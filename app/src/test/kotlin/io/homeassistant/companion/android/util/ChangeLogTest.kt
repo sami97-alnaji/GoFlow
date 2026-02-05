@@ -1,11 +1,11 @@
-package io.homeassistant.companion.android.util
+package com.goflow.app.util
 
 import android.app.AlertDialog
 import android.content.Context
-import io.homeassistant.companion.android.common.data.prefs.NightModeTheme
-import io.homeassistant.companion.android.common.data.prefs.PrefsRepository
-import io.homeassistant.companion.android.testing.unit.MainDispatcherJUnit5Extension
-import io.homeassistant.companion.android.themes.NightModeManager
+import com.goflow.app.common.data.prefs.NightModeTheme
+import com.goflow.app.common.data.prefs.PrefsRepository
+import com.goflow.app.testing.unit.MainDispatcherJUnit5Extension
+import com.goflow.app.themes.NightModeManager
 import io.mockk.coEvery
 import io.mockk.every
 import io.mockk.mockk

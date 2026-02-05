@@ -1,15 +1,15 @@
-package io.homeassistant.companion.android.settings
+package com.goflow.app.settings
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.homeassistant.companion.android.BuildConfig
-import io.homeassistant.companion.android.database.settings.SensorUpdateFrequencySetting
-import io.homeassistant.companion.android.database.settings.Setting
-import io.homeassistant.companion.android.database.settings.SettingsDao
-import io.homeassistant.companion.android.database.settings.WebsocketSetting
-import io.homeassistant.companion.android.websocket.WebsocketManager
+import com.goflow.app.BuildConfig
+import com.goflow.app.database.settings.SensorUpdateFrequencySetting
+import com.goflow.app.database.settings.Setting
+import com.goflow.app.database.settings.SettingsDao
+import com.goflow.app.database.settings.WebsocketSetting
+import com.goflow.app.websocket.WebsocketManager
 import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.distinctUntilChanged

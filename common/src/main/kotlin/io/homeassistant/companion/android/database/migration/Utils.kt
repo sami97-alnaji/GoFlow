@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.database.migration
+package com.goflow.app.database.migration
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -8,8 +8,8 @@ import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.getSystemService
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.util.CHANNEL_DATABASE
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.util.CHANNEL_DATABASE
 
 private const val NOTIFICATION_ID = 45
 private const val TAG = "AppDatabase"

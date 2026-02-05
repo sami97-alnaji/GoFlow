@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.database.qs
+package com.goflow.app.database.qs
 
 import androidx.room.Dao
 import androidx.room.Insert

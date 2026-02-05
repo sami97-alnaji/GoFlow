@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.widgets.button
+package com.goflow.app.widgets.button
 
 import android.annotation.SuppressLint
 import android.appwidget.AppWidgetManager
@@ -26,26 +26,26 @@ import com.mikepenz.iconics.IconicsDrawable
 import com.mikepenz.iconics.typeface.IIcon
 import com.mikepenz.iconics.typeface.library.community.material.CommunityMaterial
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.integration.Action
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.util.MapAnySerializer
-import io.homeassistant.companion.android.common.util.kotlinJsonMapper
-import io.homeassistant.companion.android.database.widget.ButtonWidgetDao
-import io.homeassistant.companion.android.database.widget.ButtonWidgetEntity
-import io.homeassistant.companion.android.database.widget.WidgetBackgroundType
-import io.homeassistant.companion.android.databinding.WidgetButtonConfigureBinding
-import io.homeassistant.companion.android.settings.widgets.ManageWidgetsViewModel
-import io.homeassistant.companion.android.util.applySafeDrawingInsets
-import io.homeassistant.companion.android.util.getHexForColor
-import io.homeassistant.companion.android.util.icondialog.IconDialogFragment
-import io.homeassistant.companion.android.util.icondialog.getIconByMdiName
-import io.homeassistant.companion.android.util.icondialog.mdiName
-import io.homeassistant.companion.android.widgets.BaseWidgetConfigureActivity
-import io.homeassistant.companion.android.widgets.common.ActionFieldBinder
-import io.homeassistant.companion.android.widgets.common.SingleItemArrayAdapter
-import io.homeassistant.companion.android.widgets.common.WidgetDynamicFieldAdapter
-import io.homeassistant.companion.android.widgets.common.WidgetUtils
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.integration.Action
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.util.MapAnySerializer
+import com.goflow.app.common.util.kotlinJsonMapper
+import com.goflow.app.database.widget.ButtonWidgetDao
+import com.goflow.app.database.widget.ButtonWidgetEntity
+import com.goflow.app.database.widget.WidgetBackgroundType
+import com.goflow.app.databinding.WidgetButtonConfigureBinding
+import com.goflow.app.settings.widgets.ManageWidgetsViewModel
+import com.goflow.app.util.applySafeDrawingInsets
+import com.goflow.app.util.getHexForColor
+import com.goflow.app.util.icondialog.IconDialogFragment
+import com.goflow.app.util.icondialog.getIconByMdiName
+import com.goflow.app.util.icondialog.mdiName
+import com.goflow.app.widgets.BaseWidgetConfigureActivity
+import com.goflow.app.widgets.common.ActionFieldBinder
+import com.goflow.app.widgets.common.SingleItemArrayAdapter
+import com.goflow.app.widgets.common.WidgetDynamicFieldAdapter
+import com.goflow.app.widgets.common.WidgetUtils
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import timber.log.Timber

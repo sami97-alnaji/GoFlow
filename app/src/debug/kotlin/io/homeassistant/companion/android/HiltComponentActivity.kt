@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android
+package com.goflow.app
 
 import androidx.activity.ComponentActivity
 import dagger.hilt.android.AndroidEntryPoint

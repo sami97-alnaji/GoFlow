@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.database.server
+package com.goflow.app.database.server
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse

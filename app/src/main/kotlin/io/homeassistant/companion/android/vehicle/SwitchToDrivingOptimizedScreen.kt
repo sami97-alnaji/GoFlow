@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.vehicle
+package com.goflow.app.vehicle
 
 import androidx.car.app.CarContext
 import androidx.car.app.Screen
@@ -6,7 +6,7 @@ import androidx.car.app.model.Action
 import androidx.car.app.model.CarIcon
 import androidx.car.app.model.MessageTemplate
 import androidx.car.app.model.Template
-import io.homeassistant.companion.android.common.R
+import com.goflow.app.common.R
 
 class SwitchToDrivingOptimizedScreen(carContext: CarContext) : Screen(carContext) {
 

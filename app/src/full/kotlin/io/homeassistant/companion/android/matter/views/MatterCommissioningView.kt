@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.matter.views
+package com.goflow.app.matter.views
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -34,16 +34,16 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.database.server.Server
-import io.homeassistant.companion.android.database.server.ServerConnectionInfo
-import io.homeassistant.companion.android.database.server.ServerSessionInfo
-import io.homeassistant.companion.android.database.server.ServerUserInfo
-import io.homeassistant.companion.android.matter.MatterCommissioningViewModel.CommissioningFlowStep
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
-import io.homeassistant.companion.android.util.compose.STEP_SCREEN_MAX_WIDTH_DP
-import io.homeassistant.companion.android.util.compose.screenWidth
+import com.goflow.app.R
+import com.goflow.app.common.R as commonR
+import com.goflow.app.database.server.Server
+import com.goflow.app.database.server.ServerConnectionInfo
+import com.goflow.app.database.server.ServerSessionInfo
+import com.goflow.app.database.server.ServerUserInfo
+import com.goflow.app.matter.MatterCommissioningViewModel.CommissioningFlowStep
+import com.goflow.app.util.compose.HomeAssistantAppTheme
+import com.goflow.app.util.compose.STEP_SCREEN_MAX_WIDTH_DP
+import com.goflow.app.util.compose.screenWidth
 import kotlin.math.min
 
 @Composable

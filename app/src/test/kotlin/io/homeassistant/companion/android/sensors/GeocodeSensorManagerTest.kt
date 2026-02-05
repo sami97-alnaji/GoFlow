@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.sensors
+package com.goflow.app.sensors
 
 import android.location.Location
 import io.mockk.every

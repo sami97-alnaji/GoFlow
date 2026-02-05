@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.util
+package com.goflow.app.util
 
 import android.content.Context
 import android.content.ContextWrapper

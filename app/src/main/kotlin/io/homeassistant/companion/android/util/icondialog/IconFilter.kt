@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.util.icondialog
+package com.goflow.app.util.icondialog
 
 import com.mikepenz.iconics.typeface.IIcon
 import com.mikepenz.iconics.typeface.ITypeface

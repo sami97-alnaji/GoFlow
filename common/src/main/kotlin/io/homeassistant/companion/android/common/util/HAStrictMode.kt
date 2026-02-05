@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.util
+package com.goflow.app.common.util
 
 import android.os.Build
 import android.os.StrictMode

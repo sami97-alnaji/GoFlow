@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.widgets.template
+package com.goflow.app.widgets.template
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
@@ -17,17 +17,17 @@ import androidx.core.os.BundleCompat
 import androidx.core.text.HtmlCompat
 import com.google.android.material.color.DynamicColors
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.util.FailFast
-import io.homeassistant.companion.android.database.widget.TemplateWidgetDao
-import io.homeassistant.companion.android.database.widget.TemplateWidgetEntity
-import io.homeassistant.companion.android.database.widget.WidgetBackgroundType
-import io.homeassistant.companion.android.util.getAttribute
-import io.homeassistant.companion.android.widgets.ACTION_APPWIDGET_CREATED
-import io.homeassistant.companion.android.widgets.BaseWidgetProvider.Companion.UPDATE_WIDGETS
-import io.homeassistant.companion.android.widgets.EXTRA_WIDGET_ENTITY
+import com.goflow.app.R
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.util.FailFast
+import com.goflow.app.database.widget.TemplateWidgetDao
+import com.goflow.app.database.widget.TemplateWidgetEntity
+import com.goflow.app.database.widget.WidgetBackgroundType
+import com.goflow.app.util.getAttribute
+import com.goflow.app.widgets.ACTION_APPWIDGET_CREATED
+import com.goflow.app.widgets.BaseWidgetProvider.Companion.UPDATE_WIDGETS
+import com.goflow.app.widgets.EXTRA_WIDGET_ENTITY
 import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -41,7 +41,7 @@ import timber.log.Timber
 class TemplateWidget : AppWidgetProvider() {
     companion object {
         const val UPDATE_VIEW =
-            "io.homeassistant.companion.android.widgets.template.TemplateWidget.UPDATE_VIEW"
+            "com.goflow.app.widgets.template.TemplateWidget.UPDATE_VIEW"
         private var widgetScope: CoroutineScope? = null
         private val widgetTemplates = mutableMapOf<Int, String>()
         private val widgetJobs = mutableMapOf<Int, Job>()

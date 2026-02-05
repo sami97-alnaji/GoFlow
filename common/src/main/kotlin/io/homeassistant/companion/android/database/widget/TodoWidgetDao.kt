@@ -1,11 +1,11 @@
-package io.homeassistant.companion.android.database.widget
+package com.goflow.app.database.widget
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.TypeConverters
-import io.homeassistant.companion.android.database.widget.converters.TodoLastUpdateDataConverter
+import com.goflow.app.database.widget.converters.TodoLastUpdateDataConverter
 import kotlinx.coroutines.flow.Flow
 
 @Dao

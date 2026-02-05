@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.nameyourdevice
+package com.goflow.app.onboarding.nameyourdevice
 
 import android.os.Build
 import androidx.annotation.StringRes
@@ -8,14 +8,14 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.toRoute
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.authentication.ServerRegistrationRepository
-import io.homeassistant.companion.android.common.data.integration.DeviceRegistration
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.util.AppVersionProvider
-import io.homeassistant.companion.android.common.util.MessagingTokenProvider
-import io.homeassistant.companion.android.onboarding.nameyourdevice.navigation.NameYourDeviceRoute
-import io.homeassistant.companion.android.util.isPubliclyAccessible
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.authentication.ServerRegistrationRepository
+import com.goflow.app.common.data.integration.DeviceRegistration
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.util.AppVersionProvider
+import com.goflow.app.common.util.MessagingTokenProvider
+import com.goflow.app.onboarding.nameyourdevice.navigation.NameYourDeviceRoute
+import com.goflow.app.util.isPubliclyAccessible
 import java.net.URL
 import javax.inject.Inject
 import javax.net.ssl.SSLException
@@ -50,7 +50,7 @@ internal sealed interface NameYourDeviceNavigationEvent {
  *
  * **Note:** This ViewModel is NOT used during Wear OS onboarding. The Wear onboarding flow
  * uses the screen without this view model since it handles device naming differently, as it returns the result
- * directly to the phone app via [io.homeassistant.companion.android.onboarding.WearOnboardApp.Output].
+ * directly to the phone app via [com.goflow.app.onboarding.WearOnboardApp.Output].
  */
 @HiltViewModel
 internal class NameYourDeviceViewModel @VisibleForTesting constructor(

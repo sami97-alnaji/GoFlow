@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.complications
+package com.goflow.app.complications
 
 import android.app.PendingIntent
 import android.content.BroadcastReceiver
@@ -8,8 +8,8 @@ import android.content.Intent
 import androidx.wear.watchface.complications.datasource.ComplicationDataSourceService.Companion.EXTRA_CONFIG_COMPLICATION_ID
 import androidx.wear.watchface.complications.datasource.ComplicationDataSourceUpdateRequester
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.conversation.ConversationActivity
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.conversation.ConversationActivity
 import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.fakes
+﻿package com.goflow.app.fakes
 
 import com.google.android.gms.wearable.CapabilityInfo
 import com.google.android.gms.wearable.Node
@@ -13,3 +13,4 @@ class FakeCapabilityInfo(
 
     override fun getNodes(): Set<Node?> = nodes
 }
+

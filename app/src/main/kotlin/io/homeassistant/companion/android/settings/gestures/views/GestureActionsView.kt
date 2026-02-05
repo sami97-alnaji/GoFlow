@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.gestures.views
+package com.goflow.app.settings.gestures.views
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -19,10 +19,10 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import io.homeassistant.companion.android.common.util.GestureAction
-import io.homeassistant.companion.android.settings.views.SettingsSubheader
-import io.homeassistant.companion.android.util.plus
-import io.homeassistant.companion.android.util.safeBottomPaddingValues
+import com.goflow.app.common.util.GestureAction
+import com.goflow.app.settings.views.SettingsSubheader
+import com.goflow.app.util.plus
+import com.goflow.app.util.safeBottomPaddingValues
 
 /**
  * View showing all actions for a gesture, grouped by category, and the currently

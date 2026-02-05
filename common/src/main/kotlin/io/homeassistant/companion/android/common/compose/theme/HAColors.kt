@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.compose.theme
+package com.goflow.app.common.compose.theme
 
 import androidx.compose.foundation.text.selection.TextSelectionColors
 import androidx.compose.material3.ButtonColors
@@ -7,8 +7,8 @@ import androidx.compose.material3.TextFieldColors
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
-import io.homeassistant.companion.android.common.compose.composable.ButtonVariant
-import io.homeassistant.companion.android.common.compose.theme.HAColors.Transparent
+import com.goflow.app.common.compose.composable.ButtonVariant
+import com.goflow.app.common.compose.theme.HAColors.Transparent
 
 /**
  * Defines the core color palette for the Home Assistant application.

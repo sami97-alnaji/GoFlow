@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.widgets.assist
+package com.goflow.app.widgets.assist
 
 import android.app.Application
 import androidx.compose.runtime.getValue
@@ -8,9 +8,9 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.AssistPipelineListResponse
-import io.homeassistant.companion.android.database.server.Server
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.data.websocket.impl.entities.AssistPipelineListResponse
+import com.goflow.app.database.server.Server
 import javax.inject.Inject
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.launch

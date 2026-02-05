@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.widgets.todo
+package com.goflow.app.widgets.todo
 
 import android.annotation.SuppressLint
 import android.appwidget.AppWidgetManager
@@ -37,29 +37,29 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.lifecycle.withCreationCallback
-import io.homeassistant.companion.android.BaseActivity
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.compose.theme.HATheme
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.AreaRegistryResponse
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.DeviceRegistryResponse
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.EntityRegistryResponse
-import io.homeassistant.companion.android.database.server.Server
-import io.homeassistant.companion.android.database.widget.WidgetBackgroundType
-import io.homeassistant.companion.android.settings.widgets.ManageWidgetsViewModel
-import io.homeassistant.companion.android.util.compose.ExposedDropdownMenu
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
-import io.homeassistant.companion.android.util.compose.ServerExposedDropdownMenu
-import io.homeassistant.companion.android.util.compose.WidgetBackgroundTypeExposedDropdownMenu
-import io.homeassistant.companion.android.util.compose.entity.EntityPicker
-import io.homeassistant.companion.android.util.enableEdgeToEdgeCompat
-import io.homeassistant.companion.android.util.getHexForColor
-import io.homeassistant.companion.android.util.previewEntity1
-import io.homeassistant.companion.android.util.previewEntity2
-import io.homeassistant.companion.android.util.previewServer1
-import io.homeassistant.companion.android.util.previewServer2
-import io.homeassistant.companion.android.util.safeBottomWindowInsets
-import io.homeassistant.companion.android.util.safeTopWindowInsets
+import com.goflow.app.BaseActivity
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.compose.theme.HATheme
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.websocket.impl.entities.AreaRegistryResponse
+import com.goflow.app.common.data.websocket.impl.entities.DeviceRegistryResponse
+import com.goflow.app.common.data.websocket.impl.entities.EntityRegistryResponse
+import com.goflow.app.database.server.Server
+import com.goflow.app.database.widget.WidgetBackgroundType
+import com.goflow.app.settings.widgets.ManageWidgetsViewModel
+import com.goflow.app.util.compose.ExposedDropdownMenu
+import com.goflow.app.util.compose.HomeAssistantAppTheme
+import com.goflow.app.util.compose.ServerExposedDropdownMenu
+import com.goflow.app.util.compose.WidgetBackgroundTypeExposedDropdownMenu
+import com.goflow.app.util.compose.entity.EntityPicker
+import com.goflow.app.util.enableEdgeToEdgeCompat
+import com.goflow.app.util.getHexForColor
+import com.goflow.app.util.previewEntity1
+import com.goflow.app.util.previewEntity2
+import com.goflow.app.util.previewServer1
+import com.goflow.app.util.previewServer2
+import com.goflow.app.util.safeBottomWindowInsets
+import com.goflow.app.util.safeTopWindowInsets
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint

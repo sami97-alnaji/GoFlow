@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package io.homeassistant.companion.android.common.compose.composable
+package com.goflow.app.common.compose.composable
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
@@ -28,13 +28,13 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import io.homeassistant.companion.android.common.compose.theme.HAButtonColors
-import io.homeassistant.companion.android.common.compose.theme.HADimens
-import io.homeassistant.companion.android.common.compose.theme.HARadius
-import io.homeassistant.companion.android.common.compose.theme.HATextStyle
-import io.homeassistant.companion.android.common.compose.theme.LocalHAColorScheme
-import io.homeassistant.companion.android.common.compose.theme.MaxButtonWidth
-import io.homeassistant.companion.android.common.compose.theme.defaultRippleAlpha
+import com.goflow.app.common.compose.theme.HAButtonColors
+import com.goflow.app.common.compose.theme.HADimens
+import com.goflow.app.common.compose.theme.HARadius
+import com.goflow.app.common.compose.theme.HATextStyle
+import com.goflow.app.common.compose.theme.LocalHAColorScheme
+import com.goflow.app.common.compose.theme.MaxButtonWidth
+import com.goflow.app.common.compose.theme.defaultRippleAlpha
 
 private val buttonShape = RoundedCornerShape(size = HARadius.Pill)
 

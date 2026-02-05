@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.data.servers
+package com.goflow.app.common.data.servers
 
 import android.Manifest
 import android.content.BroadcastReceiver
@@ -15,11 +15,11 @@ import androidx.core.content.ContextCompat
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedInject
 import dagger.hilt.android.qualifiers.ApplicationContext
-import io.homeassistant.companion.android.common.data.network.NetworkHelper
-import io.homeassistant.companion.android.common.data.network.WifiHelper
-import io.homeassistant.companion.android.common.util.DisabledLocationHandler
-import io.homeassistant.companion.android.database.server.ServerConnectionInfo
-import io.homeassistant.companion.android.database.server.ServerDao
+import com.goflow.app.common.data.network.NetworkHelper
+import com.goflow.app.common.data.network.WifiHelper
+import com.goflow.app.common.util.DisabledLocationHandler
+import com.goflow.app.database.server.ServerConnectionInfo
+import com.goflow.app.database.server.ServerDao
 import java.net.URL
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow

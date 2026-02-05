@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.ssid
+package com.goflow.app.settings.ssid
 
 import android.app.Application
 import androidx.compose.runtime.getValue
@@ -9,8 +9,8 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.homeassistant.companion.android.common.data.network.WifiHelper
-import io.homeassistant.companion.android.common.data.servers.ServerManager
+import com.goflow.app.common.data.network.WifiHelper
+import com.goflow.app.common.data.servers.ServerManager
 import javax.inject.Inject
 import kotlinx.coroutines.launch
 import timber.log.Timber

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.connection
+package com.goflow.app.onboarding.connection
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.animateColorAsState
@@ -25,15 +25,15 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.compose.composable.HAAccentButton
-import io.homeassistant.companion.android.common.compose.theme.HADimens
-import io.homeassistant.companion.android.common.compose.theme.HAFontSize
-import io.homeassistant.companion.android.common.compose.theme.HATextStyle
-import io.homeassistant.companion.android.common.compose.theme.HAThemeForPreview
-import io.homeassistant.companion.android.common.compose.theme.LocalHAColorScheme
-import io.homeassistant.companion.android.common.data.connectivity.ConnectivityCheckResult
-import io.homeassistant.companion.android.common.data.connectivity.ConnectivityCheckState
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.compose.composable.HAAccentButton
+import com.goflow.app.common.compose.theme.HADimens
+import com.goflow.app.common.compose.theme.HAFontSize
+import com.goflow.app.common.compose.theme.HATextStyle
+import com.goflow.app.common.compose.theme.HAThemeForPreview
+import com.goflow.app.common.compose.theme.LocalHAColorScheme
+import com.goflow.app.common.data.connectivity.ConnectivityCheckResult
+import com.goflow.app.common.data.connectivity.ConnectivityCheckState
 
 /**
  * Reusable connectivity checks section that displays the results of connectivity checks.

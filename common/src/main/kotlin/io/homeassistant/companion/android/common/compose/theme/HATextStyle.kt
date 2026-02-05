@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.compose.theme
+package com.goflow.app.common.compose.theme
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.SpanStyle
@@ -8,12 +8,12 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
-import io.homeassistant.companion.android.common.compose.theme.HATextStyle.Body
-import io.homeassistant.companion.android.common.compose.theme.HATextStyle.BodyMedium
-import io.homeassistant.companion.android.common.compose.theme.HATextStyle.Button
-import io.homeassistant.companion.android.common.compose.theme.HATextStyle.Headline
-import io.homeassistant.companion.android.common.compose.theme.HATextStyle.HeadlineMedium
-import io.homeassistant.companion.android.common.compose.theme.HATextStyle.UserInput
+import com.goflow.app.common.compose.theme.HATextStyle.Body
+import com.goflow.app.common.compose.theme.HATextStyle.BodyMedium
+import com.goflow.app.common.compose.theme.HATextStyle.Button
+import com.goflow.app.common.compose.theme.HATextStyle.Headline
+import com.goflow.app.common.compose.theme.HATextStyle.HeadlineMedium
+import com.goflow.app.common.compose.theme.HATextStyle.UserInput
 
 /**
  * Object defining the different text styles used in the Home Assistant app.

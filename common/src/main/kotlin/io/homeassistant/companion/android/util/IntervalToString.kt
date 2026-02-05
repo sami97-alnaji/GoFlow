@@ -1,7 +1,7 @@
-package io.homeassistant.companion.android.util
+package com.goflow.app.util
 
 import android.content.Context
-import io.homeassistant.companion.android.common.R
+import com.goflow.app.common.R
 
 fun intervalToString(context: Context, interval: Int): String {
     return when {

@@ -1,8 +1,8 @@
-package io.homeassistant.companion.android.webview
+package com.goflow.app.webview
 
 import android.net.Uri
 import android.net.http.SslError
-import io.homeassistant.companion.android.webview.externalbus.ExternalBusMessage
+import com.goflow.app.webview.externalbus.ExternalBusMessage
 
 interface WebView {
     enum class ErrorType {
@@ -23,7 +23,7 @@ interface WebView {
      * When [openInApp] is `true`, the URL is loaded in the WebView after checking if the user
      * needs to configure security settings. If the security level hasn't been set and the user
      * hasn't previously dismissed the security prompt for this server, the
-     * [io.homeassistant.companion.android.settings.ConnectionSecurityLevelFragment] is shown first.
+     * [com.goflow.app.settings.ConnectionSecurityLevelFragment] is shown first.
      *
      * When [openInApp] is `false`, the URL is opened in the device's default browser.
      *

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.util.icondialog
+package com.goflow.app.util.icondialog
 
 import android.os.Bundle
 import android.util.TypedValue
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.compose.ui.platform.ComposeView
 import androidx.fragment.app.DialogFragment
 import com.mikepenz.iconics.typeface.IIcon
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
+import com.goflow.app.util.compose.HomeAssistantAppTheme
 import kotlin.math.min
 
 class IconDialogFragment(callback: (IIcon) -> Unit) : DialogFragment() {

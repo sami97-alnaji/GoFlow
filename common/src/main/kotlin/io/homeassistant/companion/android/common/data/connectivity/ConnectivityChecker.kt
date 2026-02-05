@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.data.connectivity
+package com.goflow.app.common.data.connectivity
 
 /**
  * Interface for performing individual connectivity checks.

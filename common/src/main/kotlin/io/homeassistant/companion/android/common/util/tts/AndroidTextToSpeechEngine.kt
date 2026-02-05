@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.util.tts
+package com.goflow.app.common.util.tts
 
 import android.content.Context
 import android.speech.tts.TextToSpeech

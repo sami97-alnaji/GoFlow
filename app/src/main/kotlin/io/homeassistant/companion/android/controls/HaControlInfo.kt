@@ -1,6 +1,6 @@
-package io.homeassistant.companion.android.controls
+package com.goflow.app.controls
 
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.AreaRegistryResponse
+import com.goflow.app.common.data.websocket.impl.entities.AreaRegistryResponse
 
 data class HaControlInfo(
     val systemId: String,

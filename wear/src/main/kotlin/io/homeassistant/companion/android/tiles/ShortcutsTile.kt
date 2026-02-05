@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.tiles
+package com.goflow.app.tiles
 
 import android.content.Context
 import android.content.Intent
@@ -33,12 +33,12 @@ import com.mikepenz.iconics.utils.backgroundColor
 import com.mikepenz.iconics.utils.colorInt
 import com.mikepenz.iconics.utils.sizeDp
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.prefs.WearPrefsRepository
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.data.SimplifiedEntity
-import io.homeassistant.companion.android.util.getIcon
+import com.goflow.app.R
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.prefs.WearPrefsRepository
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.data.SimplifiedEntity
+import com.goflow.app.util.getIcon
 import java.nio.ByteBuffer
 import javax.inject.Inject
 import kotlin.math.min
@@ -73,7 +73,7 @@ class ShortcutsTile : TileService() {
         val state = requestParams.currentState
         if (state.lastClickableId.isNotEmpty()) {
             Intent().also { intent ->
-                intent.action = "io.homeassistant.companion.android.TILE_ACTION"
+                intent.action = "com.goflow.app.TILE_ACTION"
                 intent.putExtra("entity_id", state.lastClickableId)
                 intent.setPackage(packageName)
                 sendBroadcast(intent)

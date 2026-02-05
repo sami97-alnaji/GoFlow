@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.home.views
+package com.goflow.app.home.views
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
@@ -10,17 +10,17 @@ import androidx.wear.compose.foundation.lazy.items
 import androidx.wear.compose.material3.SwitchButton
 import androidx.wear.compose.material3.Text
 import com.mikepenz.iconics.compose.Image
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.integration.getIcon
-import io.homeassistant.companion.android.home.MainViewModel
-import io.homeassistant.companion.android.theme.WearAppTheme
-import io.homeassistant.companion.android.theme.getSwitchButtonColors
-import io.homeassistant.companion.android.theme.wearColorScheme
-import io.homeassistant.companion.android.views.ExpandableListHeader
-import io.homeassistant.companion.android.views.ListHeader
-import io.homeassistant.companion.android.views.ThemeLazyColumn
-import io.homeassistant.companion.android.views.rememberExpandedStates
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.integration.getIcon
+import com.goflow.app.home.MainViewModel
+import com.goflow.app.theme.WearAppTheme
+import com.goflow.app.theme.getSwitchButtonColors
+import com.goflow.app.theme.wearColorScheme
+import com.goflow.app.views.ExpandableListHeader
+import com.goflow.app.views.ListHeader
+import com.goflow.app.views.ThemeLazyColumn
+import com.goflow.app.views.rememberExpandedStates
 
 @Composable
 fun SetFavoritesView(

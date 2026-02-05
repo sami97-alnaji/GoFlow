@@ -1,8 +1,8 @@
-package io.homeassistant.companion.android.launch.link
+package com.goflow.app.launch.link
 
 import androidx.core.net.toUri
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.util.FailFast
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.util.FailFast
 import io.mockk.coEvery
 import io.mockk.mockk
 import kotlinx.coroutines.test.runTest

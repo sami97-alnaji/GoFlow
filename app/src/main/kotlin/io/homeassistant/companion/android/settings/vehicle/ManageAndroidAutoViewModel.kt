@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.vehicle
+package com.goflow.app.settings.vehicle
 
 import android.app.Application
 import android.os.Build
@@ -12,15 +12,15 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.prefs.AutoFavorite
-import io.homeassistant.companion.android.common.data.prefs.PrefsRepository
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.AreaRegistryResponse
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.DeviceRegistryResponse
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.EntityRegistryResponse
-import io.homeassistant.companion.android.database.server.Server
-import io.homeassistant.companion.android.util.vehicle.isVehicleDomain
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.prefs.AutoFavorite
+import com.goflow.app.common.data.prefs.PrefsRepository
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.data.websocket.impl.entities.AreaRegistryResponse
+import com.goflow.app.common.data.websocket.impl.entities.DeviceRegistryResponse
+import com.goflow.app.common.data.websocket.impl.entities.EntityRegistryResponse
+import com.goflow.app.database.server.Server
+import com.goflow.app.util.vehicle.isVehicleDomain
 import javax.inject.Inject
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.async

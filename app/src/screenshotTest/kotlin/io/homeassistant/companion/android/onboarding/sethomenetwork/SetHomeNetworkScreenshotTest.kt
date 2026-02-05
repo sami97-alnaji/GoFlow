@@ -1,9 +1,9 @@
-package io.homeassistant.companion.android.onboarding.sethomenetwork
+package com.goflow.app.onboarding.sethomenetwork
 
 import androidx.compose.runtime.Composable
 import com.android.tools.screenshot.PreviewTest
-import io.homeassistant.companion.android.common.compose.theme.HAThemeForPreview
-import io.homeassistant.companion.android.util.compose.HAPreviews
+import com.goflow.app.common.compose.theme.HAThemeForPreview
+import com.goflow.app.util.compose.HAPreviews
 
 class SetHomeNetworkScreenshotTest {
     @PreviewTest

@@ -1,8 +1,8 @@
-package io.homeassistant.companion.android.util.vehicle
+package com.goflow.app.util.vehicle
 
-import io.homeassistant.companion.android.common.R
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.integration.supportsAlarmControlPanelArmAway
+import com.goflow.app.common.R
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.integration.supportsAlarmControlPanelArmAway
 
 val SUPPORTED_DOMAINS_WITH_STRING = mapOf(
     "alarm_control_panel" to R.string.alarm_control_panels,

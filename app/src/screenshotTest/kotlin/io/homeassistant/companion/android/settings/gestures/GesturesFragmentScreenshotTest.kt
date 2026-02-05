@@ -1,13 +1,13 @@
-package io.homeassistant.companion.android.settings.gestures
+package com.goflow.app.settings.gestures
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.android.tools.screenshot.PreviewTest
-import io.homeassistant.companion.android.common.util.GestureAction
-import io.homeassistant.companion.android.common.util.HAGesture
-import io.homeassistant.companion.android.settings.gestures.views.GestureActionsView
-import io.homeassistant.companion.android.settings.gestures.views.GesturesListView
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
+import com.goflow.app.common.util.GestureAction
+import com.goflow.app.common.util.HAGesture
+import com.goflow.app.settings.gestures.views.GestureActionsView
+import com.goflow.app.settings.gestures.views.GesturesListView
+import com.goflow.app.util.compose.HomeAssistantAppTheme
 
 class GesturesFragmentScreenshotTest {
 

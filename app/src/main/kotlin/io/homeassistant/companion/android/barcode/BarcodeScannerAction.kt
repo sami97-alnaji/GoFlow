@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.barcode
+package com.goflow.app.barcode
 
 data class BarcodeScannerAction(val type: BarcodeActionType, val message: String? = null)
 

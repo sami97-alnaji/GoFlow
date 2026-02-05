@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.home.views
+package com.goflow.app.home.views
 
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Column
@@ -21,18 +21,18 @@ import androidx.wear.compose.material3.MaterialTheme
 import androidx.wear.compose.material3.Text
 import androidx.wear.tooling.preview.devices.WearDevices
 import com.mikepenz.iconics.compose.Image
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.integration.EntityExt
-import io.homeassistant.companion.android.common.data.integration.getIcon
-import io.homeassistant.companion.android.common.data.integration.isActive
-import io.homeassistant.companion.android.common.util.STATE_UNAVAILABLE
-import io.homeassistant.companion.android.theme.getFilledTonalButtonColors
-import io.homeassistant.companion.android.theme.wearColorScheme
-import io.homeassistant.companion.android.util.WearToggleChip
-import io.homeassistant.companion.android.util.onEntityClickedFeedback
-import io.homeassistant.companion.android.util.previewEntity1
-import io.homeassistant.companion.android.util.previewEntity3
-import io.homeassistant.companion.android.util.previewEntity4
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.integration.EntityExt
+import com.goflow.app.common.data.integration.getIcon
+import com.goflow.app.common.data.integration.isActive
+import com.goflow.app.common.util.STATE_UNAVAILABLE
+import com.goflow.app.theme.getFilledTonalButtonColors
+import com.goflow.app.theme.wearColorScheme
+import com.goflow.app.util.WearToggleChip
+import com.goflow.app.util.onEntityClickedFeedback
+import com.goflow.app.util.previewEntity1
+import com.goflow.app.util.previewEntity3
+import com.goflow.app.util.previewEntity4
 
 @Composable
 fun EntityUi(

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.nfc
+package com.goflow.app.nfc
 
 import android.content.Intent
 import android.net.Uri
@@ -8,12 +8,12 @@ import android.widget.Toast
 import androidx.activity.compose.setContent
 import androidx.lifecycle.lifecycleScope
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.BaseActivity
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.nfc.views.TagReaderView
-import io.homeassistant.companion.android.util.UrlUtil
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
+import com.goflow.app.BaseActivity
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.nfc.views.TagReaderView
+import com.goflow.app.util.UrlUtil
+import com.goflow.app.util.compose.HomeAssistantAppTheme
 import javax.inject.Inject
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll

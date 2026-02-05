@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.developer
+package com.goflow.app.developer
 
 import android.content.res.Configuration
 import androidx.compose.ui.tooling.preview.Devices.TABLET

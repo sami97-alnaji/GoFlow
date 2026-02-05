@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.nfc.views
+package com.goflow.app.nfc.views
 
 import android.content.Intent
 import androidx.compose.foundation.layout.padding
@@ -25,11 +25,11 @@ import androidx.core.net.toUri
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.nfc.NfcSetupActivity
-import io.homeassistant.companion.android.nfc.NfcViewModel
-import io.homeassistant.companion.android.util.safeBottomWindowInsets
-import io.homeassistant.companion.android.util.safeTopWindowInsets
+import com.goflow.app.common.R as commonR
+import com.goflow.app.nfc.NfcSetupActivity
+import com.goflow.app.nfc.NfcViewModel
+import com.goflow.app.util.safeBottomWindowInsets
+import com.goflow.app.util.safeTopWindowInsets
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 

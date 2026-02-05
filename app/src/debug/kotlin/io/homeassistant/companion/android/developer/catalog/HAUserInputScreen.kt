@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.developer.catalog
+package com.goflow.app.developer.catalog
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -20,18 +20,18 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Devices.TABLET
 import androidx.compose.ui.tooling.preview.Preview
-import io.homeassistant.companion.android.common.compose.composable.HARadioGroup
-import io.homeassistant.companion.android.common.compose.composable.HASwitch
-import io.homeassistant.companion.android.common.compose.composable.HATextField
-import io.homeassistant.companion.android.common.compose.composable.RadioOption
-import io.homeassistant.companion.android.common.compose.composable.rememberSelectedOption
-import io.homeassistant.companion.android.common.compose.theme.HATextStyle
-import io.homeassistant.companion.android.common.compose.theme.HAThemeForPreview
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.AreaRegistryResponse
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.DeviceRegistryResponse
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.EntityRegistryResponse
-import io.homeassistant.companion.android.util.compose.entity.EntityPicker
+import com.goflow.app.common.compose.composable.HARadioGroup
+import com.goflow.app.common.compose.composable.HASwitch
+import com.goflow.app.common.compose.composable.HATextField
+import com.goflow.app.common.compose.composable.RadioOption
+import com.goflow.app.common.compose.composable.rememberSelectedOption
+import com.goflow.app.common.compose.theme.HATextStyle
+import com.goflow.app.common.compose.theme.HAThemeForPreview
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.websocket.impl.entities.AreaRegistryResponse
+import com.goflow.app.common.data.websocket.impl.entities.DeviceRegistryResponse
+import com.goflow.app.common.data.websocket.impl.entities.EntityRegistryResponse
+import com.goflow.app.util.compose.entity.EntityPicker
 import java.time.LocalDateTime
 
 fun LazyListScope.catalogUserInputSection() {

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.sensors
+package com.goflow.app.sensors
 
 import android.content.Context
 import android.hardware.Sensor
@@ -6,8 +6,8 @@ import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager.SENSOR_DELAY_NORMAL
 import androidx.core.content.getSystemService
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.sensors.SensorManager
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.sensors.SensorManager
 import kotlin.math.roundToInt
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

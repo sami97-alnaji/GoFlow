@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.webview.insecure
+package com.goflow.app.webview.insecure
 
 import android.content.Intent
 import android.os.Bundle
@@ -18,12 +18,12 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.lifecycle.withCreationCallback
-import io.homeassistant.companion.android.common.compose.theme.HATheme
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.util.DisabledLocationHandler
-import io.homeassistant.companion.android.onboarding.locationforsecureconnection.navigation.URL_SECURITY_LEVEL_DOCUMENTATION
-import io.homeassistant.companion.android.settings.ConnectionSecurityLevelFragment
-import io.homeassistant.companion.android.settings.SettingsActivity
+import com.goflow.app.common.compose.theme.HATheme
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.util.DisabledLocationHandler
+import com.goflow.app.onboarding.locationforsecureconnection.navigation.URL_SECURITY_LEVEL_DOCUMENTATION
+import com.goflow.app.settings.ConnectionSecurityLevelFragment
+import com.goflow.app.settings.SettingsActivity
 import kotlinx.coroutines.launch
 
 /**

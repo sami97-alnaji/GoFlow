@@ -1,13 +1,13 @@
-package io.homeassistant.companion.android.onboarding.locationforsecureconnection
+package com.goflow.app.onboarding.locationforsecureconnection
 
 import app.cash.turbine.test
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.database.server.Server
-import io.homeassistant.companion.android.database.server.ServerConnectionInfo
-import io.homeassistant.companion.android.database.server.ServerSessionInfo
-import io.homeassistant.companion.android.database.server.ServerUserInfo
-import io.homeassistant.companion.android.testing.unit.ConsoleLogExtension
-import io.homeassistant.companion.android.testing.unit.MainDispatcherJUnit5Extension
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.database.server.Server
+import com.goflow.app.database.server.ServerConnectionInfo
+import com.goflow.app.database.server.ServerSessionInfo
+import com.goflow.app.database.server.ServerUserInfo
+import com.goflow.app.testing.unit.ConsoleLogExtension
+import com.goflow.app.testing.unit.MainDispatcherJUnit5Extension
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk

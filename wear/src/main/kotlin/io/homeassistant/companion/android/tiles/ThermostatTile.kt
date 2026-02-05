@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.tiles
+package com.goflow.app.tiles
 
 import androidx.wear.protolayout.ActionBuilders
 import androidx.wear.protolayout.ColorBuilders
@@ -18,15 +18,15 @@ import androidx.wear.tiles.TileBuilders.Tile
 import androidx.wear.tiles.TileService
 import com.google.common.util.concurrent.ListenableFuture
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.integration.friendlyName
-import io.homeassistant.companion.android.common.data.prefs.WearPrefsRepository
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.database.wear.ThermostatTile
-import io.homeassistant.companion.android.database.wear.ThermostatTileDao
-import io.homeassistant.companion.android.home.HomeActivity
+import com.goflow.app.R
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.integration.friendlyName
+import com.goflow.app.common.data.prefs.WearPrefsRepository
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.database.wear.ThermostatTile
+import com.goflow.app.database.wear.ThermostatTileDao
+import com.goflow.app.home.HomeActivity
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope

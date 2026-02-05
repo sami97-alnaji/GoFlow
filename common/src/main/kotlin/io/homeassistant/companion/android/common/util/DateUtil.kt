@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.util
+package com.goflow.app.common.util
 
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter

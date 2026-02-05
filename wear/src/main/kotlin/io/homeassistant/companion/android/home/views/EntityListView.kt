@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.home.views
+package com.goflow.app.home.views
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
@@ -9,19 +9,19 @@ import androidx.wear.compose.foundation.lazy.items
 import androidx.wear.compose.material3.Button
 import androidx.wear.compose.material3.Text
 import androidx.wear.tooling.preview.devices.WearDevices
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.theme.WearAppTheme
-import io.homeassistant.companion.android.theme.getPrimaryButtonColors
-import io.homeassistant.companion.android.util.playPreviewEntityScene1
-import io.homeassistant.companion.android.util.playPreviewEntityScene2
-import io.homeassistant.companion.android.util.playPreviewEntityScene3
-import io.homeassistant.companion.android.util.previewEntity1
-import io.homeassistant.companion.android.util.previewEntity2
-import io.homeassistant.companion.android.views.ExpandableListHeader
-import io.homeassistant.companion.android.views.ListHeader
-import io.homeassistant.companion.android.views.ThemeLazyColumn
-import io.homeassistant.companion.android.views.rememberExpandedStates
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.theme.WearAppTheme
+import com.goflow.app.theme.getPrimaryButtonColors
+import com.goflow.app.util.playPreviewEntityScene1
+import com.goflow.app.util.playPreviewEntityScene2
+import com.goflow.app.util.playPreviewEntityScene3
+import com.goflow.app.util.previewEntity1
+import com.goflow.app.util.previewEntity2
+import com.goflow.app.views.ExpandableListHeader
+import com.goflow.app.views.ListHeader
+import com.goflow.app.views.ThemeLazyColumn
+import com.goflow.app.views.rememberExpandedStates
 
 @Composable
 fun EntityViewList(

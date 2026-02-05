@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.nfc
+package com.goflow.app.nfc
 
 import android.app.Application
 import android.nfc.NfcAdapter
@@ -8,9 +8,9 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.util.Navigator
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.util.Navigator
 import java.util.UUID
 import javax.inject.Inject
 import kotlinx.coroutines.async

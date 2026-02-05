@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.connection
+package com.goflow.app.onboarding.connection
 
 import android.webkit.WebViewClient
 import androidx.annotation.VisibleForTesting
@@ -22,12 +22,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.compose.theme.HAThemeForPreview
-import io.homeassistant.companion.android.common.compose.theme.LocalHAColorScheme
-import io.homeassistant.companion.android.loading.LoadingScreen
-import io.homeassistant.companion.android.util.compose.HAPreviews
-import io.homeassistant.companion.android.util.compose.webview.HAWebView
+import com.goflow.app.R
+import com.goflow.app.common.compose.theme.HAThemeForPreview
+import com.goflow.app.common.compose.theme.LocalHAColorScheme
+import com.goflow.app.loading.LoadingScreen
+import com.goflow.app.util.compose.HAPreviews
+import com.goflow.app.util.compose.webview.HAWebView
 import timber.log.Timber
 
 @VisibleForTesting

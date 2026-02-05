@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.data.integration.impl.entities
+package com.goflow.app.common.data.integration.impl.entities
 
 import kotlin.reflect.jvm.jvmName
 import kotlinx.serialization.KSerializer

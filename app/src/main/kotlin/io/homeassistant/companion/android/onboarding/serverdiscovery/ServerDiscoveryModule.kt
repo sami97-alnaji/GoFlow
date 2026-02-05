@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.serverdiscovery
+package com.goflow.app.onboarding.serverdiscovery
 
 import android.content.Context
 import android.net.nsd.NsdManager

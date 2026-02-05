@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.sensors
+package com.goflow.app.common.sensors
 
 import android.Manifest
 import android.content.Context
@@ -8,7 +8,7 @@ import android.provider.Settings
 import android.provider.Settings.Global.getInt
 import android.telephony.TelephonyManager
 import androidx.core.content.getSystemService
-import io.homeassistant.companion.android.common.R as commonR
+import com.goflow.app.common.R as commonR
 
 class MobileDataManager : SensorManager {
 

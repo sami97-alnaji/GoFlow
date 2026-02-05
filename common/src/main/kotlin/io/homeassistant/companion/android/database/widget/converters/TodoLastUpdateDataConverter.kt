@@ -1,8 +1,8 @@
-package io.homeassistant.companion.android.database.widget.converters
+package com.goflow.app.database.widget.converters
 
 import androidx.room.TypeConverter
-import io.homeassistant.companion.android.common.util.kotlinJsonMapper
-import io.homeassistant.companion.android.database.widget.TodoWidgetEntity
+import com.goflow.app.common.util.kotlinJsonMapper
+import com.goflow.app.database.widget.TodoWidgetEntity
 
 class TodoLastUpdateDataConverter {
     @TypeConverter

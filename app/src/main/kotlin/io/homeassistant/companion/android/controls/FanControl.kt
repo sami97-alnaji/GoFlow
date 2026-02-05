@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.controls
+package com.goflow.app.controls
 
 import android.content.Context
 import android.os.Build
@@ -12,12 +12,12 @@ import android.service.controls.templates.RangeTemplate
 import android.service.controls.templates.ToggleRangeTemplate
 import android.service.controls.templates.ToggleTemplate
 import androidx.annotation.RequiresApi
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.integration.IntegrationRepository
-import io.homeassistant.companion.android.common.data.integration.getFanSpeed
-import io.homeassistant.companion.android.common.data.integration.isActive
-import io.homeassistant.companion.android.common.data.integration.supportsFanSetSpeed
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.integration.IntegrationRepository
+import com.goflow.app.common.data.integration.getFanSpeed
+import com.goflow.app.common.data.integration.isActive
+import com.goflow.app.common.data.integration.supportsFanSetSpeed
 
 @RequiresApi(Build.VERSION_CODES.R)
 object FanControl : HaControl {

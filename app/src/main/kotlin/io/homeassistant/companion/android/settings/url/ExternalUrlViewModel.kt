@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.url
+package com.goflow.app.settings.url
 
 import android.app.Application
 import androidx.compose.runtime.getValue
@@ -8,9 +8,9 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.homeassistant.companion.android.common.data.MalformedHttpUrlException
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.util.UrlUtil
+import com.goflow.app.common.data.MalformedHttpUrlException
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.util.UrlUtil
 import javax.inject.Inject
 import kotlinx.coroutines.launch
 import timber.log.Timber

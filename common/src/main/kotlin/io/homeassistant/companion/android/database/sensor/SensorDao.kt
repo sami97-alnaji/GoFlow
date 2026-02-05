@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.database.sensor
+package com.goflow.app.database.sensor
 
 import androidx.room.Dao
 import androidx.room.Insert

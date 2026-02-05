@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.widgets.mediaplayer
+package com.goflow.app.widgets.mediaplayer
 
 import android.appwidget.AppWidgetManager
 import android.content.Context
@@ -13,18 +13,18 @@ import android.widget.Spinner
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.integration.IntegrationDomains.MEDIA_PLAYER_DOMAIN
-import io.homeassistant.companion.android.database.widget.MediaPlayerControlsWidgetDao
-import io.homeassistant.companion.android.database.widget.MediaPlayerControlsWidgetEntity
-import io.homeassistant.companion.android.database.widget.WidgetBackgroundType
-import io.homeassistant.companion.android.databinding.WidgetMediaControlsConfigureBinding
-import io.homeassistant.companion.android.settings.widgets.ManageWidgetsViewModel
-import io.homeassistant.companion.android.util.applySafeDrawingInsets
-import io.homeassistant.companion.android.widgets.BaseWidgetConfigureActivity
-import io.homeassistant.companion.android.widgets.common.SingleItemArrayAdapter
-import io.homeassistant.companion.android.widgets.common.WidgetUtils
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.integration.IntegrationDomains.MEDIA_PLAYER_DOMAIN
+import com.goflow.app.database.widget.MediaPlayerControlsWidgetDao
+import com.goflow.app.database.widget.MediaPlayerControlsWidgetEntity
+import com.goflow.app.database.widget.WidgetBackgroundType
+import com.goflow.app.databinding.WidgetMediaControlsConfigureBinding
+import com.goflow.app.settings.widgets.ManageWidgetsViewModel
+import com.goflow.app.util.applySafeDrawingInsets
+import com.goflow.app.widgets.BaseWidgetConfigureActivity
+import com.goflow.app.widgets.common.SingleItemArrayAdapter
+import com.goflow.app.widgets.common.WidgetUtils
 import java.util.LinkedList
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking

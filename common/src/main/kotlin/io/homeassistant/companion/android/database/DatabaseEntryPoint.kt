@@ -1,13 +1,13 @@
-package io.homeassistant.companion.android.database
+package com.goflow.app.database
 
 import android.content.Context
 import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
 import dagger.hilt.android.EntryPointAccessors
 import dagger.hilt.components.SingletonComponent
-import io.homeassistant.companion.android.database.notification.NotificationDao
-import io.homeassistant.companion.android.database.sensor.SensorDao
-import io.homeassistant.companion.android.database.settings.SettingsDao
+import com.goflow.app.database.notification.NotificationDao
+import com.goflow.app.database.sensor.SensorDao
+import com.goflow.app.database.settings.SettingsDao
 
 /**
  * Hilt EntryPoint for accessing database DAOs in classes that cannot use constructor injection.

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.util.compose
+package com.goflow.app.util.compose
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.WindowInsets
@@ -18,9 +18,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
-import io.homeassistant.companion.android.common.compose.theme.LocalHAColorScheme
-import io.homeassistant.companion.android.launch.HAStartDestinationRoute
-import io.homeassistant.companion.android.loading.LoadingScreen
+import com.goflow.app.common.compose.theme.LocalHAColorScheme
+import com.goflow.app.launch.HAStartDestinationRoute
+import com.goflow.app.loading.LoadingScreen
 
 /**
  * Main composable for the Home Assistant app.

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.views
+package com.goflow.app.views
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Row
@@ -17,7 +17,7 @@ import androidx.wear.compose.material3.LocalContentColor
 import androidx.wear.compose.material3.Text
 import com.mikepenz.iconics.compose.Image
 import com.mikepenz.iconics.typeface.library.community.material.CommunityMaterial
-import io.homeassistant.companion.android.common.R as commonR
+import com.goflow.app.common.R as commonR
 
 /**
  * Remember expanded state of each header

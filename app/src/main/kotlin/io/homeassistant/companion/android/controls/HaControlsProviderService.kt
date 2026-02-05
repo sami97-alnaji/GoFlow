@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.controls
+package com.goflow.app.controls
 
 import android.os.Build
 import android.service.controls.Control
@@ -6,18 +6,18 @@ import android.service.controls.ControlsProviderService
 import android.service.controls.actions.ControlAction
 import androidx.annotation.RequiresApi
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.common.data.integration.ControlsAuthRequiredSetting
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.integration.IntegrationDomains.CAMERA_DOMAIN
-import io.homeassistant.companion.android.common.data.integration.IntegrationDomains.MEDIA_PLAYER_DOMAIN
-import io.homeassistant.companion.android.common.data.integration.applyCompressedStateDiff
-import io.homeassistant.companion.android.common.data.prefs.PrefsRepository
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.data.servers.firstUrlOrNull
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.AreaRegistryResponse
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.DeviceRegistryResponse
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.EntityRegistryResponse
-import io.homeassistant.companion.android.util.RegistriesDataHandler
+import com.goflow.app.common.data.integration.ControlsAuthRequiredSetting
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.integration.IntegrationDomains.CAMERA_DOMAIN
+import com.goflow.app.common.data.integration.IntegrationDomains.MEDIA_PLAYER_DOMAIN
+import com.goflow.app.common.data.integration.applyCompressedStateDiff
+import com.goflow.app.common.data.prefs.PrefsRepository
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.data.servers.firstUrlOrNull
+import com.goflow.app.common.data.websocket.impl.entities.AreaRegistryResponse
+import com.goflow.app.common.data.websocket.impl.entities.DeviceRegistryResponse
+import com.goflow.app.common.data.websocket.impl.entities.EntityRegistryResponse
+import com.goflow.app.util.RegistriesDataHandler
 import java.time.LocalDateTime
 import java.util.concurrent.Flow
 import java.util.function.Consumer

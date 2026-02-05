@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.connection.navigation
+package com.goflow.app.onboarding.connection.navigation
 
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertIsNotDisplayed
@@ -10,11 +10,11 @@ import androidx.navigation.NavDestination.Companion.hasRoute
 import androidx.navigation.toRoute
 import dagger.hilt.android.testing.HiltAndroidTest
 import dagger.hilt.android.testing.HiltTestApplication
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.onboarding.BaseOnboardingNavigationTest
-import io.homeassistant.companion.android.onboarding.connection.CONNECTION_SCREEN_TAG
-import io.homeassistant.companion.android.onboarding.welcome.navigation.WelcomeRoute
-import io.homeassistant.companion.android.testing.unit.stringResource
+import com.goflow.app.common.R as commonR
+import com.goflow.app.onboarding.BaseOnboardingNavigationTest
+import com.goflow.app.onboarding.connection.CONNECTION_SCREEN_TAG
+import com.goflow.app.onboarding.welcome.navigation.WelcomeRoute
+import com.goflow.app.testing.unit.stringResource
 import junit.framework.TestCase.assertTrue
 import org.junit.Test
 import org.junit.jupiter.api.Assertions.assertEquals

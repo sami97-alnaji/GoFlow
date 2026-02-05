@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.widgets
+package com.goflow.app.widgets
 
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
@@ -8,11 +8,11 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.widget.RemoteViews
 import androidx.core.content.ContextCompat
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.util.FailFast
-import io.homeassistant.companion.android.database.widget.WidgetDao
-import io.homeassistant.companion.android.database.widget.WidgetEntity
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.util.FailFast
+import com.goflow.app.database.widget.WidgetDao
+import com.goflow.app.database.widget.WidgetEntity
 import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -29,9 +29,9 @@ abstract class BaseWidgetProvider<T : WidgetEntity<T>, DAO : WidgetDao<T>> : App
 
     companion object {
         const val UPDATE_VIEW =
-            "io.homeassistant.companion.android.widgets.template.BaseWidgetProvider.UPDATE_VIEW"
+            "com.goflow.app.widgets.template.BaseWidgetProvider.UPDATE_VIEW"
         const val UPDATE_WIDGETS =
-            "io.homeassistant.companion.android.widgets.UPDATE_WIDGETS"
+            "com.goflow.app.widgets.UPDATE_WIDGETS"
 
         var widgetScope: CoroutineScope? = null
         val widgetEntities = mutableMapOf<Int, List<String>>()

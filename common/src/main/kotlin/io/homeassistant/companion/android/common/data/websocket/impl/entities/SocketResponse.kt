@@ -1,8 +1,8 @@
-package io.homeassistant.companion.android.common.data.websocket.impl.entities
+package com.goflow.app.common.data.websocket.impl.entities
 
-import io.homeassistant.companion.android.common.util.UnknownJsonContent
-import io.homeassistant.companion.android.common.util.UnknownJsonContentBuilder
-import io.homeassistant.companion.android.common.util.UnknownJsonContentDeserializer
+import com.goflow.app.common.util.UnknownJsonContent
+import com.goflow.app.common.util.UnknownJsonContentBuilder
+import com.goflow.app.common.util.UnknownJsonContentDeserializer
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.JsonElement

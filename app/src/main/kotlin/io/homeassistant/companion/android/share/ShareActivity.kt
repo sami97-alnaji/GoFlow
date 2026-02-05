@@ -1,13 +1,13 @@
-package io.homeassistant.companion.android.share
+package com.goflow.app.share
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.BaseActivity
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.servers.ServerManager
+import com.goflow.app.BaseActivity
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.servers.ServerManager
 import javax.inject.Inject
 import kotlinx.coroutines.runBlocking
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull

@@ -1,10 +1,10 @@
-package io.homeassistant.companion.android.common.data.prefs
+package com.goflow.app.common.data.prefs
 
-import io.homeassistant.companion.android.common.data.LocalStorage
-import io.homeassistant.companion.android.common.data.prefs.WearPrefsRepositoryImpl.Companion.MIGRATION_PREF
-import io.homeassistant.companion.android.common.data.prefs.WearPrefsRepositoryImpl.Companion.MIGRATION_VERSION
-import io.homeassistant.companion.android.common.data.prefs.WearPrefsRepositoryImpl.Companion.PREF_TILE_TEMPLATES
-import io.homeassistant.companion.android.common.data.prefs.impl.entities.TemplateTileConfig
+import com.goflow.app.common.data.LocalStorage
+import com.goflow.app.common.data.prefs.WearPrefsRepositoryImpl.Companion.MIGRATION_PREF
+import com.goflow.app.common.data.prefs.WearPrefsRepositoryImpl.Companion.MIGRATION_VERSION
+import com.goflow.app.common.data.prefs.WearPrefsRepositoryImpl.Companion.PREF_TILE_TEMPLATES
+import com.goflow.app.common.data.prefs.impl.entities.TemplateTileConfig
 import io.mockk.coEvery
 import io.mockk.coJustRun
 import io.mockk.mockk

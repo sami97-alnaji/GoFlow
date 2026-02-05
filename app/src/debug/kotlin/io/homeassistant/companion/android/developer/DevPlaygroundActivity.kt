@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.developer
+package com.goflow.app.developer
 
 import android.content.Context
 import android.content.Intent
@@ -18,12 +18,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import io.homeassistant.companion.android.barcode.BarcodeScannerActivity
-import io.homeassistant.companion.android.common.util.FailFast
-import io.homeassistant.companion.android.developer.catalog.HAComposeCatalogActivity
-import io.homeassistant.companion.android.settings.SettingsActivity
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
-import io.homeassistant.companion.android.util.enableEdgeToEdgeCompat
+import com.goflow.app.barcode.BarcodeScannerActivity
+import com.goflow.app.common.util.FailFast
+import com.goflow.app.developer.catalog.HAComposeCatalogActivity
+import com.goflow.app.settings.SettingsActivity
+import com.goflow.app.util.compose.HomeAssistantAppTheme
+import com.goflow.app.util.enableEdgeToEdgeCompat
 
 /**
  * This activity is meant to host a playground for development purposes.

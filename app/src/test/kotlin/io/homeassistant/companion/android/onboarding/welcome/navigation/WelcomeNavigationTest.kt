@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.welcome.navigation
+package com.goflow.app.onboarding.welcome.navigation
 
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.onNodeWithText
@@ -8,11 +8,11 @@ import androidx.navigation.NavController
 import androidx.navigation.NavDestination.Companion.hasRoute
 import dagger.hilt.android.testing.HiltAndroidTest
 import dagger.hilt.android.testing.HiltTestApplication
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.onboarding.BaseOnboardingNavigationTest
-import io.homeassistant.companion.android.onboarding.URL_GETTING_STARTED_DOCUMENTATION
-import io.homeassistant.companion.android.testing.unit.stringResource
-import io.homeassistant.companion.android.util.compose.navigateToUri
+import com.goflow.app.common.R as commonR
+import com.goflow.app.onboarding.BaseOnboardingNavigationTest
+import com.goflow.app.onboarding.URL_GETTING_STARTED_DOCUMENTATION
+import com.goflow.app.testing.unit.stringResource
+import com.goflow.app.util.compose.navigateToUri
 import io.mockk.coVerify
 import junit.framework.TestCase.assertTrue
 import org.junit.Test

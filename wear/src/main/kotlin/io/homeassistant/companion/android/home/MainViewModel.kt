@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.home
+package com.goflow.app.home
 
 import android.app.Application
 import android.content.ComponentName
@@ -16,30 +16,30 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.homeassistant.companion.android.BuildConfig
-import io.homeassistant.companion.android.HomeAssistantApplication
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.integration.IntegrationDomains.CAMERA_DOMAIN
-import io.homeassistant.companion.android.common.data.prefs.impl.entities.TemplateTileConfig
-import io.homeassistant.companion.android.common.data.websocket.WebSocketState
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.AreaRegistryResponse
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.DeviceRegistryResponse
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.EntityRegistryResponse
-import io.homeassistant.companion.android.common.sensors.SensorManager
-import io.homeassistant.companion.android.data.SimplifiedEntity
-import io.homeassistant.companion.android.database.sensor.SensorDao
-import io.homeassistant.companion.android.database.wear.CameraTile
-import io.homeassistant.companion.android.database.wear.CameraTileDao
-import io.homeassistant.companion.android.database.wear.FavoriteCaches
-import io.homeassistant.companion.android.database.wear.FavoriteCachesDao
-import io.homeassistant.companion.android.database.wear.FavoritesDao
-import io.homeassistant.companion.android.database.wear.ThermostatTile
-import io.homeassistant.companion.android.database.wear.ThermostatTileDao
-import io.homeassistant.companion.android.database.wear.getAll
-import io.homeassistant.companion.android.database.wear.getAllFlow
-import io.homeassistant.companion.android.sensors.SensorReceiver
-import io.homeassistant.companion.android.util.RegistriesDataHandler
-import io.homeassistant.companion.android.util.throttleLatest
+import com.goflow.app.BuildConfig
+import com.goflow.app.HomeAssistantApplication
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.integration.IntegrationDomains.CAMERA_DOMAIN
+import com.goflow.app.common.data.prefs.impl.entities.TemplateTileConfig
+import com.goflow.app.common.data.websocket.WebSocketState
+import com.goflow.app.common.data.websocket.impl.entities.AreaRegistryResponse
+import com.goflow.app.common.data.websocket.impl.entities.DeviceRegistryResponse
+import com.goflow.app.common.data.websocket.impl.entities.EntityRegistryResponse
+import com.goflow.app.common.sensors.SensorManager
+import com.goflow.app.data.SimplifiedEntity
+import com.goflow.app.database.sensor.SensorDao
+import com.goflow.app.database.wear.CameraTile
+import com.goflow.app.database.wear.CameraTileDao
+import com.goflow.app.database.wear.FavoriteCaches
+import com.goflow.app.database.wear.FavoriteCachesDao
+import com.goflow.app.database.wear.FavoritesDao
+import com.goflow.app.database.wear.ThermostatTile
+import com.goflow.app.database.wear.ThermostatTileDao
+import com.goflow.app.database.wear.getAll
+import com.goflow.app.database.wear.getAllFlow
+import com.goflow.app.sensors.SensorReceiver
+import com.goflow.app.util.RegistriesDataHandler
+import com.goflow.app.util.throttleLatest
 import javax.inject.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
@@ -211,7 +211,7 @@ class MainViewModel @Inject constructor(
 
             val assistantAppComponent = ComponentName(
                 BuildConfig.APPLICATION_ID,
-                "io.homeassistant.companion.android.conversation.AssistantActivity",
+                "com.goflow.app.conversation.AssistantActivity",
             )
             isAssistantAppAllowed =
                 app.packageManager.getComponentEnabledSetting(assistantAppComponent) !=
@@ -760,7 +760,7 @@ class MainViewModel @Inject constructor(
     fun setAssistantApp(allowed: Boolean) {
         val assistantAppComponent = ComponentName(
             BuildConfig.APPLICATION_ID,
-            "io.homeassistant.companion.android.conversation.AssistantActivity",
+            "com.goflow.app.conversation.AssistantActivity",
         )
         app.packageManager.setComponentEnabledSetting(
             assistantAppComponent,

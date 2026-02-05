@@ -9,7 +9,7 @@
         android:shortcutShortLabel="@string/dev_playground_label">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="io.homeassistant.companion.android.developer.DevPlaygroundActivity"
-            android:targetPackage="io.homeassistant.companion.android.debug" />
+            android:targetClass="com.goflow.app.developer.DevPlaygroundActivity"
+            android:targetPackage="com.goflow.app.debug" />
     </shortcut>
 </shortcuts>

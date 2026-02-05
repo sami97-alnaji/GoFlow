@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.wear
+package com.goflow.app.settings.wear
 
 import android.content.Context
 

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.sensor
+package com.goflow.app.settings.sensor
 
 import android.content.Intent
 import android.content.Intent.ACTION_VIEW
@@ -18,10 +18,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.settings.sensor.views.SensorListView
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
+import com.goflow.app.R
+import com.goflow.app.common.R as commonR
+import com.goflow.app.settings.sensor.views.SensorListView
+import com.goflow.app.util.compose.HomeAssistantAppTheme
 
 @AndroidEntryPoint
 class SensorSettingsFragment : Fragment() {

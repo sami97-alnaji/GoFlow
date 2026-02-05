@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.assist.ui
+package com.goflow.app.assist.ui
 
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.RepeatMode
@@ -74,10 +74,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.mikepenz.iconics.compose.Image
 import com.mikepenz.iconics.typeface.library.community.material.CommunityMaterial
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.assist.AssistViewModelBase
-import io.homeassistant.companion.android.util.compose.safeScreenHeight
+import com.goflow.app.R
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.assist.AssistViewModelBase
+import com.goflow.app.util.compose.safeScreenHeight
 import kotlinx.coroutines.launch
 
 private val HEADER_HEIGHT = 48.dp

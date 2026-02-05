@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.sensors
+package com.goflow.app.sensors
 
 import android.Manifest
 import android.content.Context
@@ -8,15 +8,15 @@ import android.location.Location
 import android.os.Build
 import android.os.Build.VERSION.SDK_INT
 import androidx.annotation.VisibleForTesting
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.sensors.SensorManager
-import io.homeassistant.companion.android.common.util.STATE_UNKNOWN
-import io.homeassistant.companion.android.common.util.instant
-import io.homeassistant.companion.android.database.sensor.SensorSetting
-import io.homeassistant.companion.android.database.sensor.SensorSettingType
-import io.homeassistant.companion.android.location.HighAccuracyLocationService
-import io.homeassistant.companion.android.location.getLastLocation
-import io.homeassistant.companion.android.sensors.GeocodeSensorManager.Companion.LOCATION_OUTDATED_THRESHOLD
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.sensors.SensorManager
+import com.goflow.app.common.util.STATE_UNKNOWN
+import com.goflow.app.common.util.instant
+import com.goflow.app.database.sensor.SensorSetting
+import com.goflow.app.database.sensor.SensorSettingType
+import com.goflow.app.location.HighAccuracyLocationService
+import com.goflow.app.location.getLastLocation
+import com.goflow.app.sensors.GeocodeSensorManager.Companion.LOCATION_OUTDATED_THRESHOLD
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine

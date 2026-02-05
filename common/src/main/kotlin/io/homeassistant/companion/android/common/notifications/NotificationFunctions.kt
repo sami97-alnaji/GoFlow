@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.notifications
+package com.goflow.app.common.notifications
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -23,9 +23,9 @@ import com.mikepenz.iconics.IconicsDrawable
 import com.mikepenz.iconics.utils.colorFilter
 import com.mikepenz.iconics.utils.toAndroidIconCompat
 import com.vdurmont.emoji.EmojiParser
-import io.homeassistant.companion.android.common.R
-import io.homeassistant.companion.android.common.util.CHANNEL_GENERAL
-import io.homeassistant.companion.android.common.util.cancel
+import com.goflow.app.common.R
+import com.goflow.app.common.util.CHANNEL_GENERAL
+import com.goflow.app.common.util.cancel
 import java.util.Locale
 import timber.log.Timber
 

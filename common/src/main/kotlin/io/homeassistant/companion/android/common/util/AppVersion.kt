@@ -1,6 +1,6 @@
-package io.homeassistant.companion.android.common.util
+package com.goflow.app.common.util
 
-import io.homeassistant.companion.android.common.util.AppVersion.Companion.from
+import com.goflow.app.common.util.AppVersion.Companion.from
 import kotlinx.serialization.Serializable
 
 private val versionRegex = """^.* \(\d+\)$""".toRegex()

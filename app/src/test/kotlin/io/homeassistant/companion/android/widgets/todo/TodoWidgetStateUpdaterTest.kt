@@ -1,14 +1,14 @@
-package io.homeassistant.companion.android.widgets.todo
+package com.goflow.app.widgets.todo
 
 import app.cash.turbine.TurbineTestContext
 import app.cash.turbine.test
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.integration.IntegrationRepository
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.data.websocket.WebSocketRepository
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.GetTodosResponse
-import io.homeassistant.companion.android.database.widget.TodoWidgetDao
-import io.homeassistant.companion.android.database.widget.TodoWidgetEntity
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.integration.IntegrationRepository
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.data.websocket.WebSocketRepository
+import com.goflow.app.common.data.websocket.impl.entities.GetTodosResponse
+import com.goflow.app.database.widget.TodoWidgetDao
+import com.goflow.app.database.widget.TodoWidgetEntity
 import io.mockk.coEvery
 import io.mockk.coJustAwait
 import io.mockk.coJustRun

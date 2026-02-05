@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.server
+package com.goflow.app.settings.server
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -19,9 +19,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.database.server.Server
-import io.homeassistant.companion.android.util.compose.ModalBottomSheet
+import com.goflow.app.common.R as commonR
+import com.goflow.app.database.server.Server
+import com.goflow.app.util.compose.ModalBottomSheet
 
 @Composable
 fun ServerChooserView(servers: List<Server>, onServerSelected: (Int) -> Unit) {

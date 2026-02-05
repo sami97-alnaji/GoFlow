@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.connection
+package com.goflow.app.onboarding.connection
 
 import android.net.Uri
 import androidx.annotation.VisibleForTesting
@@ -40,19 +40,19 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.withLink
 import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.compose.composable.HAAccentButton
-import io.homeassistant.companion.android.common.compose.composable.HABanner
-import io.homeassistant.companion.android.common.compose.composable.HADetails
-import io.homeassistant.companion.android.common.compose.composable.HAIconButton
-import io.homeassistant.companion.android.common.compose.composable.HATopBarPlaceholder
-import io.homeassistant.companion.android.common.compose.theme.HADimens
-import io.homeassistant.companion.android.common.compose.theme.HATextStyle
-import io.homeassistant.companion.android.common.compose.theme.HAThemeForPreview
-import io.homeassistant.companion.android.common.compose.theme.MaxButtonWidth
-import io.homeassistant.companion.android.common.data.connectivity.ConnectivityCheckState
-import io.homeassistant.companion.android.util.compose.HAPreviews
+import com.goflow.app.R
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.compose.composable.HAAccentButton
+import com.goflow.app.common.compose.composable.HABanner
+import com.goflow.app.common.compose.composable.HADetails
+import com.goflow.app.common.compose.composable.HAIconButton
+import com.goflow.app.common.compose.composable.HATopBarPlaceholder
+import com.goflow.app.common.compose.theme.HADimens
+import com.goflow.app.common.compose.theme.HATextStyle
+import com.goflow.app.common.compose.theme.HAThemeForPreview
+import com.goflow.app.common.compose.theme.MaxButtonWidth
+import com.goflow.app.common.data.connectivity.ConnectivityCheckState
+import com.goflow.app.util.compose.HAPreviews
 import kotlinx.coroutines.launch
 
 private val MaxContentWidth = MaxButtonWidth

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.database.server
+package com.goflow.app.database.server
 
 import android.os.Parcelable
 import androidx.room.ColumnInfo
@@ -6,7 +6,7 @@ import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.TypeConverters
-import io.homeassistant.companion.android.common.data.HomeAssistantVersion
+import com.goflow.app.common.data.HomeAssistantVersion
 import kotlinx.parcelize.Parcelize
 
 @Entity(tableName = "servers")

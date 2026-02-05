@@ -1,13 +1,13 @@
-package io.homeassistant.companion.android.settings
+package com.goflow.app.settings
 
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityComponent
-import io.homeassistant.companion.android.settings.developer.DeveloperSettingsPresenter
-import io.homeassistant.companion.android.settings.developer.DeveloperSettingsPresenterImpl
-import io.homeassistant.companion.android.settings.server.ServerSettingsPresenter
-import io.homeassistant.companion.android.settings.server.ServerSettingsPresenterImpl
+import com.goflow.app.settings.developer.DeveloperSettingsPresenter
+import com.goflow.app.settings.developer.DeveloperSettingsPresenterImpl
+import com.goflow.app.settings.server.ServerSettingsPresenter
+import com.goflow.app.settings.server.ServerSettingsPresenterImpl
 
 @Module
 @InstallIn(ActivityComponent::class)

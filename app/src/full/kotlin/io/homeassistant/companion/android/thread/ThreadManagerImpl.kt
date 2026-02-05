@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.thread
+package com.goflow.app.thread
 
 import android.app.Activity
 import android.content.Context
@@ -12,10 +12,10 @@ import com.google.android.gms.threadnetwork.ThreadBorderAgent
 import com.google.android.gms.threadnetwork.ThreadNetwork
 import com.google.android.gms.threadnetwork.ThreadNetworkCredentials
 import com.google.android.gms.threadnetwork.ThreadNetworkStatusCodes
-import io.homeassistant.companion.android.common.data.HomeAssistantVersion
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.ThreadDatasetResponse
-import io.homeassistant.companion.android.common.util.isAutomotive
+import com.goflow.app.common.data.HomeAssistantVersion
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.data.websocket.impl.entities.ThreadDatasetResponse
+import com.goflow.app.common.util.isAutomotive
 import javax.inject.Inject
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException

@@ -1,15 +1,15 @@
-package io.homeassistant.companion.android.common.data.prefs
+package com.goflow.app.common.data.prefs
 
 import androidx.annotation.VisibleForTesting
-import io.homeassistant.companion.android.common.data.LocalStorage
-import io.homeassistant.companion.android.common.data.prefs.impl.entities.TemplateTileConfig
-import io.homeassistant.companion.android.common.util.jsonArrayOrNull
-import io.homeassistant.companion.android.common.util.kotlinJsonMapper
-import io.homeassistant.companion.android.common.util.toJsonObject
-import io.homeassistant.companion.android.common.util.toJsonObjectOrNull
-import io.homeassistant.companion.android.common.util.toStringList
-import io.homeassistant.companion.android.di.qualifiers.NamedIntegrationStorage
-import io.homeassistant.companion.android.di.qualifiers.NamedWearStorage
+import com.goflow.app.common.data.LocalStorage
+import com.goflow.app.common.data.prefs.impl.entities.TemplateTileConfig
+import com.goflow.app.common.util.jsonArrayOrNull
+import com.goflow.app.common.util.kotlinJsonMapper
+import com.goflow.app.common.util.toJsonObject
+import com.goflow.app.common.util.toJsonObjectOrNull
+import com.goflow.app.common.util.toStringList
+import com.goflow.app.di.qualifiers.NamedIntegrationStorage
+import com.goflow.app.di.qualifiers.NamedWearStorage
 import javax.inject.Inject
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.json.Json

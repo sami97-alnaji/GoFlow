@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.websocket
+package com.goflow.app.websocket
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -22,17 +22,17 @@ import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
 import dagger.hilt.android.EntryPointAccessors
 import dagger.hilt.components.SingletonComponent
-import io.homeassistant.companion.android.BuildConfig
-import io.homeassistant.companion.android.common.R
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.util.CHANNEL_WEBSOCKET
-import io.homeassistant.companion.android.common.util.CHANNEL_WEBSOCKET_ISSUES
-import io.homeassistant.companion.android.database.settings.SettingsDao
-import io.homeassistant.companion.android.database.settings.WebsocketSetting
-import io.homeassistant.companion.android.notifications.MessagingManager
-import io.homeassistant.companion.android.settings.SettingsActivity
-import io.homeassistant.companion.android.util.hasActiveConnection
-import io.homeassistant.companion.android.webview.WebViewActivity
+import com.goflow.app.BuildConfig
+import com.goflow.app.common.R
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.util.CHANNEL_WEBSOCKET
+import com.goflow.app.common.util.CHANNEL_WEBSOCKET_ISSUES
+import com.goflow.app.database.settings.SettingsDao
+import com.goflow.app.database.settings.WebsocketSetting
+import com.goflow.app.notifications.MessagingManager
+import com.goflow.app.settings.SettingsActivity
+import com.goflow.app.util.hasActiveConnection
+import com.goflow.app.webview.WebViewActivity
 import java.util.concurrent.TimeUnit
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
@@ -265,7 +265,7 @@ class WebsocketManager(appContext: Context, workerParams: WorkerParameters) :
             .setOngoing(true)
             .setGroup(CHANNEL_WEBSOCKET)
             .addAction(
-                io.homeassistant.companion.android.R.drawable.ic_websocket,
+                com.goflow.app.R.drawable.ic_websocket,
                 applicationContext.getString(R.string.settings),
                 settingPendingIntent,
             )

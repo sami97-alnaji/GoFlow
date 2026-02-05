@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.controls.views
+package com.goflow.app.settings.controls.views
 
 import android.os.Build
 import androidx.compose.foundation.clickable
@@ -53,17 +53,17 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.mikepenz.iconics.compose.Image
 import com.mikepenz.iconics.typeface.library.community.material.CommunityMaterial
-import io.homeassistant.companion.android.common.R
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.integration.ControlsAuthRequiredSetting
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.integration.friendlyName
-import io.homeassistant.companion.android.database.server.Server
-import io.homeassistant.companion.android.util.compose.HaAlertWarning
-import io.homeassistant.companion.android.util.compose.ServerExposedDropdownMenu
-import io.homeassistant.companion.android.util.compose.getEntityDomainString
-import io.homeassistant.companion.android.util.plus
-import io.homeassistant.companion.android.util.safeBottomPaddingValues
+import com.goflow.app.common.R
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.integration.ControlsAuthRequiredSetting
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.integration.friendlyName
+import com.goflow.app.database.server.Server
+import com.goflow.app.util.compose.HaAlertWarning
+import com.goflow.app.util.compose.ServerExposedDropdownMenu
+import com.goflow.app.util.compose.getEntityDomainString
+import com.goflow.app.util.plus
+import com.goflow.app.util.safeBottomPaddingValues
 
 @Composable
 fun ManageControlsView(

@@ -1,16 +1,16 @@
-package io.homeassistant.companion.android.common.compose.composable
+package com.goflow.app.common.compose.composable
 
 import androidx.compose.material3.Switch
 import androidx.compose.material3.SwitchColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import io.homeassistant.companion.android.common.compose.theme.LocalHAColorScheme
+import com.goflow.app.common.compose.theme.LocalHAColorScheme
 
 /**
  * A composable function that displays a switch based on [Switch].
  * Due to the limitation of the underlying API in material this composable only
- * adjust the color of the switch using [io.homeassistant.companion.android.common.compose.theme.HAColorScheme].
+ * adjust the color of the switch using [com.goflow.app.common.compose.theme.HAColorScheme].
  *
  * @param checked whether or not this switch is checked
  * @param onCheckedChange called when this switch is clicked. If `null`, then this switch will not be

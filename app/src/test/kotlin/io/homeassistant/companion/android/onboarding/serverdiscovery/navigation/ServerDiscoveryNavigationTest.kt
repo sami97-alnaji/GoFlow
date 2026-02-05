@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.serverdiscovery.navigation
+package com.goflow.app.onboarding.serverdiscovery.navigation
 
 import androidx.compose.ui.test.ExperimentalTestApi
 import androidx.compose.ui.test.assertIsDisplayed
@@ -17,25 +17,25 @@ import dagger.hilt.android.testing.BindValue
 import dagger.hilt.android.testing.HiltAndroidTest
 import dagger.hilt.android.testing.HiltTestApplication
 import dagger.hilt.android.testing.UninstallModules
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.HomeAssistantVersion
-import io.homeassistant.companion.android.common.data.connectivity.ConnectivityCheckState
-import io.homeassistant.companion.android.onboarding.BaseOnboardingNavigationTest
-import io.homeassistant.companion.android.onboarding.URL_GETTING_STARTED_DOCUMENTATION
-import io.homeassistant.companion.android.onboarding.connection.CONNECTION_SCREEN_TAG
-import io.homeassistant.companion.android.onboarding.connection.ConnectionNavigationEvent
-import io.homeassistant.companion.android.onboarding.connection.ConnectionViewModel
-import io.homeassistant.companion.android.onboarding.connection.navigation.ConnectionRoute
-import io.homeassistant.companion.android.onboarding.manualserver.navigation.ManualServerRoute
-import io.homeassistant.companion.android.onboarding.nameyourdevice.navigation.NameYourDeviceRoute
-import io.homeassistant.companion.android.onboarding.serverdiscovery.DELAY_BEFORE_DISPLAY_DISCOVERY
-import io.homeassistant.companion.android.onboarding.serverdiscovery.HomeAssistantInstance
-import io.homeassistant.companion.android.onboarding.serverdiscovery.HomeAssistantSearcher
-import io.homeassistant.companion.android.onboarding.serverdiscovery.ONE_SERVER_FOUND_MODAL_TAG
-import io.homeassistant.companion.android.onboarding.serverdiscovery.ServerDiscoveryModule
-import io.homeassistant.companion.android.onboarding.welcome.navigation.WelcomeRoute
-import io.homeassistant.companion.android.testing.unit.stringResource
-import io.homeassistant.companion.android.util.compose.navigateToUri
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.HomeAssistantVersion
+import com.goflow.app.common.data.connectivity.ConnectivityCheckState
+import com.goflow.app.onboarding.BaseOnboardingNavigationTest
+import com.goflow.app.onboarding.URL_GETTING_STARTED_DOCUMENTATION
+import com.goflow.app.onboarding.connection.CONNECTION_SCREEN_TAG
+import com.goflow.app.onboarding.connection.ConnectionNavigationEvent
+import com.goflow.app.onboarding.connection.ConnectionViewModel
+import com.goflow.app.onboarding.connection.navigation.ConnectionRoute
+import com.goflow.app.onboarding.manualserver.navigation.ManualServerRoute
+import com.goflow.app.onboarding.nameyourdevice.navigation.NameYourDeviceRoute
+import com.goflow.app.onboarding.serverdiscovery.DELAY_BEFORE_DISPLAY_DISCOVERY
+import com.goflow.app.onboarding.serverdiscovery.HomeAssistantInstance
+import com.goflow.app.onboarding.serverdiscovery.HomeAssistantSearcher
+import com.goflow.app.onboarding.serverdiscovery.ONE_SERVER_FOUND_MODAL_TAG
+import com.goflow.app.onboarding.serverdiscovery.ServerDiscoveryModule
+import com.goflow.app.onboarding.welcome.navigation.WelcomeRoute
+import com.goflow.app.testing.unit.stringResource
+import com.goflow.app.util.compose.navigateToUri
 import io.mockk.coVerify
 import io.mockk.every
 import io.mockk.mockk

@@ -9,7 +9,7 @@
         <receiver android:name=".sensors.SensorUpdateReceiver"
             android:exported="false">
             <intent-filter>
-                <action android:name="io.homeassistant.companion.android.UPDATE_SENSORS" />
+                <action android:name="com.goflow.app.UPDATE_SENSORS" />
             </intent-filter>
         </receiver>
 

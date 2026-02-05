@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.widgets.camera
+package com.goflow.app.widgets.camera
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
@@ -20,20 +20,20 @@ import coil3.size.Dimension
 import coil3.size.Precision
 import coil3.size.Size
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.data.servers.UrlState
-import io.homeassistant.companion.android.common.util.FailFast
-import io.homeassistant.companion.android.database.widget.CameraWidgetDao
-import io.homeassistant.companion.android.database.widget.CameraWidgetEntity
-import io.homeassistant.companion.android.database.widget.WidgetTapAction
-import io.homeassistant.companion.android.util.hasActiveConnection
-import io.homeassistant.companion.android.webview.WebViewActivity
-import io.homeassistant.companion.android.widgets.ACTION_APPWIDGET_CREATED
-import io.homeassistant.companion.android.widgets.BaseWidgetProvider.Companion.UPDATE_WIDGETS
-import io.homeassistant.companion.android.widgets.BaseWidgetProvider.Companion.widgetScope
-import io.homeassistant.companion.android.widgets.EXTRA_WIDGET_ENTITY
-import io.homeassistant.companion.android.widgets.common.RemoteViewsTarget
+import com.goflow.app.R
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.data.servers.UrlState
+import com.goflow.app.common.util.FailFast
+import com.goflow.app.database.widget.CameraWidgetDao
+import com.goflow.app.database.widget.CameraWidgetEntity
+import com.goflow.app.database.widget.WidgetTapAction
+import com.goflow.app.util.hasActiveConnection
+import com.goflow.app.webview.WebViewActivity
+import com.goflow.app.widgets.ACTION_APPWIDGET_CREATED
+import com.goflow.app.widgets.BaseWidgetProvider.Companion.UPDATE_WIDGETS
+import com.goflow.app.widgets.BaseWidgetProvider.Companion.widgetScope
+import com.goflow.app.widgets.EXTRA_WIDGET_ENTITY
+import com.goflow.app.widgets.common.RemoteViewsTarget
 import javax.inject.Inject
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
@@ -49,7 +49,7 @@ class CameraWidget : AppWidgetProvider() {
 
     companion object {
         internal const val UPDATE_IMAGE =
-            "io.homeassistant.companion.android.widgets.camera.CameraWidget.UPDATE_IMAGE"
+            "com.goflow.app.widgets.camera.CameraWidget.UPDATE_IMAGE"
 
         internal const val EXTRA_SERVER_ID = "EXTRA_SERVER_ID"
         internal const val EXTRA_ENTITY_ID = "EXTRA_ENTITY_ID"

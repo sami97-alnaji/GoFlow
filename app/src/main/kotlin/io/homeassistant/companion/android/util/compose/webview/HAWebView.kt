@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.util.compose.webview
+package com.goflow.app.util.compose.webview
 
 import android.annotation.SuppressLint
 import android.content.res.Configuration
@@ -20,8 +20,8 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.webkit.WebSettingsCompat
 import androidx.webkit.WebViewFeature
-import io.homeassistant.companion.android.common.data.HomeAssistantApis
-import io.homeassistant.companion.android.common.data.prefs.NightModeTheme
+import com.goflow.app.common.data.HomeAssistantApis
+import com.goflow.app.common.data.prefs.NightModeTheme
 import timber.log.Timber
 
 /*

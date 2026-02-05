@@ -1,6 +1,6 @@
-package io.homeassistant.companion.android.common.data.integration
+package com.goflow.app.common.data.integration
 
-import io.homeassistant.companion.android.common.util.AnySerializer
+import com.goflow.app.common.util.AnySerializer
 import kotlinx.serialization.Serializable
 
 @Serializable

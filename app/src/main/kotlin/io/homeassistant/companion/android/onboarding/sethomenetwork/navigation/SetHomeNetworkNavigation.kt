@@ -1,11 +1,11 @@
-package io.homeassistant.companion.android.onboarding.sethomenetwork.navigation
+package com.goflow.app.onboarding.sethomenetwork.navigation
 
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
-import io.homeassistant.companion.android.onboarding.sethomenetwork.SetHomeNetworkScreen
+import com.goflow.app.onboarding.sethomenetwork.SetHomeNetworkScreen
 import kotlinx.serialization.Serializable
 
 @Serializable

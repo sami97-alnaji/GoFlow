@@ -1,12 +1,12 @@
-package io.homeassistant.companion.android.common.data.prefs
+package com.goflow.app.common.data.prefs
 
 import androidx.annotation.VisibleForTesting
-import io.homeassistant.companion.android.common.data.LocalStorage
-import io.homeassistant.companion.android.common.data.integration.ControlsAuthRequiredSetting
-import io.homeassistant.companion.android.common.util.GestureAction
-import io.homeassistant.companion.android.common.util.HAGesture
-import io.homeassistant.companion.android.di.qualifiers.NamedIntegrationStorage
-import io.homeassistant.companion.android.di.qualifiers.NamedThemesStorage
+import com.goflow.app.common.data.LocalStorage
+import com.goflow.app.common.data.integration.ControlsAuthRequiredSetting
+import com.goflow.app.common.util.GestureAction
+import com.goflow.app.common.util.HAGesture
+import com.goflow.app.di.qualifiers.NamedIntegrationStorage
+import com.goflow.app.di.qualifiers.NamedThemesStorage
 import java.util.concurrent.atomic.AtomicBoolean
 import javax.inject.Inject
 import kotlinx.coroutines.sync.Mutex

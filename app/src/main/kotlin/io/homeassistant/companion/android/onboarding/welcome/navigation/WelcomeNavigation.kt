@@ -1,10 +1,10 @@
-package io.homeassistant.companion.android.onboarding.welcome.navigation
+package com.goflow.app.onboarding.welcome.navigation
 
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
-import io.homeassistant.companion.android.onboarding.welcome.WelcomeScreen
+import com.goflow.app.onboarding.welcome.WelcomeScreen
 import kotlinx.serialization.Serializable
 
 @Serializable

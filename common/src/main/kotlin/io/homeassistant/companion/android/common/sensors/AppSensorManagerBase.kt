@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.sensors
+package com.goflow.app.common.sensors
 
 import android.app.ActivityManager
 import android.app.usage.UsageStatsManager
@@ -8,7 +8,7 @@ import android.os.Build
 import android.os.Process
 import androidx.annotation.RequiresApi
 import androidx.core.content.getSystemService
-import io.homeassistant.companion.android.common.R as commonR
+import com.goflow.app.common.R as commonR
 import java.math.RoundingMode
 import timber.log.Timber
 

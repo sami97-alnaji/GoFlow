@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.testing.unit
+﻿package com.goflow.app.testing.unit
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -90,3 +90,4 @@ class MainDispatcherJUnit4Rule(val testDispatcher: TestDispatcher = StandardTest
         Dispatchers.resetMain()
     }
 }
+

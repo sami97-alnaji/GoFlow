@@ -1,9 +1,9 @@
-package io.homeassistant.companion.android.common.util
+package com.goflow.app.common.util
 
 import android.Manifest
 import android.content.Context
 import androidx.appcompat.app.AlertDialog
-import io.homeassistant.companion.android.common.R as commonR
+import com.goflow.app.common.R as commonR
 
 object LocationPermissionInfoHandler {
 

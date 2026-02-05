@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.launch.link
+package com.goflow.app.launch.link
 
 import android.content.Context
 import android.content.Intent
@@ -18,14 +18,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.lifecycleScope
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.BaseActivity
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.util.FailFast
-import io.homeassistant.companion.android.launch.startLaunchOnboarding
-import io.homeassistant.companion.android.launch.startLaunchWithNavigateTo
-import io.homeassistant.companion.android.settings.server.ServerChooserFragment
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
+import com.goflow.app.BaseActivity
+import com.goflow.app.R
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.util.FailFast
+import com.goflow.app.launch.startLaunchOnboarding
+import com.goflow.app.launch.startLaunchWithNavigateTo
+import com.goflow.app.settings.server.ServerChooserFragment
+import com.goflow.app.util.compose.HomeAssistantAppTheme
 import javax.inject.Inject
 import kotlinx.coroutines.launch
 

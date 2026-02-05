@@ -1,8 +1,8 @@
-package io.homeassistant.companion.android.webview.addto
+package com.goflow.app.webview.addto
 
 import android.content.Context
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.util.isAutomotive
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.util.isAutomotive
 import io.mockk.every
 import io.mockk.mockk
 import org.junit.jupiter.api.Assertions.assertEquals

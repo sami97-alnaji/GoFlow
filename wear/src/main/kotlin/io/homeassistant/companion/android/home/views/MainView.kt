@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.home.views
+package com.goflow.app.home.views
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -32,19 +32,19 @@ import androidx.wear.compose.material3.MaterialTheme
 import androidx.wear.compose.material3.Text
 import com.mikepenz.iconics.compose.Image
 import com.mikepenz.iconics.typeface.library.community.material.CommunityMaterial
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.util.STATE_UNKNOWN
-import io.homeassistant.companion.android.home.MainViewModel
-import io.homeassistant.companion.android.theme.WearAppTheme
-import io.homeassistant.companion.android.theme.getFilledTonalButtonColors
-import io.homeassistant.companion.android.theme.getPrimaryButtonColors
-import io.homeassistant.companion.android.theme.wearColorScheme
-import io.homeassistant.companion.android.util.getIcon
-import io.homeassistant.companion.android.util.onEntityClickedFeedback
-import io.homeassistant.companion.android.views.ExpandableListHeader
-import io.homeassistant.companion.android.views.ListHeader
-import io.homeassistant.companion.android.views.ThemeLazyColumn
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.util.STATE_UNKNOWN
+import com.goflow.app.home.MainViewModel
+import com.goflow.app.theme.WearAppTheme
+import com.goflow.app.theme.getFilledTonalButtonColors
+import com.goflow.app.theme.getPrimaryButtonColors
+import com.goflow.app.theme.wearColorScheme
+import com.goflow.app.util.getIcon
+import com.goflow.app.util.onEntityClickedFeedback
+import com.goflow.app.views.ExpandableListHeader
+import com.goflow.app.views.ListHeader
+import com.goflow.app.views.ThemeLazyColumn
 
 @Composable
 fun MainView(

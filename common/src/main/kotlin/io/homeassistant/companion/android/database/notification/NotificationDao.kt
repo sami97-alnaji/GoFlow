@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.database.notification
+package com.goflow.app.database.notification
 
 import androidx.room.Dao
 import androidx.room.Insert

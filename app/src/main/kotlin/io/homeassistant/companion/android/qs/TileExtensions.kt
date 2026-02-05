@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.qs
+package com.goflow.app.qs
 
 import android.app.PendingIntent
 import android.content.Context
@@ -23,21 +23,21 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.EntryPointAccessors
 import dagger.hilt.components.SingletonComponent
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.integration.EntityExt
-import io.homeassistant.companion.android.common.data.integration.getIcon
-import io.homeassistant.companion.android.common.data.integration.isActive
-import io.homeassistant.companion.android.common.data.integration.onEntityPressedWithoutState
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.database.qs.TileDao
-import io.homeassistant.companion.android.database.qs.TileEntity
-import io.homeassistant.companion.android.database.qs.getHighestInUse
-import io.homeassistant.companion.android.database.qs.isSetup
-import io.homeassistant.companion.android.database.qs.numberedId
-import io.homeassistant.companion.android.settings.SettingsActivity
-import io.homeassistant.companion.android.settings.qs.updateActiveTileServices
-import io.homeassistant.companion.android.util.icondialog.getIconByMdiName
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.integration.EntityExt
+import com.goflow.app.common.data.integration.getIcon
+import com.goflow.app.common.data.integration.isActive
+import com.goflow.app.common.data.integration.onEntityPressedWithoutState
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.database.qs.TileDao
+import com.goflow.app.database.qs.TileEntity
+import com.goflow.app.database.qs.getHighestInUse
+import com.goflow.app.database.qs.isSetup
+import com.goflow.app.database.qs.numberedId
+import com.goflow.app.settings.SettingsActivity
+import com.goflow.app.settings.qs.updateActiveTileServices
+import com.goflow.app.util.icondialog.getIconByMdiName
 import javax.inject.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.sensors
+package com.goflow.app.common.sensors
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -12,20 +12,20 @@ import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.getSystemService
-import io.homeassistant.companion.android.common.R
-import io.homeassistant.companion.android.common.data.integration.IntegrationException
-import io.homeassistant.companion.android.common.data.integration.IntegrationRepository
-import io.homeassistant.companion.android.common.data.integration.SensorRegistration
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.GetConfigResponse
-import io.homeassistant.companion.android.common.util.CHANNEL_SENSOR_SYNC
-import io.homeassistant.companion.android.database.DatabaseEntryPoint
-import io.homeassistant.companion.android.database.sensor.SensorDao
-import io.homeassistant.companion.android.database.sensor.SensorWithAttributes
-import io.homeassistant.companion.android.database.sensor.toSensorWithAttributes
-import io.homeassistant.companion.android.database.sensor.toSensorsWithAttributes
-import io.homeassistant.companion.android.database.server.Server
-import io.homeassistant.companion.android.database.settings.SensorUpdateFrequencySetting
+import com.goflow.app.common.R
+import com.goflow.app.common.data.integration.IntegrationException
+import com.goflow.app.common.data.integration.IntegrationRepository
+import com.goflow.app.common.data.integration.SensorRegistration
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.data.websocket.impl.entities.GetConfigResponse
+import com.goflow.app.common.util.CHANNEL_SENSOR_SYNC
+import com.goflow.app.database.DatabaseEntryPoint
+import com.goflow.app.database.sensor.SensorDao
+import com.goflow.app.database.sensor.SensorWithAttributes
+import com.goflow.app.database.sensor.toSensorWithAttributes
+import com.goflow.app.database.sensor.toSensorsWithAttributes
+import com.goflow.app.database.server.Server
+import com.goflow.app.database.settings.SensorUpdateFrequencySetting
 import java.io.IOException
 import java.net.ConnectException
 import java.net.SocketTimeoutException
@@ -43,9 +43,9 @@ import timber.log.Timber
 
 abstract class SensorReceiverBase : BroadcastReceiver() {
     companion object {
-        const val ACTION_UPDATE_SENSOR = "io.homeassistant.companion.android.UPDATE_SENSOR"
-        const val ACTION_UPDATE_SENSORS = "io.homeassistant.companion.android.UPDATE_SENSORS"
-        const val ACTION_STOP_BEACON_SCANNING = "io.homeassistant.companion.android.STOP_BEACON_SCANNING"
+        const val ACTION_UPDATE_SENSOR = "com.goflow.app.UPDATE_SENSOR"
+        const val ACTION_UPDATE_SENSORS = "com.goflow.app.UPDATE_SENSORS"
+        const val ACTION_STOP_BEACON_SCANNING = "com.goflow.app.STOP_BEACON_SCANNING"
         const val EXTRA_SENSOR_ID = "sensorId"
 
         suspend fun shouldDoFastUpdates(context: Context): Boolean {

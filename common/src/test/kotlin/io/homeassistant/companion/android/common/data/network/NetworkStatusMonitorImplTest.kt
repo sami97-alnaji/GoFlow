@@ -1,9 +1,9 @@
-package io.homeassistant.companion.android.common.data.network
+package com.goflow.app.common.data.network
 
 import android.net.ConnectivityManager
 import android.net.Network
 import android.net.NetworkRequest
-import io.homeassistant.companion.android.common.data.servers.ServerConnectionStateProvider
+import com.goflow.app.common.data.servers.ServerConnectionStateProvider
 import io.mockk.CapturingSlot
 import io.mockk.Runs
 import io.mockk.coEvery

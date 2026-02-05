@@ -1,12 +1,12 @@
-package io.homeassistant.companion.android.webview.externalbus
+package com.goflow.app.webview.externalbus
 
 import android.content.Context
 import android.webkit.ValueCallback
-import io.homeassistant.companion.android.common.data.HomeAssistantVersion
-import io.homeassistant.companion.android.common.util.AppVersion
-import io.homeassistant.companion.android.common.util.kotlinJsonMapper
-import io.homeassistant.companion.android.common.util.toJsonObject
-import io.homeassistant.companion.android.webview.addto.EntityAddToAction
+import com.goflow.app.common.data.HomeAssistantVersion
+import com.goflow.app.common.util.AppVersion
+import com.goflow.app.common.util.kotlinJsonMapper
+import com.goflow.app.common.util.toJsonObject
+import com.goflow.app.webview.addto.EntityAddToAction
 import kotlin.io.encoding.Base64
 import kotlinx.serialization.Serializable
 import timber.log.Timber

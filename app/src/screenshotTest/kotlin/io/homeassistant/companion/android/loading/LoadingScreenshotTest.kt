@@ -1,10 +1,10 @@
-package io.homeassistant.companion.android.loading
+package com.goflow.app.loading
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.android.tools.screenshot.PreviewTest
-import io.homeassistant.companion.android.common.compose.theme.HAThemeForPreview
-import io.homeassistant.companion.android.util.compose.HAPreviews
+import com.goflow.app.common.compose.theme.HAThemeForPreview
+import com.goflow.app.util.compose.HAPreviews
 
 class LoadingScreenshotTest {
 

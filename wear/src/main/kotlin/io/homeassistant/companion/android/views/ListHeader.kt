@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.views
+package com.goflow.app.views
 
 import androidx.annotation.StringRes
 import androidx.compose.runtime.Composable
@@ -11,7 +11,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.wear.compose.material3.ListHeader
 import androidx.wear.compose.material3.LocalTextStyle
 import androidx.wear.compose.material3.Text
-import io.homeassistant.companion.android.common.R as commonR
+import com.goflow.app.common.R as commonR
 import kotlin.math.floor
 
 @Composable

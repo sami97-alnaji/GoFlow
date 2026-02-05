@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.util.compose
+package com.goflow.app.util.compose
 
 import android.app.Activity
 import android.net.Uri
@@ -6,20 +6,20 @@ import androidx.activity.compose.LocalActivity
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
-import io.homeassistant.companion.android.automotive.navigation.carAppActivity
-import io.homeassistant.companion.android.automotive.navigation.navigateToCarAppActivity
-import io.homeassistant.companion.android.common.util.isAutomotive
-import io.homeassistant.companion.android.frontend.navigation.frontendScreen
-import io.homeassistant.companion.android.frontend.navigation.navigateToFrontend
-import io.homeassistant.companion.android.launch.HAStartDestinationRoute
-import io.homeassistant.companion.android.loading.LoadingScreen
-import io.homeassistant.companion.android.loading.navigation.LoadingRoute
-import io.homeassistant.companion.android.loading.navigation.loadingScreen
-import io.homeassistant.companion.android.onboarding.OnboardingRoute
-import io.homeassistant.companion.android.onboarding.WearOnboardApp
-import io.homeassistant.companion.android.onboarding.WearOnboardingRoute
-import io.homeassistant.companion.android.onboarding.onboarding
-import io.homeassistant.companion.android.onboarding.wearOnboarding
+import com.goflow.app.automotive.navigation.carAppActivity
+import com.goflow.app.automotive.navigation.navigateToCarAppActivity
+import com.goflow.app.common.util.isAutomotive
+import com.goflow.app.frontend.navigation.frontendScreen
+import com.goflow.app.frontend.navigation.navigateToFrontend
+import com.goflow.app.launch.HAStartDestinationRoute
+import com.goflow.app.loading.LoadingScreen
+import com.goflow.app.loading.navigation.LoadingRoute
+import com.goflow.app.loading.navigation.loadingScreen
+import com.goflow.app.onboarding.OnboardingRoute
+import com.goflow.app.onboarding.WearOnboardApp
+import com.goflow.app.onboarding.WearOnboardingRoute
+import com.goflow.app.onboarding.onboarding
+import com.goflow.app.onboarding.wearOnboarding
 
 /**
  * Navigation host for the main application.

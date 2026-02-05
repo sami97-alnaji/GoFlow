@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.automotive.navigation
+package com.goflow.app.automotive.navigation
 
 import android.content.ComponentName
 import android.content.Intent
@@ -8,7 +8,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
 import androidx.navigation.get
-import io.homeassistant.companion.android.launch.HAStartDestinationRoute
+import com.goflow.app.launch.HAStartDestinationRoute
 import kotlinx.serialization.Serializable
 
 @Serializable

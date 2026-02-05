@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.locationforsecureconnection
+package com.goflow.app.onboarding.locationforsecureconnection
 
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.SpringSpec
@@ -29,20 +29,20 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.compose.composable.HAAccentButton
-import io.homeassistant.companion.android.common.compose.composable.HAHint
-import io.homeassistant.companion.android.common.compose.composable.HARadioGroup
-import io.homeassistant.companion.android.common.compose.composable.HATopBar
-import io.homeassistant.companion.android.common.compose.composable.RadioOption
-import io.homeassistant.companion.android.common.compose.composable.rememberSelectedOption
-import io.homeassistant.companion.android.common.compose.theme.HADimens
-import io.homeassistant.companion.android.common.compose.theme.HATextStyle
-import io.homeassistant.companion.android.common.compose.theme.HAThemeForPreview
-import io.homeassistant.companion.android.common.compose.theme.MaxButtonWidth
-import io.homeassistant.companion.android.util.compose.HAPreviews
-import io.homeassistant.companion.android.util.compose.rememberLocationPermission
+import com.goflow.app.R
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.compose.composable.HAAccentButton
+import com.goflow.app.common.compose.composable.HAHint
+import com.goflow.app.common.compose.composable.HARadioGroup
+import com.goflow.app.common.compose.composable.HATopBar
+import com.goflow.app.common.compose.composable.RadioOption
+import com.goflow.app.common.compose.composable.rememberSelectedOption
+import com.goflow.app.common.compose.theme.HADimens
+import com.goflow.app.common.compose.theme.HATextStyle
+import com.goflow.app.common.compose.theme.HAThemeForPreview
+import com.goflow.app.common.compose.theme.MaxButtonWidth
+import com.goflow.app.util.compose.HAPreviews
+import com.goflow.app.util.compose.rememberLocationPermission
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
 

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.util.compose
+package com.goflow.app.util.compose
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Row
@@ -14,7 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.unit.dp
-import io.homeassistant.companion.android.common.R as commonR
+import com.goflow.app.common.R as commonR
 
 @Composable
 fun HaAlertInfo(message: String, action: String?, onActionClicked: (() -> Unit)?) {

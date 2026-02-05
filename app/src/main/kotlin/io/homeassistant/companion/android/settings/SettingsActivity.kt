@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings
+package com.goflow.app.settings
 
 import android.content.Context
 import android.content.Intent
@@ -17,19 +17,19 @@ import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.EntryPointAccessors
 import dagger.hilt.android.components.ActivityComponent
 import eightbitlab.com.blurview.BlurView
-import io.homeassistant.companion.android.BaseActivity
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.authenticator.Authenticator
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.settings.developer.DeveloperSettingsFragment
-import io.homeassistant.companion.android.settings.notification.NotificationHistoryFragment
-import io.homeassistant.companion.android.settings.qs.ManageTilesFragment
-import io.homeassistant.companion.android.settings.sensor.SensorDetailFragment
-import io.homeassistant.companion.android.settings.server.ServerSettingsFragment
-import io.homeassistant.companion.android.settings.ssid.SsidFragment
-import io.homeassistant.companion.android.settings.websocket.WebsocketSettingFragment
-import io.homeassistant.companion.android.util.applySafeDrawingInsets
+import com.goflow.app.BaseActivity
+import com.goflow.app.R
+import com.goflow.app.authenticator.Authenticator
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.settings.developer.DeveloperSettingsFragment
+import com.goflow.app.settings.notification.NotificationHistoryFragment
+import com.goflow.app.settings.qs.ManageTilesFragment
+import com.goflow.app.settings.sensor.SensorDetailFragment
+import com.goflow.app.settings.server.ServerSettingsFragment
+import com.goflow.app.settings.ssid.SsidFragment
+import com.goflow.app.settings.websocket.WebsocketSettingFragment
+import com.goflow.app.util.applySafeDrawingInsets
 import javax.inject.Inject
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking

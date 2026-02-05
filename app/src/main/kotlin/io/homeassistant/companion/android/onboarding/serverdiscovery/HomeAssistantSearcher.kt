@@ -1,11 +1,11 @@
-package io.homeassistant.companion.android.onboarding.serverdiscovery
+package com.goflow.app.onboarding.serverdiscovery
 
 import android.net.nsd.NsdManager
 import android.net.nsd.NsdServiceInfo
 import android.net.wifi.WifiManager
 import android.os.Build
 import androidx.annotation.VisibleForTesting
-import io.homeassistant.companion.android.common.data.HomeAssistantVersion
+import com.goflow.app.common.data.HomeAssistantVersion
 import java.net.MalformedURLException
 import java.net.URL
 import java.util.concurrent.atomic.AtomicBoolean

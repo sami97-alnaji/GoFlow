@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.util.icondialog
+package com.goflow.app.util.icondialog
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.height
@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import com.mikepenz.iconics.typeface.IIcon
 import com.mikepenz.iconics.typeface.library.community.material.CommunityMaterial
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
+import com.goflow.app.util.compose.HomeAssistantAppTheme
 
 @Composable
 fun IconDialogContent(iconFilter: IconFilter = DefaultIconFilter(), onSelect: (IIcon) -> Unit) {

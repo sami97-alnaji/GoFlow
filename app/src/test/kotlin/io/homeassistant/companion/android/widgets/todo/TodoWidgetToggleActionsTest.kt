@@ -1,14 +1,14 @@
-package io.homeassistant.companion.android.widgets.todo
+package com.goflow.app.widgets.todo
 
 import androidx.glance.GlanceId
 import androidx.glance.action.actionParametersOf
 import androidx.glance.appwidget.GlanceAppWidgetManager
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.data.websocket.WebSocketRepository
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.GetTodosResponse.TodoItem.Companion.COMPLETED_STATUS
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.GetTodosResponse.TodoItem.Companion.NEEDS_ACTION_STATUS
-import io.homeassistant.companion.android.database.widget.TodoWidgetDao
-import io.homeassistant.companion.android.database.widget.TodoWidgetEntity
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.data.websocket.WebSocketRepository
+import com.goflow.app.common.data.websocket.impl.entities.GetTodosResponse.TodoItem.Companion.COMPLETED_STATUS
+import com.goflow.app.common.data.websocket.impl.entities.GetTodosResponse.TodoItem.Companion.NEEDS_ACTION_STATUS
+import com.goflow.app.database.widget.TodoWidgetDao
+import com.goflow.app.database.widget.TodoWidgetEntity
 import io.mockk.called
 import io.mockk.coEvery
 import io.mockk.coVerify

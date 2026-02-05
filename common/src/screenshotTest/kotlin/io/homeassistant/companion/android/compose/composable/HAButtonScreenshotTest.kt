@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.compose.composable
+package com.goflow.app.compose.composable
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -7,13 +7,13 @@ import androidx.compose.material.icons.filled.AccountBox
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import com.android.tools.screenshot.PreviewTest
-import io.homeassistant.companion.android.common.compose.composable.ButtonSize
-import io.homeassistant.companion.android.common.compose.composable.ButtonVariant
-import io.homeassistant.companion.android.common.compose.composable.HAAccentButton
-import io.homeassistant.companion.android.common.compose.composable.HAFilledButton
-import io.homeassistant.companion.android.common.compose.composable.HAIconButton
-import io.homeassistant.companion.android.common.compose.composable.HAPlainButton
-import io.homeassistant.companion.android.common.compose.theme.HAThemeForPreview
+import com.goflow.app.common.compose.composable.ButtonSize
+import com.goflow.app.common.compose.composable.ButtonVariant
+import com.goflow.app.common.compose.composable.HAAccentButton
+import com.goflow.app.common.compose.composable.HAFilledButton
+import com.goflow.app.common.compose.composable.HAIconButton
+import com.goflow.app.common.compose.composable.HAPlainButton
+import com.goflow.app.common.compose.theme.HAThemeForPreview
 
 class HAButtonScreenshotTest {
 

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.locationsharing
+package com.goflow.app.onboarding.locationsharing
 
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -23,18 +23,18 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.compose.composable.HAAccentButton
-import io.homeassistant.companion.android.common.compose.composable.HAPlainButton
-import io.homeassistant.companion.android.common.compose.composable.HATopBar
-import io.homeassistant.companion.android.common.compose.theme.HADimens
-import io.homeassistant.companion.android.common.compose.theme.HATextStyle
-import io.homeassistant.companion.android.common.compose.theme.HAThemeForPreview
-import io.homeassistant.companion.android.common.compose.theme.MaxButtonWidth
-import io.homeassistant.companion.android.common.util.createBatteryOptimizationIntent
-import io.homeassistant.companion.android.util.compose.HAPreviews
-import io.homeassistant.companion.android.util.compose.rememberLocationPermission
+import com.goflow.app.R
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.compose.composable.HAAccentButton
+import com.goflow.app.common.compose.composable.HAPlainButton
+import com.goflow.app.common.compose.composable.HATopBar
+import com.goflow.app.common.compose.theme.HADimens
+import com.goflow.app.common.compose.theme.HATextStyle
+import com.goflow.app.common.compose.theme.HAThemeForPreview
+import com.goflow.app.common.compose.theme.MaxButtonWidth
+import com.goflow.app.common.util.createBatteryOptimizationIntent
+import com.goflow.app.util.compose.HAPreviews
+import com.goflow.app.util.compose.rememberLocationPermission
 
 private val MaxContentWidth = MaxButtonWidth
 

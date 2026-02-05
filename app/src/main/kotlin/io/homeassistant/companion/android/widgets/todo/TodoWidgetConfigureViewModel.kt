@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.widgets.todo
+package com.goflow.app.widgets.todo
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
@@ -17,18 +17,18 @@ import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.integration.IntegrationDomains.TODO_DOMAIN
-import io.homeassistant.companion.android.common.data.integration.friendlyName
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.AreaRegistryResponse
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.DeviceRegistryResponse
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.EntityRegistryResponse
-import io.homeassistant.companion.android.database.widget.TodoWidgetDao
-import io.homeassistant.companion.android.database.widget.TodoWidgetEntity
-import io.homeassistant.companion.android.database.widget.WidgetBackgroundType
-import io.homeassistant.companion.android.widgets.ACTION_APPWIDGET_CREATED
-import io.homeassistant.companion.android.widgets.EXTRA_WIDGET_ENTITY
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.integration.IntegrationDomains.TODO_DOMAIN
+import com.goflow.app.common.data.integration.friendlyName
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.data.websocket.impl.entities.AreaRegistryResponse
+import com.goflow.app.common.data.websocket.impl.entities.DeviceRegistryResponse
+import com.goflow.app.common.data.websocket.impl.entities.EntityRegistryResponse
+import com.goflow.app.database.widget.TodoWidgetDao
+import com.goflow.app.database.widget.TodoWidgetEntity
+import com.goflow.app.database.widget.WidgetBackgroundType
+import com.goflow.app.widgets.ACTION_APPWIDGET_CREATED
+import com.goflow.app.widgets.EXTRA_WIDGET_ENTITY
 import kotlin.time.Duration.Companion.milliseconds
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.ExperimentalCoroutinesApi

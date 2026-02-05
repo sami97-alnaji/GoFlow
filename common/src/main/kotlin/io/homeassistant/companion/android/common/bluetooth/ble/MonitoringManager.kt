@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.bluetooth.ble
+package com.goflow.app.common.bluetooth.ble
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -8,11 +8,11 @@ import android.content.Intent
 import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.content.getSystemService
-import io.homeassistant.companion.android.common.BuildConfig
-import io.homeassistant.companion.android.common.R
-import io.homeassistant.companion.android.common.sensors.SensorReceiverBase
-import io.homeassistant.companion.android.common.sensors.SensorUpdateReceiver
-import io.homeassistant.companion.android.common.util.CHANNEL_BEACON_MONITOR
+import com.goflow.app.common.BuildConfig
+import com.goflow.app.common.R
+import com.goflow.app.common.sensors.SensorReceiverBase
+import com.goflow.app.common.sensors.SensorUpdateReceiver
+import com.goflow.app.common.util.CHANNEL_BEACON_MONITOR
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

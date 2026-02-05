@@ -1,11 +1,11 @@
-package io.homeassistant.companion.android.util
+package com.goflow.app.util
 
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.database.notification.NotificationItem
-import io.homeassistant.companion.android.database.server.Server
-import io.homeassistant.companion.android.database.server.ServerConnectionInfo
-import io.homeassistant.companion.android.database.server.ServerSessionInfo
-import io.homeassistant.companion.android.database.server.ServerUserInfo
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.database.notification.NotificationItem
+import com.goflow.app.database.server.Server
+import com.goflow.app.database.server.ServerConnectionInfo
+import com.goflow.app.database.server.ServerSessionInfo
+import com.goflow.app.database.server.ServerUserInfo
 import java.time.LocalDateTime
 
 val notificationItem = NotificationItem(1, 1636389288682, "testing", "{\"message\":\"test\"}", "FCM", null)

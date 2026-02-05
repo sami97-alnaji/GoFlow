@@ -1,14 +1,14 @@
 @file:OptIn(ExperimentalTime::class)
 
-package io.homeassistant.companion.android.data
+package com.goflow.app.data
 
 import android.content.Context
-import io.homeassistant.companion.android.common.util.WearDataMessages.DnsLookup.CAPABILITY_DNS_VIA_MOBILE
-import io.homeassistant.companion.android.common.util.WearDataMessages.DnsLookup.encodeDNSResult
-import io.homeassistant.companion.android.fakes.FakeCapabilityClient
-import io.homeassistant.companion.android.fakes.FakeClock
-import io.homeassistant.companion.android.fakes.FakeDns
-import io.homeassistant.companion.android.fakes.FakeMessageClient
+import com.goflow.app.common.util.WearDataMessages.DnsLookup.CAPABILITY_DNS_VIA_MOBILE
+import com.goflow.app.common.util.WearDataMessages.DnsLookup.encodeDNSResult
+import com.goflow.app.fakes.FakeCapabilityClient
+import com.goflow.app.fakes.FakeClock
+import com.goflow.app.fakes.FakeDns
+import com.goflow.app.fakes.FakeMessageClient
 import io.mockk.every
 import io.mockk.mockk
 import java.net.InetAddress

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.serverdiscovery.navigation
+package com.goflow.app.onboarding.serverdiscovery.navigation
 
 import androidx.annotation.Keep
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -6,7 +6,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
-import io.homeassistant.companion.android.onboarding.serverdiscovery.ServerDiscoveryScreen
+import com.goflow.app.onboarding.serverdiscovery.ServerDiscoveryScreen
 import java.net.URL
 import kotlinx.serialization.Serializable
 

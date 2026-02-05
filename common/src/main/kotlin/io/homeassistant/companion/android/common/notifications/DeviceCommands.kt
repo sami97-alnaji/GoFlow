@@ -1,9 +1,9 @@
-package io.homeassistant.companion.android.common.notifications
+package com.goflow.app.common.notifications
 
 import android.content.Context
-import io.homeassistant.companion.android.common.sensors.BluetoothSensorManager
-import io.homeassistant.companion.android.common.sensors.SensorUpdateReceiver
-import io.homeassistant.companion.android.database.sensor.SensorDao
+import com.goflow.app.common.sensors.BluetoothSensorManager
+import com.goflow.app.common.sensors.SensorUpdateReceiver
+import com.goflow.app.database.sensor.SensorDao
 import java.util.UUID
 import timber.log.Timber
 

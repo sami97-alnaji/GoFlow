@@ -1,13 +1,13 @@
-package io.homeassistant.companion.android.common.sensors
+package com.goflow.app.common.sensors
 
 import android.annotation.SuppressLint
 import android.content.Context
 import android.os.SystemClock
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.util.STATE_UNAVAILABLE
-import io.homeassistant.companion.android.database.sensor.SensorSetting
-import io.homeassistant.companion.android.database.sensor.SensorSettingType
-import io.homeassistant.companion.android.database.sensor.toSensorWithAttributes
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.util.STATE_UNAVAILABLE
+import com.goflow.app.database.sensor.SensorSetting
+import com.goflow.app.database.sensor.SensorSettingType
+import com.goflow.app.database.sensor.toSensorWithAttributes
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.improv
+package com.goflow.app.improv
 
 import dagger.Binds
 import dagger.Module

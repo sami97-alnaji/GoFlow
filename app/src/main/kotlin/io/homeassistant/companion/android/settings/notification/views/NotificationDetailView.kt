@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.notification.views
+package com.goflow.app.settings.notification.views
 
 import android.widget.TextView
 import androidx.annotation.StringRes
@@ -16,10 +16,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.text.HtmlCompat
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.database.notification.NotificationItem
-import io.homeassistant.companion.android.util.notificationItem
-import io.homeassistant.companion.android.util.safeBottomPaddingValues
+import com.goflow.app.common.R as commonR
+import com.goflow.app.database.notification.NotificationItem
+import com.goflow.app.util.notificationItem
+import com.goflow.app.util.safeBottomPaddingValues
 import java.util.Calendar
 import java.util.GregorianCalendar
 import kotlinx.serialization.json.Json

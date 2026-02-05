@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.locationsharing.navigation
+package com.goflow.app.onboarding.locationsharing.navigation
 
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
@@ -6,11 +6,11 @@ import androidx.compose.ui.test.performScrollTo
 import androidx.navigation.NavDestination.Companion.hasRoute
 import dagger.hilt.android.testing.HiltAndroidTest
 import dagger.hilt.android.testing.HiltTestApplication
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.onboarding.BaseOnboardingNavigationTest
-import io.homeassistant.companion.android.onboarding.locationforsecureconnection.navigation.LocationForSecureConnectionRoute
-import io.homeassistant.companion.android.onboarding.welcome.navigation.WelcomeRoute
-import io.homeassistant.companion.android.testing.unit.stringResource
+import com.goflow.app.common.R as commonR
+import com.goflow.app.onboarding.BaseOnboardingNavigationTest
+import com.goflow.app.onboarding.locationforsecureconnection.navigation.LocationForSecureConnectionRoute
+import com.goflow.app.onboarding.welcome.navigation.WelcomeRoute
+import com.goflow.app.testing.unit.stringResource
 import junit.framework.TestCase.assertTrue
 import org.junit.Test
 import org.junit.jupiter.api.Assertions.assertFalse

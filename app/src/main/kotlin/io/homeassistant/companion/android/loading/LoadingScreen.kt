@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.loading
+package com.goflow.app.loading
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -13,11 +13,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.compose.composable.HALoading
-import io.homeassistant.companion.android.common.compose.theme.HAThemeForPreview
-import io.homeassistant.companion.android.util.compose.HAPreviews
+import com.goflow.app.R
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.compose.composable.HALoading
+import com.goflow.app.common.compose.theme.HAThemeForPreview
+import com.goflow.app.util.compose.HAPreviews
 
 private val ICON_SIZE = 64.dp
 

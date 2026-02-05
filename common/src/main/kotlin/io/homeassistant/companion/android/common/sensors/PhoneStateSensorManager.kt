@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.sensors
+package com.goflow.app.common.sensors
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -11,9 +11,9 @@ import android.telephony.SubscriptionManager
 import android.telephony.TelephonyManager
 import androidx.annotation.RequiresApi
 import androidx.core.content.getSystemService
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.util.STATE_UNAVAILABLE
-import io.homeassistant.companion.android.common.util.STATE_UNKNOWN
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.util.STATE_UNAVAILABLE
+import com.goflow.app.common.util.STATE_UNKNOWN
 import timber.log.Timber
 
 class PhoneStateSensorManager : SensorManager {

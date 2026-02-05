@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.sensors
+package com.goflow.app.sensors
 
 import android.Manifest
 import android.app.PendingIntent
@@ -26,27 +26,27 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.EntryPointAccessors
 import dagger.hilt.components.SingletonComponent
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.bluetooth.BluetoothUtils
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.integration.UpdateLocation
-import io.homeassistant.companion.android.common.data.integration.containsWithAccuracy
-import io.homeassistant.companion.android.common.data.prefs.PrefsRepository
-import io.homeassistant.companion.android.common.notifications.DeviceCommandData
-import io.homeassistant.companion.android.common.sensors.SensorManager
-import io.homeassistant.companion.android.common.sensors.SensorReceiverBase
-import io.homeassistant.companion.android.common.util.DisabledLocationHandler
-import io.homeassistant.companion.android.database.DatabaseEntryPoint
-import io.homeassistant.companion.android.database.location.LocationHistoryDao
-import io.homeassistant.companion.android.database.location.LocationHistoryItem
-import io.homeassistant.companion.android.database.location.LocationHistoryItemResult
-import io.homeassistant.companion.android.database.location.LocationHistoryItemTrigger
-import io.homeassistant.companion.android.database.sensor.Attribute
-import io.homeassistant.companion.android.database.sensor.SensorSetting
-import io.homeassistant.companion.android.database.sensor.SensorSettingType
-import io.homeassistant.companion.android.database.sensor.toSensorWithAttributes
-import io.homeassistant.companion.android.location.HighAccuracyLocationService
-import io.homeassistant.companion.android.notifications.MessagingManager
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.bluetooth.BluetoothUtils
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.integration.UpdateLocation
+import com.goflow.app.common.data.integration.containsWithAccuracy
+import com.goflow.app.common.data.prefs.PrefsRepository
+import com.goflow.app.common.notifications.DeviceCommandData
+import com.goflow.app.common.sensors.SensorManager
+import com.goflow.app.common.sensors.SensorReceiverBase
+import com.goflow.app.common.util.DisabledLocationHandler
+import com.goflow.app.database.DatabaseEntryPoint
+import com.goflow.app.database.location.LocationHistoryDao
+import com.goflow.app.database.location.LocationHistoryItem
+import com.goflow.app.database.location.LocationHistoryItemResult
+import com.goflow.app.database.location.LocationHistoryItemTrigger
+import com.goflow.app.database.sensor.Attribute
+import com.goflow.app.database.sensor.SensorSetting
+import com.goflow.app.database.sensor.SensorSettingType
+import com.goflow.app.database.sensor.toSensorWithAttributes
+import com.goflow.app.location.HighAccuracyLocationService
+import com.goflow.app.notifications.MessagingManager
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope
@@ -89,17 +89,17 @@ class LocationSensorManager :
         private const val HISTORY_DURATION = 60 * 60 * 48 * 1000L // 60(s) * 60(m) * 48(h) to millis
 
         const val ACTION_REQUEST_LOCATION_UPDATES =
-            "io.homeassistant.companion.android.background.REQUEST_UPDATES"
+            "com.goflow.app.background.REQUEST_UPDATES"
         const val ACTION_REQUEST_ACCURATE_LOCATION_UPDATE =
-            "io.homeassistant.companion.android.background.REQUEST_ACCURATE_UPDATE"
+            "com.goflow.app.background.REQUEST_ACCURATE_UPDATE"
         const val ACTION_PROCESS_LOCATION =
-            "io.homeassistant.companion.android.background.PROCESS_UPDATES"
+            "com.goflow.app.background.PROCESS_UPDATES"
         const val ACTION_PROCESS_HIGH_ACCURACY_LOCATION =
-            "io.homeassistant.companion.android.background.PROCESS_HIGH_ACCURACY_UPDATES"
+            "com.goflow.app.background.PROCESS_HIGH_ACCURACY_UPDATES"
         const val ACTION_PROCESS_GEO =
-            "io.homeassistant.companion.android.background.PROCESS_GEOFENCE"
+            "com.goflow.app.background.PROCESS_GEOFENCE"
         const val ACTION_FORCE_HIGH_ACCURACY =
-            "io.homeassistant.companion.android.background.FORCE_HIGH_ACCURACY"
+            "com.goflow.app.background.FORCE_HIGH_ACCURACY"
 
         val backgroundLocation = SensorManager.BasicSensor(
             "location_background",

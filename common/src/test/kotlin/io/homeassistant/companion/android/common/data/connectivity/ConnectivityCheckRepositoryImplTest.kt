@@ -1,6 +1,6 @@
-package io.homeassistant.companion.android.common.data.connectivity
+package com.goflow.app.common.data.connectivity
 
-import io.homeassistant.companion.android.common.R as commonR
+import com.goflow.app.common.R as commonR
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.coVerifyOrder

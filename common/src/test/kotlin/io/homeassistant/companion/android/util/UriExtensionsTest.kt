@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.util
+package com.goflow.app.util
 
 import android.net.Uri
 import org.junit.Assert.assertEquals

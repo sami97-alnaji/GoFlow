@@ -1,8 +1,8 @@
-package io.homeassistant.companion.android.util
+package com.goflow.app.util
 
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.sensors.BatterySensorManager
-import io.homeassistant.companion.android.data.SimplifiedEntity
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.sensors.BatterySensorManager
+import com.goflow.app.data.SimplifiedEntity
 import java.time.LocalDateTime
 
 val attributes: Map<String, Any> = mapOf(

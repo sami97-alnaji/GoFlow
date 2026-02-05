@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.compose.composable
+package com.goflow.app.common.compose.composable
 
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -7,8 +7,8 @@ import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.SheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import io.homeassistant.companion.android.common.compose.theme.HARadius
-import io.homeassistant.companion.android.common.compose.theme.LocalHAColorScheme
+import com.goflow.app.common.compose.theme.HARadius
+import com.goflow.app.common.compose.theme.LocalHAColorScheme
 
 /**
  * A modal bottom sheet that uses the Home Assistant theme.

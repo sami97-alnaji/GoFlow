@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.complications.views
+package com.goflow.app.complications.views
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -24,18 +24,18 @@ import androidx.wear.compose.navigation.composable
 import androidx.wear.compose.navigation.rememberSwipeDismissableNavController
 import androidx.wear.tooling.preview.devices.WearDevices
 import com.mikepenz.iconics.compose.Image
-import io.homeassistant.companion.android.common.R
-import io.homeassistant.companion.android.complications.ComplicationConfigViewModel
-import io.homeassistant.companion.android.data.SimplifiedEntity
-import io.homeassistant.companion.android.theme.WearAppTheme
-import io.homeassistant.companion.android.theme.getFilledTonalButtonColors
-import io.homeassistant.companion.android.theme.getSwitchButtonColors
-import io.homeassistant.companion.android.theme.wearColorScheme
-import io.homeassistant.companion.android.util.getIcon
-import io.homeassistant.companion.android.util.simplifiedEntity
-import io.homeassistant.companion.android.views.ChooseEntityView
-import io.homeassistant.companion.android.views.ListHeader
-import io.homeassistant.companion.android.views.ThemeLazyColumn
+import com.goflow.app.common.R
+import com.goflow.app.complications.ComplicationConfigViewModel
+import com.goflow.app.data.SimplifiedEntity
+import com.goflow.app.theme.WearAppTheme
+import com.goflow.app.theme.getFilledTonalButtonColors
+import com.goflow.app.theme.getSwitchButtonColors
+import com.goflow.app.theme.wearColorScheme
+import com.goflow.app.util.getIcon
+import com.goflow.app.util.simplifiedEntity
+import com.goflow.app.views.ChooseEntityView
+import com.goflow.app.views.ListHeader
+import com.goflow.app.views.ThemeLazyColumn
 
 private const val SCREEN_MAIN = "main"
 private const val SCREEN_CHOOSE_ENTITY = "choose_entity"

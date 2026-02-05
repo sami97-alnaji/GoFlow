@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.util.compose
+package com.goflow.app.util.compose
 
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.foundation.layout.Column
@@ -28,7 +28,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.mikepenz.iconics.compose.Image
 import com.mikepenz.iconics.typeface.library.community.material.CommunityMaterial
-import io.homeassistant.companion.android.common.R
+import com.goflow.app.common.R
 import sh.calvin.reorderable.ReorderableCollectionItemScope
 
 @Composable

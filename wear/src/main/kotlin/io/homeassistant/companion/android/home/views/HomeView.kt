@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.home.views
+package com.goflow.app.home.views
 
 import android.content.Intent
 import android.provider.Settings
@@ -18,15 +18,15 @@ import androidx.wear.compose.navigation.SwipeDismissableNavHost
 import androidx.wear.compose.navigation.composable
 import androidx.wear.compose.navigation.rememberSwipeDismissableNavController
 import androidx.wear.tiles.TileService
-import io.homeassistant.companion.android.common.data.integration.IntegrationDomains.CAMERA_DOMAIN
-import io.homeassistant.companion.android.common.sensors.id
-import io.homeassistant.companion.android.home.MainViewModel
-import io.homeassistant.companion.android.theme.WearAppTheme
-import io.homeassistant.companion.android.tiles.CameraTile
-import io.homeassistant.companion.android.tiles.ShortcutsTile
-import io.homeassistant.companion.android.tiles.TemplateTile
-import io.homeassistant.companion.android.tiles.ThermostatTile
-import io.homeassistant.companion.android.views.ChooseEntityView
+import com.goflow.app.common.data.integration.IntegrationDomains.CAMERA_DOMAIN
+import com.goflow.app.common.sensors.id
+import com.goflow.app.home.MainViewModel
+import com.goflow.app.theme.WearAppTheme
+import com.goflow.app.tiles.CameraTile
+import com.goflow.app.tiles.ShortcutsTile
+import com.goflow.app.tiles.TemplateTile
+import com.goflow.app.tiles.ThermostatTile
+import com.goflow.app.views.ChooseEntityView
 
 private const val ARG_SCREEN_SENSOR_MANAGER_ID = "sensorManagerId"
 private const val ARG_SCREEN_CAMERA_TILE_ID = "cameraTileId"

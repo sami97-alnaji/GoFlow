@@ -1,11 +1,11 @@
-package io.homeassistant.companion.android.common.sensors
+package com.goflow.app.common.sensors
 
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.net.TrafficStats
 import androidx.core.content.getSystemService
-import io.homeassistant.companion.android.common.R as commonR
+import com.goflow.app.common.R as commonR
 import java.math.RoundingMode
 import kotlin.math.absoluteValue
 import timber.log.Timber

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.websocket.views
+package com.goflow.app.settings.websocket.views
 
 import android.app.UiModeManager
 import android.content.res.Configuration
@@ -18,14 +18,14 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.core.content.getSystemService
-import io.homeassistant.companion.android.BuildConfig
-import io.homeassistant.companion.android.common.R
-import io.homeassistant.companion.android.common.util.CHANNEL_WEBSOCKET
-import io.homeassistant.companion.android.database.settings.WebsocketSetting
-import io.homeassistant.companion.android.util.compose.HaAlertWarning
-import io.homeassistant.companion.android.util.compose.InfoNotification
-import io.homeassistant.companion.android.util.compose.RadioButtonRow
-import io.homeassistant.companion.android.util.safeBottomPaddingValues
+import com.goflow.app.BuildConfig
+import com.goflow.app.common.R
+import com.goflow.app.common.util.CHANNEL_WEBSOCKET
+import com.goflow.app.database.settings.WebsocketSetting
+import com.goflow.app.util.compose.HaAlertWarning
+import com.goflow.app.util.compose.InfoNotification
+import com.goflow.app.util.compose.RadioButtonRow
+import com.goflow.app.util.safeBottomPaddingValues
 
 @Composable
 fun WebsocketSettingView(

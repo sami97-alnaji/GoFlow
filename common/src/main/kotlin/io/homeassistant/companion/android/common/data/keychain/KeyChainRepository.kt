@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.data.keychain
+package com.goflow.app.common.data.keychain
 
 import android.content.Context
 import java.security.PrivateKey

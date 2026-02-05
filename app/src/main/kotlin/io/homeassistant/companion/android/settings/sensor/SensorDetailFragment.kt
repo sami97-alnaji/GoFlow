@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.sensor
+package com.goflow.app.settings.sensor
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -24,12 +24,12 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.util.DisabledLocationHandler
-import io.homeassistant.companion.android.common.util.LocationPermissionInfoHandler
-import io.homeassistant.companion.android.sensors.HealthConnectSensorManager
-import io.homeassistant.companion.android.settings.sensor.views.SensorDetailView
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
+import com.goflow.app.R
+import com.goflow.app.common.util.DisabledLocationHandler
+import com.goflow.app.common.util.LocationPermissionInfoHandler
+import com.goflow.app.sensors.HealthConnectSensorManager
+import com.goflow.app.settings.sensor.views.SensorDetailView
+import com.goflow.app.util.compose.HomeAssistantAppTheme
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.server
+package com.goflow.app.settings.server
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,9 +11,9 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.setFragmentResult
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
-import io.homeassistant.companion.android.util.setLayoutAndExpandedByDefault
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.util.compose.HomeAssistantAppTheme
+import com.goflow.app.util.setLayoutAndExpandedByDefault
 import javax.inject.Inject
 
 @AndroidEntryPoint

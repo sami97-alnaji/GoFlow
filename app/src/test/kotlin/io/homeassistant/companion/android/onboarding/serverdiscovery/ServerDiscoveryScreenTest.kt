@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.serverdiscovery
+package com.goflow.app.onboarding.serverdiscovery
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -17,12 +17,12 @@ import androidx.compose.ui.test.swipeUp
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
 import dagger.hilt.android.testing.HiltTestApplication
-import io.homeassistant.companion.android.HiltComponentActivity
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.HomeAssistantVersion
-import io.homeassistant.companion.android.testing.unit.ConsoleLogRule
-import io.homeassistant.companion.android.testing.unit.stringResource
-import io.homeassistant.companion.android.util.compose.assertAlpha
+import com.goflow.app.HiltComponentActivity
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.HomeAssistantVersion
+import com.goflow.app.testing.unit.ConsoleLogRule
+import com.goflow.app.testing.unit.stringResource
+import com.goflow.app.util.compose.assertAlpha
 import java.net.URL
 import org.junit.Rule
 import org.junit.Test

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.util.compose
+package com.goflow.app.util.compose
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.clickable

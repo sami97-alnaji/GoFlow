@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.shortcuts.views
+package com.goflow.app.settings.shortcuts.views
 
 import android.os.Build
 import android.widget.Toast
@@ -37,14 +37,14 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.mikepenz.iconics.compose.IconicsPainter
-import io.homeassistant.companion.android.common.R
-import io.homeassistant.companion.android.common.compose.theme.HATheme
-import io.homeassistant.companion.android.settings.shortcuts.ManageShortcutsSettingsFragment
-import io.homeassistant.companion.android.settings.shortcuts.ManageShortcutsViewModel
-import io.homeassistant.companion.android.util.compose.ServerExposedDropdownMenu
-import io.homeassistant.companion.android.util.compose.entity.EntityPicker
-import io.homeassistant.companion.android.util.plus
-import io.homeassistant.companion.android.util.safeBottomPaddingValues
+import com.goflow.app.common.R
+import com.goflow.app.common.compose.theme.HATheme
+import com.goflow.app.settings.shortcuts.ManageShortcutsSettingsFragment
+import com.goflow.app.settings.shortcuts.ManageShortcutsViewModel
+import com.goflow.app.util.compose.ServerExposedDropdownMenu
+import com.goflow.app.util.compose.entity.EntityPicker
+import com.goflow.app.util.plus
+import com.goflow.app.util.safeBottomPaddingValues
 
 @RequiresApi(Build.VERSION_CODES.N_MR1)
 @Composable

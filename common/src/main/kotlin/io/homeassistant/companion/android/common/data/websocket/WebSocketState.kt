@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.data.websocket
+package com.goflow.app.common.data.websocket
 
 /**
  * Represents the state of a WebSocket connection

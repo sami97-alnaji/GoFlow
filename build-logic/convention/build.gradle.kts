@@ -6,7 +6,7 @@ plugins {
     alias(libs.plugins.ktlint)
 }
 
-group = "io.homeassistant.companion.android.buildlogic"
+group = "com.goflow.app.buildlogic"
 
 allprojects {
     apply(plugin = rootProject.libs.plugins.ktlint.get().pluginId)

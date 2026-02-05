@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.connection
+package com.goflow.app.onboarding.connection
 
 import android.content.Context
 import android.net.Uri
@@ -17,16 +17,16 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.toRoute
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.authentication.impl.AuthenticationService
-import io.homeassistant.companion.android.common.data.connectivity.ConnectivityCheckRepository
-import io.homeassistant.companion.android.common.data.connectivity.ConnectivityCheckState
-import io.homeassistant.companion.android.common.data.keychain.KeyChainRepository
-import io.homeassistant.companion.android.common.data.keychain.NamedKeyChain
-import io.homeassistant.companion.android.onboarding.connection.navigation.ConnectionRoute
-import io.homeassistant.companion.android.util.TLSWebViewClient
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.authentication.impl.AuthenticationService
+import com.goflow.app.common.data.connectivity.ConnectivityCheckRepository
+import com.goflow.app.common.data.connectivity.ConnectivityCheckState
+import com.goflow.app.common.data.keychain.KeyChainRepository
+import com.goflow.app.common.data.keychain.NamedKeyChain
+import com.goflow.app.onboarding.connection.navigation.ConnectionRoute
+import com.goflow.app.util.TLSWebViewClient
 import javax.inject.Inject
-import io.homeassistant.companion.android.R
+import com.goflow.app.R
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableSharedFlow

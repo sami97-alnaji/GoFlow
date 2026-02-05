@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.util
+package com.goflow.app.common.util
 
 import java.util.Locale
 import okio.ByteString.Companion.toByteString

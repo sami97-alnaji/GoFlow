@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.widgets.mediaplayer
+package com.goflow.app.widgets.mediaplayer
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
@@ -17,17 +17,17 @@ import com.google.android.material.color.DynamicColors
 import com.mikepenz.iconics.IconicsDrawable
 import com.mikepenz.iconics.typeface.library.community.material.CommunityMaterial
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.integration.IntegrationDomains.MEDIA_PLAYER_DOMAIN
-import io.homeassistant.companion.android.common.data.servers.firstUrlOrNull
-import io.homeassistant.companion.android.database.widget.MediaPlayerControlsWidgetDao
-import io.homeassistant.companion.android.database.widget.MediaPlayerControlsWidgetEntity
-import io.homeassistant.companion.android.database.widget.WidgetBackgroundType
-import io.homeassistant.companion.android.util.hasActiveConnection
-import io.homeassistant.companion.android.widgets.BaseWidgetProvider
-import io.homeassistant.companion.android.widgets.common.RemoteViewsTarget
+import com.goflow.app.R
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.integration.IntegrationDomains.MEDIA_PLAYER_DOMAIN
+import com.goflow.app.common.data.servers.firstUrlOrNull
+import com.goflow.app.database.widget.MediaPlayerControlsWidgetDao
+import com.goflow.app.database.widget.MediaPlayerControlsWidgetEntity
+import com.goflow.app.database.widget.WidgetBackgroundType
+import com.goflow.app.util.hasActiveConnection
+import com.goflow.app.widgets.BaseWidgetProvider
+import com.goflow.app.widgets.common.RemoteViewsTarget
 import java.util.LinkedList
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.launch
@@ -38,21 +38,21 @@ class MediaPlayerControlsWidget : BaseWidgetProvider<MediaPlayerControlsWidgetEn
 
     companion object {
         internal const val UPDATE_MEDIA_IMAGE =
-            "io.homeassistant.companion.android.widgets.media_player_controls.MediaPlayerControlsWidget.UPDATE_MEDIA_IMAGE"
+            "com.goflow.app.widgets.media_player_controls.MediaPlayerControlsWidget.UPDATE_MEDIA_IMAGE"
         internal const val CALL_PREV_TRACK =
-            "io.homeassistant.companion.android.widgets.media_player_controls.MediaPlayerControlsWidget.CALL_PREV_TRACK"
+            "com.goflow.app.widgets.media_player_controls.MediaPlayerControlsWidget.CALL_PREV_TRACK"
         internal const val CALL_REWIND =
-            "io.homeassistant.companion.android.widgets.media_player_controls.MediaPlayerControlsWidget.CALL_REWIND"
+            "com.goflow.app.widgets.media_player_controls.MediaPlayerControlsWidget.CALL_REWIND"
         internal const val CALL_PLAYPAUSE =
-            "io.homeassistant.companion.android.widgets.media_player_controls.MediaPlayerControlsWidget.CALL_PLAYPAUSE"
+            "com.goflow.app.widgets.media_player_controls.MediaPlayerControlsWidget.CALL_PLAYPAUSE"
         internal const val CALL_FASTFORWARD =
-            "io.homeassistant.companion.android.widgets.media_player_controls.MediaPlayerControlsWidget.CALL_FASTFORWARD"
+            "com.goflow.app.widgets.media_player_controls.MediaPlayerControlsWidget.CALL_FASTFORWARD"
         internal const val CALL_NEXT_TRACK =
-            "io.homeassistant.companion.android.widgets.media_player_controls.MediaPlayerControlsWidget.CALL_NEXT_TRACK"
+            "com.goflow.app.widgets.media_player_controls.MediaPlayerControlsWidget.CALL_NEXT_TRACK"
         internal const val CALL_VOLUME_DOWN =
-            "io.homeassistant.companion.android.widgets.media_player_controls.MediaPlayerControlsWidget.CALL_VOLUME_DOWN"
+            "com.goflow.app.widgets.media_player_controls.MediaPlayerControlsWidget.CALL_VOLUME_DOWN"
         internal const val CALL_VOLUME_UP =
-            "io.homeassistant.companion.android.widgets.media_player_controls.MediaPlayerControlsWidget.CALL_VOLUME_UP"
+            "com.goflow.app.widgets.media_player_controls.MediaPlayerControlsWidget.CALL_VOLUME_UP"
     }
 
     override fun getWidgetProvider(context: Context): ComponentName =

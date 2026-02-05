@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.splash
+package com.goflow.app.splash
 
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import org.junit.Rule

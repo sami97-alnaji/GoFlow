@@ -1,10 +1,10 @@
-package io.homeassistant.companion.android.settings.qs
+package com.goflow.app.settings.qs
 
 import android.content.ComponentName
 import android.content.Context
 import android.content.pm.PackageManager
 import android.content.res.Resources
-import io.homeassistant.companion.android.R as commonR
+import com.goflow.app.R as commonR
 import kotlin.math.min
 
 data class TileSlot(val id: String, val name: String)

@@ -1,10 +1,10 @@
-package io.homeassistant.companion.android.onboarding
+package com.goflow.app.onboarding
 
 import android.content.Context
 import android.content.Intent
 import android.os.Build
 import androidx.activity.result.contract.ActivityResultContract
-import io.homeassistant.companion.android.launch.intentLaunchWearOnboarding
+import com.goflow.app.launch.intentLaunchWearOnboarding
 
 class WearOnboardApp : ActivityResultContract<WearOnboardApp.Input, WearOnboardApp.Output?>() {
     data class Input(val url: String? = null, val defaultDeviceName: String = Build.MODEL)

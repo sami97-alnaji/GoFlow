@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding
+package com.goflow.app.onboarding
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -19,12 +19,12 @@ import com.google.android.gms.wearable.CapabilityInfo
 import com.google.android.gms.wearable.DataMapItem
 import com.google.android.gms.wearable.Wearable
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.database.server.TemporaryServer
-import io.homeassistant.companion.android.onboarding.integration.MobileAppIntegrationActivity
-import io.homeassistant.companion.android.onboarding.phoneinstall.PhoneInstallActivity
-import io.homeassistant.companion.android.util.LoadingView
+import com.goflow.app.R
+import com.goflow.app.common.R as commonR
+import com.goflow.app.database.server.TemporaryServer
+import com.goflow.app.onboarding.integration.MobileAppIntegrationActivity
+import com.goflow.app.onboarding.phoneinstall.PhoneInstallActivity
+import com.goflow.app.util.LoadingView
 import javax.inject.Inject
 import kotlinx.coroutines.guava.await
 import kotlinx.coroutines.launch

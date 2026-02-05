@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.manualserver.navigation
+package com.goflow.app.onboarding.manualserver.navigation
 
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertIsEnabled
@@ -12,15 +12,15 @@ import androidx.navigation.NavController
 import androidx.navigation.NavDestination.Companion.hasRoute
 import dagger.hilt.android.testing.HiltAndroidTest
 import dagger.hilt.android.testing.HiltTestApplication
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.onboarding.BaseOnboardingNavigationTest
-import io.homeassistant.companion.android.onboarding.URL_GETTING_STARTED_DOCUMENTATION
-import io.homeassistant.companion.android.onboarding.connection.CONNECTION_SCREEN_TAG
-import io.homeassistant.companion.android.onboarding.connection.navigation.ConnectionRoute
-import io.homeassistant.companion.android.onboarding.serverdiscovery.navigation.ServerDiscoveryRoute
-import io.homeassistant.companion.android.onboarding.serverdiscovery.navigation.navigateToServerDiscovery
-import io.homeassistant.companion.android.testing.unit.stringResource
-import io.homeassistant.companion.android.util.compose.navigateToUri
+import com.goflow.app.common.R as commonR
+import com.goflow.app.onboarding.BaseOnboardingNavigationTest
+import com.goflow.app.onboarding.URL_GETTING_STARTED_DOCUMENTATION
+import com.goflow.app.onboarding.connection.CONNECTION_SCREEN_TAG
+import com.goflow.app.onboarding.connection.navigation.ConnectionRoute
+import com.goflow.app.onboarding.serverdiscovery.navigation.ServerDiscoveryRoute
+import com.goflow.app.onboarding.serverdiscovery.navigation.navigateToServerDiscovery
+import com.goflow.app.testing.unit.stringResource
+import com.goflow.app.util.compose.navigateToUri
 import io.mockk.coVerify
 import junit.framework.TestCase.assertTrue
 import org.junit.Test

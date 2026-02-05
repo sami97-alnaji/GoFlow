@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings
+package com.goflow.app.settings
 
 import android.content.Intent
 import android.content.Intent.ACTION_VIEW
@@ -11,7 +11,7 @@ import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
-import io.homeassistant.companion.android.R
+import com.goflow.app.R
 
 /**
  * Adds a "Get Help" menu option that opens the given [helpLink] in the browser.

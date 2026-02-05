@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.wear.views
+package com.goflow.app.settings.wear.views
 
 import android.content.Intent
 import androidx.compose.foundation.layout.windowInsetsPadding
@@ -20,10 +20,10 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.mikepenz.iconics.compose.Image
 import com.mikepenz.iconics.typeface.library.community.material.CommunityMaterial
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.settings.wear.SettingsWearViewModel
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
-import io.homeassistant.companion.android.util.safeTopWindowInsets
+import com.goflow.app.common.R as commonR
+import com.goflow.app.settings.wear.SettingsWearViewModel
+import com.goflow.app.util.compose.HomeAssistantAppTheme
+import com.goflow.app.util.safeTopWindowInsets
 
 const val WEAR_DOCS_LINK = "https://companion.home-assistant.io/docs/wear-os/"
 

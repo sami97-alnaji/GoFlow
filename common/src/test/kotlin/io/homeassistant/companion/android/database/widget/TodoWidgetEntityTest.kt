@@ -1,8 +1,8 @@
-package io.homeassistant.companion.android.database.widget
+package com.goflow.app.database.widget
 
-import io.homeassistant.companion.android.common.util.kotlinJsonMapper
-import io.homeassistant.companion.android.database.widget.TodoWidgetEntity.LastUpdateData
-import io.homeassistant.companion.android.database.widget.TodoWidgetEntity.TodoItem
+import com.goflow.app.common.util.kotlinJsonMapper
+import com.goflow.app.database.widget.TodoWidgetEntity.LastUpdateData
+import com.goflow.app.database.widget.TodoWidgetEntity.TodoItem
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertTrue

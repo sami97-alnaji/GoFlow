@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.views
+package com.goflow.app.settings.views
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

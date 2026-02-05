@@ -1,12 +1,12 @@
-package io.homeassistant.companion.android.common.util.tts
+package com.goflow.app.common.util.tts
 
 import android.content.Context
 import android.media.AudioAttributes
 import android.media.AudioManager
 import android.widget.Toast
 import androidx.core.content.getSystemService
-import io.homeassistant.companion.android.common.R
-import io.homeassistant.companion.android.common.notifications.NotificationData
+import com.goflow.app.common.R
+import com.goflow.app.common.notifications.NotificationData
 import java.util.UUID
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

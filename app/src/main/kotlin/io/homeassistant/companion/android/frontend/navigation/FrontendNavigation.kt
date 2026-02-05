@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.frontend.navigation
+package com.goflow.app.frontend.navigation
 
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
@@ -6,10 +6,10 @@ import androidx.navigation.NavOptions
 import androidx.navigation.activity
 import androidx.navigation.compose.composable
 import androidx.navigation.toRoute
-import io.homeassistant.companion.android.common.data.servers.ServerManager.Companion.SERVER_ID_ACTIVE
-import io.homeassistant.companion.android.launch.HAStartDestinationRoute
-import io.homeassistant.companion.android.util.getActivity
-import io.homeassistant.companion.android.webview.WebViewActivity
+import com.goflow.app.common.data.servers.ServerManager.Companion.SERVER_ID_ACTIVE
+import com.goflow.app.launch.HAStartDestinationRoute
+import com.goflow.app.util.getActivity
+import com.goflow.app.webview.WebViewActivity
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -45,7 +45,7 @@ internal fun NavController.navigateToFrontend(
  *
  * Note: Security level verification is handled by [WebViewActivity] before loading any URL.
  * If the security level is not set, [WebViewActivity] will show the
- * [io.homeassistant.companion.android.settings.ConnectionSecurityLevelFragment].
+ * [com.goflow.app.settings.ConnectionSecurityLevelFragment].
  */
 internal fun NavGraphBuilder.frontendScreen(navController: NavController) {
     composable<FrontendRoute> {

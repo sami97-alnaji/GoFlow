@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.matter
+package com.goflow.app.matter
 
 import dagger.Binds
 import dagger.Module

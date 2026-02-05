@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.gestures
+package com.goflow.app.settings.gestures
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,9 +8,9 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.settings.addHelpMenuProvider
-import io.homeassistant.companion.android.settings.gestures.views.GesturesScreen
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
+import com.goflow.app.settings.addHelpMenuProvider
+import com.goflow.app.settings.gestures.views.GesturesScreen
+import com.goflow.app.util.compose.HomeAssistantAppTheme
 import kotlin.getValue
 
 @AndroidEntryPoint

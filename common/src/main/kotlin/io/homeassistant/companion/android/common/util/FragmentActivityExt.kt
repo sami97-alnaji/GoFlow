@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.util
+package com.goflow.app.common.util
 
 import androidx.fragment.app.FragmentActivity
 import timber.log.Timber

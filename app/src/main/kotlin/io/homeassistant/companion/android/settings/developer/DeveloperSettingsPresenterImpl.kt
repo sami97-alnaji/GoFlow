@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.developer
+package com.goflow.app.settings.developer
 
 import android.content.Context
 import android.webkit.WebStorage
@@ -6,10 +6,10 @@ import androidx.activity.result.ActivityResult
 import androidx.preference.PreferenceDataStore
 import androidx.webkit.WebStorageCompat
 import androidx.webkit.WebViewFeature
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.prefs.PrefsRepository
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.thread.ThreadManager
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.prefs.PrefsRepository
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.thread.ThreadManager
 import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

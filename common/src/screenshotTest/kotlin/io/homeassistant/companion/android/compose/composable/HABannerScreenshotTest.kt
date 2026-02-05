@@ -1,12 +1,12 @@
-package io.homeassistant.companion.android.compose.composable
+package com.goflow.app.compose.composable
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import com.android.tools.screenshot.PreviewTest
-import io.homeassistant.companion.android.common.compose.composable.HABanner
-import io.homeassistant.companion.android.common.compose.composable.HAHint
-import io.homeassistant.companion.android.common.compose.theme.HAThemeForPreview
+import com.goflow.app.common.compose.composable.HABanner
+import com.goflow.app.common.compose.composable.HAHint
+import com.goflow.app.common.compose.theme.HAThemeForPreview
 
 class HABannerScreenshotTest {
 

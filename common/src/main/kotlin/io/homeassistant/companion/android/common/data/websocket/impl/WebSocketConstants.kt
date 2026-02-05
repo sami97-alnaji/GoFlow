@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.data.websocket.impl
+package com.goflow.app.common.data.websocket.impl
 
 internal object WebSocketConstants {
 

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.wear.views
+package com.goflow.app.settings.wear.views
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -17,10 +17,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.mikepenz.iconics.typeface.library.community.material.CommunityMaterial
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.prefs.impl.entities.TemplateTileConfig
-import io.homeassistant.companion.android.settings.views.SettingsRow
-import io.homeassistant.companion.android.util.safeBottomPaddingValues
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.prefs.impl.entities.TemplateTileConfig
+import com.goflow.app.settings.views.SettingsRow
+import com.goflow.app.util.safeBottomPaddingValues
 
 @Composable
 fun SettingsWearTemplateTileList(

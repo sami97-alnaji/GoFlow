@@ -1,8 +1,8 @@
-package io.homeassistant.companion.android.common.data.connectivity
+package com.goflow.app.common.data.connectivity
 
 import androidx.annotation.StringRes
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.util.kotlinJsonMapper
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.util.kotlinJsonMapper
 import java.io.BufferedReader
 import java.net.HttpURLConnection
 import java.net.InetAddress

@@ -1,8 +1,8 @@
-package io.homeassistant.companion.android.onboarding.locationsharing
+package com.goflow.app.onboarding.locationsharing
 
-import io.homeassistant.companion.android.database.sensor.SensorDao
-import io.homeassistant.companion.android.testing.unit.ConsoleLogExtension
-import io.homeassistant.companion.android.testing.unit.MainDispatcherJUnit5Extension
+import com.goflow.app.database.sensor.SensorDao
+import com.goflow.app.testing.unit.ConsoleLogExtension
+import com.goflow.app.testing.unit.MainDispatcherJUnit5Extension
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk

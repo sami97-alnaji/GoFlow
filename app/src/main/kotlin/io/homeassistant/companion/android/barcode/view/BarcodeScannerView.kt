@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.barcode.view
+package com.goflow.app.barcode.view
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Box
@@ -52,13 +52,13 @@ import androidx.lifecycle.compose.LifecycleResumeEffect
 import com.google.zxing.BarcodeFormat
 import com.journeyapps.barcodescanner.CaptureManager
 import com.journeyapps.barcodescanner.DecoratedBarcodeView
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.util.compose.darkColorBackground
-import io.homeassistant.companion.android.util.compose.safeScreenHeight
-import io.homeassistant.companion.android.util.compose.screenWidth
-import io.homeassistant.companion.android.util.getActivity
-import io.homeassistant.companion.android.util.safeBottomWindowInsets
-import io.homeassistant.companion.android.util.safeTopWindowInsets
+import com.goflow.app.common.R as commonR
+import com.goflow.app.util.compose.darkColorBackground
+import com.goflow.app.util.compose.safeScreenHeight
+import com.goflow.app.util.compose.screenWidth
+import com.goflow.app.util.getActivity
+import com.goflow.app.util.safeBottomWindowInsets
+import com.goflow.app.util.safeTopWindowInsets
 
 @SuppressLint("UnusedBoxWithConstraintsScope")
 @Composable

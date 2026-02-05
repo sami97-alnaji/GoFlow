@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.nfc.views
+package com.goflow.app.nfc.views
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -18,7 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import io.homeassistant.companion.android.common.R as commonR
+import com.goflow.app.common.R as commonR
 
 @Composable
 fun NfcReadView() {

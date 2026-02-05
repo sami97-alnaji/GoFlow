@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.qs
+package com.goflow.app.qs
 
 import android.os.Build
 import android.service.quicksettings.Tile

@@ -1,8 +1,8 @@
-package io.homeassistant.companion.android.launch
+package com.goflow.app.launch
 
 /**
  * Simple interface used to identify a route as being usable as start destination
- * for [io.homeassistant.companion.android.util.compose.HAApp].
+ * for [com.goflow.app.util.compose.HAApp].
  *
  * It is mainly used to enforce type when passing a route to the [androidx.navigation.NavHost].
  *

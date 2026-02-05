@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.home
+package com.goflow.app.home
 
 interface HomeView {
 

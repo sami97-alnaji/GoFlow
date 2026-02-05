@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.util
+package com.goflow.app.common.util
 
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Assertions.assertEquals

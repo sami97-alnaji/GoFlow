@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.widgets
+package com.goflow.app.widgets
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
@@ -14,11 +14,11 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.content.getSystemService
 import androidx.lifecycle.lifecycleScope
-import io.homeassistant.companion.android.BaseActivity
-import io.homeassistant.companion.android.common.R
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.database.widget.WidgetDao
-import io.homeassistant.companion.android.database.widget.WidgetEntity
+import com.goflow.app.BaseActivity
+import com.goflow.app.common.R
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.database.widget.WidgetDao
+import com.goflow.app.database.widget.WidgetEntity
 import javax.inject.Inject
 import kotlinx.coroutines.flow.drop
 import kotlinx.coroutines.flow.first

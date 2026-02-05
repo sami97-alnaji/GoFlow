@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.launch.link
+package com.goflow.app.launch.link
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview

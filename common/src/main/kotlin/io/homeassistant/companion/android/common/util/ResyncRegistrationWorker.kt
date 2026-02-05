@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.util
+package com.goflow.app.common.util
 
 import android.content.Context
 import androidx.work.Constraints
@@ -11,9 +11,9 @@ import dagger.hilt.EntryPoint
 import dagger.hilt.EntryPoints
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import io.homeassistant.companion.android.common.data.integration.DeviceRegistration
-import io.homeassistant.companion.android.common.data.integration.PushWebsocketSupport
-import io.homeassistant.companion.android.common.data.servers.ServerManager
+import com.goflow.app.common.data.integration.DeviceRegistration
+import com.goflow.app.common.data.integration.PushWebsocketSupport
+import com.goflow.app.common.data.servers.ServerManager
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.joinAll
 import kotlinx.coroutines.launch

@@ -1,11 +1,11 @@
-package io.homeassistant.companion.android
+package com.goflow.app
 
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
 import dagger.hilt.android.testing.HiltTestApplication
-import io.homeassistant.companion.android.common.data.integration.PushWebsocketSupport
-import io.homeassistant.companion.android.common.util.AppVersionProvider
-import io.homeassistant.companion.android.testing.unit.ConsoleLogRule
+import com.goflow.app.common.data.integration.PushWebsocketSupport
+import com.goflow.app.common.util.AppVersionProvider
+import com.goflow.app.testing.unit.ConsoleLogRule
 import javax.inject.Inject
 import org.junit.Before
 import org.junit.Rule

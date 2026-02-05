@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.controls
+package com.goflow.app.settings.controls
 
 import android.app.Application
 import android.content.ComponentName
@@ -14,13 +14,13 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.homeassistant.companion.android.common.data.integration.ControlsAuthRequiredSetting
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.prefs.PrefsRepository
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.controls.HaControlsPanelActivity
-import io.homeassistant.companion.android.controls.HaControlsProviderService
-import io.homeassistant.companion.android.database.server.Server
+import com.goflow.app.common.data.integration.ControlsAuthRequiredSetting
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.prefs.PrefsRepository
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.controls.HaControlsPanelActivity
+import com.goflow.app.controls.HaControlsProviderService
+import com.goflow.app.database.server.Server
 import javax.inject.Inject
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.async

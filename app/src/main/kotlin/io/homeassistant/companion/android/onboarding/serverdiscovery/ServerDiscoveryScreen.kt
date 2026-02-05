@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.serverdiscovery
+package com.goflow.app.onboarding.serverdiscovery
 
 import androidx.annotation.VisibleForTesting
 import androidx.compose.animation.core.FastOutSlowInEasing
@@ -67,24 +67,24 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.compose.composable.HAAccentButton
-import io.homeassistant.companion.android.common.compose.composable.HALoading
-import io.homeassistant.companion.android.common.compose.composable.HAModalBottomSheet
-import io.homeassistant.companion.android.common.compose.composable.HAPlainButton
-import io.homeassistant.companion.android.common.compose.composable.HATopBar
-import io.homeassistant.companion.android.common.compose.composable.alpha
-import io.homeassistant.companion.android.common.compose.theme.HABorderWidth
-import io.homeassistant.companion.android.common.compose.theme.HADimens
-import io.homeassistant.companion.android.common.compose.theme.HARadius
-import io.homeassistant.companion.android.common.compose.theme.HASize
-import io.homeassistant.companion.android.common.compose.theme.HATextStyle
-import io.homeassistant.companion.android.common.compose.theme.HAThemeForPreview
-import io.homeassistant.companion.android.common.compose.theme.LocalHAColorScheme
-import io.homeassistant.companion.android.common.compose.theme.MaxButtonWidth
-import io.homeassistant.companion.android.common.data.HomeAssistantVersion
-import io.homeassistant.companion.android.util.compose.HAPreviews
+import com.goflow.app.R
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.compose.composable.HAAccentButton
+import com.goflow.app.common.compose.composable.HALoading
+import com.goflow.app.common.compose.composable.HAModalBottomSheet
+import com.goflow.app.common.compose.composable.HAPlainButton
+import com.goflow.app.common.compose.composable.HATopBar
+import com.goflow.app.common.compose.composable.alpha
+import com.goflow.app.common.compose.theme.HABorderWidth
+import com.goflow.app.common.compose.theme.HADimens
+import com.goflow.app.common.compose.theme.HARadius
+import com.goflow.app.common.compose.theme.HASize
+import com.goflow.app.common.compose.theme.HATextStyle
+import com.goflow.app.common.compose.theme.HAThemeForPreview
+import com.goflow.app.common.compose.theme.LocalHAColorScheme
+import com.goflow.app.common.compose.theme.MaxButtonWidth
+import com.goflow.app.common.data.HomeAssistantVersion
+import com.goflow.app.util.compose.HAPreviews
 import java.net.URL
 import kotlinx.coroutines.launch
 

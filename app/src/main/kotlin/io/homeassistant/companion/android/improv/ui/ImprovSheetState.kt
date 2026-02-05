@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.improv.ui
+package com.goflow.app.improv.ui
 
 import com.wifi.improv.DeviceState
 import com.wifi.improv.ErrorState

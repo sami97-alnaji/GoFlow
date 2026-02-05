@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.launch
+package com.goflow.app.launch
 
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import leakcanary.DetectLeaksAfterTestSuccess

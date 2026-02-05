@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.sensors
+package com.goflow.app.common.sensors
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -10,10 +10,10 @@ import androidx.core.content.getSystemService
 import androidx.work.CoroutineWorker
 import androidx.work.ForegroundInfo
 import androidx.work.WorkerParameters
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.util.CHANNEL_SENSOR_WORKER
-import io.homeassistant.companion.android.database.DatabaseEntryPoint
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.util.CHANNEL_SENSOR_WORKER
+import com.goflow.app.database.DatabaseEntryPoint
 import java.lang.IllegalStateException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

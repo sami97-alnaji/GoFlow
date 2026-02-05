@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.server
+package com.goflow.app.settings.server
 
 interface ServerSettingsView {
     fun updateServerName(name: String)

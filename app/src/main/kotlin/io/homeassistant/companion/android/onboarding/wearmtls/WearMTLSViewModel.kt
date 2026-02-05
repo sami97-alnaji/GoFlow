@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.wearmtls
+package com.goflow.app.onboarding.wearmtls
 
 import android.content.ContentResolver
 import android.content.Context

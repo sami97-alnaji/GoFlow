@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.tiles
+package com.goflow.app.tiles
 
 import android.content.Context
 import android.os.Build
@@ -22,10 +22,10 @@ import androidx.wear.protolayout.material.Text
 import androidx.wear.protolayout.material.Typography
 import androidx.wear.protolayout.material.layouts.PrimaryLayout
 import androidx.wear.tiles.RequestBuilders
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.home.HomeActivity
-import io.homeassistant.companion.android.splash.SplashActivity
+import com.goflow.app.R
+import com.goflow.app.common.R as commonR
+import com.goflow.app.home.HomeActivity
+import com.goflow.app.splash.SplashActivity
 
 const val RESOURCE_REFRESH = "refresh"
 const val MODIFIER_CLICK_REFRESH = "refresh"

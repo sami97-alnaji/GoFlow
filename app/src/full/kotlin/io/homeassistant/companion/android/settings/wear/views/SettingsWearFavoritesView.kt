@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.wear.views
+package com.goflow.app.settings.wear.views
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
@@ -20,16 +20,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.compose.theme.HATheme
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.integration.friendlyName
-import io.homeassistant.companion.android.settings.wear.SettingsWearViewModel
-import io.homeassistant.companion.android.util.compose.FavoriteEntityRow
-import io.homeassistant.companion.android.util.compose.entity.EntityPicker
-import io.homeassistant.companion.android.util.plus
-import io.homeassistant.companion.android.util.safeBottomPaddingValues
-import io.homeassistant.companion.android.util.safeBottomWindowInsets
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.compose.theme.HATheme
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.integration.friendlyName
+import com.goflow.app.settings.wear.SettingsWearViewModel
+import com.goflow.app.util.compose.FavoriteEntityRow
+import com.goflow.app.util.compose.entity.EntityPicker
+import com.goflow.app.util.plus
+import com.goflow.app.util.safeBottomPaddingValues
+import com.goflow.app.util.safeBottomWindowInsets
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.launchIn

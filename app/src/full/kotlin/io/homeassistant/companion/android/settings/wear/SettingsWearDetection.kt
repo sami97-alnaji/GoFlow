@@ -1,10 +1,10 @@
-package io.homeassistant.companion.android.settings.wear
+package com.goflow.app.settings.wear
 
 import android.content.Context
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.common.api.CommonStatusCodes
 import com.google.android.gms.wearable.Wearable
-import io.homeassistant.companion.android.common.util.isAutomotive
+import com.goflow.app.common.util.isAutomotive
 import kotlinx.coroutines.tasks.await
 import timber.log.Timber
 

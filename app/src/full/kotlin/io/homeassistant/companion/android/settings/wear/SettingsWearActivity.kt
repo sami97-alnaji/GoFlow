@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.wear
+package com.goflow.app.settings.wear
 
 import android.content.Context
 import android.content.Intent
@@ -18,12 +18,12 @@ import com.google.android.gms.wearable.CapabilityInfo
 import com.google.android.gms.wearable.NodeClient
 import com.google.android.gms.wearable.Wearable
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.settings.wear.SettingsWearViewModel.Companion.CAPABILITY_WEAR_APP
-import io.homeassistant.companion.android.settings.wear.views.SettingsWearMainView
-import io.homeassistant.companion.android.settings.wear.views.SettingsWearOnboardingView
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
-import io.homeassistant.companion.android.util.enableEdgeToEdgeCompat
+import com.goflow.app.common.R as commonR
+import com.goflow.app.settings.wear.SettingsWearViewModel.Companion.CAPABILITY_WEAR_APP
+import com.goflow.app.settings.wear.views.SettingsWearMainView
+import com.goflow.app.settings.wear.views.SettingsWearOnboardingView
+import com.goflow.app.util.compose.HomeAssistantAppTheme
+import com.goflow.app.util.enableEdgeToEdgeCompat
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.launch
 import timber.log.Timber
@@ -178,7 +178,7 @@ class SettingsWearActivity :
 
     companion object {
         private const val PLAY_STORE_APP_URI =
-            "market://details?id=io.homeassistant.companion.android"
+            "market://details?id=com.goflow.app"
 
         fun newInstance(context: Context): Intent {
             return Intent(context, SettingsWearActivity::class.java)

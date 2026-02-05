@@ -1,6 +1,6 @@
-package io.homeassistant.companion.android.webview.externalbus
+package com.goflow.app.webview.externalbus
 
-import io.homeassistant.companion.android.common.util.getStringOrNull
+import com.goflow.app.common.util.getStringOrNull
 import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow

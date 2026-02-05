@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.developer.catalog
+package com.goflow.app.developer.catalog
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -34,10 +34,10 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.tooling.preview.Devices.TABLET
 import androidx.compose.ui.tooling.preview.Preview
-import io.homeassistant.companion.android.common.compose.composable.ButtonVariant
-import io.homeassistant.companion.android.common.compose.theme.HADimens
-import io.homeassistant.companion.android.common.compose.theme.HATextStyle
-import io.homeassistant.companion.android.common.compose.theme.HATheme
+import com.goflow.app.common.compose.composable.ButtonVariant
+import com.goflow.app.common.compose.theme.HADimens
+import com.goflow.app.common.compose.theme.HATextStyle
+import com.goflow.app.common.compose.theme.HATheme
 
 private sealed class CatalogScreen(val title: String, val icon: ImageVector) {
     object ButtonsAndIndicators : CatalogScreen("Buttons & Indicators", Icons.Default.TouchApp)

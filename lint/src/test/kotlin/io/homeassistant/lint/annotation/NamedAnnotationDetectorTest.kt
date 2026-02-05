@@ -1,4 +1,4 @@
-package io.homeassistant.lint.annotation
+﻿package io.homeassistant.lint.annotation
 
 import com.android.tools.lint.checks.infrastructure.TestFiles.kotlin
 import com.android.tools.lint.checks.infrastructure.TestLintTask.lint
@@ -27,7 +27,7 @@ class NamedAnnotationDetectorTest {
 
     private val customQualifierStub = kotlin(
         """
-        package io.homeassistant.companion.android.di.qualifiers
+        package com.goflow.app.di.qualifiers
 
         import javax.inject.Qualifier
 
@@ -61,7 +61,7 @@ class NamedAnnotationDetectorTest {
                 namedAnnotationStub,
                 kotlin(
                     """
-                    package io.homeassistant.companion.android.data
+                    package com.goflow.app.data
 
                     import javax.inject.Inject
                     import javax.inject.Named
@@ -93,10 +93,10 @@ class NamedAnnotationDetectorTest {
                 customQualifierStub,
                 kotlin(
                     """
-                    package io.homeassistant.companion.android.data
+                    package com.goflow.app.data
 
                     import javax.inject.Inject
-                    import io.homeassistant.companion.android.di.qualifiers.MyCustomQualifier
+                    import com.goflow.app.di.qualifiers.MyCustomQualifier
 
                     class MyRepository @Inject constructor(
                         @MyCustomQualifier private val serverUrl: String
@@ -108,3 +108,4 @@ class NamedAnnotationDetectorTest {
             .expectClean()
     }
 }
+

@@ -1,8 +1,8 @@
-package io.homeassistant.companion.android.common.data.keychain
+package com.goflow.app.common.data.keychain
 
 import android.content.Context
 import android.security.KeyChain
-import io.homeassistant.companion.android.common.data.prefs.PrefsRepository
+import com.goflow.app.common.data.prefs.PrefsRepository
 import java.security.PrivateKey
 import java.security.cert.X509Certificate
 import javax.inject.Inject

@@ -1,9 +1,9 @@
-package io.homeassistant.companion.android.common.sensors
+package com.goflow.app.common.sensors
 
 import android.content.Context
 import android.os.Environment
 import android.os.StatFs
-import io.homeassistant.companion.android.common.R as commonR
+import com.goflow.app.common.R as commonR
 import java.io.File
 import kotlin.math.roundToInt
 import timber.log.Timber

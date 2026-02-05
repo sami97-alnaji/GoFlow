@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.util
+package com.goflow.app.util
 
 import android.content.Context
 import java.io.File
@@ -11,7 +11,7 @@ import kotlinx.coroutines.withContext
 import timber.log.Timber
 
 /**
- * Final location of a file on the device is /data/data/io.homeassistant.companion.android<.debug>/cache/fatalcrash/last_crash
+ * Final location of a file on the device is /data/data/com.goflow.app<.debug>/cache/fatalcrash/last_crash
  */
 
 private const val FATAL_CRASH_FILE = "/fatalcrash/last_crash"

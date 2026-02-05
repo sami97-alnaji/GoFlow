@@ -1,7 +1,7 @@
-package io.homeassistant.companion.android.common.util
+package com.goflow.app.common.util
 
-import io.homeassistant.companion.android.common.BuildConfig
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.SocketResponse
+import com.goflow.app.common.BuildConfig
+import com.goflow.app.common.data.websocket.impl.entities.SocketResponse
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import kotlinx.serialization.DeserializationStrategy

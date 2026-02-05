@@ -1,8 +1,8 @@
-package io.homeassistant.companion.android.settings.server
+package com.goflow.app.settings.server
 
 import androidx.preference.PreferenceDataStore
-import io.homeassistant.companion.android.common.data.network.WifiHelper
-import io.homeassistant.companion.android.common.data.servers.ServerManager
+import com.goflow.app.common.data.network.WifiHelper
+import com.goflow.app.common.data.servers.ServerManager
 import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

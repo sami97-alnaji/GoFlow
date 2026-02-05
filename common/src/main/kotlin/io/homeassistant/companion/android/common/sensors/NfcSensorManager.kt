@@ -1,8 +1,8 @@
-package io.homeassistant.companion.android.common.sensors
+package com.goflow.app.common.sensors
 
 import android.content.Context
 import android.nfc.NfcAdapter
-import io.homeassistant.companion.android.common.R as commonR
+import com.goflow.app.common.R as commonR
 
 class NfcSensorManager : SensorManager {
     companion object {

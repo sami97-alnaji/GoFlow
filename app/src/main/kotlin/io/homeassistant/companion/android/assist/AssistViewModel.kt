@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.assist
+package com.goflow.app.assist
 
 import android.app.Application
 import android.content.Intent
@@ -8,15 +8,15 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.homeassistant.companion.android.assist.ui.AssistMessage
-import io.homeassistant.companion.android.assist.ui.AssistUiPipeline
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.assist.AssistEvent
-import io.homeassistant.companion.android.common.assist.AssistViewModelBase
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.AssistPipelineResponse
-import io.homeassistant.companion.android.common.util.AudioRecorder
-import io.homeassistant.companion.android.common.util.AudioUrlPlayer
+import com.goflow.app.assist.ui.AssistMessage
+import com.goflow.app.assist.ui.AssistUiPipeline
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.assist.AssistEvent
+import com.goflow.app.common.assist.AssistViewModelBase
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.data.websocket.impl.entities.AssistPipelineResponse
+import com.goflow.app.common.util.AudioRecorder
+import com.goflow.app.common.util.AudioUrlPlayer
 import javax.inject.Inject
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.launch

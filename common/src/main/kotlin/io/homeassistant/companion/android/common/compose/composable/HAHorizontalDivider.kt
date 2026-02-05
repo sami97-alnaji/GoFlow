@@ -1,10 +1,10 @@
-package io.homeassistant.companion.android.common.compose.composable
+package com.goflow.app.common.compose.composable
 
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import io.homeassistant.companion.android.common.compose.theme.HABorderWidth
-import io.homeassistant.companion.android.common.compose.theme.LocalHAColorScheme
+import com.goflow.app.common.compose.theme.HABorderWidth
+import com.goflow.app.common.compose.theme.LocalHAColorScheme
 
 @Composable
 fun HAHorizontalDivider(modifier: Modifier = Modifier) {

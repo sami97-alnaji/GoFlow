@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.fakes
+package com.goflow.app.fakes
 
 import java.net.InetAddress
 import okhttp3.Dns

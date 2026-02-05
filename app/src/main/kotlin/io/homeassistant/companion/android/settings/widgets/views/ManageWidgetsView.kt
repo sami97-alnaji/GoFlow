@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.widgets.views
+package com.goflow.app.settings.widgets.views
 
 import android.appwidget.AppWidgetManager
 import android.content.Intent
@@ -34,19 +34,19 @@ import androidx.compose.ui.unit.dp
 import com.mikepenz.iconics.compose.Image
 import com.mikepenz.iconics.typeface.IIcon
 import com.mikepenz.iconics.typeface.library.community.material.CommunityMaterial
-import io.homeassistant.companion.android.common.R
-import io.homeassistant.companion.android.database.widget.WidgetEntity
-import io.homeassistant.companion.android.settings.views.EmptyState
-import io.homeassistant.companion.android.settings.widgets.ManageWidgetsViewModel
-import io.homeassistant.companion.android.util.compose.MdcAlertDialog
-import io.homeassistant.companion.android.util.plus
-import io.homeassistant.companion.android.util.safeBottomPaddingValues
-import io.homeassistant.companion.android.widgets.button.ButtonWidgetConfigureActivity
-import io.homeassistant.companion.android.widgets.camera.CameraWidgetConfigureActivity
-import io.homeassistant.companion.android.widgets.entity.EntityWidgetConfigureActivity
-import io.homeassistant.companion.android.widgets.mediaplayer.MediaPlayerControlsWidgetConfigureActivity
-import io.homeassistant.companion.android.widgets.template.TemplateWidgetConfigureActivity
-import io.homeassistant.companion.android.widgets.todo.TodoWidgetConfigureActivity
+import com.goflow.app.common.R
+import com.goflow.app.database.widget.WidgetEntity
+import com.goflow.app.settings.views.EmptyState
+import com.goflow.app.settings.widgets.ManageWidgetsViewModel
+import com.goflow.app.util.compose.MdcAlertDialog
+import com.goflow.app.util.plus
+import com.goflow.app.util.safeBottomPaddingValues
+import com.goflow.app.widgets.button.ButtonWidgetConfigureActivity
+import com.goflow.app.widgets.camera.CameraWidgetConfigureActivity
+import com.goflow.app.widgets.entity.EntityWidgetConfigureActivity
+import com.goflow.app.widgets.mediaplayer.MediaPlayerControlsWidgetConfigureActivity
+import com.goflow.app.widgets.template.TemplateWidgetConfigureActivity
+import com.goflow.app.widgets.todo.TodoWidgetConfigureActivity
 
 enum class WidgetType(val widgetIcon: IIcon) {
     BUTTON(CommunityMaterial.Icon2.cmd_gesture_tap),

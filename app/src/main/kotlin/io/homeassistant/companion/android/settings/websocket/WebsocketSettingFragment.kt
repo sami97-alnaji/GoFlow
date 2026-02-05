@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.websocket
+package com.goflow.app.settings.websocket
 
 import android.content.Intent
 import android.os.Bundle
@@ -17,14 +17,14 @@ import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.network.WifiHelper
-import io.homeassistant.companion.android.common.util.isIgnoringBatteryOptimizations
-import io.homeassistant.companion.android.settings.SettingViewModel
-import io.homeassistant.companion.android.settings.SettingViewModel.Companion.DEFAULT_WEBSOCKET_SETTING
-import io.homeassistant.companion.android.settings.addHelpMenuProvider
-import io.homeassistant.companion.android.settings.websocket.views.WebsocketSettingView
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.network.WifiHelper
+import com.goflow.app.common.util.isIgnoringBatteryOptimizations
+import com.goflow.app.settings.SettingViewModel
+import com.goflow.app.settings.SettingViewModel.Companion.DEFAULT_WEBSOCKET_SETTING
+import com.goflow.app.settings.addHelpMenuProvider
+import com.goflow.app.settings.websocket.views.WebsocketSettingView
+import com.goflow.app.util.compose.HomeAssistantAppTheme
 import javax.inject.Inject
 
 @AndroidEntryPoint

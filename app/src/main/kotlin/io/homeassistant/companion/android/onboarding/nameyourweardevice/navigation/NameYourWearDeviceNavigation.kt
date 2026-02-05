@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.nameyourweardevice.navigation
+package com.goflow.app.onboarding.nameyourweardevice.navigation
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -9,7 +9,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
 import androidx.navigation.toRoute
-import io.homeassistant.companion.android.onboarding.nameyourdevice.NameYourDeviceScreen
+import com.goflow.app.onboarding.nameyourdevice.NameYourDeviceScreen
 import kotlinx.serialization.Serializable
 
 @Serializable

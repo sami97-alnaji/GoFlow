@@ -1,12 +1,12 @@
-package io.homeassistant.companion.android.common.data.integration.impl
+package com.goflow.app.common.data.integration.impl
 
-import io.homeassistant.companion.android.common.data.LocalStorage
-import io.homeassistant.companion.android.common.data.integration.IntegrationRepository
-import io.homeassistant.companion.android.common.data.integration.impl.IntegrationRepositoryImpl.Companion.PREF_ASK_NOTIFICATION_PERMISSION
-import io.homeassistant.companion.android.common.data.servers.ServerConnectionStateProvider
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.database.server.Server
-import io.homeassistant.companion.android.database.server.ServerConnectionInfo
+import com.goflow.app.common.data.LocalStorage
+import com.goflow.app.common.data.integration.IntegrationRepository
+import com.goflow.app.common.data.integration.impl.IntegrationRepositoryImpl.Companion.PREF_ASK_NOTIFICATION_PERMISSION
+import com.goflow.app.common.data.servers.ServerConnectionStateProvider
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.database.server.Server
+import com.goflow.app.database.server.ServerConnectionInfo
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.every

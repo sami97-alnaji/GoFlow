@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.widgets.assist
+package com.goflow.app.widgets.assist
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -26,14 +26,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.assist.AssistViewModelBase
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.AssistPipelineListResponse
-import io.homeassistant.companion.android.database.server.Server
-import io.homeassistant.companion.android.util.compose.ExposedDropdownMenu
-import io.homeassistant.companion.android.util.compose.ServerExposedDropdownMenu
-import io.homeassistant.companion.android.util.safeBottomPaddingValues
-import io.homeassistant.companion.android.util.safeTopWindowInsets
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.assist.AssistViewModelBase
+import com.goflow.app.common.data.websocket.impl.entities.AssistPipelineListResponse
+import com.goflow.app.database.server.Server
+import com.goflow.app.util.compose.ExposedDropdownMenu
+import com.goflow.app.util.compose.ServerExposedDropdownMenu
+import com.goflow.app.util.safeBottomPaddingValues
+import com.goflow.app.util.safeTopWindowInsets
 
 @Composable
 fun AssistShortcutView(

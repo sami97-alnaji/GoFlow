@@ -1,9 +1,9 @@
-package io.homeassistant.companion.android.common.sensors
+package com.goflow.app.common.sensors
 
 import android.app.KeyguardManager
 import android.content.Context
 import androidx.core.content.getSystemService
-import io.homeassistant.companion.android.common.R as commonR
+import com.goflow.app.common.R as commonR
 
 class KeyguardSensorManager : SensorManager {
     companion object {

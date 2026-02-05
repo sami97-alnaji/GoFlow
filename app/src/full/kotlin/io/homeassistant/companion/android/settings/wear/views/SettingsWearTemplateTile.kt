@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.wear.views
+package com.goflow.app.settings.wear.views
 
 import android.graphics.Typeface
 import android.text.style.AbsoluteSizeSpan
@@ -43,9 +43,9 @@ import androidx.core.text.HtmlCompat.FROM_HTML_MODE_LEGACY
 import androidx.core.text.HtmlCompat.fromHtml
 import com.mikepenz.iconics.compose.Image
 import com.mikepenz.iconics.typeface.library.community.material.CommunityMaterial
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.util.intervalToString
-import io.homeassistant.companion.android.util.safeBottomPaddingValues
+import com.goflow.app.common.R as commonR
+import com.goflow.app.util.intervalToString
+import com.goflow.app.util.safeBottomPaddingValues
 
 @Composable
 fun SettingsWearTemplateTile(

@@ -1,6 +1,6 @@
-package io.homeassistant.companion.android.common.util
+package com.goflow.app.common.util
 
-import io.homeassistant.companion.android.testing.unit.ConsoleLogExtension
+import com.goflow.app.testing.unit.ConsoleLogExtension
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith

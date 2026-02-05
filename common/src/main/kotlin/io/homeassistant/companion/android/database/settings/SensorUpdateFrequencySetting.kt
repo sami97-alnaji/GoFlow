@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.database.settings
+package com.goflow.app.database.settings
 
 import androidx.room.TypeConverter
 

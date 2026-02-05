@@ -1,3 +1,3 @@
-package io.homeassistant.companion.android.common.util
+package com.goflow.app.common.util
 
 val DefaultFailFastHandler = CrashFailFastHandler

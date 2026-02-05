@@ -1,9 +1,9 @@
-package io.homeassistant.companion.android.onboarding.manualserver
+package com.goflow.app.onboarding.manualserver
 
 import androidx.compose.runtime.Composable
 import com.android.tools.screenshot.PreviewTest
-import io.homeassistant.companion.android.common.compose.theme.HAThemeForPreview
-import io.homeassistant.companion.android.util.compose.HAPreviews
+import com.goflow.app.common.compose.theme.HAThemeForPreview
+import com.goflow.app.util.compose.HAPreviews
 
 class ManualServerScreenshotTest {
 

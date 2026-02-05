@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.notification
+package com.goflow.app.settings.notification
 
 import android.app.Application
 import android.app.NotificationChannel

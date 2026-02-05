@@ -1,12 +1,12 @@
-package io.homeassistant.companion.android.onboarding.serverdiscovery
+package com.goflow.app.onboarding.serverdiscovery
 
 import app.cash.turbine.test
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.onboarding.serverdiscovery.navigation.ServerDiscoveryMode
-import io.homeassistant.companion.android.testing.unit.ConsoleLogExtension
-import io.homeassistant.companion.android.testing.unit.MainDispatcherJUnit5Extension
-import io.homeassistant.companion.android.util.mockServer
-import io.homeassistant.companion.android.util.testHAVersion
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.onboarding.serverdiscovery.navigation.ServerDiscoveryMode
+import com.goflow.app.testing.unit.ConsoleLogExtension
+import com.goflow.app.testing.unit.MainDispatcherJUnit5Extension
+import com.goflow.app.util.mockServer
+import com.goflow.app.util.testHAVersion
 import io.mockk.coEvery
 import io.mockk.every
 import io.mockk.mockk

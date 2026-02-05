@@ -1,6 +1,6 @@
-package io.homeassistant.companion.android.widgets.todo
+package com.goflow.app.widgets.todo
 
-import io.homeassistant.companion.android.common.data.integration.Entity
+import com.goflow.app.common.data.integration.Entity
 import java.time.LocalDateTime
 
 internal fun fakeServerEntity(entityId: String, friendlyName: String? = null): Entity {

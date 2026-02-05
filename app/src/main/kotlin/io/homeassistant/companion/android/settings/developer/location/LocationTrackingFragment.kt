@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.developer.location
+package com.goflow.app.settings.developer.location
 
 import android.content.Intent
 import android.os.Bundle
@@ -16,11 +16,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.settings.developer.location.views.LocationTrackingView
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
+import com.goflow.app.R
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.settings.developer.location.views.LocationTrackingView
+import com.goflow.app.util.compose.HomeAssistantAppTheme
 import javax.inject.Inject
 
 private const val FAQ_LINK =

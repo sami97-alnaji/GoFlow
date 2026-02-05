@@ -1,17 +1,17 @@
-package io.homeassistant.companion.android.onboarding.integration
+package com.goflow.app.onboarding.integration
 
 import android.content.Context
 import androidx.wear.tiles.TileService
 import dagger.hilt.android.qualifiers.ActivityContext
-import io.homeassistant.companion.android.common.data.integration.DeviceRegistration
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.util.AppVersionProvider
-import io.homeassistant.companion.android.common.util.MessagingTokenProvider
-import io.homeassistant.companion.android.database.server.TemporaryServer
-import io.homeassistant.companion.android.tiles.CameraTile
-import io.homeassistant.companion.android.tiles.ConversationTile
-import io.homeassistant.companion.android.tiles.ShortcutsTile
-import io.homeassistant.companion.android.tiles.TemplateTile
+import com.goflow.app.common.data.integration.DeviceRegistration
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.util.AppVersionProvider
+import com.goflow.app.common.util.MessagingTokenProvider
+import com.goflow.app.database.server.TemporaryServer
+import com.goflow.app.tiles.CameraTile
+import com.goflow.app.tiles.ConversationTile
+import com.goflow.app.tiles.ShortcutsTile
+import com.goflow.app.tiles.TemplateTile
 import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

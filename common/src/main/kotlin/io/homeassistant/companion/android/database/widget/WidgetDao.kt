@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.database.widget
+package com.goflow.app.database.widget
 
 import kotlinx.coroutines.flow.Flow
 

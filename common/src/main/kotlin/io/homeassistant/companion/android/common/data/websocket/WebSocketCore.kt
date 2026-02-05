@@ -1,9 +1,9 @@
-package io.homeassistant.companion.android.common.data.websocket
+package com.goflow.app.common.data.websocket
 
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.data.websocket.impl.WebSocketCoreImpl
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.RawMessageSocketResponse
-import io.homeassistant.companion.android.database.server.Server
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.data.websocket.impl.WebSocketCoreImpl
+import com.goflow.app.common.data.websocket.impl.entities.RawMessageSocketResponse
+import com.goflow.app.database.server.Server
 import javax.inject.Inject
 import javax.inject.Provider
 import kotlinx.coroutines.flow.Flow

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.widgets.todo
+package com.goflow.app.widgets.todo
 
 import android.content.Context
 import androidx.annotation.VisibleForTesting
@@ -42,13 +42,13 @@ import dagger.hilt.EntryPoint
 import dagger.hilt.EntryPoints
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.database.widget.WidgetBackgroundType
-import io.homeassistant.companion.android.util.compose.HomeAssistantGlanceTheme
-import io.homeassistant.companion.android.util.compose.HomeAssistantGlanceTypography
-import io.homeassistant.companion.android.util.compose.glanceStringResource
-import io.homeassistant.companion.android.widgets.todo.TodoState.Companion.getColors
+import com.goflow.app.R
+import com.goflow.app.common.R as commonR
+import com.goflow.app.database.widget.WidgetBackgroundType
+import com.goflow.app.util.compose.HomeAssistantGlanceTheme
+import com.goflow.app.util.compose.HomeAssistantGlanceTypography
+import com.goflow.app.util.compose.glanceStringResource
+import com.goflow.app.widgets.todo.TodoState.Companion.getColors
 
 /**
  * Glance widget for managing and displaying a Todo List.

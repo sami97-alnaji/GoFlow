@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.compose.composable
+package com.goflow.app.common.compose.composable
 
 import androidx.compose.ui.semantics.SemanticsPropertyKey
 import androidx.compose.ui.semantics.SemanticsPropertyReceiver

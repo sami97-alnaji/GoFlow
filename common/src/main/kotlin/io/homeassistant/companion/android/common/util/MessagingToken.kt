@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.util
+package com.goflow.app.common.util
 
 import kotlin.contracts.ExperimentalContracts
 import kotlin.contracts.contract

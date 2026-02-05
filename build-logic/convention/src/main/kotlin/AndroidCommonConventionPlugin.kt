@@ -1,6 +1,6 @@
 import com.android.build.api.dsl.ApplicationExtension
-import io.homeassistant.companion.android.androidConfig
-import io.homeassistant.companion.android.getPluginId
+import com.goflow.app.androidConfig
+import com.goflow.app.getPluginId
 import java.io.File
 import org.gradle.api.Plugin
 import org.gradle.api.Project

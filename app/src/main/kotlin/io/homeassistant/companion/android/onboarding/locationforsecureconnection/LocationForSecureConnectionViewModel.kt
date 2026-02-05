@@ -1,12 +1,12 @@
-package io.homeassistant.companion.android.onboarding.locationforsecureconnection
+package com.goflow.app.onboarding.locationforsecureconnection
 
 import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.navigation.toRoute
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.onboarding.locationforsecureconnection.navigation.LocationForSecureConnectionRoute
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.onboarding.locationforsecureconnection.navigation.LocationForSecureConnectionRoute
 import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow

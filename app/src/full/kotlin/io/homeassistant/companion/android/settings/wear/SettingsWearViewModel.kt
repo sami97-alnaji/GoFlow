@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.wear
+package com.goflow.app.settings.wear
 
 import android.app.Application
 import androidx.annotation.StringRes
@@ -20,13 +20,13 @@ import com.google.android.gms.wearable.NodeClient
 import com.google.android.gms.wearable.PutDataMapRequest
 import com.google.android.gms.wearable.Wearable
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.homeassistant.companion.android.HomeAssistantApplication
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.integration.IntegrationException
-import io.homeassistant.companion.android.common.data.prefs.impl.entities.TemplateTileConfig
-import io.homeassistant.companion.android.common.util.WearDataMessages
-import io.homeassistant.companion.android.common.util.kotlinJsonMapper
+import com.goflow.app.HomeAssistantApplication
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.integration.IntegrationException
+import com.goflow.app.common.data.prefs.impl.entities.TemplateTileConfig
+import com.goflow.app.common.util.WearDataMessages
+import com.goflow.app.common.util.kotlinJsonMapper
 import java.util.UUID
 import javax.inject.Inject
 import kotlinx.coroutines.CancellationException

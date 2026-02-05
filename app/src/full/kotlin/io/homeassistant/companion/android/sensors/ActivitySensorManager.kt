@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.sensors
+package com.goflow.app.sensors
 
 import android.Manifest
 import android.app.PendingIntent
@@ -13,11 +13,11 @@ import com.google.android.gms.location.SleepClassifyEvent
 import com.google.android.gms.location.SleepSegmentEvent
 import com.google.android.gms.location.SleepSegmentRequest
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.sensors.SensorManager
-import io.homeassistant.companion.android.common.sensors.SensorReceiverBase
-import io.homeassistant.companion.android.common.util.STATE_UNKNOWN
-import io.homeassistant.companion.android.common.util.isAutomotive
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.sensors.SensorManager
+import com.goflow.app.common.sensors.SensorReceiverBase
+import com.goflow.app.common.util.STATE_UNKNOWN
+import com.goflow.app.common.util.isAutomotive
 import java.util.concurrent.TimeUnit
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -32,10 +32,10 @@ class ActivitySensorManager :
 
     companion object {
         const val ACTION_UPDATE_ACTIVITY =
-            "io.homeassistant.companion.android.background.UPDATE_ACTIVITY"
+            "com.goflow.app.background.UPDATE_ACTIVITY"
 
         const val ACTION_SLEEP_ACTIVITY =
-            "io.homeassistant.companion.android.background.SLEEP_ACTIVITY"
+            "com.goflow.app.background.SLEEP_ACTIVITY"
         private var sleepRegistration = false
 
         private val activity = SensorManager.BasicSensor(

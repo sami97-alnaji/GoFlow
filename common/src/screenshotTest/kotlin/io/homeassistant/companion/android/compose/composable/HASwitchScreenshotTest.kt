@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.compose.composable
+package com.goflow.app.compose.composable
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -7,8 +7,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
 import com.android.tools.screenshot.PreviewTest
-import io.homeassistant.companion.android.common.compose.composable.HASwitch
-import io.homeassistant.companion.android.common.compose.theme.HAThemeForPreview
+import com.goflow.app.common.compose.composable.HASwitch
+import com.goflow.app.common.compose.theme.HAThemeForPreview
 
 class HASwitchScreenshotTest {
     @PreviewLightDark

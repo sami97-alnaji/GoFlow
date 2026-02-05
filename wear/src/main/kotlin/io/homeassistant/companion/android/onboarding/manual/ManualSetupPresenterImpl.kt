@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.manual
+package com.goflow.app.onboarding.manual
 
 import android.content.Context
 import androidx.core.net.toUri
@@ -8,9 +8,9 @@ import androidx.wear.phone.interactions.authentication.OAuthRequest
 import androidx.wear.phone.interactions.authentication.OAuthResponse
 import androidx.wear.phone.interactions.authentication.RemoteAuthClient
 import dagger.hilt.android.qualifiers.ActivityContext
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.authentication.ServerRegistrationRepository
-import io.homeassistant.companion.android.util.UrlUtil
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.authentication.ServerRegistrationRepository
+import com.goflow.app.util.UrlUtil
 import java.util.concurrent.Executors
 import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope

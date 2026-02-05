@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.connection
+package com.goflow.app.onboarding.connection
 
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.test.assertIsDisplayed
@@ -13,12 +13,12 @@ import androidx.compose.ui.test.performScrollTo
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
 import dagger.hilt.android.testing.HiltTestApplication
-import io.homeassistant.companion.android.HiltComponentActivity
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.connectivity.ConnectivityCheckResult
-import io.homeassistant.companion.android.common.data.connectivity.ConnectivityCheckState
-import io.homeassistant.companion.android.testing.unit.ConsoleLogRule
-import io.homeassistant.companion.android.testing.unit.stringResource
+import com.goflow.app.HiltComponentActivity
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.connectivity.ConnectivityCheckResult
+import com.goflow.app.common.data.connectivity.ConnectivityCheckState
+import com.goflow.app.testing.unit.ConsoleLogRule
+import com.goflow.app.testing.unit.stringResource
 import io.mockk.Runs
 import io.mockk.every
 import io.mockk.just

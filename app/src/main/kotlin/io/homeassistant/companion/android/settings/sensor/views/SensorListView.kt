@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.sensor.views
+package com.goflow.app.settings.sensor.views
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -12,15 +12,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import com.mikepenz.iconics.IconicsDrawable
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.sensors.SensorManager
-import io.homeassistant.companion.android.common.sensors.id
-import io.homeassistant.companion.android.database.sensor.Sensor
-import io.homeassistant.companion.android.settings.sensor.SensorSettingsViewModel
-import io.homeassistant.companion.android.settings.views.SettingsRow
-import io.homeassistant.companion.android.settings.views.SettingsSubheader
-import io.homeassistant.companion.android.settings.views.SettingsSubheaderDefaults
-import io.homeassistant.companion.android.util.safeBottomPaddingValues
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.sensors.SensorManager
+import com.goflow.app.common.sensors.id
+import com.goflow.app.database.sensor.Sensor
+import com.goflow.app.settings.sensor.SensorSettingsViewModel
+import com.goflow.app.settings.views.SettingsRow
+import com.goflow.app.settings.views.SettingsSubheader
+import com.goflow.app.settings.views.SettingsSubheaderDefaults
+import com.goflow.app.util.safeBottomPaddingValues
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable

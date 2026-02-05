@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.ssid.views
+package com.goflow.app.settings.ssid.views
 
 import android.net.wifi.WifiManager
 import android.os.Build
@@ -57,12 +57,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.mikepenz.iconics.compose.Image
 import com.mikepenz.iconics.typeface.library.community.material.CommunityMaterial
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.network.WifiHelper
-import io.homeassistant.companion.android.util.compose.HaAlertInfo
-import io.homeassistant.companion.android.util.compose.HaAlertWarning
-import io.homeassistant.companion.android.util.plus
-import io.homeassistant.companion.android.util.safeBottomPaddingValues
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.network.WifiHelper
+import com.goflow.app.util.compose.HaAlertInfo
+import com.goflow.app.util.compose.HaAlertWarning
+import com.goflow.app.util.plus
+import com.goflow.app.util.safeBottomPaddingValues
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable

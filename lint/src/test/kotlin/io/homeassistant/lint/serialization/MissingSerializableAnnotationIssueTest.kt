@@ -1,4 +1,4 @@
-package io.homeassistant.lint.serialization
+﻿package io.homeassistant.lint.serialization
 
 import com.android.tools.lint.checks.infrastructure.LintDetectorTest.kotlin
 import com.android.tools.lint.checks.infrastructure.TestLintTask.lint
@@ -45,7 +45,7 @@ class MissingSerializableAnnotationIssueTest {
 
     private val kotlinJsonMapperStub = kotlin(
         """
-        package io.homeassistant.companion.android.common.util
+        package com.goflow.app.common.util
         import kotlinx.serialization.json.Json
 
         val kotlinJsonMapper = Json {}
@@ -93,7 +93,7 @@ class MissingSerializableAnnotationIssueTest {
                 kotlin(
                     """
                 package io.homeassistant
-                import io.homeassistant.companion.android.common.util.kotlinJsonMapper
+                import com.goflow.app.common.util.kotlinJsonMapper
                 import kotlinx.serialization.Serializable
 
                 @Serializable
@@ -151,7 +151,7 @@ class MissingSerializableAnnotationIssueTest {
                 kotlin(
                     """
                 package io.homeassistant
-                import io.homeassistant.companion.android.common.util.kotlinJsonMapper                
+                import com.goflow.app.common.util.kotlinJsonMapper                
 
                 class Home
                 fun main() {
@@ -181,7 +181,7 @@ class MissingSerializableAnnotationIssueTest {
                 kotlin(
                     """
                 package io.homeassistant
-                import io.homeassistant.companion.android.common.util.kotlinJsonMapper                
+                import com.goflow.app.common.util.kotlinJsonMapper                
                 import kotlinx.serialization.Serializable
 
                 @Serializable
@@ -216,7 +216,7 @@ class MissingSerializableAnnotationIssueTest {
                 kotlin(
                     """
                 package io.homeassistant
-                import io.homeassistant.companion.android.common.util.kotlinJsonMapper
+                import com.goflow.app.common.util.kotlinJsonMapper
                 import kotlinx.serialization.json.SerializationStrategy
                 
                 class Home
@@ -247,7 +247,7 @@ class MissingSerializableAnnotationIssueTest {
                 kotlin(
                     """
                 package io.homeassistant
-                import io.homeassistant.companion.android.common.util.kotlinJsonMapper
+                import com.goflow.app.common.util.kotlinJsonMapper
                 import kotlinx.serialization.json.SerializationStrategy
                 
                 class Home
@@ -278,7 +278,7 @@ class MissingSerializableAnnotationIssueTest {
                 kotlin(
                     """
                 package io.homeassistant
-                import io.homeassistant.companion.android.common.util.kotlinJsonMapper
+                import com.goflow.app.common.util.kotlinJsonMapper
                 import kotlinx.serialization.json.SerializationStrategy
                 import java.util.List
                 
@@ -310,8 +310,8 @@ class MissingSerializableAnnotationIssueTest {
                 kotlin(
                     """
                 package io.homeassistant
-                import io.homeassistant.companion.android.common.util.kotlinJsonMapper
-                import io.homeassistant.companion.android.common.util.MapAnySerializer
+                import com.goflow.app.common.util.kotlinJsonMapper
+                import com.goflow.app.common.util.MapAnySerializer
                 import kotlinx.serialization.json.SerializationStrategy
                 import java.util.List
                 
@@ -372,7 +372,7 @@ class MissingSerializableAnnotationIssueTest {
                 kotlin(
                     """
                 package io.homeassistant
-                import io.homeassistant.companion.android.common.util.kotlinJsonMapper
+                import com.goflow.app.common.util.kotlinJsonMapper
                 import kotlinx.serialization.Serializable
 
                 @Serializable
@@ -430,7 +430,7 @@ class MissingSerializableAnnotationIssueTest {
                 kotlin(
                     """
                 package io.homeassistant
-                import io.homeassistant.companion.android.common.util.kotlinJsonMapper                
+                import com.goflow.app.common.util.kotlinJsonMapper                
                 import kotlinx.serialization.Serializable
 
                 @Serializable
@@ -465,7 +465,7 @@ class MissingSerializableAnnotationIssueTest {
                 kotlin(
                     """
                 package io.homeassistant
-                import io.homeassistant.companion.android.common.util.kotlinJsonMapper                
+                import com.goflow.app.common.util.kotlinJsonMapper                
                 import kotlinx.serialization.Serializable
 
                 @Serializable
@@ -500,7 +500,7 @@ class MissingSerializableAnnotationIssueTest {
                 kotlin(
                     """
                 package io.homeassistant
-                import io.homeassistant.companion.android.common.util.kotlinJsonMapper
+                import com.goflow.app.common.util.kotlinJsonMapper
                 import kotlinx.serialization.json.SerializationStrategy
                 
                 class Home
@@ -531,7 +531,7 @@ class MissingSerializableAnnotationIssueTest {
                 kotlin(
                     """
                 package io.homeassistant
-                import io.homeassistant.companion.android.common.util.kotlinJsonMapper
+                import com.goflow.app.common.util.kotlinJsonMapper
                 import kotlinx.serialization.json.SerializationStrategy
                 import java.util.List
                 
@@ -563,8 +563,8 @@ class MissingSerializableAnnotationIssueTest {
                 kotlin(
                     """
                 package io.homeassistant
-                import io.homeassistant.companion.android.common.util.kotlinJsonMapper
-                import io.homeassistant.companion.android.common.util.MapAnySerializer
+                import com.goflow.app.common.util.kotlinJsonMapper
+                import com.goflow.app.common.util.MapAnySerializer
                 import kotlinx.serialization.json.SerializationStrategy
                 import java.util.List
                 
@@ -585,3 +585,4 @@ class MissingSerializableAnnotationIssueTest {
             )
     }
 }
+

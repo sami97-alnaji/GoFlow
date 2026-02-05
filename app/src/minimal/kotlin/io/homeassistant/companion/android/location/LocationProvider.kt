@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.location
+package com.goflow.app.location
 
 import android.Manifest
 import android.content.Context
@@ -10,8 +10,8 @@ import android.os.CancellationSignal
 import androidx.annotation.RequiresPermission
 import androidx.core.content.ContextCompat
 import androidx.core.location.LocationManagerCompat
-import io.homeassistant.companion.android.common.util.instant
-import io.homeassistant.companion.android.sensors.GeocodeSensorManager.Companion.LOCATION_OUTDATED_THRESHOLD
+import com.goflow.app.common.util.instant
+import com.goflow.app.sensors.GeocodeSensorManager.Companion.LOCATION_OUTDATED_THRESHOLD
 import kotlin.coroutines.resume
 import kotlin.coroutines.suspendCoroutine
 import kotlin.time.Clock

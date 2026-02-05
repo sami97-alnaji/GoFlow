@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.webview
+package com.goflow.app.webview
 
 enum class MatterThreadStep {
     NOT_STARTED,

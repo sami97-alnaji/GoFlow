@@ -1,23 +1,23 @@
-package io.homeassistant.companion.android.webview.addto
+package com.goflow.app.webview.addto
 
 import android.content.Context
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.integration.IntegrationDomains.CAMERA_DOMAIN
-import io.homeassistant.companion.android.common.data.integration.IntegrationDomains.IMAGE_DOMAIN
-import io.homeassistant.companion.android.common.data.integration.IntegrationDomains.MEDIA_PLAYER_DOMAIN
-import io.homeassistant.companion.android.common.data.integration.IntegrationDomains.TODO_DOMAIN
-import io.homeassistant.companion.android.common.data.integration.IntegrationRepository
-import io.homeassistant.companion.android.common.data.prefs.AutoFavorite
-import io.homeassistant.companion.android.common.data.prefs.PrefsRepository
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.util.FailFast
-import io.homeassistant.companion.android.database.server.Server
-import io.homeassistant.companion.android.testing.unit.ConsoleLogExtension
-import io.homeassistant.companion.android.widgets.camera.CameraWidgetConfigureActivity
-import io.homeassistant.companion.android.widgets.entity.EntityWidgetConfigureActivity
-import io.homeassistant.companion.android.widgets.mediaplayer.MediaPlayerControlsWidgetConfigureActivity
-import io.homeassistant.companion.android.widgets.todo.TodoWidgetConfigureActivity
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.integration.IntegrationDomains.CAMERA_DOMAIN
+import com.goflow.app.common.data.integration.IntegrationDomains.IMAGE_DOMAIN
+import com.goflow.app.common.data.integration.IntegrationDomains.MEDIA_PLAYER_DOMAIN
+import com.goflow.app.common.data.integration.IntegrationDomains.TODO_DOMAIN
+import com.goflow.app.common.data.integration.IntegrationRepository
+import com.goflow.app.common.data.prefs.AutoFavorite
+import com.goflow.app.common.data.prefs.PrefsRepository
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.util.FailFast
+import com.goflow.app.database.server.Server
+import com.goflow.app.testing.unit.ConsoleLogExtension
+import com.goflow.app.widgets.camera.CameraWidgetConfigureActivity
+import com.goflow.app.widgets.entity.EntityWidgetConfigureActivity
+import com.goflow.app.widgets.mediaplayer.MediaPlayerControlsWidgetConfigureActivity
+import com.goflow.app.widgets.todo.TodoWidgetConfigureActivity
 import io.mockk.coEvery
 import io.mockk.coJustRun
 import io.mockk.coVerify

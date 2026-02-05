@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.widgets.common
+package com.goflow.app.widgets.common
 
 import android.content.Context
 import android.view.View

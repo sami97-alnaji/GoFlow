@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.data.servers
+package com.goflow.app.common.data.servers
 
 import android.Manifest
 import android.content.Context
@@ -6,15 +6,15 @@ import android.content.pm.PackageManager
 import android.location.LocationManager
 import android.net.ConnectivityManager
 import androidx.core.content.ContextCompat
-import io.homeassistant.companion.android.common.data.network.NetworkHelper
-import io.homeassistant.companion.android.common.data.network.WifiHelper
-import io.homeassistant.companion.android.common.util.DisabledLocationHandler
-import io.homeassistant.companion.android.database.server.Server
-import io.homeassistant.companion.android.database.server.ServerConnectionInfo
-import io.homeassistant.companion.android.database.server.ServerDao
-import io.homeassistant.companion.android.database.server.ServerSessionInfo
-import io.homeassistant.companion.android.database.server.ServerUserInfo
-import io.homeassistant.companion.android.testing.unit.ConsoleLogExtension
+import com.goflow.app.common.data.network.NetworkHelper
+import com.goflow.app.common.data.network.WifiHelper
+import com.goflow.app.common.util.DisabledLocationHandler
+import com.goflow.app.database.server.Server
+import com.goflow.app.database.server.ServerConnectionInfo
+import com.goflow.app.database.server.ServerDao
+import com.goflow.app.database.server.ServerSessionInfo
+import com.goflow.app.database.server.ServerUserInfo
+import com.goflow.app.testing.unit.ConsoleLogExtension
 import io.mockk.coEvery
 import io.mockk.every
 import io.mockk.mockk

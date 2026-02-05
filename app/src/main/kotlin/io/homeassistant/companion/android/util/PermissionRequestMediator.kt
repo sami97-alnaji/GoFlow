@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.util
+package com.goflow.app.util
 
 import javax.inject.Inject
 import javax.inject.Singleton

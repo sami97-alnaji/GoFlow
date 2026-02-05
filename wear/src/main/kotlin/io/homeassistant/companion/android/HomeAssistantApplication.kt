@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android
+package com.goflow.app
 
 import android.app.Application
 import android.app.NotificationManager
@@ -14,13 +14,13 @@ import androidx.compose.runtime.Composer
 import androidx.compose.runtime.ExperimentalComposeRuntimeApi
 import androidx.core.content.ContextCompat
 import dagger.hilt.android.HiltAndroidApp
-import io.homeassistant.companion.android.common.data.keychain.KeyChainRepository
-import io.homeassistant.companion.android.common.data.keychain.KeyStoreRepository
-import io.homeassistant.companion.android.common.data.keychain.NamedKeyStore
-import io.homeassistant.companion.android.common.sensors.AudioSensorManager
-import io.homeassistant.companion.android.common.util.HAStrictMode
-import io.homeassistant.companion.android.complications.ComplicationReceiver
-import io.homeassistant.companion.android.sensors.SensorReceiver
+import com.goflow.app.common.data.keychain.KeyChainRepository
+import com.goflow.app.common.data.keychain.KeyStoreRepository
+import com.goflow.app.common.data.keychain.NamedKeyStore
+import com.goflow.app.common.sensors.AudioSensorManager
+import com.goflow.app.common.util.HAStrictMode
+import com.goflow.app.complications.ComplicationReceiver
+import com.goflow.app.sensors.SensorReceiver
 import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

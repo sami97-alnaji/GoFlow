@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.testing.unit
+﻿package com.goflow.app.testing.unit
 
 import org.junit.jupiter.api.extension.AfterAllCallback
 import org.junit.jupiter.api.extension.BeforeAllCallback
@@ -108,3 +108,4 @@ class ConsoleLogExtension :
         Timber.uproot(ConsoleLogTree)
     }
 }
+

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.database.migration
+package com.goflow.app.database.migration
 
 import android.annotation.SuppressLint
 import android.content.ContentValues
@@ -16,8 +16,8 @@ import androidx.sqlite.SQLiteConnection
 import androidx.sqlite.db.SupportSQLiteDatabase
 import androidx.sqlite.driver.SupportSQLiteConnection
 import androidx.sqlite.execSQL
-import io.homeassistant.companion.android.common.util.kotlinJsonMapper
-import io.homeassistant.companion.android.database.IconDialogCompat
+import com.goflow.app.common.util.kotlinJsonMapper
+import com.goflow.app.database.IconDialogCompat
 import java.util.UUID
 import timber.log.Timber
 

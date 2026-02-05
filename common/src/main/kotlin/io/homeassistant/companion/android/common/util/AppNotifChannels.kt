@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.util
+package com.goflow.app.common.util
 
 const val CHANNEL_SENSOR_WORKER = "Sensor Worker"
 const val CHANNEL_SENSOR_SYNC = "Sensor Sync"

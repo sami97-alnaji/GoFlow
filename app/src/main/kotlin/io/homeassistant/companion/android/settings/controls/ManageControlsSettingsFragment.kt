@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.controls
+package com.goflow.app.settings.controls
 
 import android.os.Build
 import android.os.Bundle
@@ -10,11 +10,11 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.integration.ControlsAuthRequiredSetting
-import io.homeassistant.companion.android.settings.addHelpMenuProvider
-import io.homeassistant.companion.android.settings.controls.views.ManageControlsView
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.integration.ControlsAuthRequiredSetting
+import com.goflow.app.settings.addHelpMenuProvider
+import com.goflow.app.settings.controls.views.ManageControlsView
+import com.goflow.app.util.compose.HomeAssistantAppTheme
 
 @RequiresApi(Build.VERSION_CODES.TIRAMISU)
 @AndroidEntryPoint

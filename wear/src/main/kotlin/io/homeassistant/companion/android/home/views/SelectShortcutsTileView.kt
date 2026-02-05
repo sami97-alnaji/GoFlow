@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.home.views
+package com.goflow.app.home.views
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
@@ -14,13 +14,13 @@ import androidx.wear.compose.material3.Text
 import androidx.wear.tooling.preview.devices.WearDevices
 import com.mikepenz.iconics.compose.Image
 import com.mikepenz.iconics.typeface.library.community.material.CommunityMaterial
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.theme.WearAppTheme
-import io.homeassistant.companion.android.theme.getFilledTonalButtonColors
-import io.homeassistant.companion.android.theme.getSwitchButtonColors
-import io.homeassistant.companion.android.theme.wearColorScheme
-import io.homeassistant.companion.android.views.ListHeader
-import io.homeassistant.companion.android.views.ThemeLazyColumn
+import com.goflow.app.common.R as commonR
+import com.goflow.app.theme.WearAppTheme
+import com.goflow.app.theme.getFilledTonalButtonColors
+import com.goflow.app.theme.getSwitchButtonColors
+import com.goflow.app.theme.wearColorScheme
+import com.goflow.app.views.ListHeader
+import com.goflow.app.views.ThemeLazyColumn
 
 @Composable
 fun SelectShortcutsTileView(

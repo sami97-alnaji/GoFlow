@@ -1,10 +1,10 @@
-package io.homeassistant.companion.android.common.data.integration
+package com.goflow.app.common.data.integration
 
 import dagger.assisted.AssistedFactory
-import io.homeassistant.companion.android.common.data.integration.impl.IntegrationRepositoryImpl
-import io.homeassistant.companion.android.common.data.integration.impl.entities.RateLimitResponse
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.AssistPipelineEvent
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.GetConfigResponse
+import com.goflow.app.common.data.integration.impl.IntegrationRepositoryImpl
+import com.goflow.app.common.data.integration.impl.entities.RateLimitResponse
+import com.goflow.app.common.data.websocket.impl.entities.AssistPipelineEvent
+import com.goflow.app.common.data.websocket.impl.entities.GetConfigResponse
 import kotlinx.coroutines.flow.Flow
 
 interface IntegrationRepository {

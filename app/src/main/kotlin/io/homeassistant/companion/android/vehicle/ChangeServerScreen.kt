@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.vehicle
+package com.goflow.app.vehicle
 
 import androidx.car.app.CarContext
 import androidx.car.app.Screen
@@ -6,9 +6,9 @@ import androidx.car.app.model.ItemList
 import androidx.car.app.model.ListTemplate
 import androidx.car.app.model.Row
 import androidx.car.app.model.Template
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.database.server.Server
-import io.homeassistant.companion.android.util.vehicle.getHeaderBuilder
+import com.goflow.app.common.R as commonR
+import com.goflow.app.database.server.Server
+import com.goflow.app.util.vehicle.getHeaderBuilder
 import kotlinx.coroutines.flow.StateFlow
 
 class ChangeServerScreen(

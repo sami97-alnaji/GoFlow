@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.sensors
+package com.goflow.app.sensors
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -12,13 +12,13 @@ import androidx.car.app.hardware.info.Model
 import androidx.car.app.hardware.info.Speed
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.DefaultLifecycleObserver
-import io.homeassistant.companion.android.BuildConfig
-import io.homeassistant.companion.android.common.R
-import io.homeassistant.companion.android.common.sensors.SensorManager
-import io.homeassistant.companion.android.common.util.STATE_UNAVAILABLE
-import io.homeassistant.companion.android.common.util.STATE_UNKNOWN
-import io.homeassistant.companion.android.common.util.isAutomotive
-import io.homeassistant.companion.android.vehicle.HaCarAppService
+import com.goflow.app.BuildConfig
+import com.goflow.app.common.R
+import com.goflow.app.common.sensors.SensorManager
+import com.goflow.app.common.util.STATE_UNAVAILABLE
+import com.goflow.app.common.util.STATE_UNKNOWN
+import com.goflow.app.common.util.isAutomotive
+import com.goflow.app.vehicle.HaCarAppService
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

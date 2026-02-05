@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.util.compose.media.player
+package com.goflow.app.util.compose.media.player
 
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable

@@ -1,6 +1,6 @@
-package io.homeassistant.companion.android.common.data.websocket.impl.entities
+package com.goflow.app.common.data.websocket.impl.entities
 
-import io.homeassistant.companion.android.common.util.MapAnySerializer
+import com.goflow.app.common.util.MapAnySerializer
 import kotlinx.serialization.Polymorphic
 import kotlinx.serialization.Serializable
 

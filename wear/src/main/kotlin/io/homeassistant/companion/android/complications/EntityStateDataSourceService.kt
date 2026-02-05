@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.complications
+package com.goflow.app.complications
 
 import android.graphics.Color
 import android.graphics.drawable.Icon
@@ -14,13 +14,13 @@ import androidx.wear.watchface.complications.datasource.SuspendingComplicationDa
 import com.mikepenz.iconics.IconicsDrawable
 import com.mikepenz.iconics.utils.colorInt
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.common.R
-import io.homeassistant.companion.android.common.data.integration.canSupportPrecision
-import io.homeassistant.companion.android.common.data.integration.friendlyName
-import io.homeassistant.companion.android.common.data.integration.friendlyState
-import io.homeassistant.companion.android.common.data.integration.getIcon
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.database.wear.EntityStateComplicationsDao
+import com.goflow.app.common.R
+import com.goflow.app.common.data.integration.canSupportPrecision
+import com.goflow.app.common.data.integration.friendlyName
+import com.goflow.app.common.data.integration.friendlyState
+import com.goflow.app.common.data.integration.getIcon
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.database.wear.EntityStateComplicationsDao
 import javax.inject.Inject
 import kotlinx.coroutines.CancellationException
 import retrofit2.HttpException
@@ -133,7 +133,7 @@ class EntityStateDataSourceService : SuspendingComplicationDataSourceService() {
         val monochromaticImage = MonochromaticImage.Builder(
             Icon.createWithResource(
                 this,
-                io.homeassistant.companion.android.R.drawable.ic_lightbulb,
+                com.goflow.app.R.drawable.ic_lightbulb,
             ),
         ).build()
         return when (type) {

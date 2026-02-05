@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.locationsharing.navigation
+package com.goflow.app.onboarding.locationsharing.navigation
 
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
@@ -6,7 +6,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
 import androidx.navigation.toRoute
-import io.homeassistant.companion.android.onboarding.locationsharing.LocationSharingScreen
+import com.goflow.app.onboarding.locationsharing.LocationSharingScreen
 import kotlinx.serialization.Serializable
 
 @Serializable

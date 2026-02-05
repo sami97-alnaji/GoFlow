@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.bluetooth.ble
+package com.goflow.app.common.bluetooth.ble
 
 interface IBeaconNameFormat {
     val uuid: String

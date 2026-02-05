@@ -1,9 +1,9 @@
-package io.homeassistant.companion.android.location
+package com.goflow.app.location
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import io.homeassistant.companion.android.sensors.LocationSensorManager
+import com.goflow.app.sensors.LocationSensorManager
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

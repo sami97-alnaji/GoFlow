@@ -1,9 +1,9 @@
-package io.homeassistant.companion.android.common.sensors
+package com.goflow.app.common.sensors
 
 import android.content.Context
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.database.sensor.SensorSetting
-import io.homeassistant.companion.android.database.sensor.SensorSettingType
+import com.goflow.app.common.R as commonR
+import com.goflow.app.database.sensor.SensorSetting
+import com.goflow.app.database.sensor.SensorSettingType
 import timber.log.Timber
 
 class LastUpdateManager : SensorManager {

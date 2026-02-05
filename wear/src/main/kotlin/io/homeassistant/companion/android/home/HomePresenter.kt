@@ -1,15 +1,15 @@
-package io.homeassistant.companion.android.home
+package com.goflow.app.home
 
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.prefs.impl.entities.TemplateTileConfig
-import io.homeassistant.companion.android.common.data.websocket.WebSocketState
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.AreaRegistryResponse
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.AreaRegistryUpdatedEvent
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.DeviceRegistryResponse
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.DeviceRegistryUpdatedEvent
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.EntityRegistryResponse
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.EntityRegistryUpdatedEvent
-import io.homeassistant.companion.android.data.SimplifiedEntity
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.prefs.impl.entities.TemplateTileConfig
+import com.goflow.app.common.data.websocket.WebSocketState
+import com.goflow.app.common.data.websocket.impl.entities.AreaRegistryResponse
+import com.goflow.app.common.data.websocket.impl.entities.AreaRegistryUpdatedEvent
+import com.goflow.app.common.data.websocket.impl.entities.DeviceRegistryResponse
+import com.goflow.app.common.data.websocket.impl.entities.DeviceRegistryUpdatedEvent
+import com.goflow.app.common.data.websocket.impl.entities.EntityRegistryResponse
+import com.goflow.app.common.data.websocket.impl.entities.EntityRegistryUpdatedEvent
+import com.goflow.app.data.SimplifiedEntity
 import kotlinx.coroutines.flow.Flow
 
 interface HomePresenter {

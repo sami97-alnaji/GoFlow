@@ -1,9 +1,9 @@
-package io.homeassistant.companion.android.settings.sensor
+package com.goflow.app.settings.sensor
 
 import android.content.Intent
 import androidx.core.net.toUri
-import io.homeassistant.companion.android.BaseActivity
-import io.homeassistant.companion.android.common.R as commonR
+import com.goflow.app.BaseActivity
+import com.goflow.app.common.R as commonR
 
 class HealthConnectPermissionActivity : BaseActivity() {
     override fun onResume() {

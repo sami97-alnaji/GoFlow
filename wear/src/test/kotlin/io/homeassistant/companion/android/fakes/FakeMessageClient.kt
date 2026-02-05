@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.fakes
+package com.goflow.app.fakes
 
 import android.content.Context
 import android.net.Uri

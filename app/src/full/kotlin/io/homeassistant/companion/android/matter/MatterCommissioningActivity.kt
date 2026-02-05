@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.matter
+package com.goflow.app.matter
 
 import android.content.Intent
 import android.os.Bundle
@@ -14,10 +14,10 @@ import androidx.lifecycle.lifecycleScope
 import com.google.android.gms.home.matter.Matter
 import com.google.android.gms.home.matter.commissioning.SharedDeviceData
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.matter.views.MatterCommissioningView
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
-import io.homeassistant.companion.android.util.enableEdgeToEdgeCompat
-import io.homeassistant.companion.android.webview.WebViewActivity
+import com.goflow.app.matter.views.MatterCommissioningView
+import com.goflow.app.util.compose.HomeAssistantAppTheme
+import com.goflow.app.util.enableEdgeToEdgeCompat
+import com.goflow.app.webview.WebViewActivity
 import kotlinx.coroutines.launch
 import timber.log.Timber
 

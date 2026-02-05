@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.controls
+package com.goflow.app.controls
 
 import android.content.Context
 import android.os.Build
@@ -7,10 +7,10 @@ import android.service.controls.DeviceTypes
 import android.service.controls.actions.ControlAction
 import android.service.controls.templates.StatelessTemplate
 import androidx.annotation.RequiresApi
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.integration.IntegrationRepository
-import io.homeassistant.companion.android.common.util.capitalize
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.integration.IntegrationRepository
+import com.goflow.app.common.util.capitalize
 import java.util.Locale
 
 @RequiresApi(Build.VERSION_CODES.R)

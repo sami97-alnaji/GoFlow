@@ -1,8 +1,8 @@
-package io.homeassistant.companion.android.common.data.integration
+package com.goflow.app.common.data.integration
 
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.CompressedEntityRemoved
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.CompressedEntityState
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.CompressedStateDiff
+import com.goflow.app.common.data.websocket.impl.entities.CompressedEntityRemoved
+import com.goflow.app.common.data.websocket.impl.entities.CompressedEntityState
+import com.goflow.app.common.data.websocket.impl.entities.CompressedStateDiff
 import java.time.LocalDateTime
 import java.time.ZoneOffset
 import org.junit.jupiter.api.Assertions.assertEquals

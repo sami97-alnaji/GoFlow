@@ -1,13 +1,13 @@
-package io.homeassistant.companion.android.common.data.integration.impl
+package com.goflow.app.common.data.integration.impl
 
-import io.homeassistant.companion.android.common.data.integration.impl.entities.CheckRateLimits
-import io.homeassistant.companion.android.common.data.integration.impl.entities.EntityResponse
-import io.homeassistant.companion.android.common.data.integration.impl.entities.IntegrationRequest
-import io.homeassistant.companion.android.common.data.integration.impl.entities.RateLimitRequest
-import io.homeassistant.companion.android.common.data.integration.impl.entities.RegisterDeviceRequest
-import io.homeassistant.companion.android.common.data.integration.impl.entities.RegisterDeviceResponse
-import io.homeassistant.companion.android.common.data.integration.impl.entities.UpdateSensorResponse
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.GetConfigResponse
+import com.goflow.app.common.data.integration.impl.entities.CheckRateLimits
+import com.goflow.app.common.data.integration.impl.entities.EntityResponse
+import com.goflow.app.common.data.integration.impl.entities.IntegrationRequest
+import com.goflow.app.common.data.integration.impl.entities.RateLimitRequest
+import com.goflow.app.common.data.integration.impl.entities.RegisterDeviceRequest
+import com.goflow.app.common.data.integration.impl.entities.RegisterDeviceResponse
+import com.goflow.app.common.data.integration.impl.entities.UpdateSensorResponse
+import com.goflow.app.common.data.websocket.impl.entities.GetConfigResponse
 import kotlinx.serialization.json.JsonObject
 import okhttp3.HttpUrl
 import okhttp3.ResponseBody

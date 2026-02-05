@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.barcode
+package com.goflow.app.barcode
 
 import android.Manifest
 import android.app.Application
@@ -10,9 +10,9 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.homeassistant.companion.android.common.util.getStringOrElse
-import io.homeassistant.companion.android.webview.externalbus.ExternalBusMessage
-import io.homeassistant.companion.android.webview.externalbus.ExternalBusRepository
+import com.goflow.app.common.util.getStringOrElse
+import com.goflow.app.webview.externalbus.ExternalBusMessage
+import com.goflow.app.webview.externalbus.ExternalBusRepository
 import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.compose.composable
+package com.goflow.app.common.compose.composable
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.widthIn
@@ -10,10 +10,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.VisualTransformation
-import io.homeassistant.companion.android.common.compose.theme.HARadius
-import io.homeassistant.companion.android.common.compose.theme.HATextStyle
-import io.homeassistant.companion.android.common.compose.theme.LocalHAColorScheme
-import io.homeassistant.companion.android.common.compose.theme.MaxButtonWidth
+import com.goflow.app.common.compose.theme.HARadius
+import com.goflow.app.common.compose.theme.HATextStyle
+import com.goflow.app.common.compose.theme.LocalHAColorScheme
+import com.goflow.app.common.compose.theme.MaxButtonWidth
 
 /**
  * A Home Assistant themed [OutlinedTextField]. This composable is the equivalent of the `ha-input` on the frontend.
@@ -25,15 +25,15 @@ import io.homeassistant.companion.android.common.compose.theme.MaxButtonWidth
  * @param modifier the [Modifier] to be applied to this text field
  * @param enabled controls the enabled state of this text field
  * @param isError indicates if the text field's current value is in error. If set to true, the
- * text field will adjust based on the color of the theme [io.homeassistant.companion.android.common.compose.theme.HATheme]
+ * text field will adjust based on the color of the theme [com.goflow.app.common.compose.theme.HATheme]
  * @param label the optional label to be displayed inside the text field container.
  * @param placeholder the optional placeholder to be displayed when the text field is in focus and
  * the input text is empty.
  * @param supportingText the optional supporting text to be displayed below the text field
  * @param trailingIcon the optional trailing icon to be displayed at the end of the text field
- * container it will be colored according to the theme [io.homeassistant.companion.android.common.compose.theme.HATheme]
+ * container it will be colored according to the theme [com.goflow.app.common.compose.theme.HATheme]
  * @param leadingIcon the optional leading icon to be displayed at the beginning of the text field
- * container it will be colored according to the theme [io.homeassistant.companion.android.common.compose.theme.HATheme]
+ * container it will be colored according to the theme [com.goflow.app.common.compose.theme.HATheme]
  * @param keyboardOptions software keyboard options that contains configuration such as
  * [KeyboardType] and [ImeAction]
  * @param keyboardActions when the input service emits an IME action, the corresponding callback

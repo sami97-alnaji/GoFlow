@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.util.icondialog
+package com.goflow.app.util.icondialog
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
@@ -24,7 +24,7 @@ import com.mikepenz.iconics.compose.Image
 import com.mikepenz.iconics.typeface.IIcon
 import com.mikepenz.iconics.typeface.ITypeface
 import com.mikepenz.iconics.typeface.library.community.material.CommunityMaterial
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
+import com.goflow.app.util.compose.HomeAssistantAppTheme
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

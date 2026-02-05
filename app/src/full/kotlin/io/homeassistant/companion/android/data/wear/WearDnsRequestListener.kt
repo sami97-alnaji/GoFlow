@@ -1,11 +1,11 @@
-package io.homeassistant.companion.android.data.wear
+package com.goflow.app.data.wear
 
 import androidx.annotation.VisibleForTesting
 import com.google.android.gms.tasks.Task
 import com.google.android.gms.wearable.WearableListenerService
-import io.homeassistant.companion.android.common.util.WearDataMessages.DnsLookup.PATH_DNS_LOOKUP
-import io.homeassistant.companion.android.common.util.WearDataMessages.DnsLookup.decodeDNSRequest
-import io.homeassistant.companion.android.common.util.WearDataMessages.DnsLookup.encodeDNSResult
+import com.goflow.app.common.util.WearDataMessages.DnsLookup.PATH_DNS_LOOKUP
+import com.goflow.app.common.util.WearDataMessages.DnsLookup.decodeDNSRequest
+import com.goflow.app.common.util.WearDataMessages.DnsLookup.encodeDNSResult
 import java.net.UnknownHostException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

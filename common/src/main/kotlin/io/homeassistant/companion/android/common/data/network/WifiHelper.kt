@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.data.network
+package com.goflow.app.common.data.network
 
 interface WifiHelper {
 

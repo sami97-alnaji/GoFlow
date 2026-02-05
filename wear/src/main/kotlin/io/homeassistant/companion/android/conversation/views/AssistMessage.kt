@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.conversation.views
+package com.goflow.app.conversation.views
 
 private const val PLACEHOLDER = "…"
 

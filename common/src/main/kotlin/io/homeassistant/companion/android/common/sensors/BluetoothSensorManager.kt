@@ -1,24 +1,24 @@
-package io.homeassistant.companion.android.common.sensors
+package com.goflow.app.common.sensors
 
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Build
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.bluetooth.BluetoothDevice
-import io.homeassistant.companion.android.common.bluetooth.BluetoothUtils
-import io.homeassistant.companion.android.common.bluetooth.BluetoothUtils.supportsTransmitter
-import io.homeassistant.companion.android.common.bluetooth.ble.IBeacon
-import io.homeassistant.companion.android.common.bluetooth.ble.IBeaconMonitor
-import io.homeassistant.companion.android.common.bluetooth.ble.IBeaconTransmitter
-import io.homeassistant.companion.android.common.bluetooth.ble.KalmanFilter
-import io.homeassistant.companion.android.common.bluetooth.ble.MonitoringManager
-import io.homeassistant.companion.android.common.bluetooth.ble.TransmitterManager
-import io.homeassistant.companion.android.common.bluetooth.ble.name
-import io.homeassistant.companion.android.common.util.STATE_UNKNOWN
-import io.homeassistant.companion.android.database.DatabaseEntryPoint
-import io.homeassistant.companion.android.database.sensor.SensorSetting
-import io.homeassistant.companion.android.database.sensor.SensorSettingType
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.bluetooth.BluetoothDevice
+import com.goflow.app.common.bluetooth.BluetoothUtils
+import com.goflow.app.common.bluetooth.BluetoothUtils.supportsTransmitter
+import com.goflow.app.common.bluetooth.ble.IBeacon
+import com.goflow.app.common.bluetooth.ble.IBeaconMonitor
+import com.goflow.app.common.bluetooth.ble.IBeaconTransmitter
+import com.goflow.app.common.bluetooth.ble.KalmanFilter
+import com.goflow.app.common.bluetooth.ble.MonitoringManager
+import com.goflow.app.common.bluetooth.ble.TransmitterManager
+import com.goflow.app.common.bluetooth.ble.name
+import com.goflow.app.common.util.STATE_UNKNOWN
+import com.goflow.app.database.DatabaseEntryPoint
+import com.goflow.app.database.sensor.SensorSetting
+import com.goflow.app.database.sensor.SensorSettingType
 import java.util.UUID
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

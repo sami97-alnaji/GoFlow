@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.home.views
+package com.goflow.app.home.views
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -12,14 +12,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.wear.compose.material.CircularProgressIndicator
 import androidx.wear.tooling.preview.devices.WearDevices
-import io.homeassistant.companion.android.common.R
-import io.homeassistant.companion.android.common.sensors.SensorManager
-import io.homeassistant.companion.android.database.sensor.Sensor
-import io.homeassistant.companion.android.theme.WearAppTheme
-import io.homeassistant.companion.android.util.batterySensorManager
-import io.homeassistant.companion.android.util.sensorList
-import io.homeassistant.companion.android.views.ListHeader
-import io.homeassistant.companion.android.views.ThemeLazyColumn
+import com.goflow.app.common.R
+import com.goflow.app.common.sensors.SensorManager
+import com.goflow.app.database.sensor.Sensor
+import com.goflow.app.theme.WearAppTheme
+import com.goflow.app.util.batterySensorManager
+import com.goflow.app.util.sensorList
+import com.goflow.app.views.ListHeader
+import com.goflow.app.views.ThemeLazyColumn
 
 @Composable
 fun SensorManagerUi(

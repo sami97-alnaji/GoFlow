@@ -1,14 +1,14 @@
-package io.homeassistant.companion.android.util
+package com.goflow.app.util
 
 import android.content.Context
 import android.content.res.Configuration
 import android.view.ContextThemeWrapper
 import androidx.annotation.VisibleForTesting
 import info.hannes.changelog.ChangeLog
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.data.prefs.NightModeTheme
-import io.homeassistant.companion.android.common.data.prefs.PrefsRepository
-import io.homeassistant.companion.android.themes.NightModeManager
+import com.goflow.app.R
+import com.goflow.app.common.data.prefs.NightModeTheme
+import com.goflow.app.common.data.prefs.PrefsRepository
+import com.goflow.app.themes.NightModeManager
 import javax.inject.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

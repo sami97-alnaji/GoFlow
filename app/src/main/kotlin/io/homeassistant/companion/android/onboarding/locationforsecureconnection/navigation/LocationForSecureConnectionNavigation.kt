@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.locationforsecureconnection.navigation
+package com.goflow.app.onboarding.locationforsecureconnection.navigation
 
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
@@ -6,7 +6,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
 import androidx.navigation.toRoute
-import io.homeassistant.companion.android.onboarding.locationforsecureconnection.LocationForSecureConnectionScreen
+import com.goflow.app.onboarding.locationforsecureconnection.LocationForSecureConnectionScreen
 import kotlinx.serialization.Serializable
 
 internal const val URL_SECURITY_LEVEL_DOCUMENTATION =

@@ -1,13 +1,13 @@
-package io.homeassistant.companion.android.themes
+package com.goflow.app.themes
 
 import android.os.Build
 import androidx.appcompat.app.AppCompatDelegate
-import io.homeassistant.companion.android.common.data.prefs.NightModeTheme
-import io.homeassistant.companion.android.common.data.prefs.NightModeTheme.ANDROID
-import io.homeassistant.companion.android.common.data.prefs.NightModeTheme.DARK
-import io.homeassistant.companion.android.common.data.prefs.NightModeTheme.LIGHT
-import io.homeassistant.companion.android.common.data.prefs.NightModeTheme.SYSTEM
-import io.homeassistant.companion.android.common.data.prefs.PrefsRepository
+import com.goflow.app.common.data.prefs.NightModeTheme
+import com.goflow.app.common.data.prefs.NightModeTheme.ANDROID
+import com.goflow.app.common.data.prefs.NightModeTheme.DARK
+import com.goflow.app.common.data.prefs.NightModeTheme.LIGHT
+import com.goflow.app.common.data.prefs.NightModeTheme.SYSTEM
+import com.goflow.app.common.data.prefs.PrefsRepository
 import javax.inject.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

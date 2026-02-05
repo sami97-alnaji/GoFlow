@@ -1,6 +1,6 @@
-package io.homeassistant.companion.android.common.data.websocket.impl.entities
+package com.goflow.app.common.data.websocket.impl.entities
 
-import io.homeassistant.companion.android.common.util.kotlinJsonMapper
+import com.goflow.app.common.util.kotlinJsonMapper
 import kotlinx.serialization.json.JsonNull
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive

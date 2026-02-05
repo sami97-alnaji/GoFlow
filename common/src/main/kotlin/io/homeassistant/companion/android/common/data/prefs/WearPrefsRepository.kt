@@ -1,6 +1,6 @@
-package io.homeassistant.companion.android.common.data.prefs
+package com.goflow.app.common.data.prefs
 
-import io.homeassistant.companion.android.common.data.prefs.impl.entities.TemplateTileConfig
+import com.goflow.app.common.data.prefs.impl.entities.TemplateTileConfig
 
 interface WearPrefsRepository {
     suspend fun getAllTileShortcuts(): Map<Int?, List<String>>

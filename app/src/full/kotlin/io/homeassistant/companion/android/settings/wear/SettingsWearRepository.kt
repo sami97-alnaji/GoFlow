@@ -1,15 +1,15 @@
-package io.homeassistant.companion.android.settings.wear
+package com.goflow.app.settings.wear
 
-import io.homeassistant.companion.android.common.data.authentication.AuthorizationException
-import io.homeassistant.companion.android.common.data.authentication.impl.AuthenticationService
-import io.homeassistant.companion.android.common.data.authentication.impl.AuthenticationService.Companion.SEGMENT_AUTH_TOKEN
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.integration.IntegrationException
-import io.homeassistant.companion.android.common.data.integration.impl.IntegrationService
-import io.homeassistant.companion.android.common.data.integration.impl.entities.RenderTemplateIntegrationRequest
-import io.homeassistant.companion.android.common.data.integration.impl.entities.Template
-import io.homeassistant.companion.android.common.data.servers.tryOnUrls
-import io.homeassistant.companion.android.common.util.FailFast
+import com.goflow.app.common.data.authentication.AuthorizationException
+import com.goflow.app.common.data.authentication.impl.AuthenticationService
+import com.goflow.app.common.data.authentication.impl.AuthenticationService.Companion.SEGMENT_AUTH_TOKEN
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.integration.IntegrationException
+import com.goflow.app.common.data.integration.impl.IntegrationService
+import com.goflow.app.common.data.integration.impl.entities.RenderTemplateIntegrationRequest
+import com.goflow.app.common.data.integration.impl.entities.Template
+import com.goflow.app.common.data.servers.tryOnUrls
+import com.goflow.app.common.util.FailFast
 import javax.inject.Inject
 import kotlinx.coroutines.CancellationException
 import kotlinx.serialization.json.JsonPrimitive

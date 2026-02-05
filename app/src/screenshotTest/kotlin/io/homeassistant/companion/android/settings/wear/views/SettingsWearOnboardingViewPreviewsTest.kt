@@ -1,10 +1,10 @@
-package io.homeassistant.companion.android.settings.wear.views
+package com.goflow.app.settings.wear.views
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.android.tools.screenshot.PreviewTest
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
+import com.goflow.app.common.R as commonR
+import com.goflow.app.util.compose.HomeAssistantAppTheme
 
 class SettingsWearOnboardingViewPreviewsTest {
 

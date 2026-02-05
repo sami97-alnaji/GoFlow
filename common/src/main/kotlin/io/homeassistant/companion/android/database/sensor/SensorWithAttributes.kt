@@ -1,8 +1,8 @@
-package io.homeassistant.companion.android.database.sensor
+package com.goflow.app.database.sensor
 
-import io.homeassistant.companion.android.common.data.integration.SensorRegistration
-import io.homeassistant.companion.android.common.sensors.SensorManager
-import io.homeassistant.companion.android.common.util.kotlinJsonMapper
+import com.goflow.app.common.data.integration.SensorRegistration
+import com.goflow.app.common.sensors.SensorManager
+import com.goflow.app.common.util.kotlinJsonMapper
 
 data class SensorWithAttributes(val sensor: Sensor, val attributes: List<Attribute>) {
     fun toSensorRegistration(basicSensor: SensorManager.BasicSensor): SensorRegistration<Any> {

@@ -1,13 +1,13 @@
-package io.homeassistant.companion.android.common.data
+package com.goflow.app.common.data
 
 import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
 import android.webkit.CookieManager
 import dagger.hilt.android.qualifiers.ApplicationContext
-import io.homeassistant.companion.android.common.BuildConfig
-import io.homeassistant.companion.android.common.util.kotlinJsonMapper
-import io.homeassistant.companion.android.di.OkHttpConfigurator
+import com.goflow.app.common.BuildConfig
+import com.goflow.app.common.util.kotlinJsonMapper
+import com.goflow.app.di.OkHttpConfigurator
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 import okhttp3.MediaType.Companion.toMediaType

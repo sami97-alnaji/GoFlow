@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.phoneinstall
+package com.goflow.app.onboarding.phoneinstall
 
 import android.content.Context
 import android.content.Intent
@@ -9,10 +9,10 @@ import androidx.core.net.toUri
 import androidx.lifecycle.lifecycleScope
 import androidx.wear.activity.ConfirmationActivity
 import androidx.wear.remote.interactions.RemoteActivityHelper
-import io.homeassistant.companion.android.BuildConfig
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.onboarding.manual.ManualSetupActivity
-import io.homeassistant.companion.android.theme.WearAppTheme
+import com.goflow.app.BuildConfig
+import com.goflow.app.common.R as commonR
+import com.goflow.app.onboarding.manual.ManualSetupActivity
+import com.goflow.app.theme.WearAppTheme
 import kotlinx.coroutines.guava.await
 import kotlinx.coroutines.launch
 import timber.log.Timber

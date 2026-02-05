@@ -1,9 +1,9 @@
-package io.homeassistant.companion.android.settings
+package com.goflow.app.settings
 
 import android.content.Context
 import androidx.preference.PreferenceDataStore
-import io.homeassistant.companion.android.common.data.integration.impl.entities.RateLimitResponse
-import io.homeassistant.companion.android.database.server.Server
+import com.goflow.app.common.data.integration.impl.entities.RateLimitResponse
+import com.goflow.app.database.server.Server
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.StateFlow
 

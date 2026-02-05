@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "io.homeassistant.companion.android.testing.unit"
+    namespace = "com.goflow.app.testing.unit"
 
     compileSdk = libs.versions.androidSdk.compile.get().toInt()
 

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.sensors
+package com.goflow.app.common.sensors
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -10,13 +10,13 @@ import android.net.wifi.WifiInfo
 import android.net.wifi.WifiManager
 import android.os.Build
 import androidx.core.content.getSystemService
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.util.STATE_UNAVAILABLE
-import io.homeassistant.companion.android.common.util.STATE_UNKNOWN
-import io.homeassistant.companion.android.common.util.getStringOrElse
-import io.homeassistant.companion.android.common.util.toJsonObjectOrNull
-import io.homeassistant.companion.android.database.sensor.SensorSetting
-import io.homeassistant.companion.android.database.sensor.SensorSettingType
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.util.STATE_UNAVAILABLE
+import com.goflow.app.common.util.STATE_UNKNOWN
+import com.goflow.app.common.util.getStringOrElse
+import com.goflow.app.common.util.toJsonObjectOrNull
+import com.goflow.app.database.sensor.SensorSetting
+import com.goflow.app.database.sensor.SensorSettingType
 import java.lang.reflect.Method
 import java.net.Inet6Address
 import kotlinx.coroutines.suspendCancellableCoroutine

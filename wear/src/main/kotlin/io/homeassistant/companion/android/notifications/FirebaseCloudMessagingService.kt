@@ -1,11 +1,11 @@
-package io.homeassistant.companion.android.notifications
+package com.goflow.app.notifications
 
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.common.data.integration.DeviceRegistration
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.util.MessagingToken
+import com.goflow.app.common.data.integration.DeviceRegistration
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.util.MessagingToken
 import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

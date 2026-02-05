@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.vehicle
+package com.goflow.app.vehicle
 
 import android.content.Intent
 import android.os.Build
@@ -19,16 +19,16 @@ import androidx.lifecycle.repeatOnLifecycle
 import com.mikepenz.iconics.IconicsDrawable
 import com.mikepenz.iconics.utils.sizeDp
 import com.mikepenz.iconics.utils.toAndroidIconCompat
-import io.homeassistant.companion.android.common.R
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.integration.EntityExt
-import io.homeassistant.companion.android.common.data.integration.IntegrationRepository
-import io.homeassistant.companion.android.common.data.integration.friendlyName
-import io.homeassistant.companion.android.common.data.integration.friendlyState
-import io.homeassistant.companion.android.common.data.integration.getIcon
-import io.homeassistant.companion.android.common.data.integration.isActive
-import io.homeassistant.companion.android.util.vehicle.getHeaderBuilder
+import com.goflow.app.common.R
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.integration.EntityExt
+import com.goflow.app.common.data.integration.IntegrationRepository
+import com.goflow.app.common.data.integration.friendlyName
+import com.goflow.app.common.data.integration.friendlyState
+import com.goflow.app.common.data.integration.getIcon
+import com.goflow.app.common.data.integration.isActive
+import com.goflow.app.util.vehicle.getHeaderBuilder
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 import timber.log.Timber

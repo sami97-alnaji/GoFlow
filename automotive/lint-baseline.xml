@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <issues format="6" by="lint 8.13.2" type="baseline" client="gradle" dependencies="false" name="AGP (8.13.2)" variant="all" version="8.13.2">
 
     <issue
@@ -91,7 +91,7 @@
 
     <issue
         id="MissingClass"
-        message="Class referenced in the manifest, `io.homeassistant.companion.android.onboarding.OnboardingActivity`, was not found in the project or the libraries"
+        message="Class referenced in the manifest, `com.goflow.app.onboarding.OnboardingActivity`, was not found in the project or the libraries"
         errorLine1="            android:name=&quot;.onboarding.OnboardingActivity&quot;"
         errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -102,7 +102,7 @@
 
     <issue
         id="MissingClass"
-        message="Class referenced in the manifest, `io.homeassistant.companion.android.notifications.NotificationDeleteReceiver`, was not found in the project or the libraries"
+        message="Class referenced in the manifest, `com.goflow.app.notifications.NotificationDeleteReceiver`, was not found in the project or the libraries"
         errorLine1="            android:name=&quot;.notifications.NotificationDeleteReceiver&quot;"
         errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -366,7 +366,7 @@
 
     <issue
         id="VectorRaster"
-        message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
+        message="Limit vector icons sizes to 200أ—200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
         errorLine1="    android:width=&quot;288dp&quot;"
         errorLine2="                   ~~~~~">
         <location
@@ -377,7 +377,7 @@
 
     <issue
         id="VectorRaster"
-        message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
+        message="Limit vector icons sizes to 200أ—200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
         errorLine1="    android:width=&quot;220dp&quot;"
         errorLine2="                   ~~~~~">
         <location
@@ -388,7 +388,7 @@
 
     <issue
         id="VectorRaster"
-        message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
+        message="Limit vector icons sizes to 200أ—200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
         errorLine1="    android:width=&quot;220dp&quot;"
         errorLine2="                   ~~~~~">
         <location
@@ -399,7 +399,7 @@
 
     <issue
         id="VectorRaster"
-        message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
+        message="Limit vector icons sizes to 200أ—200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
         errorLine1="    android:width=&quot;240dp&quot;"
         errorLine2="                   ~~~~~">
         <location
@@ -1026,7 +1026,7 @@
 
     <issue
         id="ObsoleteSdkInt"
-        message="Unnecessary; `Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q` is always true here (`SDK_INT` ≥ 29 and &lt; 31)"
+        message="Unnecessary; `Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q` is always true here (`SDK_INT` â‰¥ 29 and &lt; 31)"
         errorLine1="            (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) -> {"
         errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -4406,3 +4406,4 @@
     </issue>
 
 </issues>
+

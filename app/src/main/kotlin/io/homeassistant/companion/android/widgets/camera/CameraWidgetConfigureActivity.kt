@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.widgets.camera
+package com.goflow.app.widgets.camera
 
 import android.R.layout
 import android.appwidget.AppWidgetManager
@@ -14,18 +14,18 @@ import android.widget.Spinner
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.integration.IntegrationDomains.CAMERA_DOMAIN
-import io.homeassistant.companion.android.common.data.integration.IntegrationDomains.IMAGE_DOMAIN
-import io.homeassistant.companion.android.database.widget.CameraWidgetDao
-import io.homeassistant.companion.android.database.widget.CameraWidgetEntity
-import io.homeassistant.companion.android.database.widget.WidgetTapAction
-import io.homeassistant.companion.android.databinding.WidgetCameraConfigureBinding
-import io.homeassistant.companion.android.settings.widgets.ManageWidgetsViewModel
-import io.homeassistant.companion.android.util.applySafeDrawingInsets
-import io.homeassistant.companion.android.widgets.BaseWidgetConfigureActivity
-import io.homeassistant.companion.android.widgets.common.SingleItemArrayAdapter
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.integration.IntegrationDomains.CAMERA_DOMAIN
+import com.goflow.app.common.data.integration.IntegrationDomains.IMAGE_DOMAIN
+import com.goflow.app.database.widget.CameraWidgetDao
+import com.goflow.app.database.widget.CameraWidgetEntity
+import com.goflow.app.database.widget.WidgetTapAction
+import com.goflow.app.databinding.WidgetCameraConfigureBinding
+import com.goflow.app.settings.widgets.ManageWidgetsViewModel
+import com.goflow.app.util.applySafeDrawingInsets
+import com.goflow.app.widgets.BaseWidgetConfigureActivity
+import com.goflow.app.widgets.common.SingleItemArrayAdapter
 import kotlinx.coroutines.launch
 import timber.log.Timber
 

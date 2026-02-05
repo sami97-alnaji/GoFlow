@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.webview.externalbus
+package com.goflow.app.webview.externalbus
 
 import kotlinx.coroutines.flow.Flow
 import kotlinx.serialization.json.JsonObject

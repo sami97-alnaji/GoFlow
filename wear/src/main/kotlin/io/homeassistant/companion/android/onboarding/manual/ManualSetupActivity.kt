@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.manual
+package com.goflow.app.onboarding.manual
 
 import android.content.Context
 import android.content.Intent
@@ -9,12 +9,12 @@ import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.wear.activity.ConfirmationActivity
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.database.server.TemporaryServer
-import io.homeassistant.companion.android.databinding.ActivityManualSetupBinding
-import io.homeassistant.companion.android.onboarding.integration.MobileAppIntegrationActivity
-import io.homeassistant.companion.android.util.adjustInset
+import com.goflow.app.R
+import com.goflow.app.common.R as commonR
+import com.goflow.app.database.server.TemporaryServer
+import com.goflow.app.databinding.ActivityManualSetupBinding
+import com.goflow.app.onboarding.integration.MobileAppIntegrationActivity
+import com.goflow.app.util.adjustInset
 import javax.inject.Inject
 
 @AndroidEntryPoint

@@ -1,9 +1,9 @@
-package io.homeassistant.companion.android.util.compose
+package com.goflow.app.util.compose
 
 import androidx.compose.ui.platform.AndroidUriHandler
 import androidx.navigation.NavController
-import io.homeassistant.companion.android.BuildConfig
-import io.homeassistant.companion.android.common.R as commonR
+import com.goflow.app.BuildConfig
+import com.goflow.app.common.R as commonR
 import timber.log.Timber
 
 suspend fun NavController.navigateToUri(

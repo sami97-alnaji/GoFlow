@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.fakes
+﻿package com.goflow.app.fakes
 
 import android.content.Context
 import android.net.Uri
@@ -52,3 +52,4 @@ class FakeCapabilityClient(context: Context) : CapabilityClient(context, Setting
         TODO("Not yet implemented")
     }
 }
+

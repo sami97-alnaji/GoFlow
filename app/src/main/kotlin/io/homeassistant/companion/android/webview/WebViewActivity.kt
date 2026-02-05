@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.webview
+package com.goflow.app.webview
 
 import android.annotation.SuppressLint
 import android.app.DownloadManager
@@ -91,68 +91,68 @@ import androidx.media3.exoplayer.ExoPlayer
 import androidx.webkit.WebViewCompat
 import androidx.webkit.WebViewFeature
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.BaseActivity
-import io.homeassistant.companion.android.BuildConfig
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.R.*
-import io.homeassistant.companion.android.assist.AssistActivity
-import io.homeassistant.companion.android.authenticator.Authenticator
-import io.homeassistant.companion.android.barcode.BarcodeScannerActivity
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.keychain.KeyChainRepository
-import io.homeassistant.companion.android.common.data.keychain.NamedKeyChain
-import io.homeassistant.companion.android.common.data.prefs.NightModeTheme
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.util.AppVersionProvider
-import io.homeassistant.companion.android.common.util.DisabledLocationHandler
-import io.homeassistant.companion.android.common.util.FailFast
-import io.homeassistant.companion.android.common.util.GestureAction
-import io.homeassistant.companion.android.common.util.GestureDirection
-import io.homeassistant.companion.android.common.util.getBooleanOrElse
-import io.homeassistant.companion.android.common.util.getBooleanOrNull
-import io.homeassistant.companion.android.common.util.getIntOrElse
-import io.homeassistant.companion.android.common.util.getIntOrNull
-import io.homeassistant.companion.android.common.util.getStringOrElse
-import io.homeassistant.companion.android.common.util.getStringOrNull
-import io.homeassistant.companion.android.common.util.initializePlayer
-import io.homeassistant.companion.android.common.util.isAutomotive
-import io.homeassistant.companion.android.common.util.jsonObjectOrNull
-import io.homeassistant.companion.android.common.util.runFragmentTransactionIfStateSafe
-import io.homeassistant.companion.android.common.util.toJsonObject
-import io.homeassistant.companion.android.common.util.toJsonObjectOrNull
-import io.homeassistant.companion.android.database.authentication.Authentication
-import io.homeassistant.companion.android.database.authentication.AuthenticationDao
-import io.homeassistant.companion.android.database.server.ServerConnectionInfo
-import io.homeassistant.companion.android.databinding.DialogAuthenticationBinding
-import io.homeassistant.companion.android.improv.ui.ImprovPermissionDialog
-import io.homeassistant.companion.android.improv.ui.ImprovSetupDialog
-import io.homeassistant.companion.android.launch.LaunchActivity
-import io.homeassistant.companion.android.nfc.WriteNfcTag
-import io.homeassistant.companion.android.sensors.SensorReceiver
-import io.homeassistant.companion.android.sensors.SensorWorker
-import io.homeassistant.companion.android.settings.ConnectionSecurityLevelFragment
-import io.homeassistant.companion.android.settings.SettingsActivity
-import io.homeassistant.companion.android.settings.server.ServerChooserFragment
-import io.homeassistant.companion.android.themes.NightModeManager
-import io.homeassistant.companion.android.util.ChangeLog
-import io.homeassistant.companion.android.util.DataUriDownloadManager
-import io.homeassistant.companion.android.util.LifecycleHandler
-import io.homeassistant.companion.android.util.OnSwipeListener
-import io.homeassistant.companion.android.util.TLSWebViewClient
-import io.homeassistant.companion.android.util.applyInsets
-import io.homeassistant.companion.android.util.hasNonRootPath
-import io.homeassistant.companion.android.util.hasSameOrigin
-import io.homeassistant.companion.android.util.isStarted
-import io.homeassistant.companion.android.websocket.WebsocketManager
-import io.homeassistant.companion.android.webview.WebView.ErrorType
-import io.homeassistant.companion.android.webview.addto.EntityAddToHandler
-import io.homeassistant.companion.android.webview.externalbus.EntityAddToActionsResponse
-import io.homeassistant.companion.android.webview.externalbus.ExternalBusMessage
-import io.homeassistant.companion.android.webview.externalbus.ExternalConfigResponse
-import io.homeassistant.companion.android.webview.externalbus.ExternalEntityAddToAction
-import io.homeassistant.companion.android.webview.externalbus.NavigateTo
-import io.homeassistant.companion.android.webview.externalbus.ShowSidebar
-import io.homeassistant.companion.android.webview.insecure.BlockInsecureFragment
+import com.goflow.app.BaseActivity
+import com.goflow.app.BuildConfig
+import com.goflow.app.R
+import com.goflow.app.R.*
+import com.goflow.app.assist.AssistActivity
+import com.goflow.app.authenticator.Authenticator
+import com.goflow.app.barcode.BarcodeScannerActivity
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.keychain.KeyChainRepository
+import com.goflow.app.common.data.keychain.NamedKeyChain
+import com.goflow.app.common.data.prefs.NightModeTheme
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.util.AppVersionProvider
+import com.goflow.app.common.util.DisabledLocationHandler
+import com.goflow.app.common.util.FailFast
+import com.goflow.app.common.util.GestureAction
+import com.goflow.app.common.util.GestureDirection
+import com.goflow.app.common.util.getBooleanOrElse
+import com.goflow.app.common.util.getBooleanOrNull
+import com.goflow.app.common.util.getIntOrElse
+import com.goflow.app.common.util.getIntOrNull
+import com.goflow.app.common.util.getStringOrElse
+import com.goflow.app.common.util.getStringOrNull
+import com.goflow.app.common.util.initializePlayer
+import com.goflow.app.common.util.isAutomotive
+import com.goflow.app.common.util.jsonObjectOrNull
+import com.goflow.app.common.util.runFragmentTransactionIfStateSafe
+import com.goflow.app.common.util.toJsonObject
+import com.goflow.app.common.util.toJsonObjectOrNull
+import com.goflow.app.database.authentication.Authentication
+import com.goflow.app.database.authentication.AuthenticationDao
+import com.goflow.app.database.server.ServerConnectionInfo
+import com.goflow.app.databinding.DialogAuthenticationBinding
+import com.goflow.app.improv.ui.ImprovPermissionDialog
+import com.goflow.app.improv.ui.ImprovSetupDialog
+import com.goflow.app.launch.LaunchActivity
+import com.goflow.app.nfc.WriteNfcTag
+import com.goflow.app.sensors.SensorReceiver
+import com.goflow.app.sensors.SensorWorker
+import com.goflow.app.settings.ConnectionSecurityLevelFragment
+import com.goflow.app.settings.SettingsActivity
+import com.goflow.app.settings.server.ServerChooserFragment
+import com.goflow.app.themes.NightModeManager
+import com.goflow.app.util.ChangeLog
+import com.goflow.app.util.DataUriDownloadManager
+import com.goflow.app.util.LifecycleHandler
+import com.goflow.app.util.OnSwipeListener
+import com.goflow.app.util.TLSWebViewClient
+import com.goflow.app.util.applyInsets
+import com.goflow.app.util.hasNonRootPath
+import com.goflow.app.util.hasSameOrigin
+import com.goflow.app.util.isStarted
+import com.goflow.app.websocket.WebsocketManager
+import com.goflow.app.webview.WebView.ErrorType
+import com.goflow.app.webview.addto.EntityAddToHandler
+import com.goflow.app.webview.externalbus.EntityAddToActionsResponse
+import com.goflow.app.webview.externalbus.ExternalBusMessage
+import com.goflow.app.webview.externalbus.ExternalConfigResponse
+import com.goflow.app.webview.externalbus.ExternalEntityAddToAction
+import com.goflow.app.webview.externalbus.NavigateTo
+import com.goflow.app.webview.externalbus.ShowSidebar
+import com.goflow.app.webview.insecure.BlockInsecureFragment
 import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -168,7 +168,7 @@ import timber.log.Timber
 @AndroidEntryPoint
 class WebViewActivity :
     BaseActivity(),
-    io.homeassistant.companion.android.webview.WebView {
+    com.goflow.app.webview.WebView {
 
     companion object {
         const val EXTRA_PATH = "path"

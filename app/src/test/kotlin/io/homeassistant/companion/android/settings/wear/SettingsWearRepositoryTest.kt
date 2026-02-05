@@ -1,13 +1,13 @@
-package io.homeassistant.companion.android.settings.wear
+package com.goflow.app.settings.wear
 
-import io.homeassistant.companion.android.common.data.authentication.AuthorizationException
-import io.homeassistant.companion.android.common.data.authentication.impl.AuthenticationService
-import io.homeassistant.companion.android.common.data.authentication.impl.entities.Token
-import io.homeassistant.companion.android.common.data.integration.IntegrationException
-import io.homeassistant.companion.android.common.data.integration.impl.IntegrationService
-import io.homeassistant.companion.android.common.data.integration.impl.entities.EntityResponse
-import io.homeassistant.companion.android.common.util.FailFast
-import io.homeassistant.companion.android.testing.unit.ConsoleLogExtension
+import com.goflow.app.common.data.authentication.AuthorizationException
+import com.goflow.app.common.data.authentication.impl.AuthenticationService
+import com.goflow.app.common.data.authentication.impl.entities.Token
+import com.goflow.app.common.data.integration.IntegrationException
+import com.goflow.app.common.data.integration.impl.IntegrationService
+import com.goflow.app.common.data.integration.impl.entities.EntityResponse
+import com.goflow.app.common.util.FailFast
+import com.goflow.app.testing.unit.ConsoleLogExtension
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk

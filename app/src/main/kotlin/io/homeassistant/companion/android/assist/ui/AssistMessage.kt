@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.assist.ui
+package com.goflow.app.assist.ui
 
 private const val PLACEHOLDER = "…"
 

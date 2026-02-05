@@ -1,8 +1,8 @@
-package io.homeassistant.companion.android.matter
+package com.goflow.app.matter
 
 import android.content.Context
 import android.content.IntentSender
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.MatterCommissionResponse
+import com.goflow.app.common.data.websocket.impl.entities.MatterCommissionResponse
 import javax.inject.Inject
 
 class MatterManagerImpl @Inject constructor() : MatterManager {

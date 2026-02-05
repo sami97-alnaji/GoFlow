@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.license
+package com.goflow.app.settings.license
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -16,10 +16,10 @@ import com.mikepenz.aboutlibraries.ui.compose.DefaultChipColors
 import com.mikepenz.aboutlibraries.ui.compose.DefaultLibraryColors
 import com.mikepenz.aboutlibraries.ui.compose.android.produceLibraries
 import com.mikepenz.aboutlibraries.ui.compose.m3.LibrariesContainer
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.compose.theme.HATheme
-import io.homeassistant.companion.android.common.compose.theme.LocalHAColorScheme
-import io.homeassistant.companion.android.util.safeBottomWindowInsets
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.compose.theme.HATheme
+import com.goflow.app.common.compose.theme.LocalHAColorScheme
+import com.goflow.app.util.safeBottomWindowInsets
 
 class LicensesFragment : Fragment() {
 

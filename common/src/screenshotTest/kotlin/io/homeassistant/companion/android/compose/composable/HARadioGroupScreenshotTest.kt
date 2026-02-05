@@ -1,13 +1,13 @@
-package io.homeassistant.companion.android.compose.composable
+package com.goflow.app.compose.composable
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import com.android.tools.screenshot.PreviewTest
-import io.homeassistant.companion.android.common.compose.composable.HARadioGroup
-import io.homeassistant.companion.android.common.compose.composable.RadioOption
-import io.homeassistant.companion.android.common.compose.theme.HAThemeForPreview
+import com.goflow.app.common.compose.composable.HARadioGroup
+import com.goflow.app.common.compose.composable.RadioOption
+import com.goflow.app.common.compose.theme.HAThemeForPreview
 
 class HARadioGroupScreenshotTest {
 

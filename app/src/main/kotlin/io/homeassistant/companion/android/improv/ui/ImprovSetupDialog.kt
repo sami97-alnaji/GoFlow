@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.improv.ui
+package com.goflow.app.improv.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -14,12 +14,12 @@ import androidx.lifecycle.repeatOnLifecycle
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.wifi.improv.DeviceState
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.common.data.network.WifiHelper
-import io.homeassistant.companion.android.improv.ImprovRepository
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
-import io.homeassistant.companion.android.util.setLayoutAndExpandedByDefault
-import io.homeassistant.companion.android.webview.externalbus.ExternalBusMessage
-import io.homeassistant.companion.android.webview.externalbus.ExternalBusRepository
+import com.goflow.app.common.data.network.WifiHelper
+import com.goflow.app.improv.ImprovRepository
+import com.goflow.app.util.compose.HomeAssistantAppTheme
+import com.goflow.app.util.setLayoutAndExpandedByDefault
+import com.goflow.app.webview.externalbus.ExternalBusMessage
+import com.goflow.app.webview.externalbus.ExternalBusRepository
 import javax.inject.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow

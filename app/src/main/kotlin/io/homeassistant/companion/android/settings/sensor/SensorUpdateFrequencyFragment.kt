@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.sensor
+package com.goflow.app.settings.sensor
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,12 +10,12 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.settings.SettingViewModel
-import io.homeassistant.companion.android.settings.SettingViewModel.Companion.DEFAULT_UPDATE_FREQUENCY
-import io.homeassistant.companion.android.settings.addHelpMenuProvider
-import io.homeassistant.companion.android.settings.sensor.views.SensorUpdateFrequencyView
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
+import com.goflow.app.common.R as commonR
+import com.goflow.app.settings.SettingViewModel
+import com.goflow.app.settings.SettingViewModel.Companion.DEFAULT_UPDATE_FREQUENCY
+import com.goflow.app.settings.addHelpMenuProvider
+import com.goflow.app.settings.sensor.views.SensorUpdateFrequencyView
+import com.goflow.app.util.compose.HomeAssistantAppTheme
 
 @AndroidEntryPoint
 class SensorUpdateFrequencyFragment : Fragment() {

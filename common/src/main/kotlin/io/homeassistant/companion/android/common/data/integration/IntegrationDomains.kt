@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.data.integration
+package com.goflow.app.common.data.integration
 
 object IntegrationDomains {
     const val CAMERA_DOMAIN = "camera"

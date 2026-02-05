@@ -1,7 +1,7 @@
-package io.homeassistant.companion.android.onboarding.manual
+package com.goflow.app.onboarding.manual
 
 import androidx.annotation.StringRes
-import io.homeassistant.companion.android.database.server.TemporaryServer
+import com.goflow.app.database.server.TemporaryServer
 
 interface ManualSetupView {
     fun startIntegration(temporaryServer: TemporaryServer)

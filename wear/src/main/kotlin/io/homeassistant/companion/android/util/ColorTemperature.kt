@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.util
+package com.goflow.app.util
 
 import androidx.compose.ui.graphics.Color
 import java.util.TreeMap

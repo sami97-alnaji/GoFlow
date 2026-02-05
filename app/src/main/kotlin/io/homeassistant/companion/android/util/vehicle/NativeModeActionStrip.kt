@@ -1,11 +1,11 @@
-package io.homeassistant.companion.android.util.vehicle
+package com.goflow.app.util.vehicle
 
 import android.content.Intent
 import androidx.car.app.CarContext
 import androidx.car.app.model.Action
-import io.homeassistant.companion.android.common.R
-import io.homeassistant.companion.android.common.util.isAutomotive
-import io.homeassistant.companion.android.launch.LaunchActivity
+import com.goflow.app.common.R
+import com.goflow.app.common.util.isAutomotive
+import com.goflow.app.launch.LaunchActivity
 import timber.log.Timber
 
 fun nativeModeAction(carContext: CarContext): Action {

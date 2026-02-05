@@ -1,8 +1,8 @@
-package io.homeassistant.companion.android.common.data.prefs
+package com.goflow.app.common.data.prefs
 
-import io.homeassistant.companion.android.common.data.LocalStorage
-import io.homeassistant.companion.android.common.util.GestureAction
-import io.homeassistant.companion.android.common.util.HAGesture
+import com.goflow.app.common.data.LocalStorage
+import com.goflow.app.common.util.GestureAction
+import com.goflow.app.common.util.HAGesture
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk

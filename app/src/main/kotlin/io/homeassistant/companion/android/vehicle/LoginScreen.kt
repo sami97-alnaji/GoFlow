@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.vehicle
+package com.goflow.app.vehicle
 
 import android.content.Intent
 import androidx.car.app.CarContext
@@ -11,11 +11,11 @@ import androidx.car.app.model.Template
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import io.homeassistant.companion.android.common.R
-import io.homeassistant.companion.android.common.data.authentication.SessionState
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.util.isAutomotive
-import io.homeassistant.companion.android.launch.LaunchActivity
+import com.goflow.app.common.R
+import com.goflow.app.common.data.authentication.SessionState
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.util.isAutomotive
+import com.goflow.app.launch.LaunchActivity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 

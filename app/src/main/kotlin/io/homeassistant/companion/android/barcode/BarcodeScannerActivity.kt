@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.barcode
+package com.goflow.app.barcode
 
 import android.Manifest
 import android.content.Context
@@ -20,10 +20,10 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.google.zxing.BarcodeFormat
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.BaseActivity
-import io.homeassistant.companion.android.barcode.view.BarcodeScannerView
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
+import com.goflow.app.BaseActivity
+import com.goflow.app.barcode.view.BarcodeScannerView
+import com.goflow.app.common.R as commonR
+import com.goflow.app.util.compose.HomeAssistantAppTheme
 import java.util.Locale
 import kotlinx.coroutines.launch
 

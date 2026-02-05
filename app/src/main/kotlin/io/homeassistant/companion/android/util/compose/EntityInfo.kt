@@ -1,9 +1,9 @@
-package io.homeassistant.companion.android.util.compose
+package com.goflow.app.util.compose
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.integration.IntegrationDomains.CAMERA_DOMAIN
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.integration.IntegrationDomains.CAMERA_DOMAIN
 
 @Composable
 fun getEntityDomainString(domain: String): String {

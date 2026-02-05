@@ -1,8 +1,8 @@
-package io.homeassistant.companion.android.common
+package com.goflow.app.common
 
 import android.content.SharedPreferences
 import androidx.core.content.edit
-import io.homeassistant.companion.android.common.data.LocalStorage
+import com.goflow.app.common.data.LocalStorage
 import java.util.concurrent.atomic.AtomicReference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex

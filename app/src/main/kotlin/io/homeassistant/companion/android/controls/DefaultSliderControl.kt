@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.controls
+package com.goflow.app.controls
 
 import android.content.Context
 import android.os.Build
@@ -8,9 +8,9 @@ import android.service.controls.actions.ControlAction
 import android.service.controls.actions.FloatAction
 import android.service.controls.templates.RangeTemplate
 import androidx.annotation.RequiresApi
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.integration.IntegrationRepository
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.integration.IntegrationRepository
 
 @RequiresApi(Build.VERSION_CODES.R)
 object DefaultSliderControl : HaControl {

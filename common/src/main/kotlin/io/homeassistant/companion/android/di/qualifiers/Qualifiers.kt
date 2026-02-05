@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.di.qualifiers
+package com.goflow.app.di.qualifiers
 
 import javax.inject.Qualifier
 

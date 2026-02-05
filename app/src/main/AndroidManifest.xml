@@ -85,7 +85,7 @@
     <uses-feature android:name="android.hardware.bluetooth" android:required="false" />
 
     <application
-        android:name="io.homeassistant.companion.android.HomeAssistantApplication"
+        android:name="com.goflow.app.HomeAssistantApplication"
         android:allowBackup="true"
         android:fullBackupContent="@xml/backup_rules"
         android:dataExtractionRules="@xml/backup_rules_android12"
@@ -108,7 +108,7 @@
         break all user-created shortcuts from previous versions.
         -->
         <activity
-            android:name="io.homeassistant.companion.android.launch.LaunchActivity"
+            android:name="com.goflow.app.launch.LaunchActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.LaunchScreen">
@@ -129,10 +129,10 @@
         break the app for users who set it as their default launcher when updating.
         -->
         <activity-alias
-            android:name="io.homeassistant.companion.android.launch.LauncherAlias"
-            android:enabled="false"
+            android:name="com.goflow.app.launch.LauncherAlias"
+            android:enabled="true"
             android:exported="true"
-            android:targetActivity="io.homeassistant.companion.android.launch.LaunchActivity">
+            android:targetActivity="com.goflow.app.launch.LaunchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -168,7 +168,7 @@
                 <action android:name="android.app.action.NEXT_ALARM_CLOCK_CHANGED" />
                 <action android:name="android.bluetooth.device.action.ACL_CONNECTED" />
                 <action android:name="android.bluetooth.device.action.ACL_DISCONNECTED" />
-                <action android:name="io.homeassistant.companion.android.UPDATE_SENSORS" />
+                <action android:name="com.goflow.app.UPDATE_SENSORS" />
             </intent-filter>
         </receiver>
 
@@ -176,8 +176,8 @@
             android:exported="false">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="io.homeassistant.companion.android.widgets.ButtonWidget.CALL_SERVICE" />
-                <action android:name="io.homeassistant.companion.android.widgets.ButtonWidget.CALL_SERVICE_AUTH" />
+                <action android:name="com.goflow.app.widgets.ButtonWidget.CALL_SERVICE" />
+                <action android:name="com.goflow.app.widgets.ButtonWidget.CALL_SERVICE_AUTH" />
             </intent-filter>
 
             <meta-data
@@ -189,7 +189,7 @@
             android:exported="false">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="io.homeassistant.companion.android.widgets.camera.CameraWidget.UPDATE_IMAGE" />
+                <action android:name="com.goflow.app.widgets.camera.CameraWidget.UPDATE_IMAGE" />
             </intent-filter>
 
             <meta-data
@@ -223,12 +223,12 @@
             android:exported="false">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="io.homeassistant.companion.android.widgets.media_player_controls.MediaPlayerControlsWidget.UPDATE_MEDIA_IMAGE" />
-                <action android:name="io.homeassistant.companion.android.widgets.media_player_controls.MediaPlayerControlsWidget.CALL_PREV_TRACK" />
-                <action android:name="io.homeassistant.companion.android.widgets.media_player_controls.MediaPlayerControlsWidget.CALL_REWIND" />
-                <action android:name="io.homeassistant.companion.android.widgets.media_player_controls.MediaPlayerControlsWidget.CALL_PLAYPAUSE" />
-                <action android:name="io.homeassistant.companion.android.widgets.media_player_controls.MediaPlayerControlsWidget.CALL_FASTFORWARD" />
-                <action android:name="io.homeassistant.companion.android.widgets.media_player_controls.MediaPlayerControlsWidget.CALL_NEXT_TRACK" />
+                <action android:name="com.goflow.app.widgets.media_player_controls.MediaPlayerControlsWidget.UPDATE_MEDIA_IMAGE" />
+                <action android:name="com.goflow.app.widgets.media_player_controls.MediaPlayerControlsWidget.CALL_PREV_TRACK" />
+                <action android:name="com.goflow.app.widgets.media_player_controls.MediaPlayerControlsWidget.CALL_REWIND" />
+                <action android:name="com.goflow.app.widgets.media_player_controls.MediaPlayerControlsWidget.CALL_PLAYPAUSE" />
+                <action android:name="com.goflow.app.widgets.media_player_controls.MediaPlayerControlsWidget.CALL_FASTFORWARD" />
+                <action android:name="com.goflow.app.widgets.media_player_controls.MediaPlayerControlsWidget.CALL_NEXT_TRACK" />
             </intent-filter>
 
             <meta-data
@@ -245,7 +245,7 @@
                 <action android:name="android.app.action.NEXT_ALARM_CLOCK_CHANGED" />
                 <action android:name="android.bluetooth.device.action.ACL_CONNECTED" />
                 <action android:name="android.bluetooth.device.action.ACL_DISCONNECTED" />
-                <action android:name="io.homeassistant.companion.android.background.REQUEST_SENSORS_UPDATE" />
+                <action android:name="com.goflow.app.background.REQUEST_SENSORS_UPDATE" />
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
 
@@ -314,7 +314,7 @@
             android:exported="true">
             <meta-data
                 android:name="android.service.controls.META_DATA_PANEL_ACTIVITY"
-                android:value="${applicationId}/io.homeassistant.companion.android.controls.HaControlsPanelActivity" />
+                android:value="${applicationId}/com.goflow.app.controls.HaControlsPanelActivity" />
             <intent-filter>
                 <action android:name="android.service.controls.ControlsProviderService"/>
             </intent-filter>
@@ -324,7 +324,7 @@
             android:permission="android.permission.BIND_CONTROLS"
             android:exported="true"
             android:resizeableActivity="true"
-            android:taskAffinity="io.homeassistant.companion.android.controls"
+            android:taskAffinity="com.goflow.app.controls"
             android:enabled="false" />
 
         <receiver
@@ -337,7 +337,7 @@
             And Action would just force the update of the sensor nothing else.
             -->
             <intent-filter>
-                <action android:name="io.homeassistant.companion.android.background.REQUEST_ACCURATE_UPDATE" />
+                <action android:name="com.goflow.app.background.REQUEST_ACCURATE_UPDATE" />
             </intent-filter>
         </receiver>
 
@@ -346,7 +346,7 @@
             android:enabled="true"
             android:exported="false">
             <intent-filter>
-                <action android:name="io.homeassistant.companion.android.background.REQUEST_ACTIVITY_UPDATES" />
+                <action android:name="com.goflow.app.background.REQUEST_ACTIVITY_UPDATES" />
             </intent-filter>
         </receiver>
 
@@ -513,7 +513,7 @@
             android:exported="true"
             android:windowSoftInputMode="adjustResize"
             android:launchMode="singleTask"
-            android:taskAffinity="io.homeassistant.companion.android.assist"
+            android:taskAffinity="com.goflow.app.assist"
             android:autoRemoveFromRecents="true"
             android:showWhenLocked="true"
             android:theme="@style/Theme.HomeAssistant.Assist">

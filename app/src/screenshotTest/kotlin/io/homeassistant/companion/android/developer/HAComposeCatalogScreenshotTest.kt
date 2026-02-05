@@ -1,13 +1,13 @@
-package io.homeassistant.companion.android.developer
+package com.goflow.app.developer
 
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
 import com.android.tools.screenshot.PreviewTest
-import io.homeassistant.companion.android.common.compose.composable.ButtonVariant
-import io.homeassistant.companion.android.common.compose.theme.HAThemeForPreview
-import io.homeassistant.companion.android.developer.catalog.catalogButtonsAndIndicatorsSection
-import io.homeassistant.companion.android.developer.catalog.catalogTextAndBannersSection
-import io.homeassistant.companion.android.developer.catalog.catalogUserInputSection
+import com.goflow.app.common.compose.composable.ButtonVariant
+import com.goflow.app.common.compose.theme.HAThemeForPreview
+import com.goflow.app.developer.catalog.catalogButtonsAndIndicatorsSection
+import com.goflow.app.developer.catalog.catalogTextAndBannersSection
+import com.goflow.app.developer.catalog.catalogUserInputSection
 
 class HAComposeCatalogScreenshotTest {
 

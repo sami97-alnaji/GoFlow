@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings
+package com.goflow.app.settings
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes

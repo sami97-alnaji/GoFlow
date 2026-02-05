@@ -1,9 +1,9 @@
-package io.homeassistant.companion.android.sensors
+package com.goflow.app.sensors
 
 import android.content.Context
 import android.content.Intent
-import io.homeassistant.companion.android.common.R
-import io.homeassistant.companion.android.common.sensors.SensorManager
+import com.goflow.app.common.R
+import com.goflow.app.common.sensors.SensorManager
 
 class DevicePolicyManager : SensorManager {
     companion object {

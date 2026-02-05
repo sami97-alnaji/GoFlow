@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.authenticator
+package com.goflow.app.authenticator
 
 import android.content.Context
 import androidx.biometric.BiometricManager.Authenticators

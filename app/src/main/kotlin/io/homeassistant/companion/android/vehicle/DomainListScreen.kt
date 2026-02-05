@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.vehicle
+package com.goflow.app.vehicle
 
 import android.os.Build
 import androidx.annotation.RequiresApi
@@ -6,17 +6,17 @@ import androidx.car.app.CarContext
 import androidx.car.app.model.GridTemplate
 import androidx.car.app.model.Template
 import androidx.lifecycle.lifecycleScope
-import io.homeassistant.companion.android.BuildConfig
-import io.homeassistant.companion.android.common.R
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.prefs.PrefsRepository
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.EntityRegistryResponse
-import io.homeassistant.companion.android.common.util.isAutomotive
-import io.homeassistant.companion.android.util.vehicle.SUPPORTED_DOMAINS
-import io.homeassistant.companion.android.util.vehicle.getDomainList
-import io.homeassistant.companion.android.util.vehicle.getHeaderBuilder
-import io.homeassistant.companion.android.util.vehicle.nativeModeAction
+import com.goflow.app.BuildConfig
+import com.goflow.app.common.R
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.prefs.PrefsRepository
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.data.websocket.impl.entities.EntityRegistryResponse
+import com.goflow.app.common.util.isAutomotive
+import com.goflow.app.util.vehicle.SUPPORTED_DOMAINS
+import com.goflow.app.util.vehicle.getDomainList
+import com.goflow.app.util.vehicle.getHeaderBuilder
+import com.goflow.app.util.vehicle.nativeModeAction
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.viewHolders
+package com.goflow.app.viewHolders
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

@@ -1,6 +1,6 @@
 @file:Suppress("ktlint-disable no-empty-file")
 
-package io.homeassistant.companion.android
+package com.goflow.app
 
 /**
  * Central configuration for work-in-progress features.

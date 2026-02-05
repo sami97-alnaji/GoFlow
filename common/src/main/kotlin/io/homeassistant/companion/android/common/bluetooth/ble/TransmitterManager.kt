@@ -1,11 +1,11 @@
-package io.homeassistant.companion.android.common.bluetooth.ble
+package com.goflow.app.common.bluetooth.ble
 
 import android.bluetooth.BluetoothManager
 import android.bluetooth.le.AdvertiseCallback
 import android.bluetooth.le.AdvertiseSettings
 import android.content.Context
 import androidx.core.content.getSystemService
-import io.homeassistant.companion.android.common.sensors.BluetoothSensorManager
+import com.goflow.app.common.sensors.BluetoothSensorManager
 import java.util.UUID
 import org.altbeacon.beacon.Beacon
 import org.altbeacon.beacon.BeaconParser

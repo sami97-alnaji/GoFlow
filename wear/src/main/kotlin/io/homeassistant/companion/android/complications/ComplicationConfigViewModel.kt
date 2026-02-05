@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.complications
+package com.goflow.app.complications
 
 import android.app.Application
 import androidx.compose.runtime.State
@@ -11,16 +11,16 @@ import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.homeassistant.companion.android.HomeAssistantApplication
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.integration.friendlyName
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.data.websocket.WebSocketState
-import io.homeassistant.companion.android.data.SimplifiedEntity
-import io.homeassistant.companion.android.database.wear.EntityStateComplications
-import io.homeassistant.companion.android.database.wear.EntityStateComplicationsDao
-import io.homeassistant.companion.android.database.wear.FavoritesDao
-import io.homeassistant.companion.android.database.wear.getAllFlow
+import com.goflow.app.HomeAssistantApplication
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.integration.friendlyName
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.data.websocket.WebSocketState
+import com.goflow.app.data.SimplifiedEntity
+import com.goflow.app.database.wear.EntityStateComplications
+import com.goflow.app.database.wear.EntityStateComplicationsDao
+import com.goflow.app.database.wear.FavoritesDao
+import com.goflow.app.database.wear.getAllFlow
 import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch

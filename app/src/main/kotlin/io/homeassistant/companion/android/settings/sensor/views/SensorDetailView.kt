@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.sensor.views
+package com.goflow.app.settings.sensor.views
 
 import android.content.Intent
 import android.provider.Settings
@@ -71,21 +71,21 @@ import androidx.core.net.toUri
 import com.mikepenz.iconics.IconicsDrawable
 import com.mikepenz.iconics.compose.Image
 import com.mikepenz.iconics.typeface.library.community.material.CommunityMaterial
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.compose.composable.HAHint
-import io.homeassistant.companion.android.common.sensors.SensorManager
-import io.homeassistant.companion.android.common.util.kotlinJsonMapper
-import io.homeassistant.companion.android.database.sensor.SensorSetting
-import io.homeassistant.companion.android.database.sensor.SensorSettingType
-import io.homeassistant.companion.android.database.sensor.SensorWithAttributes
-import io.homeassistant.companion.android.database.settings.SensorUpdateFrequencySetting
-import io.homeassistant.companion.android.sensors.HealthConnectSensorManager
-import io.homeassistant.companion.android.settings.sensor.SensorDetailViewModel
-import io.homeassistant.companion.android.settings.views.SettingsSubheader
-import io.homeassistant.companion.android.util.compose.MdcAlertDialog
-import io.homeassistant.companion.android.util.compose.TransparentChip
-import io.homeassistant.companion.android.util.safeBottomPaddingValues
-import io.homeassistant.companion.android.util.safeBottomWindowInsets
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.compose.composable.HAHint
+import com.goflow.app.common.sensors.SensorManager
+import com.goflow.app.common.util.kotlinJsonMapper
+import com.goflow.app.database.sensor.SensorSetting
+import com.goflow.app.database.sensor.SensorSettingType
+import com.goflow.app.database.sensor.SensorWithAttributes
+import com.goflow.app.database.settings.SensorUpdateFrequencySetting
+import com.goflow.app.sensors.HealthConnectSensorManager
+import com.goflow.app.settings.sensor.SensorDetailViewModel
+import com.goflow.app.settings.views.SettingsSubheader
+import com.goflow.app.util.compose.MdcAlertDialog
+import com.goflow.app.util.compose.TransparentChip
+import com.goflow.app.util.safeBottomPaddingValues
+import com.goflow.app.util.safeBottomWindowInsets
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 

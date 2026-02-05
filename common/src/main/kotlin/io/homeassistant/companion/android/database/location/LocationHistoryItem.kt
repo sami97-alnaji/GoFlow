@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.database.location
+package com.goflow.app.database.location
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

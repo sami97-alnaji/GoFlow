@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.thread
+package com.goflow.app.thread
 
 import dagger.Binds
 import dagger.Module

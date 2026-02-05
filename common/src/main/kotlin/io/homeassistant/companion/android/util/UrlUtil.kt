@@ -1,8 +1,8 @@
-package io.homeassistant.companion.android.util
+package com.goflow.app.util
 
 import android.net.Uri
-import io.homeassistant.companion.android.common.data.MalformedHttpUrlException
-import io.homeassistant.companion.android.common.data.authentication.impl.AuthenticationService
+import com.goflow.app.common.data.MalformedHttpUrlException
+import com.goflow.app.common.data.authentication.impl.AuthenticationService
 import java.net.InetAddress
 import java.net.URI
 import java.net.URL

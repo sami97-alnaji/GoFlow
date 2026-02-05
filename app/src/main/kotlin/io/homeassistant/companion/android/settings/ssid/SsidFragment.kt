@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.ssid
+package com.goflow.app.settings.ssid
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -16,12 +16,12 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.util.DisabledLocationHandler
-import io.homeassistant.companion.android.common.util.LocationPermissionInfoHandler
-import io.homeassistant.companion.android.settings.addHelpMenuProvider
-import io.homeassistant.companion.android.settings.ssid.views.SsidView
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.util.DisabledLocationHandler
+import com.goflow.app.common.util.LocationPermissionInfoHandler
+import com.goflow.app.settings.addHelpMenuProvider
+import com.goflow.app.settings.ssid.views.SsidView
+import com.goflow.app.util.compose.HomeAssistantAppTheme
 
 @AndroidEntryPoint
 class SsidFragment : Fragment() {

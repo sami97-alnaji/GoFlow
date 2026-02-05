@@ -1,9 +1,9 @@
-package io.homeassistant.companion.android.common.data.integration.impl.entities
+package com.goflow.app.common.data.integration.impl.entities
 
-import io.homeassistant.companion.android.common.util.AppVersion
-import io.homeassistant.companion.android.common.util.MessagingToken
-import io.homeassistant.companion.android.common.util.kotlinJsonMapper
-import io.homeassistant.companion.android.testing.unit.ConsoleLogExtension
+import com.goflow.app.common.util.AppVersion
+import com.goflow.app.common.util.MessagingToken
+import com.goflow.app.common.util.kotlinJsonMapper
+import com.goflow.app.testing.unit.ConsoleLogExtension
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith

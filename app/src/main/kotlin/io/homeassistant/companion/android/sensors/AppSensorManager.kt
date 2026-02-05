@@ -1,7 +1,7 @@
-package io.homeassistant.companion.android.sensors
+package com.goflow.app.sensors
 
-import io.homeassistant.companion.android.BuildConfig
-import io.homeassistant.companion.android.common.sensors.AppSensorManagerBase
+import com.goflow.app.BuildConfig
+import com.goflow.app.common.sensors.AppSensorManagerBase
 
 class AppSensorManager : AppSensorManagerBase() {
 

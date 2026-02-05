@@ -1,15 +1,15 @@
-package io.homeassistant.companion.android.common.util
+package com.goflow.app.common.util
 
 import android.content.Context
 import androidx.work.ListenableWorker
 import dagger.hilt.EntryPoints
-import io.homeassistant.companion.android.common.data.integration.DeviceRegistration
-import io.homeassistant.companion.android.common.data.integration.IntegrationRepository
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.data.websocket.WebSocketRepository
-import io.homeassistant.companion.android.common.util.ResyncRegistrationWorker.Companion.ResyncRegistrationWorkerEntryPoint
-import io.homeassistant.companion.android.database.server.Server
-import io.homeassistant.companion.android.testing.unit.ConsoleLogExtension
+import com.goflow.app.common.data.integration.DeviceRegistration
+import com.goflow.app.common.data.integration.IntegrationRepository
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.data.websocket.WebSocketRepository
+import com.goflow.app.common.util.ResyncRegistrationWorker.Companion.ResyncRegistrationWorkerEntryPoint
+import com.goflow.app.database.server.Server
+import com.goflow.app.testing.unit.ConsoleLogExtension
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.every

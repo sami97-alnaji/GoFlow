@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.server
+package com.goflow.app.settings.server
 
 import android.content.Intent
 import android.graphics.Color
@@ -27,18 +27,18 @@ import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreference
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.authenticator.Authenticator
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.launch.LaunchActivity
-import io.homeassistant.companion.android.settings.ConnectionSecurityLevelFragment
-import io.homeassistant.companion.android.settings.SettingsActivity
-import io.homeassistant.companion.android.settings.ssid.SsidFragment
-import io.homeassistant.companion.android.settings.url.ExternalUrlFragment
-import io.homeassistant.companion.android.settings.websocket.WebsocketSettingFragment
-import io.homeassistant.companion.android.util.QuestUtil
-import io.homeassistant.companion.android.util.applyBottomSafeDrawingInsets
-import io.homeassistant.companion.android.webview.WebViewActivity
+import com.goflow.app.R
+import com.goflow.app.authenticator.Authenticator
+import com.goflow.app.common.R as commonR
+import com.goflow.app.launch.LaunchActivity
+import com.goflow.app.settings.ConnectionSecurityLevelFragment
+import com.goflow.app.settings.SettingsActivity
+import com.goflow.app.settings.ssid.SsidFragment
+import com.goflow.app.settings.url.ExternalUrlFragment
+import com.goflow.app.settings.websocket.WebsocketSettingFragment
+import com.goflow.app.util.QuestUtil
+import com.goflow.app.util.applyBottomSafeDrawingInsets
+import com.goflow.app.webview.WebViewActivity
 import java.net.URLEncoder
 import javax.inject.Inject
 import kotlinx.coroutines.launch

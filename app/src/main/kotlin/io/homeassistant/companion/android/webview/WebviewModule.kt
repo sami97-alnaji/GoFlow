@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.webview
+package com.goflow.app.webview
 
 import dagger.Binds
 import dagger.Module

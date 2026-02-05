@@ -1,10 +1,10 @@
-package io.homeassistant.companion.android.util
+package com.goflow.app.util
 
-import io.homeassistant.companion.android.common.data.HomeAssistantVersion
-import io.homeassistant.companion.android.common.data.servers.ServerConnectionStateProvider
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.database.server.Server
-import io.homeassistant.companion.android.database.server.ServerConnectionInfo
+import com.goflow.app.common.data.HomeAssistantVersion
+import com.goflow.app.common.data.servers.ServerConnectionStateProvider
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.database.server.Server
+import com.goflow.app.database.server.ServerConnectionInfo
 import io.mockk.coEvery
 import io.mockk.every
 import io.mockk.mockk

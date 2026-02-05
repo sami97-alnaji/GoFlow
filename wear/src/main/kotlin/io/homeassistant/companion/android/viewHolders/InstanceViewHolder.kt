@@ -1,10 +1,10 @@
-package io.homeassistant.companion.android.viewHolders
+package com.goflow.app.viewHolders
 
 import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.onboarding.HomeAssistantInstance
+import com.goflow.app.R
+import com.goflow.app.onboarding.HomeAssistantInstance
 import timber.log.Timber
 
 class InstanceViewHolder(v: View, val onClick: (HomeAssistantInstance) -> Unit) :

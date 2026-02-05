@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.developer
+package com.goflow.app.developer
 
 import android.app.PictureInPictureParams
 import android.os.Build
@@ -31,9 +31,9 @@ import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import androidx.media3.datasource.DataSource
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.common.util.initializePlayer
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
-import io.homeassistant.companion.android.util.compose.media.player.HAMediaPlayer
+import com.goflow.app.common.util.initializePlayer
+import com.goflow.app.util.compose.HomeAssistantAppTheme
+import com.goflow.app.util.compose.media.player.HAMediaPlayer
 import javax.inject.Inject
 import kotlinx.coroutines.launch
 

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.integration
+package com.goflow.app.onboarding.integration
 
 import dagger.Binds
 import dagger.Module

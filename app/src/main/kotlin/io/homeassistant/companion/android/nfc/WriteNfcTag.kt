@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.nfc
+package com.goflow.app.nfc
 
 import android.content.Context
 import android.content.Intent

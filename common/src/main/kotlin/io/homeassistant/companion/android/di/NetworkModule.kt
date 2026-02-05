@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.di
+package com.goflow.app.di
 
 import android.content.Context
 import android.net.ConnectivityManager
@@ -10,12 +10,12 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import io.homeassistant.companion.android.common.data.network.NetworkHelper
-import io.homeassistant.companion.android.common.data.network.NetworkHelperImpl
-import io.homeassistant.companion.android.common.data.network.NetworkStatusMonitor
-import io.homeassistant.companion.android.common.data.network.NetworkStatusMonitorImpl
-import io.homeassistant.companion.android.common.data.network.WifiHelper
-import io.homeassistant.companion.android.common.data.network.WifiHelperImpl
+import com.goflow.app.common.data.network.NetworkHelper
+import com.goflow.app.common.data.network.NetworkHelperImpl
+import com.goflow.app.common.data.network.NetworkStatusMonitor
+import com.goflow.app.common.data.network.NetworkStatusMonitorImpl
+import com.goflow.app.common.data.network.WifiHelper
+import com.goflow.app.common.data.network.WifiHelperImpl
 import javax.inject.Singleton
 
 @Module

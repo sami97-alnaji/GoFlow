@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings
+package com.goflow.app.settings
 
 import android.app.role.RoleManager
 import android.content.ComponentName
@@ -9,19 +9,19 @@ import android.provider.Settings
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.getSystemService
 import androidx.preference.PreferenceDataStore
-import io.homeassistant.companion.android.BuildConfig
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.integration.impl.entities.RateLimitResponse
-import io.homeassistant.companion.android.common.data.prefs.NightModeTheme
-import io.homeassistant.companion.android.common.data.prefs.PrefsRepository
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.util.isAutomotive
-import io.homeassistant.companion.android.database.server.Server
-import io.homeassistant.companion.android.database.settings.SettingsDao
-import io.homeassistant.companion.android.settings.language.LanguagesManager
-import io.homeassistant.companion.android.themes.NightModeManager
-import io.homeassistant.companion.android.util.ChangeLog
+import com.goflow.app.BuildConfig
+import com.goflow.app.R
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.integration.impl.entities.RateLimitResponse
+import com.goflow.app.common.data.prefs.NightModeTheme
+import com.goflow.app.common.data.prefs.PrefsRepository
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.util.isAutomotive
+import com.goflow.app.database.server.Server
+import com.goflow.app.database.settings.SettingsDao
+import com.goflow.app.settings.language.LanguagesManager
+import com.goflow.app.themes.NightModeManager
+import com.goflow.app.util.ChangeLog
 import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -51,12 +51,12 @@ class SettingsPresenterImpl @Inject constructor(
 
     private val voiceCommandAppComponent = ComponentName(
         BuildConfig.APPLICATION_ID,
-        "io.homeassistant.companion.android.assist.VoiceCommandIntentActivity",
+        "com.goflow.app.assist.VoiceCommandIntentActivity",
     )
 
     private val launcherAliasComponent = ComponentName(
         BuildConfig.APPLICATION_ID,
-        "io.homeassistant.companion.android.launch.LauncherAlias",
+        "com.goflow.app.launch.LauncherAlias",
     )
 
     private var suggestionFlow = MutableStateFlow<SettingsHomeSuggestion?>(null)

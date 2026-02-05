@@ -1,14 +1,14 @@
-package io.homeassistant.companion.android.common.sensors
+package com.goflow.app.common.sensors
 
 import android.app.AlarmManager
 import android.content.Context
 import androidx.core.content.getSystemService
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.util.STATE_UNAVAILABLE
-import io.homeassistant.companion.android.common.util.STATE_UNKNOWN
-import io.homeassistant.companion.android.common.util.isAutomotive
-import io.homeassistant.companion.android.database.sensor.SensorSetting
-import io.homeassistant.companion.android.database.sensor.SensorSettingType
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.util.STATE_UNAVAILABLE
+import com.goflow.app.common.util.STATE_UNKNOWN
+import com.goflow.app.common.util.isAutomotive
+import com.goflow.app.database.sensor.SensorSetting
+import com.goflow.app.database.sensor.SensorSettingType
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date

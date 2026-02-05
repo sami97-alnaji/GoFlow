@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.notifications
+package com.goflow.app.common.notifications
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -6,9 +6,9 @@ import android.content.Intent
 import android.os.Build
 import androidx.core.app.NotificationManagerCompat
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.util.cancelGroupIfNeeded
-import io.homeassistant.companion.android.database.notification.NotificationDao
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.util.cancelGroupIfNeeded
+import com.goflow.app.database.notification.NotificationDao
 import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.widgets.entity
+package com.goflow.app.widgets.entity
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
@@ -14,18 +14,18 @@ import androidx.core.content.ContextCompat
 import androidx.core.graphics.toColorInt
 import com.google.android.material.color.DynamicColors
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.integration.canSupportPrecision
-import io.homeassistant.companion.android.common.data.integration.friendlyState
-import io.homeassistant.companion.android.common.data.integration.onEntityPressedWithoutState
-import io.homeassistant.companion.android.database.widget.StaticWidgetDao
-import io.homeassistant.companion.android.database.widget.StaticWidgetEntity
-import io.homeassistant.companion.android.database.widget.WidgetBackgroundType
-import io.homeassistant.companion.android.database.widget.WidgetTapAction
-import io.homeassistant.companion.android.util.getAttribute
-import io.homeassistant.companion.android.widgets.BaseWidgetProvider
+import com.goflow.app.R
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.integration.canSupportPrecision
+import com.goflow.app.common.data.integration.friendlyState
+import com.goflow.app.common.data.integration.onEntityPressedWithoutState
+import com.goflow.app.database.widget.StaticWidgetDao
+import com.goflow.app.database.widget.StaticWidgetEntity
+import com.goflow.app.database.widget.WidgetBackgroundType
+import com.goflow.app.database.widget.WidgetTapAction
+import com.goflow.app.util.getAttribute
+import com.goflow.app.widgets.BaseWidgetProvider
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.launch
 import timber.log.Timber
@@ -35,7 +35,7 @@ class EntityWidget : BaseWidgetProvider<StaticWidgetEntity, StaticWidgetDao>() {
 
     companion object {
         internal const val TOGGLE_ENTITY =
-            "io.homeassistant.companion.android.widgets.entity.EntityWidget.TOGGLE_ENTITY"
+            "com.goflow.app.widgets.entity.EntityWidget.TOGGLE_ENTITY"
 
         private data class ResolvedText(val text: CharSequence?, val exception: Boolean = false)
     }

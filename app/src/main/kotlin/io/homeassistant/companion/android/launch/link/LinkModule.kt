@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.launch.link
+package com.goflow.app.launch.link
 
 import dagger.Binds
 import dagger.Module

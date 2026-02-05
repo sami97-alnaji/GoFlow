@@ -1,12 +1,12 @@
-package io.homeassistant.companion.android.tiles
+package com.goflow.app.tiles
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.common.data.integration.onEntityPressedWithoutState
-import io.homeassistant.companion.android.common.data.prefs.WearPrefsRepository
-import io.homeassistant.companion.android.common.data.servers.ServerManager
+import com.goflow.app.common.data.integration.onEntityPressedWithoutState
+import com.goflow.app.common.data.prefs.WearPrefsRepository
+import com.goflow.app.common.data.servers.ServerManager
 import javax.inject.Inject
 import kotlinx.coroutines.runBlocking
 import timber.log.Timber

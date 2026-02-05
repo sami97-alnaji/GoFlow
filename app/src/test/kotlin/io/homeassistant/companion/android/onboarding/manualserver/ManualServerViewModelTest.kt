@@ -1,8 +1,8 @@
-package io.homeassistant.companion.android.onboarding.manualserver
+package com.goflow.app.onboarding.manualserver
 
 import android.webkit.URLUtil
 import app.cash.turbine.turbineScope
-import io.homeassistant.companion.android.testing.unit.MainDispatcherJUnit5Extension
+import com.goflow.app.testing.unit.MainDispatcherJUnit5Extension
 import io.mockk.every
 import io.mockk.mockkStatic
 import kotlinx.coroutines.ExperimentalCoroutinesApi

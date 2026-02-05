@@ -1,11 +1,11 @@
-package io.homeassistant.companion.android.sensors
+package com.goflow.app.sensors
 
 import android.content.Context
 import dagger.hilt.android.EntryPointAccessors
-import io.homeassistant.companion.android.common.sensors.SensorManager
-import io.homeassistant.companion.android.database.sensor.Attribute
-import io.homeassistant.companion.android.database.sensor.Sensor
-import io.homeassistant.companion.android.database.sensor.SensorDao
+import com.goflow.app.common.sensors.SensorManager
+import com.goflow.app.database.sensor.Attribute
+import com.goflow.app.database.sensor.Sensor
+import com.goflow.app.database.sensor.SensorDao
 import io.mockk.coEvery
 import io.mockk.coJustRun
 import io.mockk.every

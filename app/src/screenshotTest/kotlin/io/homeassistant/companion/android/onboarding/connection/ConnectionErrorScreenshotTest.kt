@@ -1,13 +1,13 @@
-package io.homeassistant.companion.android.onboarding.connection
+package com.goflow.app.onboarding.connection
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import com.android.tools.screenshot.PreviewTest
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.compose.theme.HAThemeForPreview
-import io.homeassistant.companion.android.common.data.connectivity.ConnectivityCheckResult
-import io.homeassistant.companion.android.common.data.connectivity.ConnectivityCheckState
-import io.homeassistant.companion.android.util.compose.HAPreviews
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.compose.theme.HAThemeForPreview
+import com.goflow.app.common.data.connectivity.ConnectivityCheckResult
+import com.goflow.app.common.data.connectivity.ConnectivityCheckState
+import com.goflow.app.util.compose.HAPreviews
 
 class ConnectionErrorScreenshotTest {
 

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.home
+package com.goflow.app.home
 
 import android.Manifest
 import android.content.Context
@@ -16,15 +16,15 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.wear.protolayout.ActionBuilders
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.home.views.DEEPLINK_PREFIX_SET_CAMERA_TILE
-import io.homeassistant.companion.android.home.views.DEEPLINK_PREFIX_SET_SHORTCUT_TILE
-import io.homeassistant.companion.android.home.views.DEEPLINK_PREFIX_SET_TEMPLATE_TILE
-import io.homeassistant.companion.android.home.views.DEEPLINK_PREFIX_SET_THERMOSTAT_TILE
-import io.homeassistant.companion.android.home.views.LoadHomePage
-import io.homeassistant.companion.android.onboarding.OnboardingActivity
-import io.homeassistant.companion.android.sensors.SensorReceiver
-import io.homeassistant.companion.android.sensors.SensorWorker
-import io.homeassistant.companion.android.tiles.OpenTileSettingsActivity
+import com.goflow.app.home.views.DEEPLINK_PREFIX_SET_CAMERA_TILE
+import com.goflow.app.home.views.DEEPLINK_PREFIX_SET_SHORTCUT_TILE
+import com.goflow.app.home.views.DEEPLINK_PREFIX_SET_TEMPLATE_TILE
+import com.goflow.app.home.views.DEEPLINK_PREFIX_SET_THERMOSTAT_TILE
+import com.goflow.app.home.views.LoadHomePage
+import com.goflow.app.onboarding.OnboardingActivity
+import com.goflow.app.sensors.SensorReceiver
+import com.goflow.app.sensors.SensorWorker
+import com.goflow.app.tiles.OpenTileSettingsActivity
 import javax.inject.Inject
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job

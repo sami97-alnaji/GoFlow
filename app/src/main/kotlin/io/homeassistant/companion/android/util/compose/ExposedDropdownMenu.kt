@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.util.compose
+package com.goflow.app.util.compose
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -17,10 +17,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.stringResource
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.database.server.Server
-import io.homeassistant.companion.android.database.widget.WidgetBackgroundType
-import io.homeassistant.companion.android.widgets.common.WidgetUtils
+import com.goflow.app.common.R as commonR
+import com.goflow.app.database.server.Server
+import com.goflow.app.database.widget.WidgetBackgroundType
+import com.goflow.app.widgets.common.WidgetUtils
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable

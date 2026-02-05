@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.webview
+package com.goflow.app.webview
 
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.runtime.Composable
@@ -6,7 +6,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
 import com.android.tools.screenshot.PreviewTest
-import io.homeassistant.companion.android.util.compose.media.player.FakePlayer
+import com.goflow.app.util.compose.media.player.FakePlayer
 
 class WebViewContentScreenScreenshotTest {
 

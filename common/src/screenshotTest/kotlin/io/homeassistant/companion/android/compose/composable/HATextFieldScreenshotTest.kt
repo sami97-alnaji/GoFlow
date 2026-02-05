@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.compose.composable
+package com.goflow.app.compose.composable
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -16,9 +16,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
 import com.android.tools.screenshot.PreviewTest
-import io.homeassistant.companion.android.common.compose.composable.HATextField
-import io.homeassistant.companion.android.common.compose.theme.HADimens
-import io.homeassistant.companion.android.common.compose.theme.HAThemeForPreview
+import com.goflow.app.common.compose.composable.HATextField
+import com.goflow.app.common.compose.theme.HADimens
+import com.goflow.app.common.compose.theme.HAThemeForPreview
 
 class HATextFieldScreenshotTest {
 

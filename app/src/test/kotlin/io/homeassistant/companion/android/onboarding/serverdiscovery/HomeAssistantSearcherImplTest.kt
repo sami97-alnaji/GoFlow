@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.serverdiscovery
+package com.goflow.app.onboarding.serverdiscovery
 
 import android.net.nsd.NsdManager
 import android.net.nsd.NsdServiceInfo
@@ -6,9 +6,9 @@ import android.net.wifi.WifiManager
 import app.cash.turbine.TurbineTestContext
 import app.cash.turbine.test
 import app.cash.turbine.turbineScope
-import io.homeassistant.companion.android.common.data.HomeAssistantVersion
-import io.homeassistant.companion.android.common.util.FailFast
-import io.homeassistant.companion.android.testing.unit.ConsoleLogExtension
+import com.goflow.app.common.data.HomeAssistantVersion
+import com.goflow.app.common.util.FailFast
+import com.goflow.app.testing.unit.ConsoleLogExtension
 import io.mockk.CapturingSlot
 import io.mockk.Ordering
 import io.mockk.Runs

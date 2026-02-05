@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.webview
+package com.goflow.app.webview
 
 import android.Manifest
 import android.app.Activity
@@ -13,28 +13,28 @@ import androidx.core.graphics.toColorInt
 import androidx.core.net.toUri
 import androidx.lifecycle.Lifecycle
 import dagger.hilt.android.qualifiers.ActivityContext
-import io.homeassistant.companion.android.BuildConfig
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.authentication.SessionState
-import io.homeassistant.companion.android.common.data.prefs.PrefsRepository
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.data.servers.UrlState
-import io.homeassistant.companion.android.common.util.GestureAction
-import io.homeassistant.companion.android.common.util.GestureDirection
-import io.homeassistant.companion.android.common.util.HAGesture
-import io.homeassistant.companion.android.common.util.cancelOnLifecycle
-import io.homeassistant.companion.android.database.server.ServerConnectionInfo
-import io.homeassistant.companion.android.database.settings.SensorUpdateFrequencySetting
-import io.homeassistant.companion.android.database.settings.Setting
-import io.homeassistant.companion.android.database.settings.SettingsDao
-import io.homeassistant.companion.android.database.settings.WebsocketSetting
-import io.homeassistant.companion.android.improv.ImprovRepository
-import io.homeassistant.companion.android.matter.MatterManager
-import io.homeassistant.companion.android.thread.ThreadManager
-import io.homeassistant.companion.android.util.UrlUtil
-import io.homeassistant.companion.android.util.UrlUtil.baseIsEqual
-import io.homeassistant.companion.android.webview.externalbus.ExternalBusMessage
-import io.homeassistant.companion.android.webview.externalbus.ExternalBusRepository
+import com.goflow.app.BuildConfig
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.authentication.SessionState
+import com.goflow.app.common.data.prefs.PrefsRepository
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.data.servers.UrlState
+import com.goflow.app.common.util.GestureAction
+import com.goflow.app.common.util.GestureDirection
+import com.goflow.app.common.util.HAGesture
+import com.goflow.app.common.util.cancelOnLifecycle
+import com.goflow.app.database.server.ServerConnectionInfo
+import com.goflow.app.database.settings.SensorUpdateFrequencySetting
+import com.goflow.app.database.settings.Setting
+import com.goflow.app.database.settings.SettingsDao
+import com.goflow.app.database.settings.WebsocketSetting
+import com.goflow.app.improv.ImprovRepository
+import com.goflow.app.matter.MatterManager
+import com.goflow.app.thread.ThreadManager
+import com.goflow.app.util.UrlUtil
+import com.goflow.app.util.UrlUtil.baseIsEqual
+import com.goflow.app.webview.externalbus.ExternalBusMessage
+import com.goflow.app.webview.externalbus.ExternalBusRepository
 import java.net.SocketTimeoutException
 import java.net.URL
 import java.util.regex.Matcher

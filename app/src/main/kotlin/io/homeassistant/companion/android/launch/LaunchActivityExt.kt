@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.launch
+package com.goflow.app.launch
 
 import android.content.Context
 import android.content.Intent

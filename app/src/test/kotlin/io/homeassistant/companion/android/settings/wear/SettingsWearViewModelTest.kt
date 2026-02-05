@@ -1,12 +1,12 @@
-package io.homeassistant.companion.android.settings.wear
+package com.goflow.app.settings.wear
 
 import android.app.Application
 import app.cash.turbine.turbineScope
 import com.google.android.gms.wearable.Node
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.fakes.FakeCapabilityClient
-import io.homeassistant.companion.android.fakes.FakeNodeClient
-import io.homeassistant.companion.android.testing.unit.ConsoleLogExtension
+import com.goflow.app.common.R as commonR
+import com.goflow.app.fakes.FakeCapabilityClient
+import com.goflow.app.fakes.FakeNodeClient
+import com.goflow.app.testing.unit.ConsoleLogExtension
 import io.mockk.every
 import io.mockk.mockk
 import kotlinx.coroutines.ExperimentalCoroutinesApi

@@ -1,6 +1,7 @@
-package io.homeassistant.companion.android.onboarding
+﻿package com.goflow.app.onboarding
 
 class WearOnboardingListener {
     // No op
 
 }
+

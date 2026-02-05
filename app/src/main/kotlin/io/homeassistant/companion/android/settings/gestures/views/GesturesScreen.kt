@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.gestures.views
+package com.goflow.app.settings.gestures.views
 
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
@@ -11,9 +11,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
-import io.homeassistant.companion.android.common.R
-import io.homeassistant.companion.android.common.util.GestureAction
-import io.homeassistant.companion.android.common.util.HAGesture
+import com.goflow.app.common.R
+import com.goflow.app.common.util.GestureAction
+import com.goflow.app.common.util.HAGesture
 import kotlinx.serialization.Serializable
 
 @Serializable private data object GesturesRoute

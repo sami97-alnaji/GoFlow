@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.serverdiscovery
+package com.goflow.app.onboarding.serverdiscovery
 
 import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.SavedStateHandle
@@ -6,11 +6,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.toRoute
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.homeassistant.companion.android.common.data.HomeAssistantVersion
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.onboarding.serverdiscovery.navigation.ServerDiscoveryMode
-import io.homeassistant.companion.android.onboarding.serverdiscovery.navigation.ServerDiscoveryRoute
-import io.homeassistant.companion.android.util.delayFirstThrottle
+import com.goflow.app.common.data.HomeAssistantVersion
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.onboarding.serverdiscovery.navigation.ServerDiscoveryMode
+import com.goflow.app.onboarding.serverdiscovery.navigation.ServerDiscoveryRoute
+import com.goflow.app.util.delayFirstThrottle
 import java.net.URL
 import javax.inject.Inject
 import kotlin.time.Duration.Companion.seconds

@@ -1,10 +1,10 @@
-package io.homeassistant.companion.android.common.util
+package com.goflow.app.common.util
 
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LifecycleRegistry
-import io.homeassistant.companion.android.testing.unit.ConsoleLogExtension
-import io.homeassistant.companion.android.testing.unit.MainDispatcherJUnit5Extension
+import com.goflow.app.testing.unit.ConsoleLogExtension
+import com.goflow.app.testing.unit.MainDispatcherJUnit5Extension
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

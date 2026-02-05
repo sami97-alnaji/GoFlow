@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.widgets.todo
+package com.goflow.app.widgets.todo
 
 import android.os.Build
 import android.os.Parcelable
@@ -9,13 +9,13 @@ import androidx.core.graphics.toColorInt
 import androidx.glance.GlanceTheme
 import androidx.glance.color.ColorProviders
 import androidx.glance.material.ColorProviders
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.integration.friendlyName
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.GetTodosResponse.TodoItem.Companion.COMPLETED_STATUS
-import io.homeassistant.companion.android.database.widget.TodoWidgetEntity
-import io.homeassistant.companion.android.database.widget.WidgetBackgroundType
-import io.homeassistant.companion.android.util.compose.HomeAssistantGlanceTheme
-import io.homeassistant.companion.android.util.compose.glanceHaLightColors
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.integration.friendlyName
+import com.goflow.app.common.data.websocket.impl.entities.GetTodosResponse.TodoItem.Companion.COMPLETED_STATUS
+import com.goflow.app.database.widget.TodoWidgetEntity
+import com.goflow.app.database.widget.WidgetBackgroundType
+import com.goflow.app.util.compose.HomeAssistantGlanceTheme
+import com.goflow.app.util.compose.glanceHaLightColors
 import kotlinx.parcelize.Parcelize
 
 @Parcelize

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.sensor
+package com.goflow.app.settings.sensor
 
 import android.app.Application
 import androidx.annotation.IdRes
@@ -8,11 +8,11 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.sensors.SensorManager
-import io.homeassistant.companion.android.database.sensor.Sensor
-import io.homeassistant.companion.android.database.sensor.SensorDao
-import io.homeassistant.companion.android.sensors.SensorReceiver
+import com.goflow.app.R
+import com.goflow.app.common.sensors.SensorManager
+import com.goflow.app.database.sensor.Sensor
+import com.goflow.app.database.sensor.SensorDao
+import com.goflow.app.sensors.SensorReceiver
 import javax.inject.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

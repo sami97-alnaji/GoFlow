@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android
+package com.goflow.app
 
 import com.android.build.api.dsl.ApplicationExtension
 import com.android.build.api.dsl.CommonExtension

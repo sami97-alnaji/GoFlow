@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.util
+package com.goflow.app.util
 
 import java.io.BufferedReader
 import java.io.InputStreamReader

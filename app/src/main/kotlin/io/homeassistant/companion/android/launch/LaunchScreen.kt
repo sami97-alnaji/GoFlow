@@ -1,11 +1,11 @@
-package io.homeassistant.companion.android.launch
+package com.goflow.app.launch
 
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.compose.theme.LocalHAColorScheme
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.compose.theme.LocalHAColorScheme
 
 @Composable
 fun NetworkUnavailableDialog(onBackClick: () -> Unit) {

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.database.server
+package com.goflow.app.database.server
 
 import android.os.Parcelable
 import androidx.room.ColumnInfo

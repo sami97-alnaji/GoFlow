@@ -1,7 +1,7 @@
-package io.homeassistant.companion.android.util
+package com.goflow.app.util
 
 import app.cash.turbine.test
-import io.homeassistant.companion.android.testing.unit.FakeClock
+import com.goflow.app.testing.unit.FakeClock
 import kotlin.time.Duration.Companion.milliseconds
 import kotlin.time.Duration.Companion.seconds
 import kotlin.time.ExperimentalTime

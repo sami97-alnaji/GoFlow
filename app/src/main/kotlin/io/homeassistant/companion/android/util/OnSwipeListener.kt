@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.util
+package com.goflow.app.util
 
 import android.content.Context
 import android.os.Handler
@@ -7,7 +7,7 @@ import android.view.MotionEvent
 import android.view.VelocityTracker
 import android.view.View
 import android.view.ViewConfiguration
-import io.homeassistant.companion.android.common.util.GestureDirection
+import com.goflow.app.common.util.GestureDirection
 import kotlin.math.abs
 
 // Adapted from the system GestureDetector/GestureListener and https://stackoverflow.com/a/26387629

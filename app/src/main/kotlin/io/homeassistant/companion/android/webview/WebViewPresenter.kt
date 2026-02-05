@@ -1,12 +1,12 @@
-package io.homeassistant.companion.android.webview
+package com.goflow.app.webview
 
 import android.content.Context
 import android.content.IntentSender
 import androidx.activity.result.ActivityResult
 import androidx.lifecycle.Lifecycle
-import io.homeassistant.companion.android.common.util.GestureAction
-import io.homeassistant.companion.android.common.util.GestureDirection
-import io.homeassistant.companion.android.database.server.ServerConnectionInfo
+import com.goflow.app.common.util.GestureAction
+import com.goflow.app.common.util.GestureDirection
+import com.goflow.app.database.server.ServerConnectionInfo
 import kotlinx.coroutines.flow.Flow
 import kotlinx.serialization.json.JsonObject
 
@@ -61,7 +61,7 @@ interface WebViewPresenter {
     /**
      * Marks the security level screen as having been shown for the current server.
      * Should be called when the user dismisses
-     * the [io.homeassistant.companion.android.settings.ConnectionSecurityLevelFragment].
+     * the [com.goflow.app.settings.ConnectionSecurityLevelFragment].
      */
     fun onConnectionSecurityLevelShown()
 

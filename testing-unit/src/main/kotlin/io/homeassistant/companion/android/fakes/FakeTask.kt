@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.fakes
+﻿package com.goflow.app.fakes
 
 import android.app.Activity
 import com.google.android.gms.tasks.OnFailureListener
@@ -56,3 +56,4 @@ class FakeTask<T>(private val result: Result<T>) : Task<T>() {
         return result.isSuccess
     }
 }
+

@@ -1,13 +1,13 @@
-package io.homeassistant.companion.android.widgets.common
+package com.goflow.app.widgets.common
 
 import android.appwidget.AppWidgetManager
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import io.homeassistant.companion.android.authenticator.Authenticator
-import io.homeassistant.companion.android.common.R
-import io.homeassistant.companion.android.widgets.button.ButtonWidget
+import com.goflow.app.authenticator.Authenticator
+import com.goflow.app.common.R
+import com.goflow.app.widgets.button.ButtonWidget
 import timber.log.Timber
 
 class WidgetAuthenticationActivity : AppCompatActivity() {

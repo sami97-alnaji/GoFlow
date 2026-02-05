@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.database.authentication
+package com.goflow.app.database.authentication
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

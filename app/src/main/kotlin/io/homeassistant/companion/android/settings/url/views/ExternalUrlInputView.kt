@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.url.views
+package com.goflow.app.settings.url.views
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -28,7 +28,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
-import io.homeassistant.companion.android.common.R as commonR
+import com.goflow.app.common.R as commonR
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 
 @OptIn(ExperimentalComposeUiApi::class)

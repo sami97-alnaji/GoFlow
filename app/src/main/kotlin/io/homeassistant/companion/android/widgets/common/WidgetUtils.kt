@@ -1,9 +1,9 @@
-package io.homeassistant.companion.android.widgets.common
+package com.goflow.app.widgets.common
 
 import android.content.Context
 import com.google.android.material.color.DynamicColors
-import io.homeassistant.companion.android.common.R
-import io.homeassistant.companion.android.database.widget.WidgetBackgroundType
+import com.goflow.app.common.R
+import com.goflow.app.database.widget.WidgetBackgroundType
 
 /**
  * Shared helpers for working with widgets.

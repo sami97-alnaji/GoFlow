@@ -1,13 +1,13 @@
-package io.homeassistant.companion.android.common.sensors
+package com.goflow.app.common.sensors
 
 import android.content.Context
 import android.os.PowerManager
 import androidx.core.content.getSystemService
-import io.homeassistant.companion.android.common.R as commonR
+import com.goflow.app.common.R as commonR
 
 class PowerSensorManager : SensorManager {
     companion object {
-        private const val PACKAGE_NAME = "io.homeassistant.companion.android"
+        private const val PACKAGE_NAME = "com.goflow.app"
 
         val interactiveDevice = SensorManager.BasicSensor(
             "is_interactive",

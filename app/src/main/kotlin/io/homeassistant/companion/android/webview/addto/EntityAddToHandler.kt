@@ -1,24 +1,24 @@
-package io.homeassistant.companion.android.webview.addto
+package com.goflow.app.webview.addto
 
 import android.content.Context
 import androidx.annotation.VisibleForTesting
-import io.homeassistant.companion.android.BuildConfig
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.integration.IntegrationDomains.CAMERA_DOMAIN
-import io.homeassistant.companion.android.common.data.integration.IntegrationDomains.IMAGE_DOMAIN
-import io.homeassistant.companion.android.common.data.integration.IntegrationDomains.MEDIA_PLAYER_DOMAIN
-import io.homeassistant.companion.android.common.data.integration.IntegrationDomains.TODO_DOMAIN
-import io.homeassistant.companion.android.common.data.prefs.AutoFavorite
-import io.homeassistant.companion.android.common.data.prefs.PrefsRepository
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.util.FailFast
-import io.homeassistant.companion.android.common.util.isAutomotive
-import io.homeassistant.companion.android.util.QuestUtil
-import io.homeassistant.companion.android.util.vehicle.isVehicleDomain
-import io.homeassistant.companion.android.widgets.camera.CameraWidgetConfigureActivity
-import io.homeassistant.companion.android.widgets.entity.EntityWidgetConfigureActivity
-import io.homeassistant.companion.android.widgets.mediaplayer.MediaPlayerControlsWidgetConfigureActivity
-import io.homeassistant.companion.android.widgets.todo.TodoWidgetConfigureActivity
+import com.goflow.app.BuildConfig
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.integration.IntegrationDomains.CAMERA_DOMAIN
+import com.goflow.app.common.data.integration.IntegrationDomains.IMAGE_DOMAIN
+import com.goflow.app.common.data.integration.IntegrationDomains.MEDIA_PLAYER_DOMAIN
+import com.goflow.app.common.data.integration.IntegrationDomains.TODO_DOMAIN
+import com.goflow.app.common.data.prefs.AutoFavorite
+import com.goflow.app.common.data.prefs.PrefsRepository
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.util.FailFast
+import com.goflow.app.common.util.isAutomotive
+import com.goflow.app.util.QuestUtil
+import com.goflow.app.util.vehicle.isVehicleDomain
+import com.goflow.app.widgets.camera.CameraWidgetConfigureActivity
+import com.goflow.app.widgets.entity.EntityWidgetConfigureActivity
+import com.goflow.app.widgets.mediaplayer.MediaPlayerControlsWidgetConfigureActivity
+import com.goflow.app.widgets.todo.TodoWidgetConfigureActivity
 import javax.inject.Inject
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers

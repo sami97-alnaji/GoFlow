@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.log
+package com.goflow.app.settings.log
 
 import android.content.ComponentName
 import android.content.Intent
@@ -27,12 +27,12 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.tabs.TabLayout
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.prefs.PrefsRepository
-import io.homeassistant.companion.android.util.LogcatReader
-import io.homeassistant.companion.android.util.applyBottomSafeDrawingInsets
-import io.homeassistant.companion.android.util.getLatestFatalCrash
+import com.goflow.app.R
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.prefs.PrefsRepository
+import com.goflow.app.util.LogcatReader
+import com.goflow.app.util.applyBottomSafeDrawingInsets
+import com.goflow.app.util.getLatestFatalCrash
 import java.io.File
 import java.util.Calendar
 import javax.inject.Inject

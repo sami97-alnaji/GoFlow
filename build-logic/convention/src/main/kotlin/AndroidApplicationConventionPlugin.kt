@@ -1,11 +1,11 @@
 import com.android.build.api.dsl.ApplicationExtension
-import io.homeassistant.companion.android.getPluginId
+import com.goflow.app.getPluginId
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.configure
 
-private const val APPLICATION_ID = "io.homeassistant.companion.android"
+private const val APPLICATION_ID = "com.goflow.app"
 
 /**
  * A convention plugin that applies common configurations to Android application modules.
@@ -45,7 +45,7 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
                     targetSdk = libs.versions.androidSdk.target.get().toInt()
 
                     versionName = project.version.toString()
-                    versionCode = System.getenv("VERSION_CODE")?.toIntOrNull() ?: 1
+                    versionCode = System.getenv("VERSION_CODE")?.toIntOrNull() ?: 30
 
                     val noStrictMode = project.findProperty("noStrictMode")?.toString()?.ifEmpty { "true" }
                         ?.toBoolean() ?: false

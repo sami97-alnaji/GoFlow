@@ -1,25 +1,25 @@
-package io.homeassistant.companion.android.onboarding.nameyourdevice
+package com.goflow.app.onboarding.nameyourdevice
 
 import app.cash.turbine.test
 import app.cash.turbine.turbineScope
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.authentication.AuthenticationRepository
-import io.homeassistant.companion.android.common.data.authentication.ServerRegistrationRepository
-import io.homeassistant.companion.android.common.data.integration.DeviceRegistration
-import io.homeassistant.companion.android.common.data.integration.IntegrationRepository
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.util.AppVersion
-import io.homeassistant.companion.android.common.util.AppVersionProvider
-import io.homeassistant.companion.android.common.util.MessagingToken
-import io.homeassistant.companion.android.common.util.MessagingTokenProvider
-import io.homeassistant.companion.android.database.server.Server
-import io.homeassistant.companion.android.database.server.ServerConnectionInfo
-import io.homeassistant.companion.android.database.server.ServerSessionInfo
-import io.homeassistant.companion.android.database.server.ServerUserInfo
-import io.homeassistant.companion.android.database.server.TemporaryServer
-import io.homeassistant.companion.android.onboarding.nameyourdevice.navigation.NameYourDeviceRoute
-import io.homeassistant.companion.android.testing.unit.ConsoleLogExtension
-import io.homeassistant.companion.android.testing.unit.MainDispatcherJUnit5Extension
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.authentication.AuthenticationRepository
+import com.goflow.app.common.data.authentication.ServerRegistrationRepository
+import com.goflow.app.common.data.integration.DeviceRegistration
+import com.goflow.app.common.data.integration.IntegrationRepository
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.util.AppVersion
+import com.goflow.app.common.util.AppVersionProvider
+import com.goflow.app.common.util.MessagingToken
+import com.goflow.app.common.util.MessagingTokenProvider
+import com.goflow.app.database.server.Server
+import com.goflow.app.database.server.ServerConnectionInfo
+import com.goflow.app.database.server.ServerSessionInfo
+import com.goflow.app.database.server.ServerUserInfo
+import com.goflow.app.database.server.TemporaryServer
+import com.goflow.app.onboarding.nameyourdevice.navigation.NameYourDeviceRoute
+import com.goflow.app.testing.unit.ConsoleLogExtension
+import com.goflow.app.testing.unit.MainDispatcherJUnit5Extension
 import io.mockk.Runs
 import io.mockk.coEvery
 import io.mockk.coVerify

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.assist
+package com.goflow.app.assist
 
 import android.Manifest
 import android.app.KeyguardManager
@@ -15,13 +15,13 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.getSystemService
 import androidx.lifecycle.lifecycleScope
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.BaseActivity
-import io.homeassistant.companion.android.assist.ui.AssistSheetView
-import io.homeassistant.companion.android.common.assist.AssistViewModelBase
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.launch.LaunchActivity
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
-import io.homeassistant.companion.android.webview.WebViewActivity
+import com.goflow.app.BaseActivity
+import com.goflow.app.assist.ui.AssistSheetView
+import com.goflow.app.common.assist.AssistViewModelBase
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.launch.LaunchActivity
+import com.goflow.app.util.compose.HomeAssistantAppTheme
+import com.goflow.app.webview.WebViewActivity
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint

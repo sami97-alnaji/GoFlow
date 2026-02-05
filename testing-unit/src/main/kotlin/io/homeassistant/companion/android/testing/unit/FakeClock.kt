@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.testing.unit
+﻿package com.goflow.app.testing.unit
 
 import kotlin.time.Clock
 import kotlin.time.ExperimentalTime
@@ -12,3 +12,4 @@ class FakeClock : Clock {
         return currentInstant
     }
 }
+

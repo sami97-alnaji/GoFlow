@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.database.migration
+package com.goflow.app.database.migration
 
 import android.content.Context
 import androidx.room.Room
@@ -6,7 +6,7 @@ import androidx.room.testing.MigrationTestHelper
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import io.homeassistant.companion.android.database.AppDatabase
+import com.goflow.app.database.AppDatabase
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith

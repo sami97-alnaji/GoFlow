@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.data.authentication
+package com.goflow.app.common.data.authentication
 
 import okhttp3.ResponseBody
 

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.wear.views
+package com.goflow.app.settings.wear.views
 
 import android.content.Context
 import android.content.Intent
@@ -9,9 +9,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.google.android.gms.wearable.Node
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.onboarding.WearOnboardApp
-import io.homeassistant.companion.android.settings.wear.SettingsWearViewModel
-import io.homeassistant.companion.android.util.enableEdgeToEdgeCompat
+import com.goflow.app.onboarding.WearOnboardApp
+import com.goflow.app.settings.wear.SettingsWearViewModel
+import com.goflow.app.util.enableEdgeToEdgeCompat
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 import timber.log.Timber

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.nfc
+package com.goflow.app.nfc
 
 import android.app.Activity
 import android.app.PendingIntent
@@ -12,7 +12,7 @@ import android.nfc.Tag
 import android.nfc.tech.Ndef
 import android.nfc.tech.NdefFormatable
 import androidx.core.content.IntentCompat
-import io.homeassistant.companion.android.BuildConfig
+import com.goflow.app.BuildConfig
 import java.io.IOException
 
 object NFCUtil {

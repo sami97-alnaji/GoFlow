@@ -1,8 +1,8 @@
-package io.homeassistant.companion.android.common.util
+package com.goflow.app.common.util
 
 import androidx.annotation.Keep
 import androidx.annotation.StringRes
-import io.homeassistant.companion.android.common.R
+import com.goflow.app.common.R
 import kotlin.math.abs
 
 enum class GestureAction(@StringRes val description: Int, val category: GestureActionCategory) {

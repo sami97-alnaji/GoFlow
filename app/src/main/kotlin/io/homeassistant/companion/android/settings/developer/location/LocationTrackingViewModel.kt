@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.developer.location
+package com.goflow.app.settings.developer.location
 
 import android.app.Application
 import androidx.annotation.IdRes
@@ -10,12 +10,12 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.data.prefs.PrefsRepository
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.database.location.LocationHistoryDao
-import io.homeassistant.companion.android.database.location.LocationHistoryItemResult
-import io.homeassistant.companion.android.database.server.Server
+import com.goflow.app.R
+import com.goflow.app.common.data.prefs.PrefsRepository
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.database.location.LocationHistoryDao
+import com.goflow.app.database.location.LocationHistoryItemResult
+import com.goflow.app.database.server.Server
 import javax.inject.Inject
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow

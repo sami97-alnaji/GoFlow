@@ -1,11 +1,11 @@
-package io.homeassistant.companion.android.settings.language
+package com.goflow.app.settings.language
 
 import android.content.Context
 import android.os.Build
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.os.LocaleListCompat
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.prefs.PrefsRepository
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.prefs.PrefsRepository
 import javax.inject.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

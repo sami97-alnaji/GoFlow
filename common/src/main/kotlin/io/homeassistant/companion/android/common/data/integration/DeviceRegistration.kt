@@ -1,7 +1,7 @@
-package io.homeassistant.companion.android.common.data.integration
+package com.goflow.app.common.data.integration
 
-import io.homeassistant.companion.android.common.util.AppVersion
-import io.homeassistant.companion.android.common.util.MessagingToken
+import com.goflow.app.common.util.AppVersion
+import com.goflow.app.common.util.MessagingToken
 import javax.inject.Qualifier
 
 data class DeviceRegistration(

@@ -1,7 +1,7 @@
-package io.homeassistant.companion.android.common.data.integration.impl.entities
+package com.goflow.app.common.data.integration.impl.entities
 
-import io.homeassistant.companion.android.common.util.LocalDateTimeSerializer
-import io.homeassistant.companion.android.common.util.MapAnySerializer
+import com.goflow.app.common.util.LocalDateTimeSerializer
+import com.goflow.app.common.util.MapAnySerializer
 import java.time.LocalDateTime
 import kotlinx.serialization.Polymorphic
 import kotlinx.serialization.Serializable

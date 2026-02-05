@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.nfc.views
+package com.goflow.app.nfc.views
 
 import android.content.Intent
 import android.provider.Settings
@@ -31,8 +31,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.mikepenz.iconics.compose.Image
 import com.mikepenz.iconics.typeface.library.community.material.CommunityMaterial
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.util.compose.MdcAlertDialog
+import com.goflow.app.common.R as commonR
+import com.goflow.app.util.compose.MdcAlertDialog
 
 @Composable
 fun NfcWriteView(isNfcEnabled: Boolean, identifier: String?, onSetIdentifier: ((String) -> Unit)? = null) {

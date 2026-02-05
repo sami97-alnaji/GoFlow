@@ -1,6 +1,6 @@
-package io.homeassistant.companion.android.common.util
+package com.goflow.app.common.util
 
-import io.homeassistant.companion.android.common.util.FailFast.setHandler
+import com.goflow.app.common.util.FailFast.setHandler
 import kotlin.coroutines.cancellation.CancellationException
 
 /**

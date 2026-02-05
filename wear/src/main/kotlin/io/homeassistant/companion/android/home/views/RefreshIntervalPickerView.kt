@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.home.views
+package com.goflow.app.home.views
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -32,9 +32,9 @@ import androidx.wear.compose.material3.touchTargetAwareSize
 import androidx.wear.tooling.preview.devices.WearDevices
 import com.mikepenz.iconics.compose.Image
 import com.mikepenz.iconics.typeface.library.community.material.CommunityMaterial
-import io.homeassistant.companion.android.common.R as R
-import io.homeassistant.companion.android.theme.wearColorScheme
-import io.homeassistant.companion.android.util.intervalToString
+import com.goflow.app.common.R as R
+import com.goflow.app.theme.wearColorScheme
+import com.goflow.app.util.intervalToString
 
 @Composable
 fun RefreshIntervalPickerView(currentInterval: Int, onSelectInterval: (Int) -> Unit) {

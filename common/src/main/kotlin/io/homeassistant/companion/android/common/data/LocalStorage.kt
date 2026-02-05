@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.data
+package com.goflow.app.common.data
 
 interface LocalStorage {
 

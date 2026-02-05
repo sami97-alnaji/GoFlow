@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.matter
+package com.goflow.app.matter
 
 import android.content.ComponentName
 import android.content.Context
@@ -7,9 +7,9 @@ import android.content.pm.PackageManager
 import android.os.Build
 import com.google.android.gms.home.matter.Matter
 import com.google.android.gms.home.matter.commissioning.CommissioningRequest
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.MatterCommissionResponse
-import io.homeassistant.companion.android.common.util.isAutomotive
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.data.websocket.impl.entities.MatterCommissionResponse
+import com.goflow.app.common.util.isAutomotive
 import javax.inject.Inject
 import kotlinx.coroutines.CancellationException
 import timber.log.Timber

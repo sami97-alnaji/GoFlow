@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.database
+package com.goflow.app.database
 
 import android.content.Context
 import androidx.room.Room
@@ -7,25 +7,25 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import io.homeassistant.companion.android.database.authentication.AuthenticationDao
-import io.homeassistant.companion.android.database.location.LocationHistoryDao
-import io.homeassistant.companion.android.database.migration.migrationPath
-import io.homeassistant.companion.android.database.notification.NotificationDao
-import io.homeassistant.companion.android.database.qs.TileDao
-import io.homeassistant.companion.android.database.sensor.SensorDao
-import io.homeassistant.companion.android.database.server.ServerDao
-import io.homeassistant.companion.android.database.settings.SettingsDao
-import io.homeassistant.companion.android.database.wear.CameraTileDao
-import io.homeassistant.companion.android.database.wear.EntityStateComplicationsDao
-import io.homeassistant.companion.android.database.wear.FavoriteCachesDao
-import io.homeassistant.companion.android.database.wear.FavoritesDao
-import io.homeassistant.companion.android.database.wear.ThermostatTileDao
-import io.homeassistant.companion.android.database.widget.ButtonWidgetDao
-import io.homeassistant.companion.android.database.widget.CameraWidgetDao
-import io.homeassistant.companion.android.database.widget.MediaPlayerControlsWidgetDao
-import io.homeassistant.companion.android.database.widget.StaticWidgetDao
-import io.homeassistant.companion.android.database.widget.TemplateWidgetDao
-import io.homeassistant.companion.android.database.widget.TodoWidgetDao
+import com.goflow.app.database.authentication.AuthenticationDao
+import com.goflow.app.database.location.LocationHistoryDao
+import com.goflow.app.database.migration.migrationPath
+import com.goflow.app.database.notification.NotificationDao
+import com.goflow.app.database.qs.TileDao
+import com.goflow.app.database.sensor.SensorDao
+import com.goflow.app.database.server.ServerDao
+import com.goflow.app.database.settings.SettingsDao
+import com.goflow.app.database.wear.CameraTileDao
+import com.goflow.app.database.wear.EntityStateComplicationsDao
+import com.goflow.app.database.wear.FavoriteCachesDao
+import com.goflow.app.database.wear.FavoritesDao
+import com.goflow.app.database.wear.ThermostatTileDao
+import com.goflow.app.database.widget.ButtonWidgetDao
+import com.goflow.app.database.widget.CameraWidgetDao
+import com.goflow.app.database.widget.MediaPlayerControlsWidgetDao
+import com.goflow.app.database.widget.StaticWidgetDao
+import com.goflow.app.database.widget.TemplateWidgetDao
+import com.goflow.app.database.widget.TodoWidgetDao
 import javax.inject.Singleton
 
 private const val DATABASE_NAME = "HomeAssistantDB"

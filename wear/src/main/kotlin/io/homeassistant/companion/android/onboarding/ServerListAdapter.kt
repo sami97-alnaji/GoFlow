@@ -1,15 +1,15 @@
-package io.homeassistant.companion.android.onboarding
+package com.goflow.app.onboarding
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.viewHolders.HeaderViewHolder
-import io.homeassistant.companion.android.viewHolders.InstanceViewHolder
-import io.homeassistant.companion.android.viewHolders.LoadingViewHolder
-import io.homeassistant.companion.android.viewHolders.ManualSetupViewHolder
+import com.goflow.app.R
+import com.goflow.app.common.R as commonR
+import com.goflow.app.viewHolders.HeaderViewHolder
+import com.goflow.app.viewHolders.InstanceViewHolder
+import com.goflow.app.viewHolders.LoadingViewHolder
+import com.goflow.app.viewHolders.ManualSetupViewHolder
 import kotlin.math.min
 
 class ServerListAdapter(val servers: ArrayList<HomeAssistantInstance>) : RecyclerView.Adapter<ViewHolder>() {

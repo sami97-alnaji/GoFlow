@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.launch
+package com.goflow.app.launch
 
 import android.content.Context
 import android.content.Intent
@@ -14,9 +14,9 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.lifecycle.withCreationCallback
-import io.homeassistant.companion.android.common.compose.theme.HATheme
-import io.homeassistant.companion.android.util.compose.HAApp
-import io.homeassistant.companion.android.util.enableEdgeToEdgeCompat
+import com.goflow.app.common.compose.theme.HATheme
+import com.goflow.app.util.compose.HAApp
+import com.goflow.app.util.enableEdgeToEdgeCompat
 import kotlinx.parcelize.Parcelize
 
 private const val DEEP_LINK_KEY = "deep_link_key"

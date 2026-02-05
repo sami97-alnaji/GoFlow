@@ -1,11 +1,11 @@
-package io.homeassistant.companion.android.common.data.servers
+package com.goflow.app.common.data.servers
 
-import io.homeassistant.companion.android.common.data.authentication.AuthenticationRepository
-import io.homeassistant.companion.android.common.data.integration.IntegrationRepository
-import io.homeassistant.companion.android.common.data.servers.ServerManager.Companion.SERVER_ID_ACTIVE
-import io.homeassistant.companion.android.common.data.websocket.WebSocketRepository
-import io.homeassistant.companion.android.database.server.Server
-import io.homeassistant.companion.android.database.server.TemporaryServer
+import com.goflow.app.common.data.authentication.AuthenticationRepository
+import com.goflow.app.common.data.integration.IntegrationRepository
+import com.goflow.app.common.data.servers.ServerManager.Companion.SERVER_ID_ACTIVE
+import com.goflow.app.common.data.websocket.WebSocketRepository
+import com.goflow.app.database.server.Server
+import com.goflow.app.database.server.TemporaryServer
 import kotlinx.coroutines.flow.Flow
 
 interface ServerManager {

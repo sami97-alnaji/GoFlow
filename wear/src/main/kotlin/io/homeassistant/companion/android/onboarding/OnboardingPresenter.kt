@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding
+package com.goflow.app.onboarding
 
 import android.content.Context
 import com.google.android.gms.wearable.DataClient

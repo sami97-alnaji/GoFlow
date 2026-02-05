@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.locationsharing
+package com.goflow.app.onboarding.locationsharing
 
 import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.SavedStateHandle
@@ -6,9 +6,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.toRoute
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.homeassistant.companion.android.database.sensor.SensorDao
-import io.homeassistant.companion.android.onboarding.locationsharing.navigation.LocationSharingRoute
-import io.homeassistant.companion.android.sensors.LocationSensorManager
+import com.goflow.app.database.sensor.SensorDao
+import com.goflow.app.onboarding.locationsharing.navigation.LocationSharingRoute
+import com.goflow.app.sensors.LocationSensorManager
 import javax.inject.Inject
 import kotlinx.coroutines.launch
 import timber.log.Timber

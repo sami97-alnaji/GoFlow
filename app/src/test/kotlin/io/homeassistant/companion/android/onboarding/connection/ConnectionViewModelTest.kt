@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.connection
+package com.goflow.app.onboarding.connection
 
 import android.net.Uri
 import android.net.http.SslError
@@ -14,13 +14,13 @@ import android.webkit.WebViewClient.ERROR_UNSUPPORTED_AUTH_SCHEME
 import androidx.annotation.StringRes
 import app.cash.turbine.ReceiveTurbine
 import app.cash.turbine.turbineScope
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.authentication.impl.AuthenticationService
-import io.homeassistant.companion.android.common.data.connectivity.ConnectivityCheckRepository
-import io.homeassistant.companion.android.common.data.connectivity.ConnectivityCheckState
-import io.homeassistant.companion.android.common.data.keychain.KeyChainRepository
-import io.homeassistant.companion.android.testing.unit.ConsoleLogExtension
-import io.homeassistant.companion.android.testing.unit.MainDispatcherJUnit5Extension
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.authentication.impl.AuthenticationService
+import com.goflow.app.common.data.connectivity.ConnectivityCheckRepository
+import com.goflow.app.common.data.connectivity.ConnectivityCheckState
+import com.goflow.app.common.data.keychain.KeyChainRepository
+import com.goflow.app.testing.unit.ConsoleLogExtension
+import com.goflow.app.testing.unit.MainDispatcherJUnit5Extension
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.mockkStatic

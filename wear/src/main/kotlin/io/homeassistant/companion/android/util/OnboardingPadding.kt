@@ -1,9 +1,9 @@
-package io.homeassistant.companion.android.util
+package com.goflow.app.util
 
 import android.content.Context
 import android.content.res.Resources
-import io.homeassistant.companion.android.databinding.ActivityIntegrationBinding
-import io.homeassistant.companion.android.databinding.ActivityManualSetupBinding
+import com.goflow.app.databinding.ActivityIntegrationBinding
+import com.goflow.app.databinding.ActivityManualSetupBinding
 
 private const val FACTOR = 0.146467f // c = a * sqrt(2)
 

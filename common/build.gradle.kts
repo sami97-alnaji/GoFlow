@@ -9,10 +9,10 @@ val homeAssistantAndroidPushUrl: String by project
 val homeAssistantAndroidRateLimitUrl: String by project
 
 val versionName = project.version.toString()
-val versionCode = System.getenv("VERSION_CODE")?.toIntOrNull() ?: 1
+val versionCode = System.getenv("VERSION_CODE")?.toIntOrNull() ?: 20
 
 android {
-    namespace = "io.homeassistant.companion.android.common"
+    namespace = "com.goflow.app.common"
 
     defaultConfig {
         buildConfigField("String", "PUSH_URL", "\"$homeAssistantAndroidPushUrl\"")

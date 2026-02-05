@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding
+package com.goflow.app.onboarding
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -13,9 +13,9 @@ import com.google.android.gms.wearable.DataEventBuffer
 import com.google.android.gms.wearable.DataMap
 import com.google.android.gms.wearable.DataMapItem
 import dagger.hilt.android.qualifiers.ActivityContext
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.authentication.ServerRegistrationRepository
-import io.homeassistant.companion.android.util.UrlUtil
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.authentication.ServerRegistrationRepository
+import com.goflow.app.util.UrlUtil
 import java.net.URL
 import java.util.concurrent.Executors
 import javax.inject.Inject

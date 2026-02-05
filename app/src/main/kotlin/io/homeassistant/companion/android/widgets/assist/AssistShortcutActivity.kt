@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.widgets.assist
+package com.goflow.app.widgets.assist
 
 import android.app.Activity
 import android.content.Intent
@@ -9,10 +9,10 @@ import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.core.graphics.drawable.IconCompat
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.BaseActivity
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.assist.AssistActivity
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
+import com.goflow.app.BaseActivity
+import com.goflow.app.R
+import com.goflow.app.assist.AssistActivity
+import com.goflow.app.util.compose.HomeAssistantAppTheme
 import java.util.UUID
 
 @AndroidEntryPoint

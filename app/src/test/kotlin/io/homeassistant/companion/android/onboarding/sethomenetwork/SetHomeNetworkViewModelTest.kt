@@ -1,12 +1,12 @@
-package io.homeassistant.companion.android.onboarding.sethomenetwork
+package com.goflow.app.onboarding.sethomenetwork
 
 import app.cash.turbine.test
-import io.homeassistant.companion.android.common.data.network.NetworkHelper
-import io.homeassistant.companion.android.common.data.network.WifiHelper
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.database.server.Server
-import io.homeassistant.companion.android.database.server.ServerConnectionInfo
-import io.homeassistant.companion.android.testing.unit.MainDispatcherJUnit5Extension
+import com.goflow.app.common.data.network.NetworkHelper
+import com.goflow.app.common.data.network.WifiHelper
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.database.server.Server
+import com.goflow.app.database.server.ServerConnectionInfo
+import com.goflow.app.testing.unit.MainDispatcherJUnit5Extension
 import io.mockk.Runs
 import io.mockk.coEvery
 import io.mockk.coVerify

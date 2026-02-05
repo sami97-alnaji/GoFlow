@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.nameyourdevice.navigation
+package com.goflow.app.onboarding.nameyourdevice.navigation
 
 import androidx.annotation.VisibleForTesting
 import androidx.compose.runtime.Composable
@@ -9,9 +9,9 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
-import io.homeassistant.companion.android.onboarding.nameyourdevice.NameYourDeviceNavigationEvent
-import io.homeassistant.companion.android.onboarding.nameyourdevice.NameYourDeviceScreen
-import io.homeassistant.companion.android.onboarding.nameyourdevice.NameYourDeviceViewModel
+import com.goflow.app.onboarding.nameyourdevice.NameYourDeviceNavigationEvent
+import com.goflow.app.onboarding.nameyourdevice.NameYourDeviceScreen
+import com.goflow.app.onboarding.nameyourdevice.NameYourDeviceViewModel
 import kotlinx.serialization.Serializable
 
 @Serializable

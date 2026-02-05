@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.util
+package com.goflow.app.common.util
 
 import android.app.Notification.FLAG_GROUP_SUMMARY
 import android.app.NotificationManager

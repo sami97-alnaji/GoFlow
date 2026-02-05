@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.common.compose.theme
+package com.goflow.app.common.compose.theme
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.background

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.barcode.view
+package com.goflow.app.barcode.view
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.runtime.Composable

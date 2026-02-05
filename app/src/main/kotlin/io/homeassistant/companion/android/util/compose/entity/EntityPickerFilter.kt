@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.util.compose.entity
+package com.goflow.app.util.compose.entity
 
 import androidx.annotation.VisibleForTesting
 import androidx.compose.runtime.Composable

@@ -1,6 +1,6 @@
-package io.homeassistant.companion.android.onboarding.integration
+package com.goflow.app.onboarding.integration
 
-import io.homeassistant.companion.android.database.server.TemporaryServer
+import com.goflow.app.database.server.TemporaryServer
 
 interface MobileAppIntegrationPresenter {
     fun onRegistrationAttempt(temporaryServer: TemporaryServer, deviceName: String)

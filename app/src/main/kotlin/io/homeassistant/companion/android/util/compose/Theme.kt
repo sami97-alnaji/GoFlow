@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.util.compose
+package com.goflow.app.util.compose
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.LocalContentColor
@@ -18,9 +18,9 @@ import androidx.glance.color.ColorProviders
 import androidx.glance.material.ColorProviders
 import androidx.glance.text.FontWeight
 import androidx.glance.text.TextStyle
-import io.homeassistant.companion.android.common.compose.theme.DarkHAColorScheme
-import io.homeassistant.companion.android.common.compose.theme.LightHAColorScheme
-import io.homeassistant.companion.android.common.compose.theme.LocalHAColorScheme
+import com.goflow.app.common.compose.theme.DarkHAColorScheme
+import com.goflow.app.common.compose.theme.LightHAColorScheme
+import com.goflow.app.common.compose.theme.LocalHAColorScheme
 
 val colorPrimary = Color(0xFF03A9F4)
 val colorPrimaryDark = Color(0xFF0288D1)

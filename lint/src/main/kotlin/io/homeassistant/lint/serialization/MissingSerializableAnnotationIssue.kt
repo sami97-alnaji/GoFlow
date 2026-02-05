@@ -1,4 +1,4 @@
-package io.homeassistant.lint.serialization
+﻿package io.homeassistant.lint.serialization
 
 import com.android.tools.lint.client.api.UElementHandler
 import com.android.tools.lint.detector.api.Category
@@ -37,8 +37,8 @@ private val WELL_KNOWN_SERIALIZABLE_TYPES = listOf(
     "java.lang.String",
 )
 private val ANY_SERIALIZER_TYPES = listOf(
-    "io.homeassistant.companion.android.common.util.AnySerializer",
-    "io.homeassistant.companion.android.common.util.MapAnySerializer",
+    "com.goflow.app.common.util.AnySerializer",
+    "com.goflow.app.common.util.MapAnySerializer",
 )
 private val ISSUE_IMPLEMENTATION = Implementation(
     MissingSerializableAnnotationIssue.IssueDetector::class.java,
@@ -266,3 +266,4 @@ private fun isUsingAnySerializer(context: JavaContext, node: UCallExpression, se
     }
     return false
 }
+

@@ -1,10 +1,10 @@
-package io.homeassistant.companion.android.sensors
+package com.goflow.app.sensors
 
 import android.content.Context
 import androidx.health.connect.client.HealthConnectClient
 import androidx.health.connect.client.HealthConnectFeatures
 import androidx.health.connect.client.permission.HealthPermission
-import io.homeassistant.companion.android.testing.unit.ConsoleLogExtension
+import com.goflow.app.testing.unit.ConsoleLogExtension
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.mockkObject

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.developer.location.views
+package com.goflow.app.settings.developer.location.views
 
 import android.content.Intent
 import androidx.compose.animation.AnimatedVisibility
@@ -53,13 +53,13 @@ import androidx.paging.compose.collectAsLazyPagingItems
 import androidx.paging.compose.itemKey
 import com.mikepenz.iconics.compose.Image
 import com.mikepenz.iconics.typeface.library.community.material.CommunityMaterial
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.database.location.LocationHistoryItem
-import io.homeassistant.companion.android.database.location.LocationHistoryItemResult
-import io.homeassistant.companion.android.database.location.LocationHistoryItemTrigger
-import io.homeassistant.companion.android.database.server.Server
-import io.homeassistant.companion.android.settings.views.EmptyState
-import io.homeassistant.companion.android.util.safeBottomPaddingValues
+import com.goflow.app.common.R as commonR
+import com.goflow.app.database.location.LocationHistoryItem
+import com.goflow.app.database.location.LocationHistoryItemResult
+import com.goflow.app.database.location.LocationHistoryItemTrigger
+import com.goflow.app.database.server.Server
+import com.goflow.app.settings.views.EmptyState
+import com.goflow.app.util.safeBottomPaddingValues
 import java.text.DateFormat
 import java.util.TimeZone
 import kotlinx.coroutines.flow.Flow

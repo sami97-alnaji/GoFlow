@@ -1,10 +1,10 @@
-package io.homeassistant.companion.android.database.server
+package com.goflow.app.database.server
 
 import androidx.room.ColumnInfo
 import androidx.room.Ignore
 import androidx.room.TypeConverter
-import io.homeassistant.companion.android.common.util.kotlinJsonMapper
-import io.homeassistant.companion.android.util.hasSameOrigin
+import com.goflow.app.common.util.kotlinJsonMapper
+import com.goflow.app.util.hasSameOrigin
 import kotlinx.serialization.SerializationException
 import okhttp3.HttpUrl
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull

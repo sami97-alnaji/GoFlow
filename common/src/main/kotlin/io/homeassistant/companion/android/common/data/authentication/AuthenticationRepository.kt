@@ -1,7 +1,7 @@
-package io.homeassistant.companion.android.common.data.authentication
+package com.goflow.app.common.data.authentication
 
 import dagger.assisted.AssistedFactory
-import io.homeassistant.companion.android.common.data.authentication.impl.AuthenticationRepositoryImpl
+import com.goflow.app.common.data.authentication.impl.AuthenticationRepositoryImpl
 
 interface AuthenticationRepository {
 

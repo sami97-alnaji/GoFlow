@@ -1,9 +1,9 @@
-package io.homeassistant.companion.android.splash
+package com.goflow.app.splash
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import io.homeassistant.companion.android.home.HomeActivity
+import com.goflow.app.home.HomeActivity
 
 class SplashActivity : AppCompatActivity() {
 

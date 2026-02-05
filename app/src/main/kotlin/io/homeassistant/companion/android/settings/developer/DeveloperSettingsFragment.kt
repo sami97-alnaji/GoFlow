@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.developer
+package com.goflow.app.settings.developer
 
 import android.content.IntentSender
 import android.os.Bundle
@@ -12,14 +12,14 @@ import androidx.lifecycle.lifecycleScope
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.BuildConfig
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.settings.developer.location.LocationTrackingFragment
-import io.homeassistant.companion.android.settings.log.LogFragment
-import io.homeassistant.companion.android.settings.server.ServerChooserFragment
-import io.homeassistant.companion.android.util.applyBottomSafeDrawingInsets
+import com.goflow.app.BuildConfig
+import com.goflow.app.R
+import com.goflow.app.common.R as commonR
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.settings.developer.location.LocationTrackingFragment
+import com.goflow.app.settings.log.LogFragment
+import com.goflow.app.settings.server.ServerChooserFragment
+import com.goflow.app.util.applyBottomSafeDrawingInsets
 import javax.inject.Inject
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -51,7 +51,7 @@ class DeveloperSettingsFragment :
         findPreference<Preference>("show_share_logs")?.setOnPreferenceClickListener {
             parentFragmentManager.commit {
                 replace(R.id.content, LogFragment::class.java, null)
-                addToBackStack(getString(io.homeassistant.companion.android.common.R.string.log))
+                addToBackStack(getString(com.goflow.app.common.R.string.log))
             }
             return@setOnPreferenceClickListener true
         }
@@ -61,7 +61,7 @@ class DeveloperSettingsFragment :
             it.setOnPreferenceClickListener {
                 parentFragmentManager.commit {
                     replace(R.id.content, LocationTrackingFragment::class.java, null)
-                    addToBackStack(getString(io.homeassistant.companion.android.common.R.string.location_tracking))
+                    addToBackStack(getString(com.goflow.app.common.R.string.location_tracking))
                 }
                 return@setOnPreferenceClickListener true
             }

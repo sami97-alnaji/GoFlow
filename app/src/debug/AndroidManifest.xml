@@ -3,6 +3,10 @@
 
     <application tools:ignore="MissingApplicationIcon">
 
+        <activity-alias
+            android:name="leakcanary.internal.activity.LeakLauncherActivity"
+            tools:node="remove" />
+
         <activity android:name=".launch.LaunchActivity">
             <meta-data android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
@@ -26,7 +30,7 @@
         -->
         <activity
             android:theme="@android:style/Theme.Material.Light.NoActionBar"
-            android:name="io.homeassistant.companion.android.HiltComponentActivity"
+            android:name="com.goflow.app.HiltComponentActivity"
             />
     </application>
 

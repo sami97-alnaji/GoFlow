@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.qs.views
+package com.goflow.app.settings.qs.views
 
 import android.os.Build
 import androidx.compose.foundation.layout.Box
@@ -37,13 +37,13 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import io.homeassistant.companion.android.common.R
-import io.homeassistant.companion.android.common.compose.theme.HATheme
-import io.homeassistant.companion.android.settings.qs.ManageTilesViewModel
-import io.homeassistant.companion.android.util.compose.ServerExposedDropdownMenu
-import io.homeassistant.companion.android.util.compose.entity.EntityPicker
-import io.homeassistant.companion.android.util.safeBottomPaddingValues
-import io.homeassistant.companion.android.util.safeBottomWindowInsets
+import com.goflow.app.common.R
+import com.goflow.app.common.compose.theme.HATheme
+import com.goflow.app.settings.qs.ManageTilesViewModel
+import com.goflow.app.util.compose.ServerExposedDropdownMenu
+import com.goflow.app.util.compose.entity.EntityPicker
+import com.goflow.app.util.safeBottomPaddingValues
+import com.goflow.app.util.safeBottomWindowInsets
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 

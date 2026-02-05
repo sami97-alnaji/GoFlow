@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.complications
+package com.goflow.app.complications
 
 import android.app.Activity
 import android.content.ComponentName
@@ -13,7 +13,7 @@ import androidx.wear.watchface.complications.datasource.ComplicationDataSourceSe
 import androidx.wear.watchface.complications.datasource.ComplicationDataSourceService.Companion.EXTRA_CONFIG_COMPLICATION_TYPE
 import androidx.wear.watchface.complications.datasource.ComplicationDataSourceService.Companion.EXTRA_CONFIG_DATA_SOURCE_COMPONENT
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.complications.views.LoadConfigView
+import com.goflow.app.complications.views.LoadConfigView
 import timber.log.Timber
 
 @AndroidEntryPoint

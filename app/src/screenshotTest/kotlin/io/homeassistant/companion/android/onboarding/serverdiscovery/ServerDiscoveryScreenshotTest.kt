@@ -1,10 +1,10 @@
-package io.homeassistant.companion.android.onboarding.serverdiscovery
+package com.goflow.app.onboarding.serverdiscovery
 
 import androidx.compose.runtime.Composable
 import com.android.tools.screenshot.PreviewTest
-import io.homeassistant.companion.android.common.compose.theme.HAThemeForPreview
-import io.homeassistant.companion.android.common.data.HomeAssistantVersion
-import io.homeassistant.companion.android.util.compose.HAPreviews
+import com.goflow.app.common.compose.theme.HAThemeForPreview
+import com.goflow.app.common.data.HomeAssistantVersion
+import com.goflow.app.util.compose.HAPreviews
 import java.net.URL
 
 class ServerDiscoveryScreenshotTest {

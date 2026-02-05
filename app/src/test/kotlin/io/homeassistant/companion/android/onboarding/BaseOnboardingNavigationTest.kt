@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding
+package com.goflow.app.onboarding
 
 import android.content.pm.PackageManager
 import androidx.activity.compose.LocalActivityResultRegistryOwner
@@ -14,10 +14,10 @@ import androidx.navigation.compose.ComposeNavigator
 import androidx.navigation.compose.NavHost
 import androidx.navigation.testing.TestNavHostController
 import dagger.hilt.android.testing.HiltAndroidRule
-import io.homeassistant.companion.android.HiltComponentActivity
-import io.homeassistant.companion.android.testing.unit.ConsoleLogRule
-import io.homeassistant.companion.android.util.LocationPermissionActivityResultRegistry
-import io.homeassistant.companion.android.util.compose.navigateToUri
+import com.goflow.app.HiltComponentActivity
+import com.goflow.app.testing.unit.ConsoleLogRule
+import com.goflow.app.util.LocationPermissionActivityResultRegistry
+import com.goflow.app.util.compose.navigateToUri
 import io.mockk.Runs
 import io.mockk.coEvery
 import io.mockk.every

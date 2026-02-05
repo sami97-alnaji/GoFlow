@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.vehicle
+package com.goflow.app.vehicle
 
 import android.content.Intent
 import android.content.pm.ApplicationInfo
@@ -14,10 +14,10 @@ import androidx.car.app.hardware.info.CarInfo
 import androidx.car.app.validation.HostValidator
 import androidx.lifecycle.lifecycleScope
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.R
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.prefs.PrefsRepository
-import io.homeassistant.companion.android.common.data.servers.ServerManager
+import com.goflow.app.R
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.prefs.PrefsRepository
+import com.goflow.app.common.data.servers.ServerManager
 import java.util.Collections
 import javax.inject.Inject
 import kotlinx.coroutines.CancellationException

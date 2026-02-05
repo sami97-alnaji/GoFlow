@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.websocket
+package com.goflow.app.websocket
 
 import android.content.BroadcastReceiver
 import android.content.Context

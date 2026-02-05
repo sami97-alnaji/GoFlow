@@ -1,9 +1,9 @@
-package io.homeassistant.companion.android.thread
+package com.goflow.app.thread
 
 import android.content.Context
 import android.content.IntentSender
 import androidx.activity.result.ActivityResult
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.ThreadDatasetResponse
+import com.goflow.app.common.data.websocket.impl.entities.ThreadDatasetResponse
 import kotlinx.coroutines.CoroutineScope
 
 interface ThreadManager {

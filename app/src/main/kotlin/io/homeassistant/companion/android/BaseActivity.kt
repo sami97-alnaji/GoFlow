@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android
+package com.goflow.app
 
 import android.car.Car
 import android.car.drivingstate.CarUxRestrictionsManager
@@ -11,9 +11,9 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.common.util.isAutomotive
-import io.homeassistant.companion.android.util.PermissionRequestMediator
-import io.homeassistant.companion.android.util.enableEdgeToEdgeCompat
+import com.goflow.app.common.util.isAutomotive
+import com.goflow.app.util.PermissionRequestMediator
+import com.goflow.app.util.enableEdgeToEdgeCompat
 import javax.inject.Inject
 import kotlin.math.absoluteValue
 import kotlinx.coroutines.launch

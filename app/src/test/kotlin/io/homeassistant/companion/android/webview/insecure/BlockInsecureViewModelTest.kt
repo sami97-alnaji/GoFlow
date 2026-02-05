@@ -1,11 +1,11 @@
-package io.homeassistant.companion.android.webview.insecure
+package com.goflow.app.webview.insecure
 
 import app.cash.turbine.test
-import io.homeassistant.companion.android.common.data.servers.SecurityState
-import io.homeassistant.companion.android.common.data.servers.ServerConnectionStateProvider
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.testing.unit.ConsoleLogExtension
-import io.homeassistant.companion.android.testing.unit.MainDispatcherJUnit5Extension
+import com.goflow.app.common.data.servers.SecurityState
+import com.goflow.app.common.data.servers.ServerConnectionStateProvider
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.testing.unit.ConsoleLogExtension
+import com.goflow.app.testing.unit.MainDispatcherJUnit5Extension
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk

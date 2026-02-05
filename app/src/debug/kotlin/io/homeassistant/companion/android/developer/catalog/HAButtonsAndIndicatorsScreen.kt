@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.developer.catalog
+package com.goflow.app.developer.catalog
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
@@ -12,13 +12,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Devices.TABLET
 import androidx.compose.ui.tooling.preview.Preview
-import io.homeassistant.companion.android.common.compose.composable.ButtonSize
-import io.homeassistant.companion.android.common.compose.composable.ButtonVariant
-import io.homeassistant.companion.android.common.compose.composable.HAAccentButton
-import io.homeassistant.companion.android.common.compose.composable.HAFilledButton
-import io.homeassistant.companion.android.common.compose.composable.HAIconButton
-import io.homeassistant.companion.android.common.compose.composable.HAPlainButton
-import io.homeassistant.companion.android.common.compose.theme.HAThemeForPreview
+import com.goflow.app.common.compose.composable.ButtonSize
+import com.goflow.app.common.compose.composable.ButtonVariant
+import com.goflow.app.common.compose.composable.HAAccentButton
+import com.goflow.app.common.compose.composable.HAFilledButton
+import com.goflow.app.common.compose.composable.HAIconButton
+import com.goflow.app.common.compose.composable.HAPlainButton
+import com.goflow.app.common.compose.theme.HAThemeForPreview
 
 internal const val BIG_CONTENT =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit."

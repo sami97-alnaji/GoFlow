@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.util.compose
+package com.goflow.app.util.compose
 
 import android.content.Intent
 import androidx.annotation.StringRes
@@ -7,7 +7,7 @@ import androidx.compose.runtime.ReadOnlyComposable
 import androidx.glance.LocalContext
 import androidx.glance.action.Action
 import androidx.glance.appwidget.action.actionStartActivity
-import io.homeassistant.companion.android.webview.WebViewActivity
+import com.goflow.app.webview.WebViewActivity
 
 @Composable
 @ReadOnlyComposable

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.util.icondialog
+package com.goflow.app.util.icondialog
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.Icon
@@ -17,8 +17,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.intl.Locale
 import androidx.compose.ui.tooling.preview.Preview
-import io.homeassistant.companion.android.common.R
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
+import com.goflow.app.common.R
+import com.goflow.app.util.compose.HomeAssistantAppTheme
 
 @Composable
 fun IconDialogSearch(value: String, onValueChange: (String) -> Unit) {

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.location
+package com.goflow.app.location
 
 import android.content.Context
 import android.location.Location

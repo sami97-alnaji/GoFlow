@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.util.compose.entity
+package com.goflow.app.util.compose.entity
 
 import com.mikepenz.iconics.typeface.library.community.material.CommunityMaterial
 import kotlinx.coroutines.test.runTest

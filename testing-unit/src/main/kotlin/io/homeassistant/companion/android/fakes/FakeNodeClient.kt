@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.fakes
+﻿package com.goflow.app.fakes
 
 import android.content.Context
 import com.google.android.gms.tasks.Task
@@ -29,3 +29,4 @@ class FakeNodeClient(context: Context) : NodeClient(context, Settings.Builder().
         TODO("Not yet implemented")
     }
 }
+

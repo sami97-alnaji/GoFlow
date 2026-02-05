@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.nameyourdevice.navigation
+package com.goflow.app.onboarding.nameyourdevice.navigation
 
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertIsEnabled
@@ -9,14 +9,14 @@ import androidx.navigation.NavDestination.Companion.hasRoute
 import dagger.hilt.android.testing.BindValue
 import dagger.hilt.android.testing.HiltAndroidTest
 import dagger.hilt.android.testing.HiltTestApplication
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.onboarding.BaseOnboardingNavigationTest
-import io.homeassistant.companion.android.onboarding.localfirst.navigation.LocalFirstRoute
-import io.homeassistant.companion.android.onboarding.locationforsecureconnection.navigation.LocationForSecureConnectionRoute
-import io.homeassistant.companion.android.onboarding.locationsharing.navigation.LocationSharingRoute
-import io.homeassistant.companion.android.onboarding.nameyourdevice.NameYourDeviceNavigationEvent
-import io.homeassistant.companion.android.onboarding.nameyourdevice.NameYourDeviceViewModel
-import io.homeassistant.companion.android.testing.unit.stringResource
+import com.goflow.app.common.R as commonR
+import com.goflow.app.onboarding.BaseOnboardingNavigationTest
+import com.goflow.app.onboarding.localfirst.navigation.LocalFirstRoute
+import com.goflow.app.onboarding.locationforsecureconnection.navigation.LocationForSecureConnectionRoute
+import com.goflow.app.onboarding.locationsharing.navigation.LocationSharingRoute
+import com.goflow.app.onboarding.nameyourdevice.NameYourDeviceNavigationEvent
+import com.goflow.app.onboarding.nameyourdevice.NameYourDeviceViewModel
+import com.goflow.app.testing.unit.stringResource
 import io.mockk.every
 import io.mockk.mockk
 import junit.framework.TestCase.assertTrue

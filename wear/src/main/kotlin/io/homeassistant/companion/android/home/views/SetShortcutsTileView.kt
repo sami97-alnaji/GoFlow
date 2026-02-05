@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.home.views
+package com.goflow.app.home.views
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -22,14 +22,14 @@ import androidx.wear.compose.material3.Text
 import androidx.wear.compose.material3.touchTargetAwareSize
 import androidx.wear.tooling.preview.devices.WearDevices
 import com.mikepenz.iconics.compose.Image
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.data.SimplifiedEntity
-import io.homeassistant.companion.android.theme.WearAppTheme
-import io.homeassistant.companion.android.theme.getFilledTonalButtonColors
-import io.homeassistant.companion.android.util.getIcon
-import io.homeassistant.companion.android.util.simplifiedEntity
-import io.homeassistant.companion.android.views.ListHeader
-import io.homeassistant.companion.android.views.ThemeLazyColumn
+import com.goflow.app.common.R as commonR
+import com.goflow.app.data.SimplifiedEntity
+import com.goflow.app.theme.WearAppTheme
+import com.goflow.app.theme.getFilledTonalButtonColors
+import com.goflow.app.util.getIcon
+import com.goflow.app.util.simplifiedEntity
+import com.goflow.app.views.ListHeader
+import com.goflow.app.views.ThemeLazyColumn
 
 @Composable
 fun SetShortcutsTileView(shortcutEntities: List<SimplifiedEntity>, onShortcutEntitySelectionChange: (Int) -> Unit) {

@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.settings.developer
+package com.goflow.app.settings.developer
 
 import android.content.IntentSender
 

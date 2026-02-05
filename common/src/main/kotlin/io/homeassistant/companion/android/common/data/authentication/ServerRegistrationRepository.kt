@@ -1,11 +1,11 @@
-package io.homeassistant.companion.android.common.data.authentication
+package com.goflow.app.common.data.authentication
 
-import io.homeassistant.companion.android.common.data.authentication.impl.AuthenticationService
-import io.homeassistant.companion.android.common.data.authentication.impl.AuthenticationService.Companion.SEGMENT_AUTH_TOKEN
-import io.homeassistant.companion.android.common.util.di.SuspendProvider
-import io.homeassistant.companion.android.database.server.ServerSessionInfo
-import io.homeassistant.companion.android.database.server.TemporaryServer
-import io.homeassistant.companion.android.di.qualifiers.NamedInstallId
+import com.goflow.app.common.data.authentication.impl.AuthenticationService
+import com.goflow.app.common.data.authentication.impl.AuthenticationService.Companion.SEGMENT_AUTH_TOKEN
+import com.goflow.app.common.util.di.SuspendProvider
+import com.goflow.app.database.server.ServerSessionInfo
+import com.goflow.app.database.server.TemporaryServer
+import com.goflow.app.di.qualifiers.NamedInstallId
 import javax.inject.Inject
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import timber.log.Timber

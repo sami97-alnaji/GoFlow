@@ -1,56 +1,56 @@
-package io.homeassistant.companion.android.common.data.integration.impl
+package com.goflow.app.common.data.integration.impl
 
 import androidx.annotation.VisibleForTesting
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedInject
-import io.homeassistant.companion.android.common.BuildConfig
-import io.homeassistant.companion.android.common.data.HomeAssistantVersion
-import io.homeassistant.companion.android.common.data.LocalStorage
-import io.homeassistant.companion.android.common.data.integration.Action
-import io.homeassistant.companion.android.common.data.integration.DeviceRegistration
-import io.homeassistant.companion.android.common.data.integration.Entity
-import io.homeassistant.companion.android.common.data.integration.IntegrationException
-import io.homeassistant.companion.android.common.data.integration.IntegrationRepository
-import io.homeassistant.companion.android.common.data.integration.SensorRegistration
-import io.homeassistant.companion.android.common.data.integration.UpdateLocation
-import io.homeassistant.companion.android.common.data.integration.impl.entities.ActionRequest
-import io.homeassistant.companion.android.common.data.integration.impl.entities.CallServiceIntegrationRequest
-import io.homeassistant.companion.android.common.data.integration.impl.entities.EntityResponse
-import io.homeassistant.companion.android.common.data.integration.impl.entities.FireEventIntegrationRequest
-import io.homeassistant.companion.android.common.data.integration.impl.entities.FireEventRequest
-import io.homeassistant.companion.android.common.data.integration.impl.entities.GetConfigIntegrationRequest
-import io.homeassistant.companion.android.common.data.integration.impl.entities.GetZonesIntegrationRequest
-import io.homeassistant.companion.android.common.data.integration.impl.entities.IntegrationRequest
-import io.homeassistant.companion.android.common.data.integration.impl.entities.RateLimitRequest
-import io.homeassistant.companion.android.common.data.integration.impl.entities.RateLimitResponse
-import io.homeassistant.companion.android.common.data.integration.impl.entities.RegisterDeviceIntegrationRequest
-import io.homeassistant.companion.android.common.data.integration.impl.entities.RegisterDeviceRequest
-import io.homeassistant.companion.android.common.data.integration.impl.entities.RegisterSensorIntegrationRequest
-import io.homeassistant.companion.android.common.data.integration.impl.entities.RenderTemplateIntegrationRequest
-import io.homeassistant.companion.android.common.data.integration.impl.entities.ScanTagIntegrationRequest
-import io.homeassistant.companion.android.common.data.integration.impl.entities.SensorRegistrationRequest
-import io.homeassistant.companion.android.common.data.integration.impl.entities.SensorUpdateRequest
-import io.homeassistant.companion.android.common.data.integration.impl.entities.Template
-import io.homeassistant.companion.android.common.data.integration.impl.entities.UpdateLocationIntegrationRequest
-import io.homeassistant.companion.android.common.data.integration.impl.entities.UpdateLocationRequest
-import io.homeassistant.companion.android.common.data.integration.impl.entities.UpdateSensorStatesIntegrationRequest
-import io.homeassistant.companion.android.common.data.servers.ServerManager
-import io.homeassistant.companion.android.common.data.servers.firstUrlOrNull
-import io.homeassistant.companion.android.common.data.servers.tryOnUrls
-import io.homeassistant.companion.android.common.data.websocket.WebSocketRepository
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.AssistPipelineEvent
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.AssistPipelineEventType
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.AssistPipelineIntentEnd
-import io.homeassistant.companion.android.common.data.websocket.impl.entities.GetConfigResponse
-import io.homeassistant.companion.android.common.util.AppVersion
-import io.homeassistant.companion.android.common.util.MessagingToken
-import io.homeassistant.companion.android.common.util.isNullOrBlank
-import io.homeassistant.companion.android.database.server.Server
-import io.homeassistant.companion.android.di.qualifiers.NamedDeviceId
-import io.homeassistant.companion.android.di.qualifiers.NamedIntegrationStorage
-import io.homeassistant.companion.android.di.qualifiers.NamedManufacturer
-import io.homeassistant.companion.android.di.qualifiers.NamedModel
-import io.homeassistant.companion.android.di.qualifiers.NamedOsVersion
+import com.goflow.app.common.BuildConfig
+import com.goflow.app.common.data.HomeAssistantVersion
+import com.goflow.app.common.data.LocalStorage
+import com.goflow.app.common.data.integration.Action
+import com.goflow.app.common.data.integration.DeviceRegistration
+import com.goflow.app.common.data.integration.Entity
+import com.goflow.app.common.data.integration.IntegrationException
+import com.goflow.app.common.data.integration.IntegrationRepository
+import com.goflow.app.common.data.integration.SensorRegistration
+import com.goflow.app.common.data.integration.UpdateLocation
+import com.goflow.app.common.data.integration.impl.entities.ActionRequest
+import com.goflow.app.common.data.integration.impl.entities.CallServiceIntegrationRequest
+import com.goflow.app.common.data.integration.impl.entities.EntityResponse
+import com.goflow.app.common.data.integration.impl.entities.FireEventIntegrationRequest
+import com.goflow.app.common.data.integration.impl.entities.FireEventRequest
+import com.goflow.app.common.data.integration.impl.entities.GetConfigIntegrationRequest
+import com.goflow.app.common.data.integration.impl.entities.GetZonesIntegrationRequest
+import com.goflow.app.common.data.integration.impl.entities.IntegrationRequest
+import com.goflow.app.common.data.integration.impl.entities.RateLimitRequest
+import com.goflow.app.common.data.integration.impl.entities.RateLimitResponse
+import com.goflow.app.common.data.integration.impl.entities.RegisterDeviceIntegrationRequest
+import com.goflow.app.common.data.integration.impl.entities.RegisterDeviceRequest
+import com.goflow.app.common.data.integration.impl.entities.RegisterSensorIntegrationRequest
+import com.goflow.app.common.data.integration.impl.entities.RenderTemplateIntegrationRequest
+import com.goflow.app.common.data.integration.impl.entities.ScanTagIntegrationRequest
+import com.goflow.app.common.data.integration.impl.entities.SensorRegistrationRequest
+import com.goflow.app.common.data.integration.impl.entities.SensorUpdateRequest
+import com.goflow.app.common.data.integration.impl.entities.Template
+import com.goflow.app.common.data.integration.impl.entities.UpdateLocationIntegrationRequest
+import com.goflow.app.common.data.integration.impl.entities.UpdateLocationRequest
+import com.goflow.app.common.data.integration.impl.entities.UpdateSensorStatesIntegrationRequest
+import com.goflow.app.common.data.servers.ServerManager
+import com.goflow.app.common.data.servers.firstUrlOrNull
+import com.goflow.app.common.data.servers.tryOnUrls
+import com.goflow.app.common.data.websocket.WebSocketRepository
+import com.goflow.app.common.data.websocket.impl.entities.AssistPipelineEvent
+import com.goflow.app.common.data.websocket.impl.entities.AssistPipelineEventType
+import com.goflow.app.common.data.websocket.impl.entities.AssistPipelineIntentEnd
+import com.goflow.app.common.data.websocket.impl.entities.GetConfigResponse
+import com.goflow.app.common.util.AppVersion
+import com.goflow.app.common.util.MessagingToken
+import com.goflow.app.common.util.isNullOrBlank
+import com.goflow.app.database.server.Server
+import com.goflow.app.di.qualifiers.NamedDeviceId
+import com.goflow.app.di.qualifiers.NamedIntegrationStorage
+import com.goflow.app.di.qualifiers.NamedManufacturer
+import com.goflow.app.di.qualifiers.NamedModel
+import com.goflow.app.di.qualifiers.NamedOsVersion
 import java.util.concurrent.TimeUnit
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.filter
@@ -79,7 +79,7 @@ class IntegrationRepositoryImpl @AssistedInject constructor(
 ) : IntegrationRepository {
 
     companion object {
-        private const val APP_ID = "io.homeassistant.companion.android"
+        private const val APP_ID = "com.goflow.app"
         private const val APP_NAME = "GoFlow"
         private const val OS_NAME = "Android"
 

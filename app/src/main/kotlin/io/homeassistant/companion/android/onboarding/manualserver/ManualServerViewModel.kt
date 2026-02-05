@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.onboarding.manualserver
+package com.goflow.app.onboarding.manualserver
 
 import android.webkit.URLUtil
 import androidx.lifecycle.ViewModel

@@ -1,10 +1,10 @@
-package io.homeassistant.companion.android.database.widget
+package com.goflow.app.database.widget
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.TypeConverters
-import io.homeassistant.companion.android.database.widget.converters.TodoLastUpdateDataConverter
+import com.goflow.app.database.widget.converters.TodoLastUpdateDataConverter
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.JsonNames

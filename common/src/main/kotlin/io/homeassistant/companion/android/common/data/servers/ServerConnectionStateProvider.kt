@@ -1,10 +1,10 @@
-package io.homeassistant.companion.android.common.data.servers
+package com.goflow.app.common.data.servers
 
 import dagger.assisted.AssistedFactory
-import io.homeassistant.companion.android.common.BuildConfig
-import io.homeassistant.companion.android.common.data.integration.IntegrationException
-import io.homeassistant.companion.android.common.data.integration.NoUrlAvailableException
-import io.homeassistant.companion.android.database.server.ServerConnectionInfo
+import com.goflow.app.common.BuildConfig
+import com.goflow.app.common.data.integration.IntegrationException
+import com.goflow.app.common.data.integration.NoUrlAvailableException
+import com.goflow.app.database.server.ServerConnectionInfo
 import java.net.URL
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.Flow

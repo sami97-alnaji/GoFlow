@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.nfc
+package com.goflow.app.nfc
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -12,11 +12,11 @@ import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import dagger.hilt.android.AndroidEntryPoint
-import io.homeassistant.companion.android.BaseActivity
-import io.homeassistant.companion.android.common.R as commonR
-import io.homeassistant.companion.android.nfc.views.LoadNfcView
-import io.homeassistant.companion.android.util.UrlUtil
-import io.homeassistant.companion.android.util.compose.HomeAssistantAppTheme
+import com.goflow.app.BaseActivity
+import com.goflow.app.common.R as commonR
+import com.goflow.app.nfc.views.LoadNfcView
+import com.goflow.app.util.UrlUtil
+import com.goflow.app.util.compose.HomeAssistantAppTheme
 import kotlinx.coroutines.launch
 import timber.log.Timber
 
