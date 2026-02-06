@@ -2476,13 +2476,47 @@ class WebViewActivity :
                 }
                 return out;
               };
-              const getText = (el) => {
-                try { return el && el.innerText ? el.innerText : ''; } catch (e) { return ''; }
-              };
-              const isAboutCard = (card) => {
-                const t = getText(card);
-                return t.includes('Companion app') && t.includes('Core') && t.includes('Frontend');
-              };
+                const getText = (el) => {
+                  try { return el && el.innerText ? el.innerText : ''; } catch (e) { return ''; }
+                };
+                const replaceHaLogoSvg = () => {
+                  // Replace <ha-logo-svg> (used in About card after language switch)
+                  const logos = deepQueryAll(document, 'ha-logo-svg', []);
+                  let changed = false;
+                  for (let i = 0; i < logos.length; i++) {
+                    const el = logos[i];
+                    if (!el || (el.dataset && el.dataset.customHaLogo === '1')) continue;
+                    if (el.dataset) el.dataset.customHaLogo = '1';
+                    const img = document.createElement('img');
+                    img.src = data;
+                    img.style.width = '140px';
+                    img.style.height = '140px';
+                    img.style.objectFit = 'contain';
+                    img.style.display = 'block';
+                    img.style.margin = '16px auto 8px auto';
+                    // Try to replace inside shadow root, otherwise replace element itself
+                    if (el.shadowRoot) {
+                      try {
+                        const svg = el.shadowRoot.querySelector('svg');
+                        if (svg && svg.replaceWith) {
+                          svg.replaceWith(img);
+                        } else {
+                          el.shadowRoot.appendChild(img);
+                        }
+                      } catch (e) {
+                        el.replaceWith(img);
+                      }
+                    } else if (el.replaceWith) {
+                      el.replaceWith(img);
+                    }
+                    changed = true;
+                  }
+                  return changed;
+                };
+                const isAboutCard = (card) => {
+                  const t = getText(card);
+                  return t.includes('Companion app') && t.includes('Core') && t.includes('Frontend');
+                };
               const insertLogo = (card) => {
                 if (!card || card.dataset && card.dataset.customAboutLogo === '1') return false;
                 card.dataset.customAboutLogo = '1';
@@ -2505,13 +2539,14 @@ class WebViewActivity :
                 card.insertBefore(img, card.firstChild);
                 return true;
               };
-              const attempt = () => {
-                try {
-                  const cards = deepQueryAll(document, 'ha-card', []);
-                  for (let i = 0; i < cards.length; i++) {
-                    if (isAboutCard(cards[i])) {
-                      if (insertLogo(cards[i])) return true;
-                    }
+                const attempt = () => {
+                  try {
+                    if (replaceHaLogoSvg()) return true;
+                    const cards = deepQueryAll(document, 'ha-card', []);
+                    for (let i = 0; i < cards.length; i++) {
+                      if (isAboutCard(cards[i])) {
+                        if (insertLogo(cards[i])) return true;
+                      }
                   }
                 } catch (e) {}
                 return false;
