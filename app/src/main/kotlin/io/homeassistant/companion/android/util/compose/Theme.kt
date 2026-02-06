@@ -22,7 +22,7 @@ import com.goflow.app.common.compose.theme.DarkHAColorScheme
 import com.goflow.app.common.compose.theme.LightHAColorScheme
 import com.goflow.app.common.compose.theme.LocalHAColorScheme
 
-val colorPrimary = Color(0xFF03A9F4)
+val colorPrimary = Color(0xFF009FE3)
 val colorPrimaryDark = Color(0xFF0288D1)
 val darkColorBackground = Color(0xFF1C1C1C)
 

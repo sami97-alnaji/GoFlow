@@ -37,31 +37,31 @@ private object HAColors {
     val White = Color(0xFFFFFFFF)
     val Transparent = Color(0x00FFFFFF)
 
-    // Primary
-    val Primary05 = Color(0xFF001721)
-    val Primary10 = Color(0xFF002E3E)
-    val Primary20 = Color(0xFF004156)
-    val Primary30 = Color(0xFF006787)
-    val Primary40 = Color(0xFF009AC7)
-    val Primary50 = Color(0xFF18BCF2)
-    val Primary60 = Color(0xFF37C8FD)
-    val Primary70 = Color(0xFF7BD4FB)
-    val Primary80 = Color(0xFFB9E6FC)
-    val Primary90 = Color(0xFFDFF3FC)
-    val Primary95 = Color(0xFFEFF9FE)
+    // Primary (GoFlow 01: #009FE3)
+    val Primary05 = Color(0xFF001828)
+    val Primary10 = Color(0xFF003356)
+    val Primary20 = Color(0xFF004B78)
+    val Primary30 = Color(0xFF0066A4)
+    val Primary40 = Color(0xFF009FE3)
+    val Primary50 = Color(0xFF26B5EE)
+    val Primary60 = Color(0xFF54C7F4)
+    val Primary70 = Color(0xFF83D9F8)
+    val Primary80 = Color(0xFFB5EAFC)
+    val Primary90 = Color(0xFFDDF6FD)
+    val Primary95 = Color(0xFFF0FBFF)
 
-    // Blue
-    val Blue05 = Color(0xFF000F35)
-    val Blue10 = Color(0xFF001A4E)
-    val Blue20 = Color(0xFF002D77)
-    val Blue30 = Color(0xFF003F9C)
-    val Blue40 = Color(0xFF0053C0)
-    val Blue50 = Color(0xFF0071EC)
-    val Blue60 = Color(0xFF3E96FF)
-    val Blue70 = Color(0xFF6EB3FF)
-    val Blue80 = Color(0xFF9FCEFF)
-    val Blue90 = Color(0xFFD1E8FF)
-    val Blue95 = Color(0xFFE8F3FF)
+    // Secondary (GoFlow 02: #1D245D)
+    val Blue05 = Color(0xFF0A0E28)
+    val Blue10 = Color(0xFF111842)
+    val Blue20 = Color(0xFF1D245D)
+    val Blue30 = Color(0xFF303672)
+    val Blue40 = Color(0xFF3F4685)
+    val Blue50 = Color(0xFF4F5698)
+    val Blue60 = Color(0xFF6B72B1)
+    val Blue70 = Color(0xFF8A90CB)
+    val Blue80 = Color(0xFFACB2E3)
+    val Blue90 = Color(0xFFD1D6F5)
+    val Blue95 = Color(0xFFEBEEFF)
 
     // Brand
     val Brand05 = Color(0xFF00222F)
@@ -197,8 +197,8 @@ private object HAColors {
 // TODO validate with design team if this color are immutable or not (not changeable by the users and also stay the same
 //  in dark mode)
 object HABrandColors {
-    val Blue = Color(0xFF18BCF2)
-    val Background = Color(0xFFF2F4F9)
+    val Blue = Color(0xFF009FE3)
+    val Background = Color(0xFFF0FBFF)
 }
 
 @Immutable

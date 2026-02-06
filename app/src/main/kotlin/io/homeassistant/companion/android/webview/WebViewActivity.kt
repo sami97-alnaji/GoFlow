@@ -8,6 +8,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
 import android.graphics.Rect
 import android.net.Uri
 import android.net.http.SslError
@@ -95,6 +96,7 @@ import com.goflow.app.BaseActivity
 import com.goflow.app.BuildConfig
 import com.goflow.app.R
 import com.goflow.app.R.*
+import com.goflow.app.webview.SearchHideScript
 import com.goflow.app.assist.AssistActivity
 import com.goflow.app.authenticator.Authenticator
 import com.goflow.app.barcode.BarcodeScannerActivity
@@ -322,6 +324,8 @@ class WebViewActivity :
     private var downloadFileUrl = ""
     private var downloadFileContentDisposition = ""
     private var downloadFileMimetype = ""
+    private var blockSearchInstalled = false
+    private var hideSearchInstalled = false
     private val javascriptInterface = "externalApp"
     private var serverHandleInsets = mutableStateOf(false)
 
@@ -500,6 +504,12 @@ class WebViewActivity :
                     }
                 }
 
+                override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
+                    super.onPageStarted(view, url, favicon)
+                    view?.let { installSearchBlock(it) }
+                    view?.let { ensureHideSearchInstalled(it) }
+                }
+
                 override fun onPageFinished(view: WebView?, url: String?) {
                     webViewInitialized.value = true
                     if (clearHistory) {
@@ -518,6 +528,7 @@ class WebViewActivity :
                     view?.let { injectWebTextReplacements(it) }
                     view?.let { injectAboutLogo(it) }
                     view?.let { injectAboutBadgeReplacement(it) }
+                    view?.let { ensureHideSearchInstalled(it) }
                     if (moreInfoEntity != "" && view?.progress == 100 && isConnected) {
                         ioScope.launch {
                             val owner = "onPageFinished:$moreInfoEntity"
@@ -665,17 +676,6 @@ class WebViewActivity :
             }
 
             webChromeClient = object : WebChromeClient() {
-                override fun onProgressChanged(view: WebView?, newProgress: Int) {
-                    if (newProgress < 100) {
-                        view?.let { injectLoadingLogoOnly(it) }
-                        view?.let { injectWebIcons(it) }
-                        view?.let { injectOhfBadge(it) }
-                        view?.let { injectWebTextReplacements(it) }
-                        view?.let { injectAboutLogo(it) }
-                        view?.let { injectAboutBadgeReplacement(it) }
-                    }
-                    super.onProgressChanged(view, newProgress)
-                }
 
                 override fun onJsConfirm(view: WebView, url: String, message: String, result: JsResult): Boolean {
                     AlertDialog
@@ -2829,6 +2829,129 @@ class WebViewActivity :
                 )
             }
         }
+    }
+
+    private fun ensureHideSearchInstalled(webView: WebView) {
+        if (hideSearchInstalled) return
+        hideSearchInstalled = true
+        webView.evaluateJavascript(SearchHideScript.JS) { res ->
+            Timber.d("HideSearchJS => $res")
+        }
+    }
+
+    private fun installSearchBlock(webView: WebView) {
+        if (blockSearchInstalled) return
+        blockSearchInstalled = true
+        val js = """
+            (function () {
+              if (window.__goflowSearchBlockInstalled) return "ALREADY";
+              window.__goflowSearchBlockInstalled = true;
+
+              const LABEL = "Search Home Assistant";
+              const RETRY_MS = 200;
+              const MAX_TRIES = 40;
+
+              function applyHide(reason) {
+                let tries = 0;
+                const t = setInterval(() => {
+                  tries++;
+                  const stack = [];
+                  if (document.documentElement) stack.push(document.documentElement);
+                  let found = null;
+                  let visits = 0;
+                  while (stack.length && visits < 4000) {
+                    const node = stack.pop();
+                    visits++;
+                    if (!node) continue;
+                    if (node.querySelector) {
+                      try {
+                        const btn = node.querySelector('button[aria-label="' + LABEL + '"]');
+                        if (btn) { found = btn; break; }
+                        const mwc = node.querySelector('mwc-icon-button[title="' + LABEL + '"]');
+                        if (mwc) { found = mwc; break; }
+                      } catch {}
+                    }
+                    if (node.shadowRoot) stack.push(node.shadowRoot);
+                    const kids = node.children;
+                    if (kids && kids.length) {
+                      for (let i = kids.length - 1; i >= 0; i--) stack.push(kids[i]);
+                    }
+                    if (node.host && node.querySelector) {
+                      try {
+                        const btn = node.querySelector('button[aria-label="' + LABEL + '"]');
+                        if (btn) { found = btn; break; }
+                        const mwc = node.querySelector('mwc-icon-button[title="' + LABEL + '"]');
+                        if (mwc) { found = mwc; break; }
+                      } catch {}
+                    }
+                  }
+                  if (found) {
+                    try {
+                      found.style.setProperty('display', 'none', 'important');
+                      found.style.setProperty('pointer-events', 'none', 'important');
+                      found.setAttribute('hidden', '');
+                    } catch {}
+                    try {
+                      const host = found.getRootNode?.().host;
+                      if (host) {
+                        host.style.setProperty('display', 'none', 'important');
+                        host.style.setProperty('pointer-events', 'none', 'important');
+                        host.setAttribute('hidden', '');
+                      }
+                      let p = host || found;
+                      for (let i = 0; i < 12 && p; i++) {
+                        const tag = (p.tagName || '').toLowerCase();
+                        if (tag == 'ha-icon-button') {
+                          p.style.setProperty('display', 'none', 'important');
+                          p.style.setProperty('pointer-events', 'none', 'important');
+                          p.setAttribute('hidden', '');
+                          break;
+                        }
+                        p = p.parentElement || p.getRootNode?.().host;
+                      }
+                    } catch {}
+                    console.log("GOFLOW_HIDE_SEARCH:", location.pathname, reason, "HIDDEN", "tries", tries);
+                    clearInterval(t);
+                    return;
+                  }
+                  if (tries >= MAX_TRIES) {
+                    console.log("GOFLOW_HIDE_SEARCH:", location.pathname, reason, "GIVE_UP");
+                    clearInterval(t);
+                  }
+                }, RETRY_MS);
+              }
+
+              // Block activation by capturing clicks on search elements
+              window.addEventListener('click', (e) => {
+                const path = e.composedPath ? e.composedPath() : [];
+                for (const el of path) {
+                  if (!el || !el.getAttribute) continue;
+                  const aria = el.getAttribute('aria-label') || '';
+                  const title = el.getAttribute('title') || '';
+                  const txtMatch = (txt) => txt.toLowerCase().includes('search') && txt.toLowerCase().includes('home assistant');
+                  if (txtMatch(aria) || txtMatch(title)) {
+                    e.preventDefault();
+                    e.stopImmediatePropagation();
+                    return false;
+                  }
+                }
+                return true;
+              }, true);
+
+              const fire = (r) => applyHide(r);
+              fire("initial");
+              const _push = history.pushState;
+              history.pushState = function () { _push.apply(this, arguments); fire("pushState"); };
+              const _replace = history.replaceState;
+              history.replaceState = function () { _replace.apply(this, arguments); fire("replaceState"); };
+              window.addEventListener("popstate", () => fire("popstate"));
+              document.addEventListener("click", () => fire("click"), true);
+
+              return "INSTALLED";
+            })();
+        """.trimIndent()
+
+        webView.evaluateJavascript(js) { res -> Timber.d("SearchBlockJS => $res") }
     }
 
     private fun scanForImprov() {
