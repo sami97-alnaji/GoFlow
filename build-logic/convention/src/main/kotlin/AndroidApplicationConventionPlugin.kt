@@ -44,7 +44,7 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
                     applicationId = APPLICATION_ID
                     targetSdk = libs.versions.androidSdk.target.get().toInt()
 
-                    versionName = project.version.toString()
+                    versionName = "1.0.0"
                     versionCode = System.getenv("VERSION_CODE")?.toIntOrNull() ?: 30
 
                     val noStrictMode = project.findProperty("noStrictMode")?.toString()?.ifEmpty { "true" }

@@ -2,8 +2,8 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@color/colorLaunchScreenBackground" />
 
-    <item android:width="112dp"
-        android:height="112dp"
+    <item android:width="512dp"
+        android:height="512dp"
         android:gravity="center"
         android:drawable="@drawable/app_icon_launch">
     </item>
