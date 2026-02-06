@@ -38,6 +38,7 @@ import android.webkit.SslErrorHandler
 import android.webkit.URLUtil
 import android.webkit.ValueCallback
 import android.webkit.WebChromeClient
+import android.webkit.ConsoleMessage
 import android.webkit.WebResourceRequest
 import android.webkit.WebResourceResponse
 import android.webkit.WebView
@@ -288,6 +289,7 @@ class WebViewActivity :
     private var cachedOhfBadgeDataUrl: String? = null
     private var cachedPrimaryLogoSvgDataUrl: String? = null
     private var cachedAboutBadgeDataUrl: String? = null
+    private var cachedBlackLogoDataUrl: String? = null
 
     /**
      * Flag to know when the webview has been fully initialized (loadUrl called).
@@ -518,6 +520,7 @@ class WebViewActivity :
                     view?.let { injectWebTextReplacements(it) }
                     view?.let { injectAboutLogo(it) }
                     view?.let { injectAboutBadgeReplacement(it) }
+                    view?.let { injectPickerComboRebrand(it) }
                     if (moreInfoEntity != "" && view?.progress == 100 && isConnected) {
                         ioScope.launch {
                             val owner = "onPageFinished:$moreInfoEntity"
@@ -673,8 +676,16 @@ class WebViewActivity :
                         view?.let { injectWebTextReplacements(it) }
                         view?.let { injectAboutLogo(it) }
                         view?.let { injectAboutBadgeReplacement(it) }
+                        view?.let { injectPickerComboRebrand(it) }
                     }
                     super.onProgressChanged(view, newProgress)
+                }
+
+                override fun onConsoleMessage(consoleMessage: ConsoleMessage): Boolean {
+                    Timber.d(
+                        "WebViewConsole: ${consoleMessage.message()} @${consoleMessage.sourceId()}:${consoleMessage.lineNumber()}",
+                    )
+                    return true
                 }
 
                 override fun onJsConfirm(view: WebView, url: String, message: String, result: JsResult): Boolean {
@@ -1160,8 +1171,14 @@ class WebViewActivity :
         val htmlArraySpacer = "-SPACER-"
         webView.evaluateJavascript(
             "[" +
-                "document.getElementsByTagName('html')[0].computedStyleMap().get('--app-header-background-color')[0]," +
-                "document.getElementsByTagName('html')[0].computedStyleMap().get('--primary-background-color')[0]" +
+                "(() => { const html = document.getElementsByTagName('html')[0];" +
+                "const map = html && html.computedStyleMap ? html.computedStyleMap() : null;" +
+                "const val = map && map.get('--app-header-background-color');" +
+                "return (val && val[0]) ? val[0] : null; })()," +
+                "(() => { const html = document.getElementsByTagName('html')[0];" +
+                "const map = html && html.computedStyleMap ? html.computedStyleMap() : null;" +
+                "const val = map && map.get('--primary-background-color');" +
+                "return (val && val[0]) ? val[0] : null; })()" +
                 "].join('" + htmlArraySpacer + "')",
         ) { webViewColors ->
             lifecycleScope.launch(Dispatchers.Main) {
@@ -2691,6 +2708,599 @@ class WebViewActivity :
         """.trimIndent()
 
         view.evaluateJavascript(js, null)
+    }
+
+    private fun injectPickerComboRebrand(view: WebView) {
+        val context = view.context ?: return
+        // Prefer Home Assistant /local assets for quick-bar branding
+        if (cachedBlackLogoDataUrl == null || cachedPrimaryLogoSvgDataUrl == null) {
+            lifecycleScope.launch(Dispatchers.IO) {
+                if (cachedBlackLogoDataUrl == null) {
+                    cachedBlackLogoDataUrl = buildBlackLogoSvgDataUrl(context)
+                }
+                if (cachedPrimaryLogoSvgDataUrl == null) {
+                    cachedPrimaryLogoSvgDataUrl = buildPrimaryLogoSvgDataUrl(context)
+                }
+                view.post { injectPickerComboRebrand(view) }
+            }
+            // Continue; we can still inject using /local URLs while data URLs load
+        }
+
+        val js = """
+            (function() {
+              try {
+              if (window.__goflowQuickBarInjected) { return true; }
+              window.__goflowQuickBarInjected = true;
+              const blackData = "$cachedBlackLogoDataUrl";
+              const colorData = "$cachedPrimaryLogoSvgDataUrl";
+              const GOFLOW_BLACK_URL = (typeof blackData === 'string' && blackData.startsWith('data:image')) ? blackData : "/local/goflow-black.svg";
+              const GOFLOW_COLOR_URL = (typeof colorData === 'string' && colorData.startsWith('data:image')) ? colorData : "/local/goflow-color.svg";
+              if (!window.__goflowLogoSourceLogged) {
+                window.__goflowLogoSourceLogged = true;
+                try {
+                  console.log("GOFLOW: logo sources", {
+                    blackIsData: GOFLOW_BLACK_URL && GOFLOW_BLACK_URL.startsWith('data:image'),
+                    colorIsData: GOFLOW_COLOR_URL && GOFLOW_COLOR_URL.startsWith('data:image'),
+                  });
+                } catch (_) {}
+              }
+              const HOME_PATH_D = "M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z";
+              const TARGET_D_PREFIX = "m12.151 1.5882c-.3262 0-.6523.1291";
+              const TARGET_D_PART_1 = "l-8.3848 8.7354";
+              const TARGET_D_PART_2 = "v8.0124a1.2731 1.2731";
+              const deepQueryAll = (root, selector, out) => {
+                if (!root) return out;
+                try {
+                  const found = root.querySelectorAll(selector);
+                  if (found && found.length) out.push.apply(out, found);
+                } catch (e) {}
+                const nodes = root.querySelectorAll ? root.querySelectorAll('*') : [];
+                for (let i = 0; i < nodes.length; i++) {
+                  const el = nodes[i];
+                  if (el && el.tagName && el.tagName.toLowerCase() === 'template' && el.content) {
+                    deepQueryAll(el.content, selector, out);
+                  }
+                  if (el && el.shadowRoot) {
+                    deepQueryAll(el.shadowRoot, selector, out);
+                  }
+                }
+                return out;
+              };
+              const safeReplace = (target, node, label) => {
+                try {
+                  if (!target || !node || !node.nodeType) return false;
+                  if (target.replaceWith) {
+                    target.replaceWith(node);
+                    return true;
+                  }
+                } catch (e) {
+                  try { console.log("GOFLOW: replace error", label || "", e && (e.message || e)); } catch (_) {}
+                }
+                return false;
+              };
+              const pickLogoUrl = (isWhite) => {
+                return isWhite ? GOFLOW_COLOR_URL : GOFLOW_BLACK_URL;
+              };
+              const pickLogoData = (pathEl) => {
+                try {
+                  const fill = pathEl.getAttribute('fill') || '';
+                  const color = (fill || getComputedStyle(pathEl).fill || getComputedStyle(pathEl).color || '').toLowerCase();
+                  if (color.includes('18bcf2') || color.includes('rgb(24, 188, 242)')) return GOFLOW_COLOR_URL;
+                } catch (e) {}
+                return GOFLOW_BLACK_URL;
+              };
+              const replaceTargetHomeSvg = () => {
+                let changed = false;
+                const paths = deepQueryAll(document, 'path', []);
+                for (let i = 0; i < paths.length; i++) {
+                  const path = paths[i];
+                  if (!path) continue;
+                  const d = path.getAttribute('d') || '';
+                  if (!isTargetHomePath(d)) continue;
+                  const svg = path.ownerSVGElement || (path.closest ? path.closest('svg') : null);
+                  if (!svg || (svg.dataset && svg.dataset.logoReplaced === '1')) continue;
+                  const img = document.createElement('img');
+                  // Use fixed black logo for the gray home icon to avoid color detection issues
+                  img.src = GOFLOW_BLACK_URL;
+                  const w = svg.getAttribute('width') || svg.clientWidth || 24;
+                  const h = svg.getAttribute('height') || svg.clientHeight || 24;
+                  img.style.width = (typeof w === "number") ? (w + "px") : ("" + w + "px");
+                  img.style.height = (typeof h === "number") ? (h + "px") : ("" + h + "px");
+                  img.style.objectFit = 'contain';
+                  img.style.display = 'block';
+                  svg.dataset.logoReplaced = '1';
+                  safeReplace(svg, img, "target-home-svg");
+                  try { console.log("GOFLOW: replaced target home svg", { w: w, h: h, d: d.slice(0, 40) }); } catch (e) {}
+                  changed = true;
+                }
+                if (!changed) {
+                  try {
+                    const now = Date.now();
+                    if (!window.__goflowTargetNotFoundTs || (now - window.__goflowTargetNotFoundTs) > 2000) {
+                      window.__goflowTargetNotFoundTs = now;
+                      console.log("GOFLOW: target home svg not found yet");
+                    }
+                  } catch (e) {}
+                  if (!window.__goflowTargetDebugLogged) {
+                    window.__goflowTargetDebugLogged = true;
+                    for (let i = 0; i < Math.min(paths.length, 20); i++) {
+                      const p = paths[i];
+                      const d = p ? p.getAttribute('d') || '' : '';
+                      if (d) {
+                        try { console.log("GOFLOW: sample svg d:", normalizePath(d).slice(0, 120)); } catch (_) {}
+                      }
+                    }
+                    for (let i = 0; i < paths.length; i++) {
+                      const d = paths[i] ? paths[i].getAttribute('d') || '' : '';
+                      if (d && d.toLowerCase().includes('12.151')) {
+                        try { console.log("GOFLOW: found d with 12.151", normalizePath(d).slice(0, 160)); } catch (_) {}
+                        break;
+                      }
+                    }
+                  }
+                }
+                return changed;
+              };
+              const replaceHaLogoElements = () => {
+                let changed = false;
+                const logos = deepQueryAll(document, 'ha-logo-svg', []);
+                for (let i = 0; i < logos.length; i++) {
+                  const el = logos[i];
+                  if (!el || (el.dataset && el.dataset.logoReplaced === '1')) continue;
+                  const color = (getComputedStyle(el).color || '').toLowerCase();
+                  const isBlue = color.includes('18bcf2') || color.includes('rgb(24, 188, 242)');
+                  const img = document.createElement('img');
+                  img.src = isBlue ? GOFLOW_COLOR_URL : GOFLOW_BLACK_URL;
+                  const rect = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+                  const w = rect && rect.width ? rect.width : 24;
+                  const h = rect && rect.height ? rect.height : 24;
+                  img.style.width = w + 'px';
+                  img.style.height = h + 'px';
+                  img.style.objectFit = 'contain';
+                  img.style.display = 'inline-block';
+                  if (el.dataset) el.dataset.logoReplaced = '1';
+                  safeReplace(el, img, "ha-logo-svg");
+                  try { console.log("GOFLOW: replaced ha-logo-svg", { w: w, h: h }); } catch (_) {}
+                  changed = true;
+                }
+                return changed;
+              };
+              const replaceTextInRoot = (root) => {
+                if (!root) return false;
+                let changed = false;
+                const all = root.querySelectorAll ? root.querySelectorAll('*') : [];
+                for (let i = 0; i < all.length; i++) {
+                  const el = all[i];
+                  if (!el || !el.childNodes) continue;
+                  for (let j = 0; j < el.childNodes.length; j++) {
+                    const n = el.childNodes[j];
+                    if (n && n.nodeType === Node.TEXT_NODE && n.nodeValue && n.nodeValue.includes('Home Assistant')) {
+                      n.nodeValue = n.nodeValue.replace(/Home Assistant/g, 'GoFlow');
+                      changed = true;
+                    }
+                  }
+                  if (el.getAttribute) {
+                    const title = el.getAttribute('title');
+                    if (title && title.includes('Home Assistant')) {
+                      el.setAttribute('title', title.replace(/Home Assistant/g, 'GoFlow'));
+                      changed = true;
+                    }
+                    const aria = el.getAttribute('aria-label');
+                    if (aria && aria.includes('Home Assistant')) {
+                      el.setAttribute('aria-label', aria.replace(/Home Assistant/g, 'GoFlow'));
+                      changed = true;
+                    }
+                    const label = el.getAttribute('label');
+                    if (label && label.includes('Home Assistant')) {
+                      el.setAttribute('label', label.replace(/Home Assistant/g, 'GoFlow'));
+                      changed = true;
+                    }
+                  }
+                }
+                return changed;
+              };
+              const replaceSearchLabels = () => {
+                let changed = false;
+                // Replace titles / aria-labels
+                const withAttrs = deepQueryAll(document, '[title], [aria-label], [label]', []);
+                for (let i = 0; i < withAttrs.length; i++) {
+                  const el = withAttrs[i];
+                  if (!el || !el.getAttribute) continue;
+                  const title = el.getAttribute('title');
+                  if (title && title.includes('Home Assistant')) {
+                    el.setAttribute('title', title.replace(/Home Assistant/g, 'GoFlow'));
+                    changed = true;
+                  }
+                  const aria = el.getAttribute('aria-label');
+                  if (aria && aria.includes('Home Assistant')) {
+                    el.setAttribute('aria-label', aria.replace(/Home Assistant/g, 'GoFlow'));
+                    changed = true;
+                  }
+                  const label = el.getAttribute('label');
+                  if (label && label.includes('Home Assistant')) {
+                    el.setAttribute('label', label.replace(/Home Assistant/g, 'GoFlow'));
+                    changed = true;
+                  }
+                }
+                // Replace visible label text in quick bar search field
+                const labels = deepQueryAll(document, 'ha-picker-combo-box span#label, ha-textfield span#label', []);
+                for (let i = 0; i < labels.length; i++) {
+                  const el = labels[i];
+                  if (el && el.textContent && el.textContent.includes('Home Assistant')) {
+                    el.textContent = el.textContent.replace(/Home Assistant/g, 'GoFlow');
+                    changed = true;
+                  }
+                }
+                // Replace placeholder if present
+                const inputs = deepQueryAll(document, 'ha-picker-combo-box input, ha-textfield input', []);
+                for (let i = 0; i < inputs.length; i++) {
+                  const el = inputs[i];
+                  if (el && el.placeholder && el.placeholder.includes('Home Assistant')) {
+                    el.placeholder = el.placeholder.replace(/Home Assistant/g, 'GoFlow');
+                    changed = true;
+                  }
+                }
+                return changed;
+              };
+              const patchOpenButton = () => {
+                let changed = false;
+                const buttons = deepQueryAll(document, 'mwc-icon-button', []);
+                for (let i = 0; i < buttons.length; i++) {
+                  const el = buttons[i];
+                  if (!el || !el.getAttribute) continue;
+                  const title = el.getAttribute('title');
+                  const aria = el.getAttribute('aria-label');
+                  if (title && title.includes('Home Assistant')) {
+                    el.setAttribute('title', title.replace(/Home Assistant/g, 'GoFlow'));
+                    changed = true;
+                  }
+                  if (aria && aria.includes('Home Assistant')) {
+                    el.setAttribute('aria-label', aria.replace(/Home Assistant/g, 'GoFlow'));
+                    changed = true;
+                  }
+                }
+                return changed;
+              };
+              const patchDialogAria = () => {
+                let changed = false;
+                const dialogs = deepQueryAll(document, 'ha-adaptive-dialog', []);
+                for (let i = 0; i < dialogs.length; i++) {
+                  const el = dialogs[i];
+                  if (el && el.hasAttribute && el.hasAttribute('open')) {
+                    const aria = el.getAttribute('aria-label');
+                    if (aria && aria.includes('Home Assistant')) {
+                      el.setAttribute('aria-label', aria.replace(/Home Assistant/g, 'GoFlow'));
+                      changed = true;
+                    }
+                  }
+                }
+                return changed;
+              };
+              const replaceHeadlineSlots = () => {
+                let changed = false;
+                const headlineSlots = deepQueryAll(document, '[slot="headline"]', []);
+                for (let i = 0; i < headlineSlots.length; i++) {
+                  const el = headlineSlots[i];
+                  if (el && el.textContent && el.textContent.includes('Home Assistant')) {
+                    el.textContent = el.textContent.replace(/Home Assistant/g, 'GoFlow');
+                    changed = true;
+                  }
+                }
+                const supportingSlots = deepQueryAll(document, '[slot="supporting-text"]', []);
+                for (let i = 0; i < supportingSlots.length; i++) {
+                  const el = supportingSlots[i];
+                  if (el && el.textContent && el.textContent.includes('Home Assistant')) {
+                    el.textContent = el.textContent.replace(/Home Assistant/g, 'GoFlow');
+                    changed = true;
+                  }
+                }
+                return changed;
+              };
+              const replaceText = () => {
+                const nodes = deepQueryAll(document, '*', []);
+                let changed = false;
+                for (let i = 0; i < nodes.length; i++) {
+                  const el = nodes[i];
+                  if (!el || !el.childNodes) continue;
+                  for (let j = 0; j < el.childNodes.length; j++) {
+                    const n = el.childNodes[j];
+                    if (n && n.nodeType === Node.TEXT_NODE && n.nodeValue && n.nodeValue.includes('Home Assistant')) {
+                      n.nodeValue = n.nodeValue.replace(/Home Assistant/g, 'GoFlow');
+                      changed = true;
+                    }
+                  }
+                  if (el.placeholder && el.placeholder.includes('Home Assistant')) {
+                    el.placeholder = el.placeholder.replace(/Home Assistant/g, 'GoFlow');
+                    changed = true;
+                  }
+                  if (el.getAttribute) {
+                    const label = el.getAttribute('aria-label');
+                    if (label && label.includes('Home Assistant')) {
+                      el.setAttribute('aria-label', label.replace(/Home Assistant/g, 'GoFlow'));
+                      changed = true;
+                    }
+                  }
+                }
+                return changed || replaceHeadlineSlots() || replaceSearchLabels() || patchOpenButton() || patchDialogAria();
+              };
+              const replaceQuickBarText = () => {
+                let changed = false;
+                const roots = deepQueryAll(document, 'ha-quick-bar, ha-adaptive-dialog, ha-picker-combo-box', []);
+                for (let r = 0; r < roots.length; r++) {
+                  const root = roots[r];
+                  changed = replaceTextInRoot(root) || changed;
+                  if (root && root.shadowRoot) {
+                    changed = replaceTextInRoot(root.shadowRoot) || changed;
+                  }
+                }
+                return changed;
+              };
+              const normalizePath = (d) => {
+                return (d || "")
+                  .toLowerCase()
+                  .replace(/,/g, " ")
+                  .replace(/\s+/g, " ")
+                  .trim();
+              };
+              const isTargetHomePath = (d) => {
+                if (!d) return false;
+                const s = normalizePath(d);
+                // Old simple home icon (fallback)
+                if (s === normalizePath(HOME_PATH_D)) return true;
+                // New gray home icon path (partial match to be resilient)
+                return (
+                  s.includes("m12.151 1.5882c-.3262 0-.6523.1291") &&
+                  s.includes("l-8.3848 8.7354") &&
+                  s.includes("v8.0124a1.2731 1.2731")
+                );
+              };
+              const replaceHomeIcons = () => {
+                let changed = false;
+                const icons = deepQueryAll(document, 'ha-svg-icon', []);
+                try { console.log("ha-svg-icon count:", icons.length); } catch (e) {}
+                for (let i = 0; i < icons.length; i++) {
+                  const icon = icons[i];
+                  const sr = icon && icon.shadowRoot;
+                  if (!sr) continue;
+                  const path = sr.querySelector('path.primary-path') || sr.querySelector('path');
+                  if (!path) continue;
+                  const d = path.getAttribute('d') || '';
+                  try { console.log("found path d:", d.slice(0, 80)); } catch (e) {}
+                  if (!isTargetHomePath(d)) continue;
+                  if (!window.__goflowMatchedHomePathLogged) {
+                    window.__goflowMatchedHomePathLogged = true;
+                    try { console.log("GOFLOW: matched home path", normalizePath(d)); } catch (e) {}
+                  }
+                  const img = document.createElement('img');
+                  img.src = pickLogoData(path);
+                  img.style.width = '24px';
+                  img.style.height = '24px';
+                  img.style.objectFit = 'contain';
+                  img.style.display = 'block';
+                  const svgEl = sr.querySelector('svg');
+                  if (svgEl && safeReplace(svgEl, img, "ha-svg-icon")) {
+                    try { console.log("GOFLOW: replaced ha-svg-icon home", { src: img.src, d: d.slice(0, 40) }); } catch (e) {}
+                  } else {
+                    try { sr.appendChild(img); } catch (_) {}
+                    try { console.log("GOFLOW: appended ha-svg-icon home", { src: img.src, d: d.slice(0, 40) }); } catch (e) {}
+                  }
+                  changed = true;
+                }
+                return changed;
+              };
+              const replaceQuickBarIcons = () => {
+                let changed = false;
+                const rows = deepQueryAll(document, '.combo-box-row, ha-combo-box-item', []);
+                for (let i = 0; i < rows.length; i++) {
+                  const el = rows[i];
+                  const text = (el && el.innerText) ? el.innerText : '';
+                  if (!text || !text.includes('Home Assistant')) continue;
+                  const img = document.createElement('img');
+                  img.src = GOFLOW_BLACK_URL;
+                  img.style.width = '24px';
+                  img.style.height = '24px';
+                  img.style.objectFit = 'contain';
+                  img.style.display = 'inline-block';
+                  img.style.verticalAlign = 'middle';
+                  const candidates = deepQueryAll(el, 'ha-icon, ha-domain-icon, ha-svg-icon, state-badge, svg, img', []);
+                  let target = null;
+                  for (let k = 0; k < candidates.length; k++) {
+                    const c = candidates[k];
+                    if (!c) continue;
+                    target = c;
+                    break;
+                  }
+                  if (target && safeReplace(target, img, "quickbar-icon")) {
+                  } else if (target && target.parentElement) {
+                    target.parentElement.appendChild(img);
+                    if (target.style) target.style.display = 'none';
+                  }
+                  changed = true;
+                }
+                return changed;
+              };
+              const replaceIconsInPicker = () => {
+                const items = deepQueryAll(document, 'ha-combo-box-item, .combo-box-row', []);
+                let changed = false;
+                for (let i = 0; i < items.length; i++) {
+                  const el = items[i];
+                  const text = (el && el.innerText) ? el.innerText : '';
+                  if (!text || !text.includes('Home Assistant')) continue;
+                  if (el.dataset && el.dataset.customPickerLogo === '1') continue;
+                  if (el.dataset) el.dataset.customPickerLogo = '1';
+                  const img = document.createElement('img');
+                  img.src = GOFLOW_BLACK_URL;
+                  img.style.width = '24px';
+                  img.style.height = '24px';
+                  img.style.objectFit = 'contain';
+                  img.style.display = 'inline-block';
+                  img.style.verticalAlign = 'middle';
+                  // Replace the first icon-ish element
+                  const candidates = deepQueryAll(el, 'ha-icon, ha-domain-icon, ha-svg-icon, state-badge, svg, img', []);
+                  let target = null;
+                  for (let k = 0; k < candidates.length; k++) {
+                    const c = candidates[k];
+                    if (!c) continue;
+                    target = c;
+                    break;
+                  }
+                  if (target && safeReplace(target, img, "picker-icon")) {
+                  } else if (target && target.parentElement) {
+                    target.parentElement.appendChild(img);
+                    if (target.style) target.style.display = 'none';
+                  }
+                  changed = true;
+                }
+                // Also replace any HA brand icons within the picker (brand images)
+                const imgs = deepQueryAll(document, 'ha-picker-combo-box img, ha-domain-icon img, ha-icon img', []);
+                for (let i = 0; i < imgs.length; i++) {
+                  const el = imgs[i];
+                  const src = el.getAttribute && el.getAttribute('src') ? el.getAttribute('src') : '';
+                  if (src.includes('brands.home-assistant.io') || src.includes('home-assistant')) {
+                    el.src = GOFLOW_BLACK_URL;
+                    el.style.width = '24px';
+                    el.style.height = '24px';
+                    el.style.objectFit = 'contain';
+                    changed = true;
+                  }
+                }
+                return changed;
+              };
+              const replaceIconAttributeHosts = () => {
+                let changed = false;
+                let replaced = 0;
+                let matched = 0;
+                const matchedIcons = [];
+                const isHomeIconAttr = (val) => {
+                  if (!val) return false;
+                  const v = ("" + val).toLowerCase();
+                  return (
+                    v.includes("home-assistant") ||
+                    v.includes("hass:home") ||
+                    v.includes("mdi:home") ||
+                    v === "home"
+                  );
+                };
+                const roots = deepQueryAll(document, 'ha-quick-bar, ha-adaptive-dialog, ha-picker-combo-box', []);
+                for (let r = 0; r < roots.length; r++) {
+                  const root = roots[r];
+                  const hosts = deepQueryAll(root, '[icon]', []);
+                  for (let i = 0; i < hosts.length; i++) {
+                    const el = hosts[i];
+                    if (!el || (el.dataset && el.dataset.goflowIconHost === '1')) continue;
+                    const iconAttr = el.getAttribute && el.getAttribute('icon');
+                    if (!isHomeIconAttr(iconAttr)) continue;
+                    matched++;
+                    if (matchedIcons.length < 10) matchedIcons.push(iconAttr);
+                    if (el.dataset) el.dataset.goflowIconHost = '1';
+                    const color = (getComputedStyle(el).color || '').toLowerCase();
+                    const isBlue = color.includes('18bcf2') || color.includes('rgb(24, 188, 242)') || color === 'white' || color.includes('255, 255, 255');
+                    const img = document.createElement('img');
+                    img.src = isBlue ? GOFLOW_COLOR_URL : GOFLOW_BLACK_URL;
+                    img.style.width = '24px';
+                    img.style.height = '24px';
+                    img.style.objectFit = 'contain';
+                    img.style.display = 'inline-block';
+                    if (safeReplace(el, img, "icon-attr-host")) {
+                      replaced++;
+                    }
+                    changed = true;
+                  }
+                }
+                if (matched > 0 && !window.__goflowIconAttrLogged) {
+                  window.__goflowIconAttrLogged = true;
+                  try { console.log("GOFLOW: icon attr matches", { matched: matched, samples: matchedIcons }); } catch (_) {}
+                }
+                if (replaced > 0) {
+                  try { console.log("GOFLOW: replaced icon attr hosts", { count: replaced }); } catch (_) {}
+                }
+                return changed;
+              };
+              try {
+                if (!window.__goflowQuickBarSetupLogged) {
+                  window.__goflowQuickBarSetupLogged = true;
+                  try {
+                    console.log("GOFLOW: setup begin");
+                    console.log("GOFLOW: counts " + JSON.stringify({
+                      haLogoSvg: deepQueryAll(document, 'ha-logo-svg', []).length,
+                      haDomainIcon: deepQueryAll(document, 'ha-domain-icon', []).length,
+                      haStateIcon: deepQueryAll(document, 'ha-state-icon', []).length,
+                      haSvgIcon: deepQueryAll(document, 'ha-svg-icon', []).length,
+                      haIcon: deepQueryAll(document, 'ha-icon', []).length,
+                      stateBadge: deepQueryAll(document, 'state-badge', []).length,
+                    }));
+                  } catch (_) {}
+                }
+                const runAll = () => {
+                  let changed = false;
+                  try { changed = replaceText() || changed; } catch (e) { try { console.log("GOFLOW_ERR replaceText", e && (e.message || e)); } catch (_) {} }
+                  try { changed = replaceQuickBarText() || changed; } catch (e) { try { console.log("GOFLOW_ERR replaceQuickBarText", e && (e.message || e)); } catch (_) {} }
+                  try { changed = replaceHomeIcons() || changed; } catch (e) { try { console.log("GOFLOW_ERR replaceHomeIcons", e && (e.message || e)); } catch (_) {} }
+                  try { changed = replaceTargetHomeSvg() || changed; } catch (e) { try { console.log("GOFLOW_ERR replaceTargetHomeSvg", e && (e.message || e)); } catch (_) {} }
+                  try { changed = replaceQuickBarIcons() || changed; } catch (e) { try { console.log("GOFLOW_ERR replaceQuickBarIcons", e && (e.message || e)); } catch (_) {} }
+                  try { changed = replaceIconsInPicker() || changed; } catch (e) { try { console.log("GOFLOW_ERR replaceIconsInPicker", e && (e.message || e)); } catch (_) {} }
+                  try { changed = replaceIconAttributeHosts() || changed; } catch (e) { try { console.log("GOFLOW_ERR replaceIconAttributeHosts", e && (e.message || e)); } catch (_) {} }
+                  try { changed = replaceHaLogoElements() || changed; } catch (e) { try { console.log("GOFLOW_ERR replaceHaLogoElements", e && (e.message || e)); } catch (_) {} }
+                  try { ensureShadowObservers(); } catch (_) {}
+                  return changed;
+                };
+                const ensureShadowObservers = () => {
+                  if (!window.__goflowObservedRoots) window.__goflowObservedRoots = new WeakSet();
+                  const roots = deepQueryAll(document, '*', []);
+                  for (let i = 0; i < roots.length; i++) {
+                    const el = roots[i];
+                    if (!el || !el.shadowRoot) continue;
+                    if (window.__goflowObservedRoots.has(el.shadowRoot)) continue;
+                    window.__goflowObservedRoots.add(el.shadowRoot);
+                    try {
+                      const obs = new MutationObserver(() => { runAll(); });
+                      obs.observe(el.shadowRoot, { childList: true, subtree: true, characterData: true });
+                    } catch (_) {}
+                  }
+                };
+                const done = runAll();
+                try { console.log("GOFLOW: after runAll"); } catch (_) {}
+                if (!window.__pickerComboRebrandObserver) {
+                  const rootNode = document.documentElement || document.body;
+                  if (rootNode && rootNode.nodeType) {
+                    try { console.log("GOFLOW: setup observer"); } catch (_) {}
+                    const obs = new MutationObserver(() => { runAll(); });
+                    obs.observe(rootNode, { childList: true, subtree: true, characterData: true });
+                    window.__pickerComboRebrandObserver = obs;
+                  } else {
+                    try { console.log("GOFLOW: no root for observer"); } catch (_) {}
+                  }
+                }
+                if (!window.__pickerComboRebrandInterval) {
+                  try { console.log("GOFLOW: setup interval"); } catch (_) {}
+                  window.__pickerComboRebrandInterval = setInterval(() => { runAll(); }, 1000);
+                }
+              } catch (e) {
+                try { console.log("GOFLOW_INJECT_ERROR:", e && (e.stack || e.message || e)); } catch (_) {}
+              }
+              return true;
+              } catch (e) {
+                try { console.log("GOFLOW_INJECT_ERROR_OUTER:", e && (e.stack || e.message || e)); } catch (_) {}
+                return true;
+              }
+            })();
+        """.trimIndent()
+
+        view.evaluateJavascript(js, null)
+    }
+
+    private fun buildBlackLogoSvgDataUrl(context: Context): String? {
+        return try {
+            val rawId = context.resources.getIdentifier("goflow_logo_black", "raw", context.packageName)
+            if (rawId == 0) return null
+            context.resources.openRawResource(rawId).use { input ->
+                val bytes = input.readBytes()
+                val base64 = Base64.encodeToString(bytes, Base64.NO_WRAP)
+                "data:image/svg+xml;base64,$base64"
+            }
+        } catch (_: Exception) {
+            null
+        }
     }
 
     private fun buildLogoDataUrl(context: Context): String? {
