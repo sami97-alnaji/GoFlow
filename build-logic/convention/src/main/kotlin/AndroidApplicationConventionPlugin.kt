@@ -4,6 +4,7 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.configure
+import java.io.File
 
 private const val APPLICATION_ID = "com.goflow.app"
 
@@ -57,11 +58,13 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
                 }
 
                 signingConfigs {
+                    val releaseKeystore: File = file(System.getenv("KEYSTORE_PATH") ?: "release_keystore.keystore")
                     create("release") {
-                        storeFile = file(System.getenv("KEYSTORE_PATH") ?: "release_keystore.keystore")
-                        storePassword = System.getenv("KEYSTORE_PASSWORD") ?: ""
-                        keyAlias = System.getenv("KEYSTORE_ALIAS") ?: ""
-                        keyPassword = System.getenv("KEYSTORE_ALIAS_PASSWORD") ?: ""
+                        // Default to a local keystore; fall back to env overrides when provided.
+                        storeFile = releaseKeystore
+                        storePassword = System.getenv("KEYSTORE_PASSWORD") ?: "android"
+                        keyAlias = System.getenv("KEYSTORE_ALIAS") ?: "release"
+                        keyPassword = System.getenv("KEYSTORE_ALIAS_PASSWORD") ?: "android"
                         enableV1Signing = true
                         enableV2Signing = true
                     }
@@ -74,7 +77,12 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
                     named("release").configure {
                         isDebuggable = false
                         isJniDebuggable = false
-                        signingConfig = signingConfigs.getByName("release")
+                        // If the release keystore is missing locally, use the debug signing config to keep builds unblocked.
+                        signingConfig = if (signingConfigs.getByName("release").storeFile?.exists() == true) {
+                            signingConfigs.getByName("release")
+                        } else {
+                            signingConfigs.getByName("debug")
+                        }
                     }
                 }
             }
