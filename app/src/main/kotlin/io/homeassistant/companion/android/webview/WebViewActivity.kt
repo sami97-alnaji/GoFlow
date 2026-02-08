@@ -289,6 +289,7 @@ class WebViewActivity :
     private var cachedLogoDataUrl: String? = null
     private var cachedOhfBadgeDataUrl: String? = null
     private var cachedPrimaryLogoSvgDataUrl: String? = null
+    private var cachedDarkLogoSvgDataUrl: String? = null
     private var cachedAboutBadgeDataUrl: String? = null
 
     /**
@@ -526,6 +527,8 @@ class WebViewActivity :
                     view?.let { injectWebIcons(it) }
                     view?.let { injectOhfBadge(it) }
                     view?.let { injectWebTextReplacements(it) }
+                    view?.let { injectWebThemeDetector(it) }
+                    view?.let { injectHeaderLogo(it) }
                     view?.let { injectAboutLogo(it) }
                     view?.let { injectAboutBadgeReplacement(it) }
                     view?.let { ensureHideSearchInstalled(it) }
@@ -2444,6 +2447,175 @@ class WebViewActivity :
         view.evaluateJavascript(js, null)
     }
 
+    private fun injectWebThemeDetector(view: WebView) {
+        val js = """
+            (function() {
+              const setTheme = (isDark) => {
+                const mode = isDark ? 'dark' : 'light';
+                window.__goflowTheme = mode;
+                try {
+                  const root = document.documentElement;
+                  if (root) root.setAttribute('data-goflow-theme', mode);
+                } catch (e) {}
+              };
+              const detect = () => {
+                try {
+                  const ha = document.querySelector('home-assistant');
+                  const hass = ha && ha.hass ? ha.hass : null;
+                  if (hass && hass.themes && typeof hass.themes.darkMode === 'boolean') {
+                    return !!hass.themes.darkMode;
+                  }
+                } catch (e) {}
+                try {
+                  if (window.matchMedia) {
+                    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+                  }
+                } catch (e) {}
+                return false;
+              };
+              try {
+                setTheme(detect());
+                if (!window.__goflowThemeListener && window.matchMedia) {
+                  const mq = window.matchMedia('(prefers-color-scheme: dark)');
+                  window.__goflowThemeListener = (e) => setTheme(!!e.matches);
+                  if (mq.addEventListener) {
+                    mq.addEventListener('change', window.__goflowThemeListener);
+                  } else if (mq.addListener) {
+                    mq.addListener(window.__goflowThemeListener);
+                  }
+                }
+              } catch (e) {}
+            })();
+        """.trimIndent()
+
+        view.evaluateJavascript(js, null)
+    }
+
+    private fun injectHeaderLogo(view: WebView) {
+        val context = view.context ?: return
+        val lightLogo = cachedPrimaryLogoSvgDataUrl
+        val darkLogo = cachedDarkLogoSvgDataUrl
+        if (lightLogo == null || darkLogo == null) {
+            lifecycleScope.launch(Dispatchers.IO) {
+                val lightDataUrl = buildPrimaryLogoSvgDataUrl(context)
+                val darkDataUrl = buildDarkLogoSvgDataUrl(context)
+                if (lightDataUrl != null && darkDataUrl != null) {
+                    cachedPrimaryLogoSvgDataUrl = lightDataUrl
+                    cachedDarkLogoSvgDataUrl = darkDataUrl
+                    view.post { injectHeaderLogo(view) }
+                }
+            }
+            return
+        }
+
+        val js = """
+            (function() {
+              const lightData = "$lightLogo";
+              const darkData = "$darkLogo";
+              const getTheme = () => {
+                try {
+                  if (window.__goflowTheme) return window.__goflowTheme;
+                } catch (e) {}
+                try {
+                  const ha = document.querySelector('home-assistant');
+                  const hass = ha && ha.hass ? ha.hass : null;
+                  if (hass && hass.themes && typeof hass.themes.darkMode === 'boolean') {
+                    return hass.themes.darkMode ? 'dark' : 'light';
+                  }
+                } catch (e) {}
+                try {
+                  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark';
+                } catch (e) {}
+                return 'light';
+              };
+              const pickData = () => (getTheme() === 'dark' ? darkData : lightData);
+              const deepQueryAll = (root, selector, out) => {
+                if (!root) return out;
+                try {
+                  const found = root.querySelectorAll(selector);
+                  if (found && found.length) out.push.apply(out, found);
+                } catch (e) {}
+                const nodes = root.querySelectorAll ? root.querySelectorAll('*') : [];
+                for (let i = 0; i < nodes.length; i++) {
+                  const el = nodes[i];
+                  if (el && el.shadowRoot) {
+                    deepQueryAll(el.shadowRoot, selector, out);
+                  }
+                }
+                return out;
+              };
+              const ensureLogo = (titleEl) => {
+                if (!titleEl) return false;
+                const existing = titleEl.querySelector && titleEl.querySelector('img.goflow-header-logo');
+                const data = pickData();
+                if (existing) {
+                  if (existing.getAttribute('src') !== data) existing.setAttribute('src', data);
+                  return true;
+                }
+                try {
+                  titleEl.textContent = '';
+                } catch (e) {}
+                const img = document.createElement('img');
+                img.className = 'goflow-header-logo';
+                img.src = data;
+                img.alt = 'GoFlow';
+                img.style.width = '65px';
+                img.style.height = '42px';
+                img.style.display = 'inline-block';
+                img.style.verticalAlign = 'middle';
+                img.style.marginInlineStart = '6px';
+                img.style.objectFit = 'contain';
+                try {
+                  const style = titleEl.style || {};
+                  if (!style.display) style.display = 'inline-flex';
+                  if (!style.alignItems) style.alignItems = 'center';
+                } catch (e) {}
+                titleEl.appendChild(img);
+                return true;
+              };
+              const run = () => {
+                let did = false;
+                const titles = deepQueryAll(document, '.menu .title', []);
+                for (let i = 0; i < titles.length; i++) {
+                  if (ensureLogo(titles[i])) did = true;
+                }
+                return did;
+              };
+              try {
+                if (!window.__goflowHeaderLogoObserver) {
+                  window.__goflowHeaderLogoObserver = new MutationObserver(() => run());
+                  const target = document.body || document.documentElement;
+                  if (target) {
+                    window.__goflowHeaderLogoObserver.observe(target, { childList: true, subtree: true });
+                  }
+                }
+                run();
+                if (!window.__goflowHeaderLogoInterval) {
+                  let tries = 0;
+                  window.__goflowHeaderLogoInterval = setInterval(() => {
+                    tries++;
+                    if (run() || tries > 50) {
+                      clearInterval(window.__goflowHeaderLogoInterval);
+                      window.__goflowHeaderLogoInterval = null;
+                    }
+                  }, 200);
+                }
+                if (!window.__goflowHeaderLogoThemeListener && window.matchMedia) {
+                  const mq = window.matchMedia('(prefers-color-scheme: dark)');
+                  window.__goflowHeaderLogoThemeListener = () => run();
+                  if (mq.addEventListener) {
+                    mq.addEventListener('change', window.__goflowHeaderLogoThemeListener);
+                  } else if (mq.addListener) {
+                    mq.addListener(window.__goflowHeaderLogoThemeListener);
+                  }
+                }
+              } catch (e) {}
+            })();
+        """.trimIndent()
+
+        view.evaluateJavascript(js, null)
+    }
+
     private fun injectAboutLogo(view: WebView) {
         val context = view.context ?: return
         val existing = cachedPrimaryLogoSvgDataUrl
@@ -2715,6 +2887,19 @@ class WebViewActivity :
             }
         } catch (e: Exception) {
             Timber.e(e, "Failed to build primary logo data URL")
+            null
+        }
+    }
+
+    private fun buildDarkLogoSvgDataUrl(context: Context): String? {
+        return try {
+            context.resources.openRawResource(raw.goflow_logo_dark).use { stream ->
+                val bytes = stream.readBytes()
+                val base64 = Base64.encodeToString(bytes, Base64.NO_WRAP)
+                "data:image/svg+xml;base64,$base64"
+            }
+        } catch (e: Exception) {
+            Timber.e(e, "Failed to build dark logo data URL")
             null
         }
     }
