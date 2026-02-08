@@ -2528,7 +2528,7 @@ class WebViewActivity :
                 } catch (e) {}
                 return 'light';
               };
-              const pickData = () => (getTheme() === 'dark' ? darkData : lightData);
+              const pickData = () => (getTheme() === 'dark' ? lightData : lightData);
               const deepQueryAll = (root, selector, out) => {
                 if (!root) return out;
                 try {
