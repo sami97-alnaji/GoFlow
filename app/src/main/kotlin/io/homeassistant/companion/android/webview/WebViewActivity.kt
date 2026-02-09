@@ -2576,9 +2576,16 @@ class WebViewActivity :
               const ensureToolbarLogo = (toolbarEl) => {
                 if (!toolbarEl) return false;
                 const data = pickData();
-                const existing = toolbarEl.querySelector && toolbarEl.querySelector('img.goflow-toolbar-logo');
-                if (existing) {
-                  if (existing.getAttribute('src') !== data) existing.setAttribute('src', data);
+                const allExisting = deepQueryAll(document, 'img.goflow-toolbar-logo', []);
+                if (allExisting.length) {
+                  const first = allExisting[0];
+                  if (first && first.getAttribute && first.getAttribute('src') !== data) {
+                    first.setAttribute('src', data);
+                  }
+                  for (let i = 1; i < allExisting.length; i++) {
+                    const extra = allExisting[i];
+                    if (extra && extra.remove) extra.remove();
+                  }
                   return true;
                 }
                 const img = document.createElement('img');
@@ -2613,6 +2620,92 @@ class WebViewActivity :
                 }
                 return true;
               };
+              const removeExtraHeaderLogos = () => {
+                const toolbarLogos = deepQueryAll(document, 'img.goflow-toolbar-logo', []);
+                const titleLogos = deepQueryAll(document, 'img.goflow-header-logo', []);
+                const overlays = deepQueryAll(document, 'img.goflow-toolbar-overlay-logo', []);
+                let removed = false;
+
+                if (toolbarLogos.length) {
+                  let keep = toolbarLogos[0];
+                  for (let i = 0; i < toolbarLogos.length; i++) {
+                    const el = toolbarLogos[i];
+                    try {
+                      const r = el.getBoundingClientRect ? el.getBoundingClientRect() : { width: 1, height: 1 };
+                      if (r.width > 0 && r.height > 0) {
+                        keep = el;
+                        break;
+                      }
+                    } catch (e) {}
+                  }
+                  for (let i = 0; i < toolbarLogos.length; i++) {
+                    const el = toolbarLogos[i];
+                    if (el !== keep && el && el.remove) {
+                      el.remove();
+                      removed = true;
+                    }
+                  }
+                  for (let i = 0; i < titleLogos.length; i++) {
+                    const el = titleLogos[i];
+                    if (el && el.remove) {
+                      el.remove();
+                      removed = true;
+                    }
+                  }
+                  for (let i = 0; i < overlays.length; i++) {
+                    const el = overlays[i];
+                    if (el && el.remove) {
+                      el.remove();
+                      removed = true;
+                    }
+                  }
+                  return removed;
+                }
+
+                if (titleLogos.length) {
+                  let keep = titleLogos[0];
+                  for (let i = 1; i < titleLogos.length; i++) {
+                    const el = titleLogos[i];
+                    if (el && el.remove) {
+                      el.remove();
+                      removed = true;
+                    }
+                  }
+                  for (let i = 0; i < overlays.length; i++) {
+                    const el = overlays[i];
+                    if (el && el.remove) {
+                      el.remove();
+                      removed = true;
+                    }
+                  }
+                  return removed;
+                }
+
+                if (overlays.length > 1) {
+                  for (let i = 1; i < overlays.length; i++) {
+                    const el = overlays[i];
+                    if (el && el.remove) {
+                      el.remove();
+                      removed = true;
+                    }
+                  }
+                }
+                return removed;
+              };
+              const clearOverlayIfToolbarLogoExists = () => {
+                const toolbarLogo = document.querySelector && document.querySelector('img.goflow-toolbar-logo');
+                if (!toolbarLogo) return false;
+                const overlays = deepQueryAll(document, 'img.goflow-toolbar-overlay-logo', []);
+                let removed = false;
+                for (let i = 0; i < overlays.length; i++) {
+                  const el = overlays[i];
+                  if (el && el.remove) {
+                    el.remove();
+                    removed = true;
+                  }
+                }
+                return removed;
+              };
               const ensureOverlayLogo = () => {
                 const data = pickData();
                 const existing = document.querySelector && document.querySelector('img.goflow-toolbar-overlay-logo');
@@ -2639,26 +2732,24 @@ class WebViewActivity :
               };
               const run = () => {
                 let did = false;
-                const titles = deepQueryAll(document, '.menu .title', []);
-                for (let i = 0; i < titles.length; i++) {
-                  const t = titles[i];
-                  try {
-                    const inToolbar = t && t.closest && t.closest('.toolbar');
-                    if (!inToolbar) {
-                      if (ensureLogo(t)) did = true;
-                    }
-                  } catch (e) {}
-                }
-                const toolbars = deepQueryAll(document, '.toolbar', []);
-                for (let i = 0; i < toolbars.length; i++) {
-                  if (ensureToolbarLogo(toolbars[i])) did = true;
-                }
-                if (!did) {
-                  const hasActionItems = deepQueryAll(document, '.action-items', []).length > 0;
-                  if (!hasActionItems) {
-                    if (ensureOverlayLogo()) did = true;
+                const toolbarLogos = deepQueryAll(document, 'img.goflow-toolbar-logo', []);
+                for (let i = 0; i < toolbarLogos.length; i++) {
+                  const el = toolbarLogos[i];
+                  if (el && el.remove) {
+                    el.remove();
+                    did = true;
                   }
                 }
+                const titleLogos = deepQueryAll(document, 'img.goflow-header-logo', []);
+                for (let i = 0; i < titleLogos.length; i++) {
+                  const el = titleLogos[i];
+                  if (el && el.remove) {
+                    el.remove();
+                    did = true;
+                  }
+                }
+                if (removeExtraHeaderLogos()) did = true;
+                if (ensureOverlayLogo()) did = true;
                 return did;
               };
               try {
