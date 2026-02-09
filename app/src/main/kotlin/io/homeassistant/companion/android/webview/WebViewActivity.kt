@@ -2573,11 +2573,91 @@ class WebViewActivity :
                 titleEl.appendChild(img);
                 return true;
               };
+              const ensureToolbarLogo = (toolbarEl) => {
+                if (!toolbarEl) return false;
+                const data = pickData();
+                const existing = toolbarEl.querySelector && toolbarEl.querySelector('img.goflow-toolbar-logo');
+                if (existing) {
+                  if (existing.getAttribute('src') !== data) existing.setAttribute('src', data);
+                  return true;
+                }
+                const img = document.createElement('img');
+                img.className = 'goflow-toolbar-logo';
+                img.src = data;
+                img.alt = 'GoFlow';
+                img.style.width = '65px';
+                img.style.height = '42px';
+                img.style.display = 'inline-block';
+                img.style.objectFit = 'contain';
+                img.style.marginInlineStart = '8px';
+                try {
+                  const style = toolbarEl.style || {};
+                  if (!style.display) style.display = 'flex';
+                  if (!style.alignItems) style.alignItems = 'center';
+                } catch (e) {}
+                const actionItems = toolbarEl.querySelector ? toolbarEl.querySelector('.action-items') : null;
+                if (actionItems) {
+                  try {
+                    const style = actionItems.style || {};
+                    if (!style.display) style.display = 'inline-flex';
+                    if (!style.alignItems) style.alignItems = 'center';
+                  } catch (e) {}
+                  if (actionItems.firstChild) {
+                    actionItems.insertBefore(img, actionItems.firstChild);
+                  } else {
+                    actionItems.appendChild(img);
+                  }
+                } else {
+                  img.style.marginInlineStart = 'auto';
+                  toolbarEl.appendChild(img);
+                }
+                return true;
+              };
+              const ensureOverlayLogo = () => {
+                const data = pickData();
+                const existing = document.querySelector && document.querySelector('img.goflow-toolbar-overlay-logo');
+                if (existing) {
+                  if (existing.getAttribute('src') !== data) existing.setAttribute('src', data);
+                  return true;
+                }
+                const img = document.createElement('img');
+                img.className = 'goflow-toolbar-overlay-logo';
+                img.src = data;
+                img.alt = 'GoFlow';
+                img.style.width = '65px';
+                img.style.height = '42px';
+                img.style.position = 'fixed';
+                img.style.top = '10px';
+                img.style.right = '56px';
+                img.style.zIndex = '2147483647';
+                img.style.objectFit = 'contain';
+                try {
+                  document.body && document.body.appendChild(img);
+                  return true;
+                } catch (e) {}
+                return false;
+              };
               const run = () => {
                 let did = false;
                 const titles = deepQueryAll(document, '.menu .title', []);
                 for (let i = 0; i < titles.length; i++) {
-                  if (ensureLogo(titles[i])) did = true;
+                  const t = titles[i];
+                  try {
+                    const inSidebar = t && t.closest && t.closest('ha-sidebar, .sidebar, ha-drawer, ha-menu');
+                    if (inSidebar) {
+                      if (ensureLogo(t)) did = true;
+                    }
+                  } catch (e) {}
+                }
+                const toolbars = deepQueryAll(document, '.toolbar', []);
+                for (let i = 0; i < toolbars.length; i++) {
+                  if (ensureToolbarLogo(toolbars[i])) did = true;
+                }
+                if (!did) {
+                  const hasActionItems = deepQueryAll(document, '.action-items', []).length > 0;
+                  if (!hasActionItems) {
+                    if (ensureOverlayLogo()) did = true;
+                  }
                 }
                 return did;
               };
@@ -2594,7 +2674,7 @@ class WebViewActivity :
                   let tries = 0;
                   window.__goflowHeaderLogoInterval = setInterval(() => {
                     tries++;
-                    if (run() || tries > 50) {
+                    if (run() || tries > 150) {
                       clearInterval(window.__goflowHeaderLogoInterval);
                       window.__goflowHeaderLogoInterval = null;
                     }

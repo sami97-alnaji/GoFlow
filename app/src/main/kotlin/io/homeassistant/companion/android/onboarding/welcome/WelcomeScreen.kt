@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
@@ -15,19 +16,22 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.goflow.app.R
 import com.goflow.app.common.R as commonR
 import com.goflow.app.common.compose.composable.HAAccentButton
-import com.goflow.app.common.compose.composable.HAPlainButton
 import com.goflow.app.common.compose.theme.HADimens
+import com.goflow.app.common.compose.theme.LocalHAColorScheme
 import com.goflow.app.common.compose.theme.HATextStyle
 import com.goflow.app.common.compose.theme.HAThemeForPreview
 import com.goflow.app.common.compose.theme.MaxButtonWidth
@@ -99,17 +103,28 @@ private fun BottomButtons(onConnectClick: () -> Unit, onLearnMoreClick: suspend 
             modifier = Modifier.fillMaxWidth(),
         )
 
-        HAPlainButton(
-            text = stringResource(commonR.string.welcome_learn_more),
+        val scheme = LocalHAColorScheme.current
+        TextButton(
             onClick = {
                 coroutineScope.launch {
                     onLearnMoreClick()
                 }
             },
+            colors = ButtonDefaults.textButtonColors(contentColor = scheme.colorFillPrimaryLoudResting),
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(bottom = HADimens.SPACE6),
-        )
+                .padding(bottom = HADimens.SPACE6)
+                .widthIn(max = MaxButtonWidth),
+            contentPadding = PaddingValues.Zero,
+        ) {
+            Text(
+                text = stringResource(commonR.string.welcome_learn_more),
+                style = HATextStyle.Button,
+                overflow = TextOverflow.Clip,
+                maxLines = 1,
+                modifier = Modifier.padding(horizontal = HADimens.SPACE4),
+            )
+        }
     }
 }
 
