@@ -2831,12 +2831,15 @@ class WebViewActivity :
                     if (!el || (el.dataset && el.dataset.customHaLogo === '1')) continue;
                     if (el.dataset) el.dataset.customHaLogo = '1';
                     const img = document.createElement('img');
+                    img.className = 'goflow-about-logo-main';
                     img.src = data;
                     img.style.width = '140px';
                     img.style.height = '140px';
                     img.style.objectFit = 'contain';
                     img.style.display = 'block';
                     img.style.margin = '16px auto 8px auto';
+                    const parentCard = el.closest ? el.closest('ha-card') : null;
+                    if (parentCard && parentCard.dataset) parentCard.dataset.customAboutLogo = '1';
                     // Try to replace inside shadow root, otherwise replace element itself
                     if (el.shadowRoot) {
                       try {
@@ -2862,8 +2865,14 @@ class WebViewActivity :
                 };
               const insertLogo = (card) => {
                 if (!card || card.dataset && card.dataset.customAboutLogo === '1') return false;
+                const existingInjected = card.querySelector ? card.querySelector('img.goflow-about-logo-main') : null;
+                if (existingInjected) {
+                  if (card.dataset) card.dataset.customAboutLogo = '1';
+                  return false;
+                }
                 card.dataset.customAboutLogo = '1';
                 const img = document.createElement('img');
+                img.className = 'goflow-about-logo-main';
                 img.src = data;
                 img.style.width = '140px';
                 img.style.height = '140px';
@@ -2888,7 +2897,17 @@ class WebViewActivity :
                     const cards = deepQueryAll(document, 'ha-card', []);
                     for (let i = 0; i < cards.length; i++) {
                       if (isAboutCard(cards[i])) {
-                        if (insertLogo(cards[i])) return true;
+                        const card = cards[i];
+                        const injected = card.querySelectorAll ? card.querySelectorAll('img.goflow-about-logo-main') : [];
+                        if (injected && injected.length > 1) {
+                          for (let j = 1; j < injected.length; j++) {
+                            const extra = injected[j];
+                            if (extra && extra.remove) extra.remove();
+                          }
+                          if (card.dataset) card.dataset.customAboutLogo = '1';
+                          return true;
+                        }
+                        if (insertLogo(card)) return true;
                       }
                   }
                 } catch (e) {}
