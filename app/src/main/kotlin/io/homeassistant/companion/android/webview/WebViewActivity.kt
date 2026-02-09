@@ -2643,8 +2643,8 @@ class WebViewActivity :
                 for (let i = 0; i < titles.length; i++) {
                   const t = titles[i];
                   try {
-                    const inSidebar = t && t.closest && t.closest('ha-sidebar, .sidebar, ha-drawer, ha-menu');
-                    if (inSidebar) {
+                    const inToolbar = t && t.closest && t.closest('.toolbar');
+                    if (!inToolbar) {
                       if (ensureLogo(t)) did = true;
                     }
                   } catch (e) {}
