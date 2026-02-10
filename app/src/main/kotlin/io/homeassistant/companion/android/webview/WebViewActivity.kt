@@ -291,6 +291,7 @@ class WebViewActivity :
     private var cachedPrimaryLogoSvgDataUrl: String? = null
     private var cachedDarkLogoSvgDataUrl: String? = null
     private var cachedAboutBadgeDataUrl: String? = null
+    private var brandingAssetsWarmupStarted = false
 
     /**
      * Flag to know when the webview has been fully initialized (loadUrl called).
@@ -377,6 +378,7 @@ class WebViewActivity :
         setStatusBarAndBackgroundColor(colorLaunchScreenBackground, colorLaunchScreenBackground)
 
         webView = WebView(this)
+        warmupBrandingAssets()
 
         lifecycleScope.launch {
             appLocked.value = presenter.isAppLocked()
@@ -509,6 +511,9 @@ class WebViewActivity :
                     super.onPageStarted(view, url, favicon)
                     view?.let { installSearchBlock(it) }
                     view?.let { ensureHideSearchInstalled(it) }
+                    view?.let { injectWebTextReplacements(it) }
+                    view?.let { injectAboutLogo(it) }
+                    view?.let { injectAboutBadgeReplacement(it) }
                 }
 
                 override fun onPageFinished(view: WebView?, url: String?) {
@@ -2270,6 +2275,29 @@ class WebViewActivity :
         view.postDelayed({ view.evaluateJavascript(js) { result -> Timber.d("Loading logo inject: $result") } }, 2500)
     }
 
+    private fun warmupBrandingAssets() {
+        if (brandingAssetsWarmupStarted) return
+        brandingAssetsWarmupStarted = true
+        val appContext = applicationContext
+        lifecycleScope.launch(Dispatchers.IO) {
+            if (cachedLogoDataUrl == null) {
+                cachedLogoDataUrl = buildLogoDataUrl(appContext)
+            }
+            if (cachedPrimaryLogoSvgDataUrl == null) {
+                cachedPrimaryLogoSvgDataUrl = buildPrimaryLogoSvgDataUrl(appContext)
+            }
+            if (cachedDarkLogoSvgDataUrl == null) {
+                cachedDarkLogoSvgDataUrl = buildDarkLogoSvgDataUrl(appContext)
+            }
+            if (cachedOhfBadgeDataUrl == null) {
+                cachedOhfBadgeDataUrl = buildOhfBadgeDataUrl(appContext)
+            }
+            if (cachedAboutBadgeDataUrl == null) {
+                cachedAboutBadgeDataUrl = buildAboutBadgeDataUrl(appContext)
+            }
+        }
+    }
+
     private fun injectWebIcons(view: WebView) {
         val context = view.context ?: return
         val existing = cachedLogoDataUrl
@@ -2438,7 +2466,7 @@ class WebViewActivity :
                       clearInterval(window.__goflowTextInterval);
                       window.__goflowTextInterval = null;
                     }
-                  }, 200);
+                  }, 100);
                 }
               } catch (e) {}
             })();
@@ -2922,7 +2950,7 @@ class WebViewActivity :
                     clearInterval(window.__aboutLogoInterval);
                     window.__aboutLogoInterval = null;
                   }
-                }, 200);
+                }, 100);
               }
               return done;
             })();
@@ -3045,7 +3073,7 @@ class WebViewActivity :
                       clearInterval(window.__aboutBadgeInterval);
                       window.__aboutBadgeInterval = null;
                     }
-                  }, 200);
+                  }, 100);
                 }
               } catch (e) {}
               return false;
