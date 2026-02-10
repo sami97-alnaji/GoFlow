@@ -2736,10 +2736,36 @@ class WebViewActivity :
               };
               const ensureOverlayLogo = () => {
                 const data = pickData();
+                const overlayRight = (() => {
+                  try {
+                    const p = (location && location.pathname) ? location.pathname : '';
+                    const h = (location && location.href) ? location.href : '';
+                    const isConfigDashboard = p.startsWith('/config/dashboard') || h.includes('/config/dashboard');
+                    return isConfigDashboard ? '138px' : '56px';
+                  } catch (e) {
+                    return '56px';
+                  }
+                })();
                 const existing = document.querySelector && document.querySelector('img.goflow-toolbar-overlay-logo');
                 if (existing) {
-                  if (existing.getAttribute('src') !== data) existing.setAttribute('src', data);
-                  return true;
+                  let changed = false;
+                  if (existing.getAttribute('src') !== data) {
+                    existing.setAttribute('src', data);
+                    changed = true;
+                  }
+                  if (existing.style.right !== overlayRight) {
+                    existing.style.right = overlayRight;
+                    changed = true;
+                  }
+                  if (existing.style.pointerEvents !== 'none') {
+                    existing.style.pointerEvents = 'none';
+                    changed = true;
+                  }
+                  if (existing.style.userSelect !== 'none') {
+                    existing.style.userSelect = 'none';
+                    changed = true;
+                  }
+                  return changed;
                 }
                 const img = document.createElement('img');
                 img.className = 'goflow-toolbar-overlay-logo';
@@ -2749,9 +2775,11 @@ class WebViewActivity :
                 img.style.height = '42px';
                 img.style.position = 'fixed';
                 img.style.top = '10px';
-                img.style.right = '56px';
+                img.style.right = overlayRight;
                 img.style.zIndex = '2147483647';
                 img.style.objectFit = 'contain';
+                img.style.pointerEvents = 'none';
+                img.style.userSelect = 'none';
                 try {
                   document.body && document.body.appendChild(img);
                   return true;
@@ -2787,6 +2815,34 @@ class WebViewActivity :
                   if (target) {
                     window.__goflowHeaderLogoObserver.observe(target, { childList: true, subtree: true });
                   }
+                }
+                if (!window.__goflowOverlayRouteSyncInstalled) {
+                  window.__goflowOverlayRouteSyncInstalled = true;
+                  const rerun = () => {
+                    try { run(); } catch (e) {}
+                  };
+                  try {
+                    window.addEventListener('popstate', rerun);
+                    window.addEventListener('hashchange', rerun);
+                  } catch (e) {}
+                  try {
+                    const h = window.history;
+                    if (h && !h.__goflowPatched) {
+                      h.__goflowPatched = true;
+                      const origPush = h.pushState;
+                      const origReplace = h.replaceState;
+                      h.pushState = function() {
+                        const res = origPush.apply(this, arguments);
+                        rerun();
+                        return res;
+                      };
+                      h.replaceState = function() {
+                        const res = origReplace.apply(this, arguments);
+                        rerun();
+                        return res;
+                      };
+                    }
+                  } catch (e) {}
                 }
                 run();
                 if (!window.__goflowHeaderLogoInterval) {
