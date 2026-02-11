@@ -2736,6 +2736,76 @@ class WebViewActivity :
               };
               const ensureOverlayLogo = () => {
                 const data = pickData();
+                const isVisible = (el) => {
+                  if (!el) return false;
+                  try {
+                    const style = window.getComputedStyle ? window.getComputedStyle(el) : null;
+                    if (style) {
+                      if (style.display === 'none' || style.visibility === 'hidden') return false;
+                      if (parseFloat(style.opacity || '1') === 0) return false;
+                    }
+                    const r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+                    if (r && (r.width <= 0 || r.height <= 0)) return false;
+                    return true;
+                  } catch (e) {
+                    return true;
+                  }
+                };
+                const hasOpenPopup = () => {
+                  try {
+                    const popupSelectors = [
+                      'ha-dialog[open]',
+                      'mwc-dialog[open]',
+                      'paper-dialog[opened]',
+                      '[role="dialog"][open]',
+                      '.mdc-dialog--open',
+                      '.dialog-open',
+                      '.show-dialog'
+                    ];
+                    for (let i = 0; i < popupSelectors.length; i++) {
+                      const list = deepQueryAll(document, popupSelectors[i], []);
+                      for (let j = 0; j < list.length; j++) {
+                        if (isVisible(list[j])) return true;
+                      }
+                    }
+                    const genericDialogs = deepQueryAll(document, '[role="dialog"], ha-dialog, mwc-dialog, paper-dialog', []);
+                    for (let i = 0; i < genericDialogs.length; i++) {
+                      const el = genericDialogs[i];
+                      if (!el) continue;
+                      const ariaHidden = (el.getAttribute && el.getAttribute('aria-hidden')) || '';
+                      if (ariaHidden.toLowerCase() === 'true') continue;
+                      const hidden = el.hasAttribute && el.hasAttribute('hidden');
+                      if (hidden) continue;
+                      if (isVisible(el)) return true;
+                    }
+                  } catch (e) {}
+                  return false;
+                };
+                const hideOverlayOnThisRoute = () => {
+                  try {
+                    const p = (location && location.pathname) ? location.pathname : '';
+                    const h = (location && location.href) ? location.href : '';
+                    const hiddenPrefixes = [
+                      '/config/integrations/dashboard',
+                      '/config/integrations/integration/',
+                      '/config/devices/dashboard',
+                      '/config/areas/dashboard',
+                      '/config/lovelace/dashboards',
+                      '/config/entities',
+                      '/config/labels',
+                      '/config/zone',
+                      '/config/helpers',
+                      '/config/application_credentials'
+                    ];
+                    for (let i = 0; i < hiddenPrefixes.length; i++) {
+                      const route = hiddenPrefixes[i];
+                      if (p.startsWith(route) || h.includes(route)) return true;
+                    }
+                    return false;
+                  } catch (e) {
+                    return false;
+                  }
+                };
                 const overlayRight = (() => {
                   try {
                     const p = (location && location.pathname) ? location.pathname : '';
@@ -2751,6 +2821,12 @@ class WebViewActivity :
                   let changed = false;
                   if (existing.getAttribute('src') !== data) {
                     existing.setAttribute('src', data);
+                    changed = true;
+                  }
+                  const shouldHide = hasOpenPopup() || hideOverlayOnThisRoute();
+                  const wantedDisplay = shouldHide ? 'none' : 'block';
+                  if (existing.style.display !== wantedDisplay) {
+                    existing.style.display = wantedDisplay;
                     changed = true;
                   }
                   if (existing.style.right !== overlayRight) {
@@ -2780,6 +2856,7 @@ class WebViewActivity :
                 img.style.objectFit = 'contain';
                 img.style.pointerEvents = 'none';
                 img.style.userSelect = 'none';
+                img.style.display = (hasOpenPopup() || hideOverlayOnThisRoute()) ? 'none' : 'block';
                 try {
                   document.body && document.body.appendChild(img);
                   return true;
