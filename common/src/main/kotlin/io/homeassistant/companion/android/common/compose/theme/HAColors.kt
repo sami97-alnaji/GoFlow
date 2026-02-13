@@ -381,12 +381,12 @@ class HAColorScheme(
             ButtonVariant.PRIMARY -> {
                 HAButtonColors(
                     ButtonColors(
-                        containerColor = colorFillPrimaryLoudResting,
-                        contentColor = colorOnPrimaryLoud,
+                        containerColor = Color(0xFF1D245D),
+                        contentColor = HAColors.White,
                         disabledContainerColor = colorFillDisabledLoudResting,
                         disabledContentColor = colorOnDisabledLoud,
                     ),
-                    colorFillPrimaryLoudHover,
+                    HAColors.White,
                 )
             }
 
@@ -445,12 +445,12 @@ class HAColorScheme(
             ButtonVariant.PRIMARY -> {
                 HAButtonColors(
                     ButtonColors(
-                        containerColor = colorFillPrimaryNormalResting,
-                        contentColor = colorOnPrimaryNormal,
+                        containerColor = Color(0xFF1D245D),
+                        contentColor = HAColors.White,
                         disabledContainerColor = colorFillDisabledNormalResting,
                         disabledContentColor = colorOnDisabledNormal,
                     ),
-                    colorFillPrimaryNormalHover,
+                    HAColors.White,
                 )
             }
 
@@ -510,7 +510,7 @@ class HAColorScheme(
                 HAButtonColors(
                     ButtonColors(
                         containerColor = Transparent,
-                        contentColor = colorOnPrimaryNormal,
+                        contentColor = Color(0xFF1D245D),
                         disabledContainerColor = colorFillDisabledQuietResting,
                         disabledContentColor = colorOnDisabledQuiet,
                     ),

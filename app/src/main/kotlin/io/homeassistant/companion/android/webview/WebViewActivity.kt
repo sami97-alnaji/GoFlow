@@ -165,6 +165,7 @@ import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
+import kotlin.math.roundToInt
 import timber.log.Timber
 
 @AndroidEntryPoint
@@ -462,6 +463,10 @@ class WebViewActivity :
         onBackPressedDispatcher.addCallback(this, onBackPressed)
 
         webView.apply {
+            // Keep WebView text sizing stable regardless of the device "Font size" setting.
+            // We still allow in-app page zoom (see setWebViewZoom()) and pinch-to-zoom.
+            applyWebViewTextZoomForSystemFontScale()
+
             setOnTouchListener(
                 object : OnSwipeListener(this@WebViewActivity) {
                     override fun onSwipe(
@@ -2735,133 +2740,19 @@ class WebViewActivity :
                 return removed;
               };
               const ensureOverlayLogo = () => {
-                const data = pickData();
-                const isVisible = (el) => {
-                  if (!el) return false;
-                  try {
-                    const style = window.getComputedStyle ? window.getComputedStyle(el) : null;
-                    if (style) {
-                      if (style.display === 'none' || style.visibility === 'hidden') return false;
-                      if (parseFloat(style.opacity || '1') === 0) return false;
-                    }
-                    const r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
-                    if (r && (r.width <= 0 || r.height <= 0)) return false;
-                    return true;
-                  } catch (e) {
-                    return true;
-                  }
-                };
-                const hasOpenPopup = () => {
-                  try {
-                    const popupSelectors = [
-                      'ha-dialog[open]',
-                      'mwc-dialog[open]',
-                      'paper-dialog[opened]',
-                      '[role="dialog"][open]',
-                      '.mdc-dialog--open',
-                      '.dialog-open',
-                      '.show-dialog'
-                    ];
-                    for (let i = 0; i < popupSelectors.length; i++) {
-                      const list = deepQueryAll(document, popupSelectors[i], []);
-                      for (let j = 0; j < list.length; j++) {
-                        if (isVisible(list[j])) return true;
-                      }
-                    }
-                    const genericDialogs = deepQueryAll(document, '[role="dialog"], ha-dialog, mwc-dialog, paper-dialog', []);
-                    for (let i = 0; i < genericDialogs.length; i++) {
-                      const el = genericDialogs[i];
-                      if (!el) continue;
-                      const ariaHidden = (el.getAttribute && el.getAttribute('aria-hidden')) || '';
-                      if (ariaHidden.toLowerCase() === 'true') continue;
-                      const hidden = el.hasAttribute && el.hasAttribute('hidden');
-                      if (hidden) continue;
-                      if (isVisible(el)) return true;
-                    }
-                  } catch (e) {}
-                  return false;
-                };
-                const hideOverlayOnThisRoute = () => {
-                  try {
-                    const p = (location && location.pathname) ? location.pathname : '';
-                    const h = (location && location.href) ? location.href : '';
-                    const hiddenPrefixes = [
-                      '/config/integrations/dashboard',
-                      '/config/integrations/integration/',
-                      '/config/devices/dashboard',
-                      '/config/areas/dashboard',
-                      '/config/lovelace/dashboards',
-                      '/config/entities',
-                      '/config/labels',
-                      '/config/zone',
-                      '/config/helpers',
-                      '/config/application_credentials'
-                    ];
-                    for (let i = 0; i < hiddenPrefixes.length; i++) {
-                      const route = hiddenPrefixes[i];
-                      if (p.startsWith(route) || h.includes(route)) return true;
-                    }
-                    return false;
-                  } catch (e) {
-                    return false;
-                  }
-                };
-                const overlayRight = (() => {
-                  try {
-                    const p = (location && location.pathname) ? location.pathname : '';
-                    const h = (location && location.href) ? location.href : '';
-                    const isConfigDashboard = p.startsWith('/config/dashboard') || h.includes('/config/dashboard');
-                    return isConfigDashboard ? '138px' : '56px';
-                  } catch (e) {
-                    return '56px';
-                  }
-                })();
-                const existing = document.querySelector && document.querySelector('img.goflow-toolbar-overlay-logo');
-                if (existing) {
-                  let changed = false;
-                  if (existing.getAttribute('src') !== data) {
-                    existing.setAttribute('src', data);
-                    changed = true;
-                  }
-                  const shouldHide = hasOpenPopup() || hideOverlayOnThisRoute();
-                  const wantedDisplay = shouldHide ? 'none' : 'block';
-                  if (existing.style.display !== wantedDisplay) {
-                    existing.style.display = wantedDisplay;
-                    changed = true;
-                  }
-                  if (existing.style.right !== overlayRight) {
-                    existing.style.right = overlayRight;
-                    changed = true;
-                  }
-                  if (existing.style.pointerEvents !== 'none') {
-                    existing.style.pointerEvents = 'none';
-                    changed = true;
-                  }
-                  if (existing.style.userSelect !== 'none') {
-                    existing.style.userSelect = 'none';
-                    changed = true;
-                  }
-                  return changed;
-                }
-                const img = document.createElement('img');
-                img.className = 'goflow-toolbar-overlay-logo';
-                img.src = data;
-                img.alt = 'GoFlow';
-                img.style.width = '65px';
-                img.style.height = '42px';
-                img.style.position = 'fixed';
-                img.style.top = '10px';
-                img.style.right = overlayRight;
-                img.style.zIndex = '2147483647';
-                img.style.objectFit = 'contain';
-                img.style.pointerEvents = 'none';
-                img.style.userSelect = 'none';
-                img.style.display = (hasOpenPopup() || hideOverlayOnThisRoute()) ? 'none' : 'block';
+                // Disable the floating overlay logo everywhere.
+                let removed = false;
                 try {
-                  document.body && document.body.appendChild(img);
-                  return true;
+                  const overlays = deepQueryAll(document, 'img.goflow-toolbar-overlay-logo', []);
+                  for (let i = 0; i < overlays.length; i++) {
+                    const el = overlays[i];
+                    if (el && el.remove) {
+                      el.remove();
+                      removed = true;
+                    }
+                  }
                 } catch (e) {}
-                return false;
+                return removed;
               };
               const run = () => {
                 let did = false;
@@ -3292,6 +3183,8 @@ class WebViewActivity :
     }
 
     private fun setWebViewZoom() = lifecycleScope.launch {
+        applyWebViewTextZoomForSystemFontScale()
+
         // Set base zoom level (percentage must be scaled to device density/percentage)
         webView.setInitialScale((resources.displayMetrics.density * presenter.getPageZoomLevel()).toInt())
 
@@ -3322,6 +3215,17 @@ class WebViewActivity :
             """,
         ) {}
     }
+
+private fun applyWebViewTextZoomForSystemFontScale() {     webView.settings.textZoom = 100 }
+    // private fun applyWebViewTextZoomForSystemFontScale() {
+    //     // Android font scaling (configuration.fontScale) affects WebView text sizing. Neutralize it so
+    //     // the frontend layout does not break due to the system "Font size" setting.
+    //     val fontScale = resources.configuration.fontScale.takeIf { it > 0f } ?: 1f
+    //     val textZoomPercent = (100f / fontScale).roundToInt().coerceIn(25, 500)
+    //     if (webView.settings.textZoom != textZoomPercent) {
+    //         webView.settings.textZoom = textZoomPercent
+    //     }
+    // }
 
     private suspend fun openFirstViewOnDashboardIfNeeded() {
         if (presenter.isAlwaysShowFirstViewOnAppStartEnabled() &&
