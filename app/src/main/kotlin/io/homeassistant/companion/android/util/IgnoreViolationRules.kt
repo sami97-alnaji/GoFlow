@@ -9,7 +9,7 @@ import androidx.annotation.RequiresApi
 import com.goflow.app.common.util.IgnoreViolationRule
 
 val vmPolicyIgnoredViolationRules = listOf(
-    IgnoreChromiumTrichomeWrongContextUsage,
+    IgnoreChromiumWebViewWrongContextUsage,
     IgnoreBarcodeScannerRotationListenerWrongContextUsage,
 )
 
@@ -27,21 +27,24 @@ val threadPolicyIgnoredViolationRules = listOf(
 )
 
 /**
- * Ignore an [IncorrectContextUseViolation] that can occur
- * in the Chromium WebView client (specifically involving `chromium-TrichromeWebViewGoogle`).
+ * Ignore an [IncorrectContextUseViolation] that can occur in Chromium WebView internals
+ * during configuration changes (for example on rotation).
  *
  * This issue typically arises when the application context is incorrectly used during
- * configuration changes (e.g., screen rotation) within the WebView's internal mechanisms.
+ * configuration changes within the WebView provider implementation.
  *
  * It doesn't seem to be tracked anywhere.
  */
-private data object IgnoreChromiumTrichomeWrongContextUsage : IgnoreViolationRule {
+private data object IgnoreChromiumWebViewWrongContextUsage : IgnoreViolationRule {
     @RequiresApi(Build.VERSION_CODES.S)
     override fun shouldIgnore(violation: Violation): Boolean {
         if (violation !is IncorrectContextUseViolation) return false
 
         return violation.stackTrace.any {
-            it.fileName?.startsWith("chromium-TrichromeWebViewGoogle") == true &&
+            (
+                it.fileName?.startsWith("chromium-TrichromeWebViewGoogle") == true ||
+                    it.fileName?.startsWith("chromium-SystemWebViewGoogle") == true
+                ) &&
                 it.methodName == "onConfigurationChanged"
         }
     }
