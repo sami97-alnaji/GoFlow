@@ -37,31 +37,31 @@ private object HAColors {
     val White = Color(0xFFFFFFFF)
     val Transparent = Color(0x00FFFFFF)
 
-    // Primary (GoFlow 01: #009FE3)
-    val Primary05 = Color(0xFF001828)
-    val Primary10 = Color(0xFF003356)
-    val Primary20 = Color(0xFF004B78)
-    val Primary30 = Color(0xFF0066A4)
-    val Primary40 = Color(0xFF009FE3)
-    val Primary50 = Color(0xFF26B5EE)
-    val Primary60 = Color(0xFF54C7F4)
-    val Primary70 = Color(0xFF83D9F8)
-    val Primary80 = Color(0xFFB5EAFC)
-    val Primary90 = Color(0xFFDDF6FD)
-    val Primary95 = Color(0xFFF0FBFF)
+    // Primary (GoFlow 01: #90BE42)
+    val Primary05 = Color(0xFF7AA235)
+    val Primary10 = Color(0xFF82AD39)
+    val Primary20 = Color(0xFF88B53E)
+    val Primary30 = Color(0xFF8DBB40)
+    val Primary40 = Color(0xFF90BE42)
+    val Primary50 = Color(0xFF9BC853)
+    val Primary60 = Color(0xFFA9D36A)
+    val Primary70 = Color(0xFFB8DC83)
+    val Primary80 = Color(0xFFC9E5A0)
+    val Primary90 = Color(0xFFE3F2CB)
+    val Primary95 = Color(0xFFF0F8E5)
 
-    // Secondary (GoFlow 02: #1D245D)
-    val Blue05 = Color(0xFF0A0E28)
-    val Blue10 = Color(0xFF111842)
-    val Blue20 = Color(0xFF1D245D)
-    val Blue30 = Color(0xFF303672)
-    val Blue40 = Color(0xFF3F4685)
-    val Blue50 = Color(0xFF4F5698)
-    val Blue60 = Color(0xFF6B72B1)
-    val Blue70 = Color(0xFF8A90CB)
-    val Blue80 = Color(0xFFACB2E3)
-    val Blue90 = Color(0xFFD1D6F5)
-    val Blue95 = Color(0xFFEBEEFF)
+    // Secondary (GoFlow 02 remapped to green palette)
+    val Blue05 = Color(0xFF102006)
+    val Blue10 = Color(0xFF1B330E)
+    val Blue20 = Color(0xFF2C4E19)
+    val Blue30 = Color(0xFF3E6A24)
+    val Blue40 = Color(0xFF518730)
+    val Blue50 = Color(0xFF66A33E)
+    val Blue60 = Color(0xFF81BF5A)
+    val Blue70 = Color(0xFF9FD67B)
+    val Blue80 = Color(0xFFBEE89E)
+    val Blue90 = Color(0xFFDCF5C5)
+    val Blue95 = Color(0xFFEFFBDD)
 
     // Brand
     val Brand05 = Color(0xFF00222F)
@@ -197,8 +197,8 @@ private object HAColors {
 // TODO validate with design team if this color are immutable or not (not changeable by the users and also stay the same
 //  in dark mode)
 object HABrandColors {
-    val Blue = Color(0xFF009FE3)
-    val Background = Color(0xFFF0FBFF)
+    val Blue = Color(0xFF90BE42)
+    val Background = Color(0xFFF3FAEB)
 }
 
 @Immutable
@@ -381,7 +381,7 @@ class HAColorScheme(
             ButtonVariant.PRIMARY -> {
                 HAButtonColors(
                     ButtonColors(
-                        containerColor = Color(0xFF1D245D),
+                        containerColor = Color(0xFF90BE42),
                         contentColor = HAColors.White,
                         disabledContainerColor = colorFillDisabledLoudResting,
                         disabledContentColor = colorOnDisabledLoud,
@@ -445,7 +445,7 @@ class HAColorScheme(
             ButtonVariant.PRIMARY -> {
                 HAButtonColors(
                     ButtonColors(
-                        containerColor = Color(0xFF1D245D),
+                        containerColor = Color(0xFF90BE42),
                         contentColor = HAColors.White,
                         disabledContainerColor = colorFillDisabledNormalResting,
                         disabledContentColor = colorOnDisabledNormal,
@@ -510,7 +510,7 @@ class HAColorScheme(
                 HAButtonColors(
                     ButtonColors(
                         containerColor = Transparent,
-                        contentColor = Color(0xFF1D245D),
+                        contentColor = Color(0xFF90BE42),
                         disabledContainerColor = colorFillDisabledQuietResting,
                         disabledContentColor = colorOnDisabledQuiet,
                     ),

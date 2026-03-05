@@ -8,6 +8,7 @@
         <item name="android:navigationBarColor">@color/colorLaunchScreenBackground</item>
         <item name="alertDialogTheme">@style/Theme.HomeAssistant.Dialog.Alert.Launch</item>
         <item name="android:windowSplashScreenAnimatedIcon">@drawable/app_icon_launch_screen</item>
+        <item name="android:windowSplashScreenBrandingImage">@drawable/parkside_logo_darkmode</item>
     </style>
 
     <style name="Theme.HomeAssistant.DynamicColorWidget">

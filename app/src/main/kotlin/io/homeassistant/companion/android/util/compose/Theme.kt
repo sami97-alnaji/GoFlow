@@ -22,8 +22,8 @@ import com.goflow.app.common.compose.theme.DarkHAColorScheme
 import com.goflow.app.common.compose.theme.LightHAColorScheme
 import com.goflow.app.common.compose.theme.LocalHAColorScheme
 
-val colorPrimary = Color(0xFF009FE3)
-val colorPrimaryDark = Color(0xFF0288D1)
+val colorPrimary = Color(0xFF90BE42)
+val colorPrimaryDark = Color(0xFF90BE42)
 val darkColorBackground = Color(0xFF1C1C1C)
 
 const val STEP_SCREEN_MAX_WIDTH_DP = 600.0f

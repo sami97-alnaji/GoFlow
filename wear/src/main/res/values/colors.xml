@@ -4,12 +4,12 @@
     <color name="colorDialogMessage">@android:color/white</color>
     <color name="colorDialogTitle">@android:color/white</color>
     <color name="colorActivityBackground">@android:color/black</color>
-    <color name="colorPrimaryDark">#111111</color>
+    <color name="colorPrimaryDark">#90BE42</color>
     <color name="colorWarning">#D32F2F</color>
     <color name="colorHint">#70FFFFFF</color>
     <color name="colorHeadline1">@android:color/white</color>
     <color name="colorHeadline2">@android:color/white</color>
-    <color name="colorActionBar">#1c1c1c</color>
+    <color name="colorActionBar">#90BE42</color>
     <color name="colorIcon">@android:color/white</color>
     <color name="colorOverlay">#24FFFFFF</color>
     <color name="colorRipple">#AAFFFFFF</color>

@@ -25,7 +25,7 @@ class HomeAssistantApis @Inject constructor(
         private const val LOCAL_HOST = "http://localhost/"
         const val USER_AGENT = "User-Agent"
         private val ANDROID_DETAILS = "Android ${Build.VERSION.RELEASE}; ${Build.MODEL}"
-        val USER_AGENT_STRING = "GoFlow/${BuildConfig.VERSION_NAME} ($ANDROID_DETAILS)"
+        val USER_AGENT_STRING = "Parkside/${BuildConfig.VERSION_NAME} ($ANDROID_DETAILS)"
 
         private const val CALL_TIMEOUT = 30L
         private const val READ_TIMEOUT = 30L

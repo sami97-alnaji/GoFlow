@@ -3,8 +3,8 @@
     <item android:drawable="@color/colorLaunchScreenBackground" />
 
     <item
-        android:width="512dp"
-        android:height="512dp"
+        android:width="280dp"
+        android:height="96dp"
         android:gravity="center"
         android:drawable="@drawable/app_icon_launch" />
 </layer-list>

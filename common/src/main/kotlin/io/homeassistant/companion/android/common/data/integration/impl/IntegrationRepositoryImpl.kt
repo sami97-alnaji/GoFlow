@@ -80,7 +80,7 @@ class IntegrationRepositoryImpl @AssistedInject constructor(
 
     companion object {
         private const val APP_ID = "com.goflow.app"
-        private const val APP_NAME = "GoFlow"
+        private const val APP_NAME = "Parkside"
         private const val OS_NAME = "Android"
 
         // Note: _not_ server-specific

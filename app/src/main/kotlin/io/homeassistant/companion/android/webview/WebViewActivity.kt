@@ -288,7 +288,6 @@ class WebViewActivity :
     private var statusBarColor = mutableStateOf<Color?>(null)
     private var backgroundColor = mutableStateOf<Color?>(null)
     private var cachedLogoDataUrl: String? = null
-    private var cachedOhfBadgeDataUrl: String? = null
     private var cachedPrimaryLogoSvgDataUrl: String? = null
     private var cachedDarkLogoSvgDataUrl: String? = null
     private var cachedAboutBadgeDataUrl: String? = null
@@ -535,7 +534,6 @@ class WebViewActivity :
                     setWebViewZoom()
                     view?.let { injectLoadingLogoOnly(it) }
                     view?.let { injectWebIcons(it) }
-                    view?.let { injectOhfBadge(it) }
                     view?.let { injectWebTextReplacements(it) }
                     view?.let { injectWebThemeDetector(it) }
                     view?.let { injectHeaderLogo(it) }
@@ -2294,9 +2292,6 @@ class WebViewActivity :
             if (cachedDarkLogoSvgDataUrl == null) {
                 cachedDarkLogoSvgDataUrl = buildDarkLogoSvgDataUrl(appContext)
             }
-            if (cachedOhfBadgeDataUrl == null) {
-                cachedOhfBadgeDataUrl = buildOhfBadgeDataUrl(appContext)
-            }
             if (cachedAboutBadgeDataUrl == null) {
                 cachedAboutBadgeDataUrl = buildAboutBadgeDataUrl(appContext)
             }
@@ -2370,51 +2365,11 @@ class WebViewActivity :
         view.evaluateJavascript(js, null)
     }
 
-    private fun injectOhfBadge(view: WebView) {
-        val context = view.context ?: return
-        val existing = cachedOhfBadgeDataUrl
-        if (existing == null) {
-            lifecycleScope.launch(Dispatchers.IO) {
-                val dataUrl = buildOhfBadgeDataUrl(context)
-                if (dataUrl != null) {
-                    cachedOhfBadgeDataUrl = dataUrl
-                    view.post { injectOhfBadge(view) }
-                }
-            }
-            return
-        }
-
-        val js = """
-            (function() {
-              const data = "$existing";
-              const replace = (img) => {
-                if (!img) return false;
-                if (img.dataset && img.dataset.customOhfApplied === '1') return true;
-                img.dataset.customOhfApplied = '1';
-                img.src = data;
-                img.style.height = '46px';
-                img.style.width = 'auto';
-                img.style.objectFit = 'contain';
-                return true;
-              };
-              try {
-                const img = document.querySelector('.ohf-logo img') ||
-                            document.querySelector('img[src*="ohf-badge"]') ||
-                            document.querySelector('img[alt*="Open Home Foundation"]');
-                if (replace(img)) return true;
-              } catch (e) {}
-              return false;
-            })();
-        """.trimIndent()
-
-        view.evaluateJavascript(js, null)
-    }
-
     private fun injectWebTextReplacements(view: WebView) {
         val js = """
             (function() {
               const from = "Home Assistant";
-              const to = "GoFlow";
+              const to = "Parkside";
               const replaceText = (node) => {
                 if (!node) return;
                 if (node.nodeType === Node.TEXT_NODE) {
@@ -2591,7 +2546,7 @@ class WebViewActivity :
                 const img = document.createElement('img');
                 img.className = 'goflow-header-logo';
                 img.src = data;
-                img.alt = 'GoFlow';
+                img.alt = 'Parkside';
                 img.style.width = '65px';
                 img.style.height = '42px';
                 img.style.display = 'inline-block';
@@ -2624,7 +2579,7 @@ class WebViewActivity :
                 const img = document.createElement('img');
                 img.className = 'goflow-toolbar-logo';
                 img.src = data;
-                img.alt = 'GoFlow';
+                img.alt = 'Parkside';
                 img.style.width = '65px';
                 img.style.height = '42px';
                 img.style.display = 'inline-block';
@@ -2915,8 +2870,34 @@ class WebViewActivity :
                   const t = getText(card);
                   return t.includes('Companion app') && t.includes('Core') && t.includes('Frontend');
                 };
+              const cleanupCardLogos = (card) => {
+                if (!card) return false;
+                let changed = false;
+                const injected = card.querySelectorAll ? card.querySelectorAll('img.goflow-about-logo-main') : [];
+                if (injected && injected.length > 1) {
+                  for (let i = 1; i < injected.length; i++) {
+                    const extra = injected[i];
+                    if (extra && extra.remove) extra.remove();
+                  }
+                  changed = true;
+                }
+                const others = card.querySelectorAll ? card.querySelectorAll('ha-logo-svg, img:not(.goflow-about-logo-main), ha-icon, ha-svg-icon, svg') : [];
+                if (others && others.length) {
+                  for (let i = 0; i < others.length; i++) {
+                    const el = others[i];
+                    if (!el) continue;
+                    if (el.remove) {
+                      el.remove();
+                    } else if (el.style) {
+                      el.style.display = 'none';
+                    }
+                    changed = true;
+                  }
+                }
+                return changed;
+              };
               const insertLogo = (card) => {
-                if (!card || card.dataset && card.dataset.customAboutLogo === '1') return false;
+                if (!card) return false;
                 const existingInjected = card.querySelector ? card.querySelector('img.goflow-about-logo-main') : null;
                 if (existingInjected) {
                   if (card.dataset) card.dataset.customAboutLogo = '1';
@@ -2931,39 +2912,23 @@ class WebViewActivity :
                 img.style.objectFit = 'contain';
                 img.style.display = 'block';
                 img.style.margin = '16px auto 8px auto';
-                // Hide the first icon-ish element in the card
-                const candidates = deepQueryAll(card, 'ha-icon, ha-svg-icon, svg, img', []);
-                for (let i = 0; i < candidates.length; i++) {
-                  const el = candidates[i];
-                  if (el === img) continue;
-                  if (el.tagName === 'IMG' && el.src && el.src.startsWith('data:')) continue;
-                  el.style.display = 'none';
-                  break;
-                }
                 card.insertBefore(img, card.firstChild);
                 return true;
               };
                 const attempt = () => {
+                  let changed = false;
                   try {
-                    if (replaceHaLogoSvg()) return true;
+                    if (replaceHaLogoSvg()) changed = true;
                     const cards = deepQueryAll(document, 'ha-card', []);
                     for (let i = 0; i < cards.length; i++) {
                       if (isAboutCard(cards[i])) {
                         const card = cards[i];
-                        const injected = card.querySelectorAll ? card.querySelectorAll('img.goflow-about-logo-main') : [];
-                        if (injected && injected.length > 1) {
-                          for (let j = 1; j < injected.length; j++) {
-                            const extra = injected[j];
-                            if (extra && extra.remove) extra.remove();
-                          }
-                          if (card.dataset) card.dataset.customAboutLogo = '1';
-                          return true;
-                        }
-                        if (insertLogo(card)) return true;
+                        if (cleanupCardLogos(card)) changed = true;
+                        if (insertLogo(card)) changed = true;
                       }
                   }
                 } catch (e) {}
-                return false;
+                return changed;
               };
               const done = attempt();
               if (!done && !window.__aboutLogoInterval) {
@@ -3122,10 +3087,10 @@ class WebViewActivity :
 
     private fun buildPrimaryLogoSvgDataUrl(context: Context): String? {
         return try {
-            context.resources.openRawResource(raw.goflow_logo).use { stream ->
+            context.resources.openRawResource(drawable.parkside_logo_primary).use { stream ->
                 val bytes = stream.readBytes()
                 val base64 = Base64.encodeToString(bytes, Base64.NO_WRAP)
-                "data:image/svg+xml;base64,$base64"
+                "data:image/png;base64,$base64"
             }
         } catch (e: Exception) {
             Timber.e(e, "Failed to build primary logo data URL")
@@ -3135,10 +3100,10 @@ class WebViewActivity :
 
     private fun buildDarkLogoSvgDataUrl(context: Context): String? {
         return try {
-            context.resources.openRawResource(raw.goflow_logo_dark).use { stream ->
+            context.resources.openRawResource(drawable.parkside_logo_primary).use { stream ->
                 val bytes = stream.readBytes()
                 val base64 = Base64.encodeToString(bytes, Base64.NO_WRAP)
-                "data:image/svg+xml;base64,$base64"
+                "data:image/png;base64,$base64"
             }
         } catch (e: Exception) {
             Timber.e(e, "Failed to build dark logo data URL")
@@ -3148,26 +3113,13 @@ class WebViewActivity :
 
     private fun buildAboutBadgeDataUrl(context: Context): String? {
         return try {
-            context.resources.openRawResource(raw.goflow_about_badge).use { stream ->
+            context.resources.openRawResource(drawable.parkside_logo_primary).use { stream ->
                 val bytes = stream.readBytes()
                 val base64 = Base64.encodeToString(bytes, Base64.NO_WRAP)
-                "data:image/svg+xml;base64,$base64"
+                "data:image/png;base64,$base64"
             }
         } catch (e: Exception) {
             Timber.e(e, "Failed to build about badge data URL")
-            null
-        }
-    }
-
-    private fun buildOhfBadgeDataUrl(context: Context): String? {
-        return try {
-            context.resources.openRawResource(raw.goflow_ohf_badge).use { stream ->
-                val bytes = stream.readBytes()
-                val base64 = Base64.encodeToString(bytes, Base64.NO_WRAP)
-                "data:image/svg+xml;base64,$base64"
-            }
-        } catch (e: Exception) {
-            Timber.e(e, "Failed to build OHF badge data URL")
             null
         }
     }

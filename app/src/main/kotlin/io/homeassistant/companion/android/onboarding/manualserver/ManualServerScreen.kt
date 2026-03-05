@@ -174,7 +174,7 @@ private fun ServerUrlTextField(
         },
         placeholder = {
             Text(
-                text = "http://GoFlow.local:8123",
+                text = "http://parkside.local:8123",
                 style = HATextStyle.UserInput,
                 color = LocalHAColorScheme.current.colorOnNeutralNormal,
             )
